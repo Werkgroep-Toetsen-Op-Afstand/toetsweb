@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'typography';
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $background-color no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+}
+
+main, #root {
+  height: 100%;
+}
+
+input[type=text]:disabled, input[type=password]:disabled {
+  cursor: not-allowed;
+}

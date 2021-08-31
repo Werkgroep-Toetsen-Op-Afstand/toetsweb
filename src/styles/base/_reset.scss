@@ -1,0 +1,18 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}

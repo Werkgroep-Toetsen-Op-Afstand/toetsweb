@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FunctionComponent} from 'react';
+import {
+    BoilerApp,
+    enableRouting,
+    enableLocalization,
+    enableTheming,
+    enableNetworking,
+} from 'react-ts-boiler';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import routes from './config/routes';
+import lang from './config/lang';
+import networking from './config/networking';
+
+import AuthContextProvider from './contexts/AuthContext';
+import Router from './components/layout/Router';
+
+enableNetworking(networking);
+enableTheming({ themes: [] });
+enableLocalization(lang);
+enableRouting({ routes });
+
+const App: FunctionComponent = () => {
+
+    return (
+        <BoilerApp>
+            <AuthContextProvider>
+                <Router />
+            </AuthContextProvider>
+        </BoilerApp>
+    );
+};
 
 export default App;
