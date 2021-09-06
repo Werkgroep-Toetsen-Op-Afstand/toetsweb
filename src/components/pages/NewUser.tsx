@@ -1,5 +1,5 @@
 import React, {FunctionComponent, useState} from 'react';
-import {Input, Option, Page, RequiredRule, useForm, useLocalization, getTranslator } from 'react-ts-boiler';
+import {Input, Option, Page, RequiredRule, useForm, useLocalization, translate, renderErrors} from 'react-ts-boiler';
 import Lang from '../../utils/Localization';
 import Button from '../layout/Button';
 import Select from '../layout/Select';
@@ -16,11 +16,7 @@ const ContainsUppercaseCharacter = (value: string, field: string) => {
         return '';
     }
 
-    const translator = getTranslator();
-
-    field = translator.translate(field);
-
-    return translator.translate('validation.containsUppercaseChar', field);
+    return translate('validation.containsUppercaseChar', translate(field));
 };
 
 const ContainsNumber = (value: string, field: string) => {
@@ -28,10 +24,7 @@ const ContainsNumber = (value: string, field: string) => {
         return '';
     }
 
-    const translator = getTranslator();
-    field = translator.translate(field);
-
-    return translator.translate('validation.containsNumber', field);
+    return translate('validation.containsNumber', translate(field));
 };
 
 const NewUser: FunctionComponent = () => {
@@ -56,16 +49,6 @@ const NewUser: FunctionComponent = () => {
         }
     };
 
-    const renderErrors = (errors: string[]) => {
-        return (
-            <ul style={{ marginLeft: 20 }}>
-                { errors.map((error, index) => (
-                    <li key={index}>{ error }</li>
-                )) }
-            </ul>
-        );
-    };
-
     return (
         <Page className={'new-user-page'}>
             <Card className={'new-user-page__form'}>
@@ -73,8 +56,6 @@ const NewUser: FunctionComponent = () => {
                     <div>
                         <Input value={form.data.username} onChange={onFormChange} id={'username'} />
                     </div>
-
-                    {/*{ renderErrors(form.errors.username ?? []) }*/}
                 </div>
 
                 <br />
@@ -83,8 +64,6 @@ const NewUser: FunctionComponent = () => {
                     <div>
                         <Input value={form.data.password} onChange={onFormChange} id={'password'} type={'password'} />
                     </div>
-
-                    {/*{ renderErrors(form.errors.password ?? []) }*/}
                 </div>
 
                 <br />
@@ -118,9 +97,7 @@ const NewUser: FunctionComponent = () => {
             </Card>
 
             <Card>
-                { Object.keys(form.errors).map(key => {
-                    const errors: string[] = form.errors[key];
-
+                { renderErrors(form.errors, (key, errors) => {
                     if(!errors.length) {
                         return <React.Fragment />
                     }

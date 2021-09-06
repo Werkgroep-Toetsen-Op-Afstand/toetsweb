@@ -4,11 +4,13 @@ import {RequestConfig} from 'react-ts-boiler/lib/networking/filter/HttpFilter';
 class AuthFilter implements HttpFilter {
 
     filter(request: RequestConfig, next: NextFilter): RequestConfig {
+        const headers = request.headers ?? {};
+
         if(TokenService.isAuthenticated()) {
-            request.headers = {
-                Authorization: `Bearer ${TokenService.getToken()}`
-            };
+            headers.Authorization = `Bearer ${TokenService.getToken()}`;
         }
+
+        request.headers = headers;
 
         return next(request);
     }
