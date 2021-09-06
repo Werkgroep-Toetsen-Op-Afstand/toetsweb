@@ -1,6 +1,9 @@
 import React, {FunctionComponent, useState} from 'react';
-import {Input, Option, Page, RequiredRule, Select, useForm, useLocalization } from 'react-ts-boiler';
+import {Input, Option, Page, RequiredRule, useForm, useLocalization, getTranslator } from 'react-ts-boiler';
 import Lang from '../../utils/Localization';
+import Button from '../layout/Button';
+import Select from '../layout/Select';
+import Card from '../layout/Card';
 
 interface UserForm {
     username?: string;
@@ -8,20 +11,27 @@ interface UserForm {
     gender?: string;
 }
 
-const ContainsUppercaseCharacter = (value: string) => {
+const ContainsUppercaseCharacter = (value: string, field: string) => {
     if(value === '' || value.match(/[A-Z]/) !== null) {
         return '';
     }
 
-    return 'Wachtwoord moet een hoofdletter bevatten!';
+    const translator = getTranslator();
+
+    field = translator.translate(field);
+
+    return translator.translate('validation.containsUppercaseChar', field);
 };
 
-const ContainsNumber = (value: string) => {
+const ContainsNumber = (value: string, field: string) => {
     if(value === '' || value.match(/[0-9]/) !== null) {
         return '';
     }
 
-    return 'Wachtwoord moet een nummer bevatten!';
+    const translator = getTranslator();
+    field = translator.translate(field);
+
+    return translator.translate('validation.containsNumber', field);
 };
 
 const NewUser: FunctionComponent = () => {
@@ -58,52 +68,76 @@ const NewUser: FunctionComponent = () => {
 
     return (
         <Page className={'new-user-page'}>
-            <div style={{ display: 'flex', alignSelf: 'center' }}>
+            <Card className={'new-user-page__form'}>
                 <div>
-                    <Input value={form.data.username} onChange={onFormChange} id={'username'} />
+                    <div>
+                        <Input value={form.data.username} onChange={onFormChange} id={'username'} />
+                    </div>
+
+                    {/*{ renderErrors(form.errors.username ?? []) }*/}
                 </div>
 
-                { renderErrors(form.errors.username ?? []) }
-            </div>
+                <br />
 
-            <br />
-
-            <div style={{ display: 'flex', alignSelf: 'center' }}>
                 <div>
-                    <Input value={form.data.password} onChange={onFormChange} id={'password'} type={'password'} />
+                    <div>
+                        <Input value={form.data.password} onChange={onFormChange} id={'password'} type={'password'} />
+                    </div>
+
+                    {/*{ renderErrors(form.errors.password ?? []) }*/}
                 </div>
 
-                { renderErrors(form.errors.password ?? []) }
-            </div>
+                <br />
 
-            <br />
-
-            <div>
                 <div>
-                    <Select onChange={onFormChange} placeholder={__('sex')} value={form.data.gender} id={'gender'}>
-                        <Option value={'male'}>{ __('male') }</Option>
-                        <Option value={'female'}>{ __('female') }</Option>
-                    </Select>
+                    <div>
+                        <Select onChange={onFormChange} placeholder={__('gender')} value={form.data.gender} id={'gender'}>
+                            <Option value={'male'}>{ __('male') }</Option>
+                            <Option value={'female'}>{ __('female') }</Option>
+                        </Select>
+                    </div>
+
+                    { /* renderErrors(form.errors.gender ?? []) */ }
                 </div>
 
-                { renderErrors(form.errors.gender ?? []) }
-            </div>
+                <br />
 
-            <br />
-
-            <div>
-                <button onClick={submit} disabled={!form.valid}>{ __('save') }</button>
-                <button onClick={switchLocale}>{ __('changeLocale') }</button>
-                <button onClick={form.clear}>{ __('clearForm') }</button>
-            </div>
-
-            { submitted &&
-                <div>
-                    <p>Username: { form.data.username }</p>
-                    <p>Password: { form.data.password }</p>
-                    <p>Gender: { form.data.gender }</p>
+                <div className={'new-user-page__actions'}>
+                    <Button onClick={submit} disabled={!form.valid}>{ __('save') }</Button>
+                    <Button onClick={switchLocale}>{ __('changeLocale') }</Button>
+                    <Button onClick={form.clear}>{ __('clearForm') }</Button>
                 </div>
-            }
+
+                { submitted &&
+                    <div>
+                        <p>Username: { form.data.username }</p>
+                        <p>Password: { form.data.password }</p>
+                        <p>Gender: { form.data.gender }</p>
+                    </div>
+                }
+            </Card>
+
+            <Card>
+                { Object.keys(form.errors).map(key => {
+                    const errors: string[] = form.errors[key];
+
+                    if(!errors.length) {
+                        return <React.Fragment />
+                    }
+
+                    return (
+                        <div className={'new-user-page__error'}>
+                            <p className={'new-user-page__error-title'}>{ __(key) }</p>
+
+                            <ul key={key}>
+                                {errors.map((error: string, index: number) => (
+                                    <li key={index}>{error}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    );
+                }) }
+            </Card>
         </Page>
     );
 };

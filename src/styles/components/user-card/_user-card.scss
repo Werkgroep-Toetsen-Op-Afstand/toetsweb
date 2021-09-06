@@ -1,17 +1,13 @@
+@import 'user-card-light';
+@import 'user-card-dark';
+
 .user-card {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 .6rem 1.5rem 0 rgba(0, 0, 0, .2);
-  padding: 1rem;
   font-size: 1.2rem;
-  background-color: white;
 
   &__title {
     font-weight: bold;
-  }
-
-  &__email {
-    color: grey;
   }
 
   &:not(:last-child) {

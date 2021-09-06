@@ -16,6 +16,14 @@ main, #root {
   height: 100%;
 }
 
+main {
+  margin-left: $sidebar-width;
+}
+
+section[class$="-page"] {
+  padding: 1rem;
+}
+
 input[type=text]:disabled, input[type=password]:disabled {
   cursor: not-allowed;
 }

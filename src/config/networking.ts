@@ -1,9 +1,9 @@
 import {NetworkingConfig} from 'react-ts-boiler/lib/networking/Networking';
-import {getApiEndpoint} from 'react-ts-boiler';
+import { getApiEndpoint } from 'react-ts-boiler';
 import AuthFilter from '../networking/filters/AuthFilter';
 
 const networking: NetworkingConfig = {
-    baseUrl: getApiEndpoint() ?? '',
+    baseUrl: 'https://jsonplaceholder.typicode.com', // Replace with getApiEndpoint()
     httpFilters: [AuthFilter]
 };
 

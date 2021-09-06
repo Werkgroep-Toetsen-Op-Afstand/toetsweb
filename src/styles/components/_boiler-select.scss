@@ -1,6 +1,17 @@
 .boiler-select {
+  &--light {
+    color: black;
+  }
 
-  &__header {
+  &--dark {
+    color: white;
+  }
+
+  &--light &__header {
     background-color: white;
+  }
+
+  &--dark &__header {
+    background-color: black;
   }
 }

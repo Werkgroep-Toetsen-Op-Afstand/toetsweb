@@ -1,2 +1,2 @@
-REACT_APP_API_ENDPOINT=endpoint
+REACT_APP_API_ENDPOINT=https://jsonplaceholder.typicode.com
 REACT_APP_ENV=local

@@ -1,0 +1,22 @@
+.button {
+  padding: .5rem 1rem;
+  color: $color-white;
+  background-color: $color-purple;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: rgba($color-purple, .6);
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: .5;
+
+    &:hover {
+      background-color: $color-purple;
+    }
+  }
+}

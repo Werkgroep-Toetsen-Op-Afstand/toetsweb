@@ -1,6 +1,11 @@
 // COLORS
-$background-color: rgba(0, 0, 100, .5);
+$color-purple: rgba(0, 0, 100, .5);
+
+$background-color: $color-purple;
 $color-white: white;
+
+// SIDEBAR
+$sidebar-width: 14rem;
 
 // FONTS
 $base-font-family: sans-serif;
