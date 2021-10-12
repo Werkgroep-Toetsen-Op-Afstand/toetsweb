@@ -8,7 +8,7 @@ class UserRepository extends ModelRepository<User> {
     }
 
     public all(): Promise<User[]> {
-        return this.request<User[]>(this.url(), RequestMethod.GET).sendRaw();
+        return this.request<User[]>(this.url(), RequestMethod.GET).send();
     }
 }
 

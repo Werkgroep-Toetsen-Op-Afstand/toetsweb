@@ -1,5 +1,5 @@
 import React, {FunctionComponent, useState} from 'react';
-import {Input, Option, Page, RequiredRule, useForm, useLocalization, translate, renderErrors} from 'react-ts-boiler';
+import {Input, Option, Page, RequiredRule, useForm, useLocalization, translate, mapInputErrors} from 'react-ts-boiler';
 import Lang from '../../utils/Localization';
 import Button from '../layout/Button';
 import Select from '../layout/Select';
@@ -29,6 +29,7 @@ const ContainsNumber = (value: string, field: string) => {
 
 const NewUser: FunctionComponent = () => {
     const [submitted, setSubmitted] = useState<boolean>(false);
+    const [showErrors, setShowErrors] = useState<boolean>(false);
     const { setLocale, locale, __ } = useLocalization();
 
     const [form, onFormChange] = useForm<UserForm>({}, {
@@ -38,6 +39,7 @@ const NewUser: FunctionComponent = () => {
     });
 
     const submit = () => {
+        setShowErrors(!form.valid);
         setSubmitted(true);
     };
 
@@ -75,16 +77,15 @@ const NewUser: FunctionComponent = () => {
                             <Option value={'female'}>{ __('female') }</Option>
                         </Select>
                     </div>
-
-                    { /* renderErrors(form.errors.gender ?? []) */ }
                 </div>
 
                 <br />
 
                 <div className={'new-user-page__actions'}>
-                    <Button onClick={submit} disabled={!form.valid}>{ __('save') }</Button>
+                    <Button onClick={submit}>{ __('save') }</Button>
                     <Button onClick={switchLocale}>{ __('changeLocale') }</Button>
                     <Button onClick={form.clear}>{ __('clearForm') }</Button>
+                    <input type={'checkbox'} checked={showErrors} value={'Show errors'} onChange={() => setShowErrors(!showErrors)} />
                 </div>
 
                 { submitted &&
@@ -97,16 +98,16 @@ const NewUser: FunctionComponent = () => {
             </Card>
 
             <Card>
-                { renderErrors(form.errors, (key, errors) => {
+                { showErrors && mapInputErrors(form.errors, (field, errors) => {
                     if(!errors.length) {
-                        return <React.Fragment />
+                        return <React.Fragment key={field} />
                     }
 
                     return (
-                        <div className={'new-user-page__error'}>
-                            <p className={'new-user-page__error-title'}>{ __(key) }</p>
+                        <div className={'new-user-page__error'} key={field}>
+                            <p className={'new-user-page__error-title'}>{ __(field) }</p>
 
-                            <ul key={key}>
+                            <ul>
                                 {errors.map((error: string, index: number) => (
                                     <li key={index}>{error}</li>
                                 ))}

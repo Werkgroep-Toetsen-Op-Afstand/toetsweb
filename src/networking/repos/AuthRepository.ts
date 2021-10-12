@@ -8,7 +8,7 @@ class AuthRepository extends Repository {
     }
 
     public getCurrentUser() {
-        return this.request<User>(this.url('users/1'), RequestMethod.GET).sendRaw();
+        return this.request<User>(this.url('users/1'), RequestMethod.GET).send();
     }
 }
 

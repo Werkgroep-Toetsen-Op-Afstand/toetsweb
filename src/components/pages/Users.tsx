@@ -15,8 +15,6 @@ const Users: FunctionComponent = () => {
 
     useEffect(() => {
         userRepo.all().then((users) => {
-            console.log(users);
-
             setUsers(users);
         });
 
