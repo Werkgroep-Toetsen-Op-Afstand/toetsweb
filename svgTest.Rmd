@@ -1,0 +1,95 @@
+---
+title: "SVG test"
+output: html_document
+---
+
+## SVG interactie test
+
+<svg id="tcyc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650.15 637.63">
+<defs>
+<style>
+
+.cls-1,.cls-3{
+  fill:red;
+  stroke:#000;
+  stroke-miterlimit:10;
+  }
+
+.cls-2{
+  fill:#202020;
+  }
+  
+.cls-3{
+  stroke-width:3px;
+  }
+
+#circles {
+  fill:white;
+}
+
+
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.cls-1:hover {
+  \\ fill-opacity:0.6;
+  stroke-width:3;
+  animation: dash 55s linear infinite;
+  animation-direction: reverse;
+  stroke-dasharray: 10;
+}
+
+text {
+  font-size: 1.4em;
+}
+  
+</style>
+</defs>
+<g id="circles">
+<circle class="cls-1" cx="325.07" cy="75.5" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="325.07" y="75.5">ontwerpen</text>
+<circle class="cls-1" cx="523.54" cy="172.93" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="523.54" y="172.93">AUTEURS
+<tspan x="523.54" y="157.93">construeren</tspan>
+<tspan x="523.54" y="207.93">OMGEVING</tspan>
+</text>
+<circle class="cls-1" cx="574.65" cy="388.43" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="574.65" y="388.43">AFSPEEL
+<tspan x="574.65" y="373.43">afnamen</tspan>
+<tspan x="574.65" y="422.43">OMGEVING</tspan>
+</text>
+<circle class="cls-1" cx="436.82" cy="562.13" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="436.82" y="562.13">nakijken</text>
+<circle class="cls-1" cx="214.32" cy="562.13" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="214.32" y="562.13">ANALYSE-
+<tspan x="214.32" y="548.13">analyseren</tspan>
+<tspan x="214.32" y="597.13">TOOL</tspan>
+</text>
+<circle class="cls-1" cx="75.5" cy="388.43" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="75.5" y="388.43">rapporteren</text>
+<circle class="cls-1" cx="131.06" cy="172.93" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="131.06" y="172.93">evalueren</text>
+<circle class="cls-1" cx="327.3" cy="313.43" r="75"/>
+<text class="text1" text-anchor="middle" dy=".4em" x="327.3" y="313.43">ITEM-
+<tspan x="327.3" y="298.43">beheer</tspan>
+<tspan x="327.3" y="348.43">BANK</tspan>
+</text>
+</g>
+<g id="arrows">
+<path class="cls-2" d="M478.26,189.25a217.67,217.67,0,0,1,30,13.84l3.1,1.76-3.26,5.63a205.9,205.9,0,0,1,21.6-5.35,222,222,0,0,0-5.54-22.38l-3.26,5.63-3.38-1.92a237.17,237.17,0,0,0-32.67-15.06Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M608.46,338.92a218.88,218.88,0,0,1,6.38,32.46l.38,3.54-6.47.65a205.73,205.73,0,0,1,17,14.38,223.87,223.87,0,0,0,14.9-17.6l-6.48.65-.42-3.85a236.36,236.36,0,0,0-6.93-35.3Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M576.66,520.69a218.76,218.76,0,0,1-21.11,25.45L553,548.68l-4.59-4.6a207.72,207.72,0,0,1-.4,22.25,220.17,220.17,0,0,0,23.05.42l-4.6-4.61,2.73-2.76a236.56,236.56,0,0,0,23-27.69Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M424.2,610.21a217.24,217.24,0,0,1-33.05,1l-3.56-.19.4-6.49A209.9,209.9,0,0,1,371.06,619,220.62,220.62,0,0,0,386,636.56l.4-6.5,3.88.21a237.11,237.11,0,0,0,35.95-1.13Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M257.22,556.86a217.8,217.8,0,0,1-22.83-23.93l-2.24-2.77,5.11-4a206.26,206.26,0,0,1-22.06-3A219.82,219.82,0,0,0,212.12,546l5.1-4,2.43,3a238.61,238.61,0,0,0,24.84,26Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M186.39,388.07a216.91,216.91,0,0,1,3.9-32.84l.72-3.5,6.36,1.37a204.69,204.69,0,0,1-11.75-18.9A218.12,218.12,0,0,0,166,346.38l6.36,1.36-.78,3.8a237.32,237.32,0,0,0-4.24,35.73Z" transform="translate(-74.93 -81.18)"/>
+<path class="cls-2" d="M282.54,219a216.45,216.45,0,0,1,28.88-16.12l3.25-1.47,2.63,6a207.36,207.36,0,0,1,8.4-20.61A219.5,219.5,0,0,0,304.35,178L307,184l-3.54,1.6A236.35,236.35,0,0,0,272,203.1Z" transform="translate(-74.93 -81.18)"/>
+</g>
+<g id="MiddleArrows">
+<path class="cls-1" d="M403.33,390.92" transform="translate(-74.93 -81.18)"/><path d="M530.82,303.73l-58.13,42.74" transform="translate(-74.93 -81.18)"/><path class="cls-3" d="M518.11,313.07,485.4,337.12" transform="translate(-74.93 -81.18)"/><polygon points="452.01 248.02 430.42 218.65 455.9 222.54 452.01 248.02"/><polygon points="423.23 269.17 401.65 239.81 397.76 265.28 423.23 269.17"/>
+<path d="M360.67,483.4l-28.53,66.28" transform="translate(-74.93 -81.18)"/><path class="cls-3" d="M354.43,497.89l-16.05,37.3" transform="translate(-74.93 -81.18)"/><polygon points="295.28 426.16 261.8 411.75 285.74 402.22 295.28 426.16"/><polygon points="281.16 458.96 247.68 444.56 257.21 468.49 281.16 458.96"/><path d="M559.77,443.37,492,418.51" transform="translate(-74.93 -81.18)"/>
+<path class="cls-3" d="M545,437.94l-38.12-14" transform="translate(-74.93 -81.18)"/><polygon points="461.46 373.02 474.02 338.81 484.84 362.19 461.46 373.02"/><polygon points="427.93 360.71 440.49 326.5 417.11 337.32 427.93 360.71"/></g>
+</svg>
