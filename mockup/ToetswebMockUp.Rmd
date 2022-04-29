@@ -1,0 +1,105 @@
+---
+title: "Toetsweb MocUp"
+author: "Klinkenberg"
+date: '2022-04-28'
+output:
+  html_document:
+    toc            : TRUE
+    self_contained : false
+    toc_float:
+      collapsed    : FALSE
+      smooth_scroll: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library("shiny")
+library("stringr")
+all.answer.options <- readxl::read_excel("answers.xlsx")
+
+question.position = "In welke beschrijving herken je jouw opleiding nu het meest?"
+question.ambition = "Welke beschrijving past over 2 jaar het beste bij jouw opleiding?"
+```
+
+## Toetsweb
+
+Web image here + info popup
+
+# Start scan
+
+```{r, results ='asis'}
+entiteit = 1:5
+element = 1:3
+
+# ent = 2
+# el  = 1
+
+for(ent in 1:length(entiteit)) {
+
+  for(el in 1:length(element)) {
+    
+# options <- subset(all.answer.options, entiteit.id == ent & element.id == el)
+
+options <- all.answer.options[which(all.answer.options$entiteit.id == ent & all.answer.options$element.id == el),]
+
+
+if(el == 1) { cat("##", options$entiteit.naam[1],"\n\n") }
+
+cat("###", options$element.naam[1]," - positie \n\n")
+
+# radioButtons(inputId      = paste0(ent,el,"p"), 
+#              label        = question.position,
+#              selected     = 0, 
+#              choiceNames  = options$fase.option, 
+#              choiceValues = options$fase.score
+#              )
+
+cat('<div id="',paste0(ent,el,"p"),'" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="21p-label">\n')
+cat('<label class="control-label" id="',paste0(ent,el,"p"),'-label" for="',paste0(ent,el,"p"),'">',question.position,'</label>\n')
+cat('<div class="shiny-options-group">\n')
+
+for (opt in 1:4) {
+  cat('<div class="radio">\n<label>\n')
+  cat('<input type="radio" name="',paste0(ent,el,"p"),'" value="',options$fase.score[opt],'">')
+  cat('<span>',options$fase.option[opt],'</span>\n</label>\n</div>')
+}
+
+cat('</div>\n</div>')
+
+cat('<textarea id="',paste0(ent,el,"p","txt"),'" name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>')
+
+cat("\n\n###", options$element.naam[1]," - ambitie \n\n")
+
+# radioButtons(paste0(ent,el,"a"), question.ambition,
+#              selected     = 0, 
+#              choiceNames  = options$fase.option, 
+#              choiceValues = options$fase.score
+#              )
+
+cat('<div id="',paste0(ent,el,"a"),'" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="21p-label">\n')
+cat('<label class="control-label" id="',paste0(ent,el,"a"),'-label" for="',paste0(ent,el,"a"),'">',question.ambition,'</label>\n')
+cat('<div class="shiny-options-group">\n')
+
+for (opt in 1:4) {
+  cat('<div class="radio">\n<label>\n')
+  cat('<input type="radio" name="',paste0(ent,el,"a"),'" value="',options$fase.score[opt],'">')
+  cat('<span>',options$fase.option[opt],'</span>\n</label>\n</div>')
+}
+
+cat('</div>\n</div>')
+
+cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>')
+
+  }
+}
+```
+
+# Results
+
+## Final report
+
+Visual
+
+Textual
+
+Download

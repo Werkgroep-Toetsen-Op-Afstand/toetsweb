@@ -1,0 +1,63 @@
+---
+title: "Toetsweb"
+author: "Klinkenberg"
+date: '2022-04-28'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Onderdelen van het toetsweb (entiteiten)
+
+```{r}
+entiteiten.naam =c("toetstaken","toetsprogramma","toetsbeleid","toetsorganisatie","toetsbekwaamheid")
+entiteiten.id = 1:5
+entiteiten <- data.frame(entiteiten.id, entiteiten.naam)
+entiteiten
+```
+
+## Elementen
+
+```{r}
+elementen.naam = c("kwaliteitsccriteria","ontwerp","borging")
+elementen.id = 1:3
+elementen <- data.frame(elementen.id, elementen.naam)
+elementen
+```
+
+## Fase
+
+```{r}
+fase.naam = c("activiteiten-georiënteerde fase", "proces-georiënteerde fase", "systeem-georiënteerde fase", "keten-georiënteerde fase")
+fase.score = 1:4
+fase <- data.frame(fase.score, fase.naam)
+fase
+```
+
+## Maturity scan positie en ambitie
+
+```{r}
+input = c("positie", "ambitie")
+input
+```
+
+# Vraag permutaties
+
+```{r}
+library("DT")
+
+DT::datatable(expand.grid(entiteiten.naam, elementen.naam, input))
+```
+
+# Score categories
+
+De combinatie van de vier kolommen geven de geven de feedback gategorie en fase score weer.
+
+```{r}
+score.categories <- expand.grid(entiteiten.naam,1:4,1:4,1:4)
+names(score.categories) <- c("entiteit", elementen.naam)
+datatable(score.categories)
+```
+

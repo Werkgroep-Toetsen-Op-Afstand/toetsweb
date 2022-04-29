@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Klinkenberg" />
+
+<meta name="date" content="2022-04-28" />
+
+<title>Toetsweb MocUp</title>
+
+<script src="ToetswebMockUp_files/header-attrs-2.11/header-attrs.js"></script>
+<script src="ToetswebMockUp_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="ToetswebMockUp_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="ToetswebMockUp_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="ToetswebMockUp_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="ToetswebMockUp_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="ToetswebMockUp_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="ToetswebMockUp_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="ToetswebMockUp_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="ToetswebMockUp_files/navigation-1.1/tabsets.js"></script>
+<link href="ToetswebMockUp_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="ToetswebMockUp_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Toetsweb MocUp</h1>
+<h4 class="author">Klinkenberg</h4>
+<h4 class="date">2022-04-28</h4>
+
+</div>
+
+
+<div id="toetsweb" class="section level2">
+<h2>Toetsweb</h2>
+<p>Web image here + info popup</p>
+</div>
+<div id="start-scan" class="section level1">
+<h1>Start scan</h1>
+<div id="toetstaken" class="section level2">
+<h2>Toets(tak)en</h2>
+<div id="kwaliteitscriteria---positie" class="section level3">
+<h3>Kwaliteitscriteria - positie</h3>
+<div id=" 11p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 11p -label" for=" 11p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 11p " value=" 1 "><span> Docenten
+ontwikkelen toetsen naar eigen inzicht: zij gebruiken daarvoor eigen
+kwaliteitscriteria. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11p " value=" 2 "><span> Docenten
+maken bij het ontwerpen van toetsen gebruik van kwaliteitscriteria die
+zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11p " value=" 3 "><span> De
+kwaliteitscriteria die docenten gebruiken bij het ontwikkelen toetsen
+worden met regelmaat bijgesteld op basis van actuele (wetenschappelijke)
+inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11p " value=" 4 "><span> De
+kwaliteitscriteria die gebruikt worden bij het ontwerpen van zowel de
+toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 11ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="kwaliteitscriteria---ambitie" class="section level3">
+<h3>Kwaliteitscriteria - ambitie</h3>
+<div id=" 11a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 11a -label" for=" 11a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 11a " value=" 1 "><span> Docenten
+ontwikkelen toetsen naar eigen inzicht: zij gebruiken daarvoor eigen
+kwaliteitscriteria. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11a " value=" 2 "><span> Docenten
+maken bij het ontwerpen van toetsen gebruik van kwaliteitscriteria die
+zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11a " value=" 3 "><span> De
+kwaliteitscriteria die docenten gebruiken bij het ontwikkelen toetsen
+worden met regelmaat bijgesteld op basis van actuele (wetenschappelijke)
+inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 11a " value=" 4 "><span> De
+kwaliteitscriteria die gebruikt worden bij het ontwerpen van zowel de
+toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 11atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="ontwerp---positie" class="section level3">
+<h3>Ontwerp - positie</h3>
+<div id=" 12p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 12p -label" for=" 12p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 12p " value=" 1 "><span> Docenten
+ontwerpen de toets vaak alleen en kort voor de afname </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12p " value=" 2 "><span> Docenten
+ontwikkelen toetsen aan de hand van een toetscyclus of ontwerpproces. De
+toetsen, die worden ontwikkeld tijdens de onderwijsperiode, maken zij
+samen met collega’s </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12p " value=" 3 "><span> De
+toetsen worden voorafgaand aan het onderwijs ontwikkeld, zijn passend
+voor de leerresultaten en sluiten aan bij eerder gegeven onderwijs
+binnen de opleiding </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12p " value=" 4 "><span> De
+toetsen worden voorafgaand aan het onderwijs ontwikkeld. Deze toetsen
+sluiten niet alleen aan bij het onderwijs dat de student volgt binnen de
+opleiding, maar ook op wat geleerd wordt op de werkplek </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 12ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="ontwerp---ambitie" class="section level3">
+<h3>Ontwerp - ambitie</h3>
+<div id=" 12a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 12a -label" for=" 12a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 12a " value=" 1 "><span> Docenten
+ontwerpen de toets vaak alleen en kort voor de afname </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12a " value=" 2 "><span> Docenten
+ontwikkelen toetsen aan de hand van een toetscyclus of ontwerpproces. De
+toetsen, die worden ontwikkeld tijdens de onderwijsperiode, maken zij
+samen met collega’s </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12a " value=" 3 "><span> De
+toetsen worden voorafgaand aan het onderwijs ontwikkeld, zijn passend
+voor de leerresultaten en sluiten aan bij eerder gegeven onderwijs
+binnen de opleiding </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 12a " value=" 4 "><span> De
+toetsen worden voorafgaand aan het onderwijs ontwikkeld. Deze toetsen
+sluiten niet alleen aan bij het onderwijs dat de student volgt binnen de
+opleiding, maar ook op wat geleerd wordt op de werkplek </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 12atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="borging---positie" class="section level3">
+<h3>Borging - positie</h3>
+<div id=" 13p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 13p -label" for=" 13p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 13p " value=" 1 "><span> De
+kwaliteit van de toetsen wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13p " value=" 2 "><span> De
+kwaliteit van de toetsen wordt door de betrokken docenten regelmatig
+geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend
+besproken met collega’s of studenten, maar wel gebruikt om eigen toetsen
+te verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13p " value=" 3 "><span> De
+kwaliteit van toetsen wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten hiervan worden besproken met
+relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13p " value=" 4 "><span> Toetsen
+worden structureel geëvalueerd aan de hand van de kwaliteitscriteria. De
+opbrengsten worden besproken met zowel de relevante partners binnen de
+opleiding als het werkveld. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 13ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="borging---ambitie" class="section level3">
+<h3>Borging - ambitie</h3>
+<div id=" 13a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 13a -label" for=" 13a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 13a " value=" 1 "><span> De
+kwaliteit van de toetsen wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13a " value=" 2 "><span> De
+kwaliteit van de toetsen wordt door de betrokken docenten regelmatig
+geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend
+besproken met collega’s of studenten, maar wel gebruikt om eigen toetsen
+te verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13a " value=" 3 "><span> De
+kwaliteit van toetsen wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten hiervan worden besproken met
+relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 13a " value=" 4 "><span> Toetsen
+worden structureel geëvalueerd aan de hand van de kwaliteitscriteria. De
+opbrengsten worden besproken met zowel de relevante partners binnen de
+opleiding als het werkveld. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 13atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+</div>
+<div id="toetsprogramma" class="section level2">
+<h2>Toetsprogramma</h2>
+<div id="kwaliteitscriteria---positie-1" class="section level3">
+<h3>Kwaliteitscriteria - positie</h3>
+<div id=" 21p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 21p -label" for=" 21p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 21p " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitscriteria het
+toetsprogramma van de opleiding moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21p " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor het toetsprogramma.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21p " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toetsprogramma worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21p " value=" 4 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toetsprogramma worden afgestemd met het werkveld en worden met regelmaat
+bijgesteld op basis van actuele (wetenschappelijke) inzichten. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 21ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="kwaliteitscriteria---ambitie-1" class="section level3">
+<h3>Kwaliteitscriteria - ambitie</h3>
+<div id=" 21a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 21a -label" for=" 21a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 21a " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitscriteria het
+toetsprogramma van de opleiding moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21a " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor het toetsprogramma.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21a " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toetsprogramma worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 21a " value=" 4 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toetsprogramma worden afgestemd met het werkveld en worden met regelmaat
+bijgesteld op basis van actuele (wetenschappelijke) inzichten. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 21atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="ontwerp---positie-1" class="section level3">
+<h3>Ontwerp - positie</h3>
+<div id=" 22p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 22p -label" for=" 22p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 22p " value=" 1 "><span> Iedere
+docent ontwikkelt zijn eigen toetsen, er is echter geen overzicht van de
+samenhang tussen de toetsen. Het is hierdoor niet met zekerheid vast te
+stellen dat de toetsen gezamenlijk de beoogde leerresultaten dekken.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22p " value=" 2 "><span> De
+beoogde leerresultaten vormen de basis voor het ontwerpen van het
+toetsprogramma. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22p " value=" 3 "><span> Bij de
+ontwikkeling van het toetsprogramma wordt er gelet op zowel de
+horizontale als verticale samenhang tussen de toetsen. Ook vindt overleg
+plaats over de meest geschikte toetsvormen, de functies van toetsen en
+de hoeveelheid van toetsen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22p " value=" 4 "><span> De opbouw
+van het toetsprogramma wordt besproken en vastgesteld met het werkveld.
+Programmaonderdelen die plaatsvinden op de werkplek worden afgestemd met
+het werkveld zodat deze uitvoerbaar en passend zijn. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 22ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="ontwerp---ambitie-1" class="section level3">
+<h3>Ontwerp - ambitie</h3>
+<div id=" 22a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 22a -label" for=" 22a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 22a " value=" 1 "><span> Iedere
+docent ontwikkelt zijn eigen toetsen, er is echter geen overzicht van de
+samenhang tussen de toetsen. Het is hierdoor niet met zekerheid vast te
+stellen dat de toetsen gezamenlijk de beoogde leerresultaten dekken.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22a " value=" 2 "><span> De
+beoogde leerresultaten vormen de basis voor het ontwerpen van het
+toetsprogramma. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22a " value=" 3 "><span> Bij de
+ontwikkeling van het toetsprogramma wordt er gelet op zowel de
+horizontale als verticale samenhang tussen de toetsen. Ook vindt overleg
+plaats over de meest geschikte toetsvormen, de functies van toetsen en
+de hoeveelheid van toetsen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 22a " value=" 4 "><span> De opbouw
+van het toetsprogramma wordt besproken en vastgesteld met het werkveld.
+Programmaonderdelen die plaatsvinden op de werkplek worden afgestemd met
+het werkveld zodat deze uitvoerbaar en passend zijn. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 22atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="borging---positie-1" class="section level3">
+<h3>Borging - positie</h3>
+<div id=" 23p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 23p -label" for=" 23p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 23p " value=" 1 "><span> De
+kwaliteit van het toetsprogramma wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23p " value=" 2 "><span> Met enige
+regelmaat worden zowel de dekking als de uitvoerbaarheid van het
+toetsprogramma geëvalueerd. De opbrengsten daarvan worden niet
+vanzelfsprekend besproken met alle collega’s of studenten, maar wel
+gebruikt om het toetsprogramma te verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23p " value=" 3 "><span> De
+kwaliteit van het toetsprogramma wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken
+met relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23p " value=" 4 "><span> Het
+toetsprogramma wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten worden besproken met zowel de
+relevante partners binnen de opleiding als het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 23ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="borging---ambitie-1" class="section level3">
+<h3>Borging - ambitie</h3>
+<div id=" 23a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 23a -label" for=" 23a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 23a " value=" 1 "><span> De
+kwaliteit van het toetsprogramma wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23a " value=" 2 "><span> Met enige
+regelmaat worden zowel de dekking als de uitvoerbaarheid van het
+toetsprogramma geëvalueerd. De opbrengsten daarvan worden niet
+vanzelfsprekend besproken met alle collega’s of studenten, maar wel
+gebruikt om het toetsprogramma te verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23a " value=" 3 "><span> De
+kwaliteit van het toetsprogramma wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken
+met relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 23a " value=" 4 "><span> Het
+toetsprogramma wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten worden besproken met zowel de
+relevante partners binnen de opleiding als het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 23atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+</div>
+<div id="toetsbeleid" class="section level2">
+<h2>Toetsbeleid</h2>
+<div id="kwaliteitscriteria---positie-2" class="section level3">
+<h3>Kwaliteitscriteria - positie</h3>
+<div id=" 31p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 31p -label" for=" 31p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 31p " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitseisen een
+toets(beleids)plan moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31p " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor het
+toets(beleids)plan. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31p " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toets(beleids)plan worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31p " value=" 4 "><span> De
+kwaliteitscriteria die gesteld worden aan het toets(beleids)plan worden
+besproken met relevante in- en/of externe partners en sluiten aan bij de
+landelijke kaders. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 31ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="kwaliteitscriteria---ambitie-2" class="section level3">
+<h3>Kwaliteitscriteria - ambitie</h3>
+<div id=" 31a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 31a -label" for=" 31a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 31a " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitseisen een
+toets(beleids)plan moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31a " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor het
+toets(beleids)plan. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31a " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het
+toets(beleids)plan worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 31a " value=" 4 "><span> De
+kwaliteitscriteria die gesteld worden aan het toets(beleids)plan worden
+besproken met relevante in- en/of externe partners en sluiten aan bij de
+landelijke kaders. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 31atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="ontwerp---positie-2" class="section level3">
+<h3>Ontwerp - positie</h3>
+<div id=" 32p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 32p -label" for=" 32p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 32p " value=" 1 "><span> Het
+beleidsplan is hoofdzakelijk een beschrijving van (losse)
+toetsprocessen, deze sluiten nog niet (volledig) aan op de visie op
+onderwijs. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32p " value=" 2 "><span> De visie
+op onderwijs en het toetskader van de instelling vormen de basis voor
+het beleidsplan. In het beleidsplan zijn naast toetsprocessen ook
+interventies opgenomen die beschrijven hoe de ambities gerealiseerd gaan
+worden. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32p " value=" 3 "><span> Bij de
+uitwerking van de processen en interventies wordt gebruik gemaakt van
+actuele (wetenschappelijke) kennis. Het beleidsplan, de visie op
+onderwijs en het toetskader van de instelling sluiten naadloos op elkaar
+aan. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32p " value=" 4 "><span> De
+opgenomen processen en interventies die opgenomen zijn in het
+beleidsplan richten zich op de lange termijn. Er zijn tussendoelen
+opgesteld zodat tussentijdse evaluatie mogelijk is. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 32ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="ontwerp---ambitie-2" class="section level3">
+<h3>Ontwerp - ambitie</h3>
+<div id=" 32a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 32a -label" for=" 32a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 32a " value=" 1 "><span> Het
+beleidsplan is hoofdzakelijk een beschrijving van (losse)
+toetsprocessen, deze sluiten nog niet (volledig) aan op de visie op
+onderwijs. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32a " value=" 2 "><span> De visie
+op onderwijs en het toetskader van de instelling vormen de basis voor
+het beleidsplan. In het beleidsplan zijn naast toetsprocessen ook
+interventies opgenomen die beschrijven hoe de ambities gerealiseerd gaan
+worden. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32a " value=" 3 "><span> Bij de
+uitwerking van de processen en interventies wordt gebruik gemaakt van
+actuele (wetenschappelijke) kennis. Het beleidsplan, de visie op
+onderwijs en het toetskader van de instelling sluiten naadloos op elkaar
+aan. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 32a " value=" 4 "><span> De
+opgenomen processen en interventies die opgenomen zijn in het
+beleidsplan richten zich op de lange termijn. Er zijn tussendoelen
+opgesteld zodat tussentijdse evaluatie mogelijk is. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 32atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="borging---positie-2" class="section level3">
+<h3>Borging - positie</h3>
+<div id=" 33p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 33p -label" for=" 33p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 33p " value=" 1 "><span> De
+kwaliteit van het beleidsplan wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33p " value=" 2 "><span> Met enige
+regelmaat wordt zowel de kwaliteit als de uitvoerbaarheid en
+bruikbaarheid van het beleidsplan geëvalueerd. De opbrengsten daarvan
+worden niet vanzelfsprekend besproken met alle collega’s of studenten,
+maar wel gebruikt om het beleidsplan bij te stellen. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33p " value=" 3 "><span> Het
+beleidsplan wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten hiervan worden besproken met
+relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33p " value=" 4 "><span> Het
+beleidsplan wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria, de opbrengsten worden besproken met zowel de
+relevante partners binnen de opleiding als het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 33ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="borging---ambitie-2" class="section level3">
+<h3>Borging - ambitie</h3>
+<div id=" 33a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 33a -label" for=" 33a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 33a " value=" 1 "><span> De
+kwaliteit van het beleidsplan wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33a " value=" 2 "><span> Met enige
+regelmaat wordt zowel de kwaliteit als de uitvoerbaarheid en
+bruikbaarheid van het beleidsplan geëvalueerd. De opbrengsten daarvan
+worden niet vanzelfsprekend besproken met alle collega’s of studenten,
+maar wel gebruikt om het beleidsplan bij te stellen. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33a " value=" 3 "><span> Het
+beleidsplan wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria. De opbrengsten hiervan worden besproken met
+relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 33a " value=" 4 "><span> Het
+beleidsplan wordt structureel geëvalueerd aan de hand van de
+kwaliteitscriteria, de opbrengsten worden besproken met zowel de
+relevante partners binnen de opleiding als het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 33atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+</div>
+<div id="toetsorganisatie" class="section level2">
+<h2>Toetsorganisatie</h2>
+<div id="kwaliteitscriteria---positie-3" class="section level3">
+<h3>Kwaliteitscriteria - positie</h3>
+<div id=" 41p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 41p -label" for=" 41p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 41p " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitscriteria de
+toetsorganisatie moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41p " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor de toetsorganisatie.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41p " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het inrichten van de
+toetsorganisatie worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41p " value=" 4 "><span> De
+kwaliteitscriteria die worden gebruikt bij het inrichten van de
+toetsorganisatie worden vastgesteld met het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 41ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="kwaliteitscriteria---ambitie-3" class="section level3">
+<h3>Kwaliteitscriteria - ambitie</h3>
+<div id=" 41a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 41a -label" for=" 41a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 41a " value=" 1 "><span> Binnen de
+opleiding is niet vastgesteld aan welke kwaliteitscriteria de
+toetsorganisatie moet voldoen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41a " value=" 2 "><span> Binnen de
+opleiding zijn kwaliteitscriteria vastgesteld voor de toetsorganisatie.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41a " value=" 3 "><span> De
+kwaliteitscriteria die worden gebruikt bij het inrichten van de
+toetsorganisatie worden met regelmaat bijgesteld op basis van actuele
+(wetenschappelijke) inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 41a " value=" 4 "><span> De
+kwaliteitscriteria die worden gebruikt bij het inrichten van de
+toetsorganisatie worden vastgesteld met het werkveld. </span>
+</label></p>
+</div>
+</div>
+</div>
+<textarea id=" 41atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="ontwerp---positie-3" class="section level3">
+<h3>Ontwerp - positie</h3>
+<div id=" 42p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 42p -label" for=" 42p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 42p " value=" 1 "><span> De
+toetsprocessen worden door de docenten naar eigen inzicht vormgegeven.
+Er zijn wel afspraken gemaakt over de rollen, taken en
+verantwoordelijkheden binnen de toetsprocessen, maar medewerkers weten
+uitsluitend aan welke verantwoordelijkheden zij zelf moeten voldoen.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42p " value=" 2 "><span> Alle
+rollen, taken en verantwoordelijkheden zijn vastgelegd, zodat iedereen
+weet wie waarvoor verantwoordelijk is. Het is voor iedereen helder hoe
+de verschillende toetsprocessen zich tot elkaar (zouden moeten)
+verhouden. De processen sluiten echter nog niet naadloos op elkaar aan.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42p " value=" 3 "><span> De
+rollen, taken en verantwoordelijkheden worden binnen de opleiding
+regelmatig met elkaar besproken en op elkaar afgestemd. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42p " value=" 4 "><span> De
+inrichting van de toetsorganisatie wordt afgestemd met het werkveld. De
+rollen, taken en verantwoordelijkheden van het werkveld in de
+toetsorganisatie zijn vastgelegd, evenals de toetsprocessen die
+plaatsvinden op de werkplek. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 42ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="ontwerp---ambitie-3" class="section level3">
+<h3>Ontwerp - ambitie</h3>
+<div id=" 42a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 42a -label" for=" 42a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 42a " value=" 1 "><span> De
+toetsprocessen worden door de docenten naar eigen inzicht vormgegeven.
+Er zijn wel afspraken gemaakt over de rollen, taken en
+verantwoordelijkheden binnen de toetsprocessen, maar medewerkers weten
+uitsluitend aan welke verantwoordelijkheden zij zelf moeten voldoen.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42a " value=" 2 "><span> Alle
+rollen, taken en verantwoordelijkheden zijn vastgelegd, zodat iedereen
+weet wie waarvoor verantwoordelijk is. Het is voor iedereen helder hoe
+de verschillende toetsprocessen zich tot elkaar (zouden moeten)
+verhouden. De processen sluiten echter nog niet naadloos op elkaar aan.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42a " value=" 3 "><span> De
+rollen, taken en verantwoordelijkheden worden binnen de opleiding
+regelmatig met elkaar besproken en op elkaar afgestemd. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 42a " value=" 4 "><span> De
+inrichting van de toetsorganisatie wordt afgestemd met het werkveld. De
+rollen, taken en verantwoordelijkheden van het werkveld in de
+toetsorganisatie zijn vastgelegd, evenals de toetsprocessen die
+plaatsvinden op de werkplek. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 42atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="borging---positie-3" class="section level3">
+<h3>Borging - positie</h3>
+<div id=" 43p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 43p -label" for=" 43p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 43p " value=" 1 "><span> De
+kwaliteit van de toetsorganisatie wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43p " value=" 2 "><span> Met enige
+regelmaat wordt de kwaliteit van de toetsorganisatie geëvalueerd. De
+opbrengsten daarvan worden niet vanzelfsprekend besproken met alle
+collega’s of studenten, maar wel gebruikt om toetsprocessen te
+verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43p " value=" 3 "><span> De
+kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken
+met relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43p " value=" 4 "><span> De
+kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria, de opbrengsten worden besproken met
+zowel de relevante partners binnen de opleiding als het werkveld.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 43ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="borging---ambitie-3" class="section level3">
+<h3>Borging - ambitie</h3>
+<div id=" 43a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 43a -label" for=" 43a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 43a " value=" 1 "><span> De
+kwaliteit van de toetsorganisatie wordt uitsluitend geëvalueerd als daar
+aanleiding toe is. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43a " value=" 2 "><span> Met enige
+regelmaat wordt de kwaliteit van de toetsorganisatie geëvalueerd. De
+opbrengsten daarvan worden niet vanzelfsprekend besproken met alle
+collega’s of studenten, maar wel gebruikt om toetsprocessen te
+verbeteren. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43a " value=" 3 "><span> De
+kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken
+met relevante partners binnen de opleiding. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 43a " value=" 4 "><span> De
+kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de
+hand van de kwaliteitscriteria, de opbrengsten worden besproken met
+zowel de relevante partners binnen de opleiding als het werkveld.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 43atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+</div>
+<div id="toetsbekwaamheid" class="section level2">
+<h2>Toetsbekwaamheid</h2>
+<div id="kwaliteitscriteria---positie-4" class="section level3">
+<h3>Kwaliteitscriteria - positie</h3>
+<div id=" 51p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 51p -label" for=" 51p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 51p " value=" 1 "><span> Binnen de
+opleiding zijn geen (concrete) afspraken gemaakt over toetsbekwaamheid
+die van docenten wordt verwacht. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51p " value=" 2 "><span> De eisen
+die binnen de opleiding gesteld worden aan de toetsbekwaamheid zijn
+gebaseerd op ervaringen van ervaren toetsontwikkelaars. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51p " value=" 3 "><span> De eisen
+die gesteld worden aan toetsbekwaamheid worden regelmatig bijgesteld op
+basis van (landelijke) kaders en actuele inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51p " value=" 4 "><span> De eisen
+die gesteld worden aan toetsbekwaamheid worden besproken met in- en/of
+relevante externe partners en sluiten aan bij de landelijke kaders.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 51ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="kwaliteitscriteria---ambitie-4" class="section level3">
+<h3>Kwaliteitscriteria - ambitie</h3>
+<div id=" 51a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 51a -label" for=" 51a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 51a " value=" 1 "><span> Binnen de
+opleiding zijn geen (concrete) afspraken gemaakt over toetsbekwaamheid
+die van docenten wordt verwacht. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51a " value=" 2 "><span> De eisen
+die binnen de opleiding gesteld worden aan de toetsbekwaamheid zijn
+gebaseerd op ervaringen van ervaren toetsontwikkelaars. </span>
+</label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51a " value=" 3 "><span> De eisen
+die gesteld worden aan toetsbekwaamheid worden regelmatig bijgesteld op
+basis van (landelijke) kaders en actuele inzichten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 51a " value=" 4 "><span> De eisen
+die gesteld worden aan toetsbekwaamheid worden besproken met in- en/of
+relevante externe partners en sluiten aan bij de landelijke kaders.
+</span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 51atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="ontwerp---positie-4" class="section level3">
+<h3>Ontwerp - positie</h3>
+<div id=" 52p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 52p -label" for=" 52p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 52p " value=" 1 "><span> De
+verantwoordelijkheid voor de ontwikkeling van toetsbekwaamheid ligt bij
+individuele docenten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52p " value=" 2 "><span> Voor alle
+medewerkers in de toetsorganisatie is vastgelegd over welke
+toetsbekwaamheid zij moeten beschikken. Om deze bekwaamheid te
+realiseren zijn concrete doelen geformuleerd… </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52p " value=" 3 "><span> De
+vereiste toetsbekwaamheid is niet alleen op individueel niveau, maar ook
+op teamniveau vastgesteld. Er wordt doelgericht gewerkt aan het
+professionaliseren van medewerkers en teams. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52p " value=" 4 "><span> Niet
+alleen voor de partners binnen de opleiding, maar ook voor de partners
+uit het werkveld is vastgelegd over welke toetsbekwaamheid zij moeten
+beschikken. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 52ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="ontwerp---ambitie-4" class="section level3">
+<h3>Ontwerp - ambitie</h3>
+<div id=" 52a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 52a -label" for=" 52a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 52a " value=" 1 "><span> De
+verantwoordelijkheid voor de ontwikkeling van toetsbekwaamheid ligt bij
+individuele docenten. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52a " value=" 2 "><span> Voor alle
+medewerkers in de toetsorganisatie is vastgelegd over welke
+toetsbekwaamheid zij moeten beschikken. Om deze bekwaamheid te
+realiseren zijn concrete doelen geformuleerd… </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52a " value=" 3 "><span> De
+vereiste toetsbekwaamheid is niet alleen op individueel niveau, maar ook
+op teamniveau vastgesteld. Er wordt doelgericht gewerkt aan het
+professionaliseren van medewerkers en teams. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 52a " value=" 4 "><span> Niet
+alleen voor de partners binnen de opleiding, maar ook voor de partners
+uit het werkveld is vastgelegd over welke toetsbekwaamheid zij moeten
+beschikken. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 52atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+<div id="borging---positie-4" class="section level3">
+<h3>Borging - positie</h3>
+<div id=" 53p "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 53p -label" for=" 53p "> In welke
+beschrijving herken je jouw opleiding nu het meest? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 53p " value=" 1 "><span>
+Uitsluitend wanneer daar aanleiding toe is, wordt de toetsbekwaamheid
+van docenten geëvalueerd. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53p " value=" 2 "><span> Zowel de
+stand van zaken t.a.v. de ontwikkeling van de toetsbekwaamheid als de
+kwaliteit van de toetsbekwaamheid worden met enige regelmaat
+geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend
+besproken met alle collega’s of studenten, maar wel gebruikt om acties
+in te zetten om de toetsbekwaamheid te verhogen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53p " value=" 3 "><span> De
+kwaliteit van de toetsbekwaamheid wordt structureel geëvalueerd aan de
+hand van de eisen die aan de toetsbekwaamheid zijn gesteld. De
+opbrengsten hiervan worden besproken met relevante partners binnen de
+opleiding en dienen als basis voor het opstellen van ontwikkelplannen.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53p " value=" 4 "><span> De
+kwaliteit van de toetsbekwaamheid van alle partners in de
+toetsorganisatie wordt structureel geëvalueerd aan de hand van de eisen
+die aan de toetsbekwaamheid zijn gesteld, de opbrengsten worden
+besproken met zowel de relevante partners binnen de opleiding als het
+werkveld. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 53ptxt " name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>
+</div>
+<div id="borging---ambitie-4" class="section level3">
+<h3>Borging - ambitie</h3>
+<div id=" 53a "
+class="form-group shiny-input-radiogroup shiny-input-container"
+role="radiogroup" aria-labelledby="21p-label">
+<label class="control-label" id=" 53a -label" for=" 53a "> Welke
+beschrijving past over 2 jaar het beste bij jouw opleiding? </label>
+<div class="shiny-options-group">
+<div class="radio">
+<p><label> <input type="radio" name=" 53a " value=" 1 "><span>
+Uitsluitend wanneer daar aanleiding toe is, wordt de toetsbekwaamheid
+van docenten geëvalueerd. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53a " value=" 2 "><span> Zowel de
+stand van zaken t.a.v. de ontwikkeling van de toetsbekwaamheid als de
+kwaliteit van de toetsbekwaamheid worden met enige regelmaat
+geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend
+besproken met alle collega’s of studenten, maar wel gebruikt om acties
+in te zetten om de toetsbekwaamheid te verhogen. </span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53a " value=" 3 "><span> De
+kwaliteit van de toetsbekwaamheid wordt structureel geëvalueerd aan de
+hand van de eisen die aan de toetsbekwaamheid zijn gesteld. De
+opbrengsten hiervan worden besproken met relevante partners binnen de
+opleiding en dienen als basis voor het opstellen van ontwikkelplannen.
+</span> </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name=" 53a " value=" 4 "><span> De
+kwaliteit van de toetsbekwaamheid van alle partners in de
+toetsorganisatie wordt structureel geëvalueerd aan de hand van de eisen
+die aan de toetsbekwaamheid zijn gesteld, de opbrengsten worden
+besproken met zowel de relevante partners binnen de opleiding als het
+werkveld. </span> </label></p>
+</div>
+</div>
+</div>
+<textarea id=" 53atxt " name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>
+</div>
+</div>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div id="final-report" class="section level2">
+<h2>Final report</h2>
+<p>Visual</p>
+<p>Textual</p>
+<p>Download</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
