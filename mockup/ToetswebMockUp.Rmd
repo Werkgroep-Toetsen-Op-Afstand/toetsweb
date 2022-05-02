@@ -85,7 +85,7 @@ cat("\n\n###", options$element.naam[1]," - ambitie \n\n")
 #              choiceValues = options$fase.score
 #              )
 
-cat('<div id="',paste0(ent,el,"a"),'" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="21p-label">\n')
+cat('<div id="',paste0(ent,el,"a"),'" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="21p-label" onchange="myFunction(\'',paste0(ent,el,"a"),'\', \'',paste0(ent,el,"ao"),'\')">\n')
 cat('<label class="control-label" id="',paste0(ent,el,"a"),'-label" for="',paste0(ent,el,"a"),'">',question.ambition,'</label>\n')
 cat('<div class="shiny-options-group">\n')
 
@@ -108,7 +108,7 @@ cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="
 ## Visual
 
 
-
+### Positie
 
 ```{r, results='asis'}
 # entiteiten <- unique(all.answer.options$entiteit.naam)
@@ -123,28 +123,7 @@ for(ent in 1:length(entiteit)) {
   
   for(el in 1:3) {
     
-    # ',paste0(ent,el,"o"),'
-    # var rate_value = document.querySelector('input[name=",paste0(ent,el,'p'),"]:checked').value;
-    
-    # document.getElementsByName('",paste0(ent,el,'p'),"')[i].value;
-    # document.getElementsByName('",paste0(ent,el,'p'),"')[i].checked
-    
     cat("<td id='",paste0(ent,el,"o"),"'>")
-    # cat('
-    #     <script>
-    #     
-    #     function myFunction() {
-    #     
-    #     for (var i = 0; i <= 3; i++) {
-    #       if (document.getElementsByName("',paste0(ent,el,"p"),'")[i].checked) {
-    #         document.getElementById("',paste0(ent,el,"o"),'").innerHTML = document.getElementsByName("',paste0(ent,el,"p"),'")[i].value; 
-    #       }
-    #     }
-    #     
-    #     
-    #     }
-    #     </script>
-    #     ')
     cat("</td>\n")
  
   }
@@ -159,6 +138,35 @@ for(ent in 1:length(entiteit)) {
 cat("</table>\n")
 ```
 
+### Ambitie
+
+```{r, results='asis'}
+# entiteiten <- unique(all.answer.options$entiteit.naam)
+
+cat('<table class="table">\n')
+cat("<td>Toetsweb</td><td>Kwaliteitscriteria</td><td>Ontwerp</td><td>Borging</td><td>Fase</td>\n")
+
+for(ent in 1:length(entiteit)) {
+
+  cat("<tr>\n")
+  cat("<td>", unique(all.answer.options$entiteit.naam)[ent], "</td>\n")
+  
+  for(el in 1:3) {
+    
+    cat("<td id='",paste0(ent,el,"ao"),"'>")
+    cat("</td>\n")
+ 
+  }
+  
+  cat("<td>")
+  cat("fase advies")
+  cat("</td>")
+  cat("</tr>\n")
+  
+}
+
+cat("</table>\n")
+```
 
 ## Textual
 
