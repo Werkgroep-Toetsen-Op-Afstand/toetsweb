@@ -254,6 +254,14 @@ div.tocify {
 </div>
 
 
+<script type="text/javascript">
+function myFunction(x, y) {
+  for (var i = 0; i <= 3; i++) {
+    if (document.getElementsByName(x)[i].checked)
+    document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
+  }
+}
+</script>
 <div id="toetsweb" class="section level1">
 <h1>Toetsweb</h1>
 <p>Web image here + info popup</p>
@@ -266,7 +274,8 @@ div.tocify {
 <h3>Kwaliteitscriteria - positie</h3>
 <div id=" 11p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 11p &#39;, &#39; 11o &#39;)">
 <label class="control-label" id=" 11p -label" for=" 11p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -336,7 +345,8 @@ toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.
 <h3>Ontwerp - positie</h3>
 <div id=" 12p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 12p &#39;, &#39; 12o &#39;)">
 <label class="control-label" id=" 12p -label" for=" 12p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -408,7 +418,8 @@ opleiding, maar ook op wat geleerd wordt op de werkplek </span>
 <h3>Borging - positie</h3>
 <div id=" 13p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 13p &#39;, &#39; 13o &#39;)">
 <label class="control-label" id=" 13p -label" for=" 13p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -483,7 +494,8 @@ opleiding als het werkveld. </span> </label></p>
 <h3>Kwaliteitscriteria - positie</h3>
 <div id=" 21p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 21p &#39;, &#39; 21o &#39;)">
 <label class="control-label" id=" 21p -label" for=" 21p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -553,7 +565,8 @@ bijgesteld op basis van actuele (wetenschappelijke) inzichten. </span>
 <h3>Ontwerp - positie</h3>
 <div id=" 22p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 22p &#39;, &#39; 22o &#39;)">
 <label class="control-label" id=" 22p -label" for=" 22p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -629,7 +642,8 @@ het werkveld zodat deze uitvoerbaar en passend zijn. </span>
 <h3>Borging - positie</h3>
 <div id=" 23p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 23p &#39;, &#39; 23o &#39;)">
 <label class="control-label" id=" 23p -label" for=" 23p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -706,7 +720,8 @@ relevante partners binnen de opleiding als het werkveld. </span>
 <h3>Kwaliteitscriteria - positie</h3>
 <div id=" 31p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 31p &#39;, &#39; 31o &#39;)">
 <label class="control-label" id=" 31p -label" for=" 31p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -774,7 +789,8 @@ landelijke kaders. </span> </label></p>
 <h3>Ontwerp - positie</h3>
 <div id=" 32p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 32p &#39;, &#39; 32o &#39;)">
 <label class="control-label" id=" 32p -label" for=" 32p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -850,7 +866,8 @@ opgesteld zodat tussentijdse evaluatie mogelijk is. </span> </label></p>
 <h3>Borging - positie</h3>
 <div id=" 33p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 33p &#39;, &#39; 33o &#39;)">
 <label class="control-label" id=" 33p -label" for=" 33p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -929,7 +946,8 @@ relevante partners binnen de opleiding als het werkveld. </span>
 <h3>Kwaliteitscriteria - positie</h3>
 <div id=" 41p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 41p &#39;, &#39; 41o &#39;)">
 <label class="control-label" id=" 41p -label" for=" 41p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -997,7 +1015,8 @@ toetsorganisatie worden vastgesteld met het werkveld. </span>
 <h3>Ontwerp - positie</h3>
 <div id=" 42p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 42p &#39;, &#39; 42o &#39;)">
 <label class="control-label" id=" 42p -label" for=" 42p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -1079,7 +1098,8 @@ plaatsvinden op de werkplek. </span> </label></p>
 <h3>Borging - positie</h3>
 <div id=" 43p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 43p &#39;, &#39; 43o &#39;)">
 <label class="control-label" id=" 43p -label" for=" 43p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -1156,7 +1176,8 @@ zowel de relevante partners binnen de opleiding als het werkveld.
 <h3>Kwaliteitscriteria - positie</h3>
 <div id=" 51p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 51p &#39;, &#39; 51o &#39;)">
 <label class="control-label" id=" 51p -label" for=" 51p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -1224,7 +1245,8 @@ relevante externe partners en sluiten aan bij de landelijke kaders.
 <h3>Ontwerp - positie</h3>
 <div id=" 52p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 52p &#39;, &#39; 52o &#39;)">
 <label class="control-label" id=" 52p -label" for=" 52p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -1294,7 +1316,8 @@ beschikken. </span> </label></p>
 <h3>Borging - positie</h3>
 <div id=" 53p "
 class="form-group shiny-input-radiogroup shiny-input-container"
-role="radiogroup" aria-labelledby="21p-label">
+role="radiogroup" aria-labelledby="21p-label"
+onchange="myFunction(&#39; 53p &#39;, &#39; 53o &#39;)">
 <label class="control-label" id=" 53p -label" for=" 53p "> In welke
 beschrijving herken je jouw opleiding nu het meest? </label>
 <div class="shiny-options-group">
@@ -1374,13 +1397,103 @@ werkveld. </span> </label></p>
 </div>
 </div>
 </div>
-<div id="results" class="section level1">
-<h1>Results</h1>
-<div id="final-report" class="section level2">
-<h2>Final report</h2>
-<p>Visual</p>
-<p>Textual</p>
-<p>Download</p>
+<div id="report" class="section level1">
+<h1>Report</h1>
+<div id="visual" class="section level2">
+<h2>Visual</h2>
+<table class="table">
+<td>
+Toetsweb
+</td>
+<td>
+Kwaliteitscriteria
+</td>
+<td>
+Ontwerp
+</td>
+<td>
+Borging
+</td>
+<td>
+Fase
+</td>
+<tr>
+<td>
+Toets(tak)en
+</td>
+<td id=" 11o ">
+</td>
+<td id=" 12o ">
+</td>
+<td id=" 13o ">
+</td>
+<td>
+fase advies
+</td>
+</tr>
+<tr>
+<td>
+Toetsprogramma
+</td>
+<td id=" 21o ">
+</td>
+<td id=" 22o ">
+</td>
+<td id=" 23o ">
+</td>
+<td>
+fase advies
+</td>
+</tr>
+<tr>
+<td>
+Toetsbeleid
+</td>
+<td id=" 31o ">
+</td>
+<td id=" 32o ">
+</td>
+<td id=" 33o ">
+</td>
+<td>
+fase advies
+</td>
+</tr>
+<tr>
+<td>
+Toetsorganisatie
+</td>
+<td id=" 41o ">
+</td>
+<td id=" 42o ">
+</td>
+<td id=" 43o ">
+</td>
+<td>
+fase advies
+</td>
+</tr>
+<tr>
+<td>
+Toetsbekwaamheid
+</td>
+<td id=" 51o ">
+</td>
+<td id=" 52o ">
+</td>
+<td id=" 53o ">
+</td>
+<td>
+fase advies
+</td>
+</tr>
+</table>
+</div>
+<div id="textual" class="section level2">
+<h2>Textual</h2>
+</div>
+<div id="download" class="section level2">
+<h2>Download</h2>
 </div>
 </div>
 
