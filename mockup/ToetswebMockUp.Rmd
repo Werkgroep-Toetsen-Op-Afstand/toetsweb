@@ -28,6 +28,11 @@ function myFunction(x, y) {
     document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
   }
 }
+
+function myInput(input, output){
+var y = document.getElementById(input).value;
+  document.getElementById(output).innerHTML = y;    
+}
 ```
 
 # Toetsweb
@@ -75,7 +80,7 @@ for (opt in 1:4) {
 
 cat('</div>\n</div>')
 
-cat('<textarea id="',paste0(ent,el,"p","txt"),'" name="w3review" rows="4" cols="115">Licht dit antwoord toe.</textarea>')
+cat('<textarea id="',paste0(ent,el,"p","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"p","txt"),'\', \'',paste0(ent,el,"potxt"),'\' )">Licht dit antwoord toe.</textarea>')
 
 cat("\n\n###", options$element.naam[1]," - ambitie \n\n")
 
@@ -97,13 +102,15 @@ for (opt in 1:4) {
 
 cat('</div>\n</div>')
 
-cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="115">Welke stappen moeten er gezet worden om dit te bereiken?</textarea>')
+cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"a","txt"),'\', \'',paste0(ent,el,"aotxt"),'\' )">Licht dit antwoord toe.</textarea>')
 
   }
 }
 ```
 
 # Report
+
+<button type="button">Download</button>
 
 ## Visual
 
@@ -128,7 +135,7 @@ for(ent in 1:length(entiteit)) {
  
   }
   
-  cat("<td>")
+  cat("<td id='",paste0(ent,"o"),"'>")
   cat("fase advies")
   cat("</td>")
   cat("</tr>\n")
@@ -158,8 +165,8 @@ for(ent in 1:length(entiteit)) {
  
   }
   
-  cat("<td>")
-  cat("fase advies")
+  cat("<td id='",paste0(ent,"ao"),"'>")
+  cat("fase projectie")
   cat("</td>")
   cat("</tr>\n")
   
@@ -170,4 +177,22 @@ cat("</table>\n")
 
 ## Textual
 
-## Download
+```{r, results='asis'}
+# entiteiten <- unique(all.answer.options$entiteit.naam)
+
+for(ent in 1:length(entiteit)) {
+
+  cat("<h3>", unique(all.answer.options$entiteit.naam)[ent], "</h3>\n")
+  
+  for(el in 1:3) {
+    
+    cat("<p id='",paste0(ent,el,"potxt"),"'></p>\n\n")
+    cat("<p id='",paste0(ent,el,"aotxt"),"'></p>\n\n")
+ 
+  }
+  
+  cat("<p id='",paste0(ent,"otxt"),"'>")
+  cat("</p>")
+  
+}
+```
