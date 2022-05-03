@@ -36,10 +36,21 @@ function myFunction(x, y) {
     
     document.getElementById(y).innerHTML = score;
     
-    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
-    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score 
+                                 faseSelect( Number(positie[ x.split("")[1]-1 ][ 0 ]), 
+                                             Number(positie[ x.split("")[1]-1 ][ 1 ]), 
+                                             Number(positie[ x.split("")[1]-1 ][ 2 ]), 
+                                             faseSelectId, faseId, " "+x.split("")[1]+"o " )
+                               }
+    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score 
+                                 faseSelect( Number(ambitie[ x.split("")[1]-1 ][ 0 ]), 
+                                             Number(ambitie[ x.split("")[1]-1 ][ 1 ]), 
+                                             Number(ambitie[ x.split("")[1]-1 ][ 2 ]), 
+                                             faseSelectId, faseId, " "+x.split("")[1]+"ao " )
+                               }
     
-    // console.log(parseInt(positie[0][0]));
+    // console.log(splitted.join(""));
+    
     }
   }
 }
@@ -78,8 +89,6 @@ cat("</script>")
 ```
 
 # Toetsweb
-
-<button type="button" id="test">test</button>
 
 ```{js}
 faseSelect(4, 4, 4, faseSelectId, faseId, "test")
@@ -187,16 +196,6 @@ for(ent in 1:length(entiteit)) {
   
   cat('<td id="',paste0(ent,"o"),'">')
   cat("fase advies")
-  cat('<script> 
-      
-      // console.log(document.getElementById("',paste0(ent,1,"o"),'").innerText)
-      
-      faseSelect(Number(positie[0][0]), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, \'',paste0(ent,"o"),'\') 
-      
-      </script>')
   cat("</td>")
   cat("</tr>\n")
   
@@ -227,11 +226,6 @@ for(ent in 1:length(entiteit)) {
   
   cat("<td id='",paste0(ent,"ao"),"'>")
   cat("fase projectie")
-  cat('<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, \'',paste0(ent,"ao"),'\') 
-      
-      </script>')
   cat("</td>")
   cat("</tr>\n")
   

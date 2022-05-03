@@ -268,10 +268,21 @@ function myFunction(x, y) {
     
     document.getElementById(y).innerHTML = score;
     
-    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
-    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score 
+                                 faseSelect( Number(positie[ x.split("")[1]-1 ][ 0 ]), 
+                                             Number(positie[ x.split("")[1]-1 ][ 1 ]), 
+                                             Number(positie[ x.split("")[1]-1 ][ 2 ]), 
+                                             faseSelectId, faseId, " "+x.split("")[1]+"o " )
+                               }
+    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score 
+                                 faseSelect( Number(ambitie[ x.split("")[1]-1 ][ 0 ]), 
+                                             Number(ambitie[ x.split("")[1]-1 ][ 1 ]), 
+                                             Number(ambitie[ x.split("")[1]-1 ][ 2 ]), 
+                                             faseSelectId, faseId, " "+x.split("")[1]+"ao " )
+                               }
     
-    // console.log(parseInt(positie[0][0]));
+    // console.log(splitted.join(""));
+    
     }
   }
 }
@@ -1503,16 +1514,6 @@ Toets(tak)en
 </td>
 <td id=" 1o ">
 fase advies
-<script> 
-      
-      // console.log(document.getElementById(" 11o ").innerText)
-      
-      faseSelect(onchange(Number(positie[0][0]) ), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, ' 1o ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1527,16 +1528,6 @@ Toetsprogramma
 </td>
 <td id=" 2o ">
 fase advies
-<script> 
-      
-      // console.log(document.getElementById(" 21o ").innerText)
-      
-      faseSelect(onchange(Number(positie[0][0]) ), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, ' 2o ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1551,16 +1542,6 @@ Toetsbeleid
 </td>
 <td id=" 3o ">
 fase advies
-<script> 
-      
-      // console.log(document.getElementById(" 31o ").innerText)
-      
-      faseSelect(onchange(Number(positie[0][0]) ), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, ' 3o ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1575,16 +1556,6 @@ Toetsorganisatie
 </td>
 <td id=" 4o ">
 fase advies
-<script> 
-      
-      // console.log(document.getElementById(" 41o ").innerText)
-      
-      faseSelect(onchange(Number(positie[0][0]) ), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, ' 4o ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1599,16 +1570,6 @@ Toetsbekwaamheid
 </td>
 <td id=" 5o ">
 fase advies
-<script> 
-      
-      // console.log(document.getElementById(" 51o ").innerText)
-      
-      faseSelect(onchange(Number(positie[0][0]) ), 
-                 4, 
-                 4, 
-                 faseSelectId, faseId, ' 5o ') 
-      
-      </script>
 </td>
 </tr>
 </table>
@@ -1643,11 +1604,6 @@ Toets(tak)en
 </td>
 <td id=" 1ao ">
 fase projectie
-<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, ' 1ao ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1662,11 +1618,6 @@ Toetsprogramma
 </td>
 <td id=" 2ao ">
 fase projectie
-<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, ' 2ao ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1681,11 +1632,6 @@ Toetsbeleid
 </td>
 <td id=" 3ao ">
 fase projectie
-<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, ' 3ao ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1700,11 +1646,6 @@ Toetsorganisatie
 </td>
 <td id=" 4ao ">
 fase projectie
-<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, ' 4ao ') 
-      
-      </script>
 </td>
 </tr>
 <tr>
@@ -1719,11 +1660,6 @@ Toetsbekwaamheid
 </td>
 <td id=" 5ao ">
 fase projectie
-<script> 
-      
-      faseSelect(1, 1, 1, faseSelectId, faseId, ' 5ao ') 
-      
-      </script>
 </td>
 </tr>
 </table>
