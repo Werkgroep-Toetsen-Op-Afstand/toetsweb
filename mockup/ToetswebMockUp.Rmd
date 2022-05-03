@@ -23,15 +23,23 @@ question.ambition = "Welke beschrijving past over 2 jaar het beste bij jouw ople
 ```
 
 ```{js}
-var positie = new Array();
-var ambitie = new Array();
+var positie = [...Array(5)].map(x=>Array(3).fill(0));  
+var ambitie = [...Array(5)].map(x=>Array(3).fill(0)) ;  
 
 function myFunction(x, y) {
   for (var i = 0; i <= 3; i++) {
+    var score;
+  
     if (document.getElementsByName(x)[i].checked) {
-    document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
     
-    console.log(x.split(""));
+    score = document.getElementsByName(x)[i].value;
+    
+    document.getElementById(y).innerHTML = score;
+    
+    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    
+    // console.log(parseInt(positie[0][0]));
     }
   }
 }
@@ -78,6 +86,8 @@ faseSelect(4, 4, 4, faseSelectId, faseId, "test")
 ```
 
 Web image here + info popup
+
+![Toetsweb](Toetsmodel.svg)
 
 # Start scan
 
@@ -181,7 +191,7 @@ for(ent in 1:length(entiteit)) {
       
       // console.log(document.getElementById("',paste0(ent,1,"o"),'").innerText)
       
-      faseSelect(4, 
+      faseSelect(Number(positie[0][0]), 
                  4, 
                  4, 
                  faseSelectId, faseId, \'',paste0(ent,"o"),'\') 

@@ -255,15 +255,23 @@ div.tocify {
 
 
 <script type="text/javascript">
-var positie = new Array();
-var ambitie = new Array();
+var positie = [...Array(5)].map(x=>Array(3).fill(0));  
+var ambitie = [...Array(5)].map(x=>Array(3).fill(0)) ;  
 
 function myFunction(x, y) {
   for (var i = 0; i <= 3; i++) {
+    var score;
+  
     if (document.getElementsByName(x)[i].checked) {
-    document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
     
-    console.log(x.split(""));
+    score = document.getElementsByName(x)[i].value;
+    
+    document.getElementById(y).innerHTML = score;
+    
+    if (x.split("")[3] == "p") { positie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    if (x.split("")[3] == "a") { ambitie[ x.split("")[1]-1 ][ x.split("")[2]-1 ] = score }
+    
+    // console.log(parseInt(positie[0][0]));
     }
   }
 }
@@ -307,6 +315,10 @@ test
 faseSelect(4, 4, 4, faseSelectId, faseId, "test")
 </script>
 <p>Web image here + info popup</p>
+<div class="figure">
+<img src="Toetsmodel.svg" alt="" />
+<p class="caption">Toetsweb</p>
+</div>
 </div>
 <div id="start-scan" class="section level1">
 <h1>Start scan</h1>
@@ -1495,7 +1507,7 @@ fase advies
       
       // console.log(document.getElementById(" 11o ").innerText)
       
-      faseSelect(4, 
+      faseSelect(onchange(Number(positie[0][0]) ), 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 1o ') 
@@ -1519,7 +1531,7 @@ fase advies
       
       // console.log(document.getElementById(" 21o ").innerText)
       
-      faseSelect(4, 
+      faseSelect(onchange(Number(positie[0][0]) ), 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 2o ') 
@@ -1543,7 +1555,7 @@ fase advies
       
       // console.log(document.getElementById(" 31o ").innerText)
       
-      faseSelect(4, 
+      faseSelect(onchange(Number(positie[0][0]) ), 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 3o ') 
@@ -1567,7 +1579,7 @@ fase advies
       
       // console.log(document.getElementById(" 41o ").innerText)
       
-      faseSelect(4, 
+      faseSelect(onchange(Number(positie[0][0]) ), 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 4o ') 
@@ -1591,7 +1603,7 @@ fase advies
       
       // console.log(document.getElementById(" 51o ").innerText)
       
-      faseSelect(4, 
+      faseSelect(onchange(Number(positie[0][0]) ), 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 5o ') 
