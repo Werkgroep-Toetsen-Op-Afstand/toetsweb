@@ -96,7 +96,19 @@ faseSelect(4, 4, 4, faseSelectId, faseId, "test")
 
 Web image here + info popup
 
-![Toetsweb](Toetsmodel.svg)
+```{css}
+.part:hover {
+   fill: red;
+   cursor: pointer;
+}
+```
+
+
+```{r, child="Toetsmodel.svg"}
+```
+
+
+
 
 # Start scan
 
