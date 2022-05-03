@@ -255,10 +255,16 @@ div.tocify {
 
 
 <script type="text/javascript">
+var positie = new Array();
+var ambitie = new Array();
+
 function myFunction(x, y) {
   for (var i = 0; i <= 3; i++) {
-    if (document.getElementsByName(x)[i].checked)
+    if (document.getElementsByName(x)[i].checked) {
     document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
+    
+    console.log(x.split(""));
+    }
   }
 }
 
@@ -1486,13 +1492,10 @@ Toets(tak)en
 <td id=" 1o ">
 fase advies
 <script> 
-      $("#someDiv").bind("DOMSubtreeModified", function() {
       
-      console.log(document.getElementById(" 11o ").innerText)
+      // console.log(document.getElementById(" 11o ").innerText)
       
-      });
-      
-      faseSelect(document.getElementById(" 11o ").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 1o ') 
@@ -1513,13 +1516,10 @@ Toetsprogramma
 <td id=" 2o ">
 fase advies
 <script> 
-      $("#someDiv").bind("DOMSubtreeModified", function() {
       
-      console.log(document.getElementById(" 21o ").innerText)
+      // console.log(document.getElementById(" 21o ").innerText)
       
-      });
-      
-      faseSelect(document.getElementById(" 21o ").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 2o ') 
@@ -1540,13 +1540,10 @@ Toetsbeleid
 <td id=" 3o ">
 fase advies
 <script> 
-      $("#someDiv").bind("DOMSubtreeModified", function() {
       
-      console.log(document.getElementById(" 31o ").innerText)
+      // console.log(document.getElementById(" 31o ").innerText)
       
-      });
-      
-      faseSelect(document.getElementById(" 31o ").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 3o ') 
@@ -1567,13 +1564,10 @@ Toetsorganisatie
 <td id=" 4o ">
 fase advies
 <script> 
-      $("#someDiv").bind("DOMSubtreeModified", function() {
       
-      console.log(document.getElementById(" 41o ").innerText)
+      // console.log(document.getElementById(" 41o ").innerText)
       
-      });
-      
-      faseSelect(document.getElementById(" 41o ").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 4o ') 
@@ -1594,13 +1588,10 @@ Toetsbekwaamheid
 <td id=" 5o ">
 fase advies
 <script> 
-      $("#someDiv").bind("DOMSubtreeModified", function() {
       
-      console.log(document.getElementById(" 51o ").innerText)
+      // console.log(document.getElementById(" 51o ").innerText)
       
-      });
-      
-      faseSelect(document.getElementById(" 51o ").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, ' 5o ') 

@@ -23,10 +23,16 @@ question.ambition = "Welke beschrijving past over 2 jaar het beste bij jouw ople
 ```
 
 ```{js}
+var positie = new Array();
+var ambitie = new Array();
+
 function myFunction(x, y) {
   for (var i = 0; i <= 3; i++) {
-    if (document.getElementsByName(x)[i].checked)
+    if (document.getElementsByName(x)[i].checked) {
     document.getElementById(y).innerHTML = document.getElementsByName(x)[i].value;
+    
+    console.log(x.split(""));
+    }
   }
 }
 
@@ -173,9 +179,9 @@ for(ent in 1:length(entiteit)) {
   cat("fase advies")
   cat('<script> 
       
-      console.log(document.getElementById("',paste0(ent,1,"o"),'").innerText)
+      // console.log(document.getElementById("',paste0(ent,1,"o"),'").innerText)
       
-      faseSelect(document.getElementById("',paste0(ent,1,"o"),'").innerHTML, 
+      faseSelect(4, 
                  4, 
                  4, 
                  faseSelectId, faseId, \'',paste0(ent,"o"),'\') 
