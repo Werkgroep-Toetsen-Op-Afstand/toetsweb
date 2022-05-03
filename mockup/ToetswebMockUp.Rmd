@@ -15,7 +15,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 library("shiny")
 library("stringr")
-all.answer.options <- readxl::read_excel("answers.xlsx")
+all.answer.options <- readxl::read_excel("answers.xlsx", sheet = "answerOptions")
+fase.select        <- readxl::read_excel("answers.xlsx", sheet = "fase")
 
 question.position = "In welke beschrijving herken je jouw opleiding nu het meest?"
 question.ambition = "Welke beschrijving past over 2 jaar het beste bij jouw opleiding?"
@@ -33,9 +34,42 @@ function myInput(input, output){
 var y = document.getElementById(input).value;
   document.getElementById(output).innerHTML = y;    
 }
+
+function faseSelect(kwaliteitscriteriaScore, ontwerpScore, borgingScore, faseSelectId, faseId, target) {
+  
+  concat = '' + kwaliteitscriteriaScore + ontwerpScore + borgingScore
+  
+  var result = 0;
+  
+  for (var i = 0; i < faseSelectId.length; i++) {
+  
+       if (concat == faseSelectId[i]) { result = faseId[i] }
+  }
+  
+  // console.log(concat);
+  // console.log(result);
+  
+  document.getElementById(target).innerHTML = result; 
+  
+}
+```
+
+```{r, results='asis'}
+cat("<script>\n\n")
+
+cat('var faseSelectId = [',paste0(fase.select$faseSelectId, sep=","), ']\n\n')
+cat('var faseId       = [',paste0(fase.select$faseId,       sep=","), ']\n\n')
+
+cat("</script>")
 ```
 
 # Toetsweb
+
+<button type="button" id="test">test</button>
+
+```{js}
+faseSelect(4, 4, 4, faseSelectId, faseId, "test")
+```
 
 Web image here + info popup
 
@@ -135,8 +169,18 @@ for(ent in 1:length(entiteit)) {
  
   }
   
-  cat("<td id='",paste0(ent,"o"),"'>")
+  cat('<td id="',paste0(ent,"o"),'">')
   cat("fase advies")
+  cat('<script> 
+      
+      console.log(document.getElementById("',paste0(ent,1,"o"),'").innerText)
+      
+      faseSelect(document.getElementById("',paste0(ent,1,"o"),'").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, \'',paste0(ent,"o"),'\') 
+      
+      </script>')
   cat("</td>")
   cat("</tr>\n")
   
@@ -167,6 +211,11 @@ for(ent in 1:length(entiteit)) {
   
   cat("<td id='",paste0(ent,"ao"),"'>")
   cat("fase projectie")
+  cat('<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, \'',paste0(ent,"ao"),'\') 
+      
+      </script>')
   cat("</td>")
   cat("</tr>\n")
   

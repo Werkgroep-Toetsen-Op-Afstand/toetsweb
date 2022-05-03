@@ -266,9 +266,40 @@ function myInput(input, output){
 var y = document.getElementById(input).value;
   document.getElementById(output).innerHTML = y;    
 }
+
+function faseSelect(kwaliteitscriteriaScore, ontwerpScore, borgingScore, faseSelectId, faseId, target) {
+  
+  concat = '' + kwaliteitscriteriaScore + ontwerpScore + borgingScore
+  
+  var result = 0;
+  
+  for (var i = 0; i < faseSelectId.length; i++) {
+  
+       if (concat == faseSelectId[i]) { result = faseId[i] }
+  }
+  
+  // console.log(concat);
+  // console.log(result);
+  
+  document.getElementById(target).innerHTML = result; 
+  
+}
+</script>
+<script>
+
+var faseSelectId = [ 111, 112, 121, 211, 113, 122, 131, 212, 221, 311, 114, 123, 132, 141, 411, 124, 133, 142, 134, 143, 144, 213, 222, 231, 312, 321, 214, 223, 232, 241, 313, 322, 331, 412, 421, 224, 233, 242, 314, 323, 332, 341, 413, 422, 431, 234, 243, 324, 342, 414, 423, 432, 441, 244, 424, 442, 333, 334, 343, 433, 344, 434, 443, 444, ]
+
+var faseId       = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, ]
+
 </script>
 <div id="toetsweb" class="section level1">
 <h1>Toetsweb</h1>
+<button type="button" id="test">
+test
+</button>
+<script type="text/javascript">
+faseSelect(4, 4, 4, faseSelectId, faseId, "test")
+</script>
 <p>Web image here + info popup</p>
 </div>
 <div id="start-scan" class="section level1">
@@ -1454,6 +1485,19 @@ Toets(tak)en
 </td>
 <td id=" 1o ">
 fase advies
+<script> 
+      $("#someDiv").bind("DOMSubtreeModified", function() {
+      
+      console.log(document.getElementById(" 11o ").innerText)
+      
+      });
+      
+      faseSelect(document.getElementById(" 11o ").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, ' 1o ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1468,6 +1512,19 @@ Toetsprogramma
 </td>
 <td id=" 2o ">
 fase advies
+<script> 
+      $("#someDiv").bind("DOMSubtreeModified", function() {
+      
+      console.log(document.getElementById(" 21o ").innerText)
+      
+      });
+      
+      faseSelect(document.getElementById(" 21o ").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, ' 2o ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1482,6 +1539,19 @@ Toetsbeleid
 </td>
 <td id=" 3o ">
 fase advies
+<script> 
+      $("#someDiv").bind("DOMSubtreeModified", function() {
+      
+      console.log(document.getElementById(" 31o ").innerText)
+      
+      });
+      
+      faseSelect(document.getElementById(" 31o ").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, ' 3o ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1496,6 +1566,19 @@ Toetsorganisatie
 </td>
 <td id=" 4o ">
 fase advies
+<script> 
+      $("#someDiv").bind("DOMSubtreeModified", function() {
+      
+      console.log(document.getElementById(" 41o ").innerText)
+      
+      });
+      
+      faseSelect(document.getElementById(" 41o ").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, ' 4o ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1510,6 +1593,19 @@ Toetsbekwaamheid
 </td>
 <td id=" 5o ">
 fase advies
+<script> 
+      $("#someDiv").bind("DOMSubtreeModified", function() {
+      
+      console.log(document.getElementById(" 51o ").innerText)
+      
+      });
+      
+      faseSelect(document.getElementById(" 51o ").innerHTML, 
+                 4, 
+                 4, 
+                 faseSelectId, faseId, ' 5o ') 
+      
+      </script>
 </td>
 </tr>
 </table>
@@ -1544,6 +1640,11 @@ Toets(tak)en
 </td>
 <td id=" 1ao ">
 fase projectie
+<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, ' 1ao ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1558,6 +1659,11 @@ Toetsprogramma
 </td>
 <td id=" 2ao ">
 fase projectie
+<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, ' 2ao ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1572,6 +1678,11 @@ Toetsbeleid
 </td>
 <td id=" 3ao ">
 fase projectie
+<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, ' 3ao ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1586,6 +1697,11 @@ Toetsorganisatie
 </td>
 <td id=" 4ao ">
 fase projectie
+<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, ' 4ao ') 
+      
+      </script>
 </td>
 </tr>
 <tr>
@@ -1600,6 +1716,11 @@ Toetsbekwaamheid
 </td>
 <td id=" 5ao ">
 fase projectie
+<script> 
+      
+      faseSelect(1, 1, 1, faseSelectId, faseId, ' 5ao ') 
+      
+      </script>
 </td>
 </tr>
 </table>
