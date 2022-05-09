@@ -79,6 +79,12 @@ fase <- data.frame(fase.score, fase.naam)
 fase
 ```
 
+```{r}
+library("DT")
+fase.select <- readxl::read_excel("answers.xlsx", sheet = "answerOptions")
+DT::datatable(fase.select[,1:7], rownames = FALSE)
+```
+
 ## Maturity scan positie en ambitie
 
 ```{r}
@@ -90,8 +96,10 @@ input
 
 De combinatie van de vier kolommen geven de geven de feedback categorie en fase score weer. De zelfde tabel wordt voor ieder van de 5 onderdelen (entiteiten) van het toetsweb gebruikt. Zowel voor de positie als de ambitie.
 
+Ik heb de scores van de drie elementen geconcateneerd om vervolgend onder de faseSelectId op te zoeken welk faseId daartoe behoord. Dit voor elk onderdeel van het toetsweb (entiteiten). Zowel voor de positie als de ambitie.
+
 ```{r}
 fase.select <- readxl::read_excel("answers.xlsx", sheet = "fase")
-fase.select
+DT::datatable(fase.select[,1:6], rownames = FALSE)
 ```
 
