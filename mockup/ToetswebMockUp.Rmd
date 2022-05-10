@@ -246,7 +246,9 @@ for(ent in 1:length(entiteit)) {
 cat("</table>\n")
 ```
 
-## Textual
+## Textueel
+
+Op basis van de vastgestelde fase en `faseFeedbackId` per onderdeel van het toetsweb de feedback text toevoegen in ondderstaande text velden.
 
 ```{r, results='asis'}
 # entiteiten <- unique(all.answer.options$entiteit.naam)
