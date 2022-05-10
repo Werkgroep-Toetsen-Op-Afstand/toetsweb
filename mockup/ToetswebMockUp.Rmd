@@ -151,7 +151,7 @@ for (opt in 1:4) {
 
 cat('</div>\n</div>')
 
-cat('<textarea id="',paste0(ent,el,"p","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"p","txt"),'\', \'',paste0(ent,el,"potxt"),'\' )">Licht dit antwoord toe.</textarea>')
+cat('<textarea id="',paste0(ent,el,"p","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"p","txt"),'\', \'',paste0(ent,el,"potxt"),'\' )" placeholder="Licht dit antwoord toe."></textarea>')
 
 cat("\n\n###", options$element.naam[1]," - ambitie \n\n")
 
@@ -173,7 +173,7 @@ for (opt in 1:4) {
 
 cat('</div>\n</div>')
 
-cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"a","txt"),'\', \'',paste0(ent,el,"aotxt"),'\' )">Licht dit antwoord toe.</textarea>')
+cat('<textarea id="',paste0(ent,el,"a","txt"),'" name="w3review" rows="4" cols="115" oninput="myInput(\'',paste0(ent,el,"a","txt"),'\', \'',paste0(ent,el,"aotxt"),'\' )"  placeholder="Geef een globaal stappenplan voor wat er nodig is om de ambitie te bewerkstelligen."></textarea>')
 
   }
 }

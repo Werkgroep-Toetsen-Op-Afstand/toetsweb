@@ -24,17 +24,20 @@ GitHub repository voor dit document en de mockup [is hier te vinden](https://git
             * Positie MC vraag: score 1:4
             * Invulveld voor toetlichting
             * Ambitie Zelfde MC vraag: score 1:4
-            * if(not: score positie = score ambitie ) Invulveld voor actie stappen
+            * if(score positie == score ambitie ) Invulveld voor toelichting
+            * if(score positie < score ambitie ) Invulveld voor globaal te nemen stappen
         * ontwerp
             * Positie MC vraag: score 1:4
             * Invulveld voor toetlichting
             * Ambitie Zelfde MC vraag: score 1:4
-            * if(not: score positie = score ambitie ) Invulveld voor actie stappen
+            * if(score positie == score ambitie ) Invulveld voor toelichting
+            * if(score positie < score ambitie ) Invulveld voor globaal te nemen stappen
         * Borging
             * Positie MC vraag: score 1:4
             * Invulveld voor toetlichting
             * Ambitie Zelfde MC vraag: score 1:4
-            * if(not: score positie = score ambitie ) Invulveld voor actie stappen
+            * if(score positie == score ambitie ) Invulveld voor toelichting
+            * if(score positie < score ambitie ) Invulveld voor globaal te nemen stappen
     * toetsprogramma
         * kwaliteitsccriteria
             * ...
@@ -96,10 +99,9 @@ input
 
 De combinatie van de vier kolommen geven de geven de feedback categorie en fase score weer. De zelfde tabel wordt voor ieder van de 5 onderdelen (entiteiten) van het toetsweb gebruikt. Zowel voor de positie als de ambitie.
 
-Ik heb de scores van de drie elementen geconcateneerd om vervolgend onder de faseSelectId op te zoeken welk faseId daartoe behoord. Dit voor elk onderdeel van het toetsweb (entiteiten). Zowel voor de positie als de ambitie.
+Ik heb de scores van de drie elementen geconcateneerd om vervolgens onder de faseSelectId op te zoeken welk faseId daartoe behoord. Dit voor elk onderdeel van het toetsweb (entiteiten). Zowel voor de positie als de ambitie. In de kolommen `faseFeedbackId` word per onderdeel van het toetsweb (entiteiten) een id gegeven voor de textuele feedback die bij de textuele rapportage geplaatst zal moeten gaan worden.
 
 ```{r}
 fase.select <- readxl::read_excel("answers.xlsx", sheet = "fase")
-DT::datatable(fase.select[,1:6], rownames = FALSE)
+DT::datatable(fase.select, rownames = FALSE)
 ```
-
