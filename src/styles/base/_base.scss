@@ -8,7 +8,6 @@ html {
 body {
   background: $background-color no-repeat;
   background-size: cover;
-  overflow: hidden;
   height: 100%;
 }
 
@@ -17,7 +16,7 @@ main, #root {
 }
 
 main {
-  margin-left: $sidebar-width;
+  
 }
 
 section[class$="-page"] {

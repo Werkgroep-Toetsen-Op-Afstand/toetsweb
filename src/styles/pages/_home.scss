@@ -1,0 +1,45 @@
+.home-page {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__hero-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 42rem;
+        }
+    }
+
+    &__info-section {
+        display: flex;
+        padding: 4rem;
+        column-gap: 3rem;
+
+        &__inner-card {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            h3 {
+                height: 5rem;
+            }
+
+            p {
+                color: $color-gray;
+            }
+        }
+    }
+
+    &__extra-info {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 5rem;
+
+        img {
+            width: 33rem;
+        }
+    }
+}

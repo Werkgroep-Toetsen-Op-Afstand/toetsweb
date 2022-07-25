@@ -7,7 +7,7 @@ const NotFoundPage: FunctionComponent<Props> = () => {
 
     return (
         <Page>
-            <p>Not found</p>
+            <p>404 Pagina niet gevonden</p>
         </Page>
     );
 };
