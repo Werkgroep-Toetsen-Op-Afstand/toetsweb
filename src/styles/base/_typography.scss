@@ -14,14 +14,26 @@ body {
 
 h1 {
   font-size: 3.75rem;
-  font-weight: bold;
+  font-weight: 900;
+  font-family: SourceSansPro, sans-serif;
+
 }
 
 h3 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-family: SourceSansPro, sans-serif;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-family: SourceSansPro, sans-serif;
 }
 
 p {
   font-size: 1.25rem;
+  font-family: SourceSansPro, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  margin: 0;
 }

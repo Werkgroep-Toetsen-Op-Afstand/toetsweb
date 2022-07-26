@@ -1,7 +1,8 @@
 .home-page {
     max-width: 1400px;
+    margin: 7rem 0;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
 
     &__hero-section {
         display: flex;
@@ -23,10 +24,6 @@
             flex-direction: column;
             row-gap: 1rem;
 
-            h3 {
-                height: 5rem;
-            }
-
             p {
                 color: $color-gray;
             }
@@ -37,9 +34,37 @@
         display: flex;
         justify-content: space-between;
         column-gap: 5rem;
+        margin-left: 7rem;
+        margin-bottom: 8rem;
 
         img {
             width: 33rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                align-self: flex-end;
+                margin-right: 1rem;
+                background-color: $color-blue;
+                padding: 0.5rem 1rem;
+                color: $color-white;
+                border-radius: 0.2rem;
+
+                span {
+                    display: flex;
+                    column-gap: 1rem;
+                    align-items: center;
+                    font-weight: $bold;
+
+                    img {
+                        height: 1rem;
+                        width: 1rem;
+                    }
+                }
+            }
         }
     }
 }
