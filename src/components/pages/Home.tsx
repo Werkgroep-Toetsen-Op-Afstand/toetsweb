@@ -1,10 +1,11 @@
 import Button from 'components/layout/Button';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import {Page, route} from 'react-ts-boiler';
-import Toetsmodel from "../../assets/images/Toetsmodel.svg"
+import { ReactComponent as Toetsmodel } from "../../assets/images/Toetsmodel.svg"
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
+import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 
 interface Props {}
 
@@ -20,7 +21,8 @@ const Home: FunctionComponent<Props> = () => {
                     <p>Op deze website kun je met je opleidingsteam, de toets- of curriculumcommissie van je team of een andere relevante vertegenwoordiging van de opleiding de Toetsweb-Scan invullen. De Toetsweb-Scan is gebaseerd op de methodiek van de Toetsing Getoetst en is bedoeld om de kwaliteit van toetsing te analyseren, verbeteren en borgen. Het toetsweb vormt het theoretisch fundament onder de Toetsing Getoetst.</p>
                 </div>
 
-                <img src={Toetsmodel} alt="toetsmodel" />
+                {/* <img src={Toetsmodel} alt="toetsmodel" /> */}
+                <ToetsmodelComponent/>
             </div>
 
             <div className='home-page__info-section'>

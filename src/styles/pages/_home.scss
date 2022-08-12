@@ -8,10 +8,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        img {
-            width: 42rem;
-        }
     }
 
     &__info-section {
@@ -67,4 +63,8 @@
             }
         }
     }
+}
+
+#toetsmodel {
+    overflow: visible;
 }
