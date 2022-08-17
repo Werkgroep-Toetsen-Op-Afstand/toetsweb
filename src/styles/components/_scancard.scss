@@ -25,4 +25,9 @@
     &__illustration {
         width: 34rem;
     }
+
+    &__form {
+        display: flex;
+        column-gap: 0.6rem;
+    }
 }

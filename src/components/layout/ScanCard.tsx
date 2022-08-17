@@ -1,9 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import ToetstakenIllu from "../../assets/images/IllustratieToetstaken.svg"
+import VerticalCheckbox from './VerticalCheckbox';
 
 interface Props {}
 
 const ScanCard: FunctionComponent<Props> = () => {
+
     return (
         <div className='scancard'>
             <div>
@@ -18,9 +20,10 @@ const ScanCard: FunctionComponent<Props> = () => {
                     <h4>Ambitie</h4>
                     <p> - Welke beschrijving past over 2 jaar het beste bij jouw opleiding?</p>
                 </span>
-
-                <form>
-                    
+                <br />
+                <form className='scancard__form'>
+                    <VerticalCheckbox titleCheckbox={'Positie'}/>
+                    <VerticalCheckbox titleCheckbox={'Ambitie'}/>
                 </form>
             </div>
             <img className='scancard__illustration' src={ToetstakenIllu} alt="illustratieve afbeelding" />
