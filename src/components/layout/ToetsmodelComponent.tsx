@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, {useState} from 'react';
 
 function ToetsmodelComponent() {
 
@@ -25,37 +25,49 @@ function ToetsmodelComponent() {
     return (
         <div className='toetsmodel-component'>
             {centerHover &&
-                    <div className='toetsmodel-component__center-hover'>
-                        <h4>Visie op onderwijs</h4>
-                        <p>
-                            De manier waarop de toetsing wordt ingericht is een middel om de visie op onderwijs te realiseren, in plaats van een doel op zich (Baartman, Van Schilt-Mol & Van der Vleuten, 2020). De visie op toetsing, die onderdeel uitmaakt van de visie op onderwijs, vormt het fundament voor het borgen van de kwaliteit van de toetsing en zal er voor zorgen dat toetsing onderdeel wordt van het onderwijsconcept. Daarmee werkt deze visie versterkend op het realiseren van de onderwijsdoelen (VO-Raad, 2019). Dit veronderstelt uiteraard dat het hebben van een visie op onderwijs voorwaardelijk is om op een zinvolle wijze invulling te kunnen geven aan toetsing.
-                            De kern van het toetsweb, visie op onderwijs, geeft antwoord op de vraag wat de opleiding verstaat onder goed onderwijs. De visie wordt gevormd wordt door ten minste;
-                        </p>
-                        <br />
-                        <ul>
-                            <li><p>de legitimering van het onderwijs/de opleiding,</p></li>
-                            <li><p>een visie op het doel van het onderwijs/het beroep waartoe wordt opgeleid,</p></li>
-                            <li><p>een visie op de opdracht* van het onderwijs,</p></li>
-                            <li><p>een visie op leren en een visie op toetsen (Van Schilt-Mol, 2021).</p></li>
-                        </ul>
-                        <br />
-                        <p>
-                        * Voor de opdracht van het onderwijs geldt dat, passend bij de uitgangspunten van eigentijds toetsen en beoordelen, de vormende (socialisatie en persoonsvorming) en de kwalificerende functie in onderling evenwicht de aandacht moeten krijgen (Hoogland, 2017).
-                        </p>
-                    </div>
+                <div className='toetsmodel-component__center-hover'>
+                    <h4>Visie op onderwijs</h4>
+                    <p>
+                        De manier waarop de toetsing wordt ingericht is een middel om de visie op onderwijs te
+                        realiseren, in plaats van een doel op zich (Baartman, Van Schilt-Mol & Van der Vleuten, 2020).
+                        De visie op toetsing, die onderdeel uitmaakt van de visie op onderwijs, vormt het fundament voor
+                        het borgen van de kwaliteit van de toetsing en zal er voor zorgen dat toetsing onderdeel wordt
+                        van het onderwijsconcept. Daarmee werkt deze visie versterkend op het realiseren van de
+                        onderwijsdoelen (VO-Raad, 2019). Dit veronderstelt uiteraard dat het hebben van een visie op
+                        onderwijs voorwaardelijk is om op een zinvolle wijze invulling te kunnen geven aan toetsing.
+                        De kern van het toetsweb, visie op onderwijs, geeft antwoord op de vraag wat de opleiding
+                        verstaat onder goed onderwijs. De visie wordt gevormd wordt door ten minste;
+                    </p>
+                    <br/>
+                    <ul>
+                        <li><p>de legitimering van het onderwijs/de opleiding,</p></li>
+                        <li><p>een visie op het doel van het onderwijs/het beroep waartoe wordt opgeleid,</p></li>
+                        <li><p>een visie op de opdracht* van het onderwijs,</p></li>
+                        <li><p>een visie op leren en een visie op toetsen (Van Schilt-Mol, 2021).</p></li>
+                    </ul>
+                    <br/>
+                    <p>
+                        * Voor de opdracht van het onderwijs geldt dat, passend bij de uitgangspunten van eigentijds
+                        toetsen en beoordelen, de vormende (socialisatie en persoonsvorming) en de kwalificerende
+                        functie in onderling evenwicht de aandacht moeten krijgen (Hoogland, 2017).
+                    </p>
+                </div>
 
-                }
+            }
 
-                { oneHover &&
-                    <div className='toetsmodel-component__one-hover'>
-                        <h4>1. Activiteiten-georiënteerde fase</h4>
-                        <p>
-                            Individuele medewerkers in de opleiding (docenten/examinatoren, opleidingsmanagement, examencommissie, toetsexperts/toetscommissie, ondersteunende medewerkers) voeren ad hoc op onderdelen toetsactiviteiten uit waarbij geen aandacht is voor de onderlinge samenhang tussen deze activiteiten.
-                        </p>
-                    </div>
-                }
-            <svg version="1.1" id="toetsmodel" 
-                height="672" width="672">
+            {oneHover &&
+                <div className='toetsmodel-component__one-hover'>
+                    <h4>1. Activiteiten-georiënteerde fase</h4>
+                    <p>
+                        Individuele medewerkers in de opleiding (docenten/examinatoren, opleidingsmanagement,
+                        examencommissie, toetsexperts/toetscommissie, ondersteunende medewerkers) voeren ad hoc op
+                        onderdelen toetsactiviteiten uit waarbij geen aandacht is voor de onderlinge samenhang tussen
+                        deze activiteiten.
+                    </p>
+                </div>
+            }
+            <svg version="1.1" id="toetsmodel"
+                 height="672" width="672">
                 <style type="text/css">
                     {`
                     .st0{fill:#FFFFFF;}
@@ -100,7 +112,8 @@ function ToetsmodelComponent() {
                     l30.6,10.1l-0.1,0.5c-3.4,11-5.2,22.5-5.2,34.2c0,36.3,17.5,70.8,46.7,92.3l0.4,0.3L212,416.4z M159,254.1
                     c-4.4,14.1-6.6,28.7-6.6,43.5c0,23.3,5.6,46.5,16.3,67c10.2,19.7,25.1,37.1,43,50.4l17.6-24.5c-29.3-21.7-46.7-56.4-46.7-92.8
                     c0-11.6,1.7-23,5.1-34L159,254.1z"/>
-                <path className="st4" d="M188.3,263.2c-3.4,10.9-5.2,22.4-5.2,34.4c0,38.1,18.5,71.8,46.9,92.7l65.7-91.5L188.3,263.2z"/>
+                <path className="st4"
+                      d="M188.3,263.2c-3.4,10.9-5.2,22.4-5.2,34.4c0,38.1,18.5,71.8,46.9,92.7l65.7-91.5L188.3,263.2z"/>
                 <path className="st0" d="M230.1,391l-0.4-0.3c-29.5-21.7-47.1-56.5-47.1-93.1c0-11.8,1.8-23.4,5.2-34.5l0.2-0.5l108.5,36L230.1,391z
                     M188.6,263.9c-3.3,10.9-5,22.2-5,33.7c0,36.1,17.3,70.5,46.3,92l65-90.5L188.6,263.9z"/>
                 <path className="st5" d="M298.2,475c-38.6,0-74.4-12.3-103.5-33.3l-18.5,25.1c34.3,24.8,76.4,39.4,122,39.4c45.7,0,87.9-14.7,122.2-39.6
@@ -117,7 +130,8 @@ function ToetsmodelComponent() {
                     c24,0,47-7.4,66.5-21.3l0.4-0.3l19.1,25.9l-0.4,0.3C358.7,434.8,329.1,444.4,298.2,444.4z M213.9,416.5
                     c24.7,17.6,53.9,26.8,84.3,26.8c30.6,0,59.8-9.3,84.6-27L364.9,392c-19.6,13.9-42.6,21.2-66.7,21.2c-23.9,0-46.9-7.3-66.4-21
                     L213.9,416.5z"/>
-                <path className="st8" d="M231.6,391.5c18.8,13.3,41.7,21.2,66.5,21.2c24.9,0,48-7.9,66.8-21.4l-66.6-90.5L231.6,391.5z"/>
+                <path className="st8"
+                      d="M231.6,391.5c18.8,13.3,41.7,21.2,66.5,21.2c24.9,0,48-7.9,66.8-21.4l-66.6-90.5L231.6,391.5z"/>
                 <path className="st0" d="M298.2,413.2c-24.1,0-47.2-7.4-66.8-21.3l-0.4-0.3l0.3-0.4l67.1-91.3l67.3,91.5l-0.4,0.3
                     C345.6,405.7,322.4,413.2,298.2,413.2z M232.4,391.4c19.3,13.6,42.1,20.8,65.8,20.8c23.9,0,46.7-7.3,66.1-21l-65.9-89.6L232.4,391.4
                     z"/>
@@ -135,33 +149,42 @@ function ToetsmodelComponent() {
                     l0.2,0.5c4.5,14.3,6.8,29.1,6.8,44.2c0,23.7-5.5,46.4-16.3,67.3c-10.3,20-25.4,37.6-43.6,51L384.7,416.2z M367.3,390.2l17.6,24.5
                     c17.9-13.2,32.7-30.6,42.9-50.3c10.8-20.8,16.2-43.3,16.2-66.9c0-14.8-2.2-29.4-6.6-43.4l-28.7,9.5c3.4,10.9,5.1,22.4,5.1,33.9
                     C413.8,333.9,396.4,368.5,367.3,390.2z"/>
-                <path className="st13" d="M366.6,390.1c28.3-21,46.7-54.6,46.7-92.5c0-11.9-1.8-23.4-5.2-34.2l-107,35.5L366.6,390.1z"/>
+                <path className="st13"
+                      d="M366.6,390.1c28.3-21,46.7-54.6,46.7-92.5c0-11.9-1.8-23.4-5.2-34.2l-107,35.5L366.6,390.1z"/>
                 <path className="st14" d="M366.5,390.8l-66.2-92.3l108.1-35.8l0.2,0.5c3.5,11.1,5.2,22.7,5.2,34.4c0,36.5-17.5,71.2-46.9,92.9
                     L366.5,390.8z M301.9,299.1l64.8,90.3c28.8-21.6,46.1-55.9,46.1-91.8c0-11.5-1.7-22.8-5-33.6L301.9,299.1z"/>
-                <path className="st15" d="M466.9,242.5l29.7-9.5C469.5,149.6,391.2,89.2,298.8,88.9l0.2,31.2C377.4,120.5,443.8,171.7,466.9,242.5z"/>
-                <path className="st16" d="M437.2,252l29.7-9.5c-23.1-70.8-89.5-122-167.9-122.4l0.2,31.2C363.6,151.8,418.1,193.8,437.2,252z"/>
+                <path className="st15"
+                      d="M466.9,242.5l29.7-9.5C469.5,149.6,391.2,89.2,298.8,88.9l0.2,31.2C377.4,120.5,443.8,171.7,466.9,242.5z"/>
+                <path className="st16"
+                      d="M437.2,252l29.7-9.5c-23.1-70.8-89.5-122-167.9-122.4l0.2,31.2C363.6,151.8,418.1,193.8,437.2,252z"/>
                 <path className="st0" d="M436.9,252.6l-0.2-0.5c-19.5-59.6-74.8-99.9-137.5-100.3l-0.5,0l-0.2-32.2l0.5,0
                     c76.9,0.4,144.6,49.7,168.4,122.7l0.2,0.5L436.9,252.6z M299.7,150.8c62.8,0.6,118.1,41,137.8,100.5l28.8-9.2
                     c-23.8-72.2-90.7-121-166.8-121.6L299.7,150.8z"/>
-                <path className="st17" d="M299.2,151.3l0.2,31.2c50.4,0.5,93.1,33.4,108.1,78.9l29.7-9.5C418.1,193.8,363.6,151.8,299.2,151.3z"/>
+                <path className="st17"
+                      d="M299.2,151.3l0.2,31.2c50.4,0.5,93.1,33.4,108.1,78.9l29.7-9.5C418.1,193.8,363.6,151.8,299.2,151.3z"/>
                 <path className="st0" d="M407.1,262.1l-0.2-0.5c-15.4-46.5-58.6-78.1-107.6-78.6l-0.5,0l-0.2-32.2l0.5,0c63.2,0.4,118.8,41,138.5,101
                     l0.2,0.5L407.1,262.1z M299.9,182c49.1,0.7,92.3,32.3,107.9,78.8l28.8-9.2c-19.6-59.2-74.5-99.2-136.9-99.8L299.9,182z"/>
                 <path className="st18" d="M407.5,261.5c-15-45.5-57.7-78.4-108.1-78.9l0.7,113.1L407.5,261.5z"/>
                 <path className="st0" d="M299.5,296.3L298.9,182l0.5,0c49.4,0.5,93.1,32.4,108.6,79.3l0.2,0.5l-0.5,0.2L299.5,296.3z M299.9,183
                     l0.7,111.9l106.3-33.8C391.4,215.1,348.5,183.7,299.9,183z"/>
-                <path className="st19" d="M297.8,120.1l0.2-31.2c-92.6,0.1-171,60.5-198.2,144l29.7,9.5C152.6,171.6,219.2,120.3,297.8,120.1z"/>
-                <path className="st20" d="M297.6,151.3l0.2-31.2c-78.6,0.2-145.1,51.4-168.3,122.3l29.7,9.5C178.3,193.7,233,151.6,297.6,151.3z"/>
+                <path className="st19"
+                      d="M297.8,120.1l0.2-31.2c-92.6,0.1-171,60.5-198.2,144l29.7,9.5C152.6,171.6,219.2,120.3,297.8,120.1z"/>
+                <path className="st20"
+                      d="M297.6,151.3l0.2-31.2c-78.6,0.2-145.1,51.4-168.3,122.3l29.7,9.5C178.3,193.7,233,151.6,297.6,151.3z"/>
                 <path className="st0" d="M159.5,252.5l-30.7-9.8l0.2-0.5c11.5-35.3,33.5-65.7,63.5-87.9c30.6-22.6,67-34.6,105.2-34.7l0.5,0l-0.2,32.2
                     l-0.5,0c-62.9,0.3-118.3,40.5-137.9,100.2L159.5,252.5z M130.1,242.1l28.8,9.2c19.8-59.7,75.3-100,138.2-100.4l0.2-30.2
                     c-37.8,0.2-73.8,12.1-104.1,34.5C163.4,177.1,141.6,207.2,130.1,242.1z"/>
-                <path className="st21" d="M297.4,182.5l0.2-31.2c-64.6,0.3-119.2,42.3-138.4,100.5l29.7,9.5C204,215.8,246.8,182.9,297.4,182.5z"/>
+                <path className="st21"
+                      d="M297.4,182.5l0.2-31.2c-64.6,0.3-119.2,42.3-138.4,100.5l29.7,9.5C204,215.8,246.8,182.9,297.4,182.5z"/>
                 <path className="st0" d="M189.2,262l-30.7-9.8l0.2-0.5c19.8-60.1,75.6-100.6,138.8-100.9l0.5,0l-0.2,32.2l-0.5,0
                     c-49.1,0.3-92.5,31.9-108,78.5L189.2,262z M159.8,251.6l28.8,9.2c15.7-46.6,59.1-78.2,108.3-78.7l0.2-30.2
                     C234.6,152.3,179.5,192.3,159.8,251.6z"/>
                 <path className="st22" d="M297.4,182.5c-50.5,0.3-93.3,33.3-108.5,78.8l107.8,34.3L297.4,182.5z"/>
                 <path className="st0" d="M297.2,296.3l-108.9-34.7l0.2-0.5c15.6-47,59.4-78.8,108.9-79.2l0.5,0L297.2,296.3z M189.6,261l106.7,34
                     l0.7-111.9C248.1,183.6,205.1,214.8,189.6,261z"/>
-                <ellipse onMouseOver={handleCenterHoverOver} onMouseOut={handleCenterHoverOut} transform="matrix(0.7071 -0.7071 0.7071 0.7071 -123.0953 298.0021)" className="st0" cx="298.2" cy="297.6" rx="83.9" ry="83.9"/>
+                <ellipse onMouseOver={handleCenterHoverOver} onMouseOut={handleCenterHoverOut}
+                         transform="matrix(0.7071 -0.7071 0.7071 0.7071 -123.0953 298.0021)" className="st0" cx="298.2"
+                         cy="297.6" rx="83.9" ry="83.9"/>
                 <g>
                     <path className="st23" d="M262,292.3l-4.2-14h3.3l1.7,6.5c0.2,0.8,0.4,1.5,0.6,2.2c0.2,0.7,0.4,1.5,0.6,2.2h0.1
                         c0.2-0.8,0.4-1.5,0.6-2.2c0.2-0.7,0.4-1.5,0.6-2.2l1.7-6.5h3.2l-4.2,14H262z"/>
@@ -216,7 +239,7 @@ function ToetsmodelComponent() {
                         s1,0.6,1.4,1.1c0.4,0.5,0.7,1,0.8,1.6c0.2,0.6,0.3,1.3,0.3,2c0,0.3,0,0.6,0,0.8s-0.1,0.5-0.1,0.6h-6.4c0.1,0.8,0.5,1.3,1,1.7
                         c0.5,0.4,1.1,0.5,1.8,0.5c0.8,0,1.5-0.2,2.3-0.7l1.1,1.9c-0.5,0.4-1.1,0.7-1.8,0.9C295.2,318.2,294.6,318.3,293.9,318.3z
                         M291.5,311.6h3.8c0-0.6-0.1-1.1-0.4-1.5c-0.3-0.4-0.7-0.6-1.4-0.6c-0.5,0-0.9,0.2-1.3,0.5C291.9,310.4,291.7,310.9,291.5,311.6z"
-                        />
+                    />
                     <path className="st23" d="M301.3,318.1v-10.6h2.6l0.2,1.9h0.1c0.4-0.7,0.9-1.3,1.4-1.6c0.5-0.3,1.1-0.5,1.6-0.5c0.3,0,0.5,0,0.7,0.1
                         s0.4,0.1,0.5,0.2l-0.5,2.7c-0.2-0.1-0.4-0.1-0.6-0.1c-0.2,0-0.4,0-0.6,0c-0.4,0-0.8,0.1-1.3,0.4c-0.4,0.3-0.8,0.8-1.1,1.5v6.2
                         H301.3z"/>
@@ -242,11 +265,13 @@ function ToetsmodelComponent() {
                         c-0.2,0.4-0.5,0.8-0.8,1.1c-0.4,0.3-0.8,0.6-1.4,0.7C347.3,318.2,346.7,318.3,346,318.3z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M231.7,230.1v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5s0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H231.7z"/>
+                    <path className="st23"
+                          d="M231.7,230.1v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5s0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H231.7z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M201,333.5v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5c0.5-0.2,0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H201z"
-                        />
+                    <path className="st23"
+                          d="M201,333.5v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5c0.5-0.2,0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H201z"
+                    />
                 </g>
                 <g>
                     <path onMouseOver={handleOneHoverOver} onMouseOut={handleOneHoverOut} className="st23 test" d="M386.8,333.5v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5c0.5-0.2,0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3
@@ -293,7 +318,8 @@ function ToetsmodelComponent() {
                         c0-0.5,0.1-1,0.1-1.4h-0.1c-0.2,0.3-0.3,0.7-0.5,1c-0.2,0.4-0.3,0.7-0.5,1.1L117.1,369.8z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M358.9,230.1v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5s0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H358.9z"/>
+                    <path className="st23"
+                          d="M358.9,230.1v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5s0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3H358.9z"/>
                 </g>
                 <g>
                     <path className="st23" d="M294.9,404.1v-2.3h2.7v-7.2h-2.3v-1.8c0.7-0.1,1.2-0.3,1.7-0.5c0.5-0.2,0.9-0.4,1.4-0.7h2.1v10.1h2.3v2.3
@@ -360,7 +386,8 @@ function ToetsmodelComponent() {
                         c0-0.5,0.1-1,0.1-1.4h-0.1c-0.2,0.3-0.3,0.7-0.5,1c-0.2,0.4-0.3,0.7-0.5,1.1L164.5,156z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M124.9,165.4l-5-3.8l-1.3,1.7l-1.2-0.9l3.6-4.8l1.2,0.9l-1.3,1.7l5,3.8L124.9,165.4z"/>
+                    <path className="st23"
+                          d="M124.9,165.4l-5-3.8l-1.3,1.7l-1.2-0.9l3.6-4.8l1.2,0.9l-1.3,1.7l5,3.8L124.9,165.4z"/>
                     <path className="st23" d="M129.4,159.9c-0.2,0.3-0.5,0.5-0.8,0.7s-0.7,0.3-1,0.3c-0.4,0-0.8,0-1.2-0.1c-0.4-0.1-0.8-0.3-1.2-0.6
                         c-0.4-0.3-0.7-0.6-0.9-1s-0.3-0.7-0.4-1.1c0-0.4,0-0.7,0.1-1.1c0.1-0.4,0.3-0.7,0.5-1s0.5-0.5,0.8-0.7c0.3-0.2,0.7-0.3,1-0.3
                         c0.4,0,0.8,0,1.1,0.1c0.4,0.1,0.8,0.3,1.2,0.6c0.4,0.3,0.7,0.6,0.9,1s0.3,0.7,0.4,1.1c0,0.4,0,0.7-0.1,1.1
@@ -412,7 +439,8 @@ function ToetsmodelComponent() {
                         c-0.2,0.1-0.3,0.3-0.4,0.5c-0.1,0.2-0.1,0.4-0.2,0.6l2.3,3.2L170,120.9z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M416.1,113.9l3.4-5.2l-1.8-1.2l0.8-1.2l5,3.3l-0.8,1.2l-1.8-1.2l-3.4,5.2L416.1,113.9z"/>
+                    <path className="st23"
+                          d="M416.1,113.9l3.4-5.2l-1.8-1.2l0.8-1.2l5,3.3l-0.8,1.2l-1.8-1.2l-3.4,5.2L416.1,113.9z"/>
                     <path className="st23" d="M422,118c-0.3-0.2-0.6-0.5-0.8-0.8c-0.2-0.3-0.3-0.7-0.4-1c-0.1-0.4-0.1-0.8,0-1.2c0.1-0.4,0.3-0.8,0.6-1.2
                         c0.3-0.4,0.6-0.7,0.9-0.9c0.3-0.2,0.7-0.4,1.1-0.4c0.4-0.1,0.7-0.1,1.1,0c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.6,0.5,0.8,0.8
                         s0.3,0.6,0.4,1c0.1,0.4,0.1,0.8,0,1.2c-0.1,0.4-0.3,0.8-0.6,1.2c-0.3,0.4-0.6,0.7-0.9,0.9c-0.3,0.2-0.7,0.4-1.1,0.4
@@ -488,7 +516,8 @@ function ToetsmodelComponent() {
                         c-0.2,0.1-0.2,0.2-0.3,0.4S480.7,176.5,480.8,176.7z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M477.3,434.1l-5.1-3.9l-1.3,1.7l-1.2-0.9l3.7-4.9l1.2,0.9l-1.3,1.7l5.1,3.9L477.3,434.1z"/>
+                    <path className="st23"
+                          d="M477.3,434.1l-5.1-3.9l-1.3,1.7l-1.2-0.9l3.7-4.9l1.2,0.9l-1.3,1.7l5.1,3.9L477.3,434.1z"/>
                     <path className="st23" d="M481.7,428.4c-0.2,0.3-0.5,0.6-0.8,0.8c-0.3,0.2-0.7,0.3-1,0.4c-0.4,0.1-0.8,0-1.2-0.1
                         c-0.4-0.1-0.8-0.3-1.2-0.6c-0.4-0.3-0.7-0.6-0.9-1c-0.2-0.4-0.4-0.7-0.4-1.1s0-0.7,0.1-1.1c0.1-0.4,0.3-0.7,0.5-1
                         c0.2-0.3,0.5-0.6,0.8-0.8c0.3-0.2,0.7-0.3,1-0.4c0.4-0.1,0.8,0,1.2,0.1c0.4,0.1,0.8,0.3,1.2,0.6s0.7,0.6,0.9,1
@@ -542,7 +571,8 @@ function ToetsmodelComponent() {
                         c-0.1,0.3-0.1,0.5,0.1,0.8c0.2,0.3,0.5,0.6,1.1,0.8c0.6,0.2,1,0.3,1.3,0.2C506.2,380.9,506.5,380.7,506.6,380.4z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M254.5,517.7l1.3-6.1l-2.1-0.4l0.3-1.4l5.9,1.3l-0.3,1.4l-2.1-0.4l-1.3,6.1L254.5,517.7z"/>
+                    <path className="st23"
+                          d="M254.5,517.7l1.3-6.1l-2.1-0.4l0.3-1.4l5.9,1.3l-0.3,1.4l-2.1-0.4l-1.3,6.1L254.5,517.7z"/>
                     <path className="st23" d="M261.4,519.2c-0.4-0.1-0.7-0.2-1-0.4c-0.3-0.2-0.6-0.5-0.8-0.8c-0.2-0.3-0.4-0.7-0.4-1.1
                         c-0.1-0.4-0.1-0.8,0-1.3c0.1-0.5,0.2-0.9,0.5-1.2c0.2-0.3,0.5-0.6,0.8-0.8c0.3-0.2,0.6-0.3,1-0.4s0.7-0.1,1.1,0
                         c0.4,0.1,0.7,0.2,1,0.4c0.3,0.2,0.6,0.5,0.8,0.8c0.2,0.3,0.4,0.7,0.4,1.1c0.1,0.4,0.1,0.8,0,1.3c-0.1,0.5-0.2,0.9-0.5,1.2
@@ -554,7 +584,7 @@ function ToetsmodelComponent() {
                         c0.2,0.3,0.3,0.6,0.3,1c0,0.4,0,0.7,0,1.1c0,0.2-0.1,0.3-0.1,0.4c0,0.1-0.1,0.2-0.1,0.3l-3.5-0.5c0,0.4,0.1,0.8,0.4,1
                         c0.2,0.2,0.6,0.4,0.9,0.5c0.4,0.1,0.9,0,1.3-0.2l0.4,1.1c-0.3,0.2-0.7,0.3-1.1,0.3C269.3,520.5,268.9,520.5,268.6,520.4z
                         M267.9,516.6l2.1,0.3c0.1-0.3,0-0.6-0.1-0.8c-0.1-0.2-0.4-0.4-0.7-0.4c-0.3,0-0.5,0-0.8,0.2C268.2,515.9,268,516.2,267.9,516.6z"
-                        />
+                    />
                     <path className="st23" d="M274.7,521.3c-0.4,0-0.7-0.1-0.9-0.3c-0.2-0.1-0.4-0.3-0.6-0.5c-0.1-0.2-0.2-0.5-0.3-0.8c0-0.3,0-0.6,0-0.9
                         l0.3-2.4l-0.8-0.1l0.2-1.3l0.9,0l0.4-1.5l1.4,0.2l-0.2,1.6l1.4,0.2l-0.2,1.4l-1.4-0.2l-0.3,2.3c0,0.3,0,0.6,0.1,0.7
                         c0.1,0.2,0.3,0.3,0.5,0.3c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3,0l0.1,1.3c-0.2,0-0.4,0.1-0.6,0.1C275.3,521.3,275,521.3,274.7,521.3z
@@ -627,7 +657,8 @@ function ToetsmodelComponent() {
                         c-0.2-0.2-0.5-0.2-0.8-0.2c-0.3,0.1-0.5,0.2-0.7,0.4C342,515,341.9,515.3,342,515.7z"/>
                 </g>
                 <g>
-                    <path className="st23" d="M79.3,339.5l6.3-1.2l-0.4-2.1l1.5-0.3l1.1,6l-1.5,0.3L86,340l-6.3,1.2L79.3,339.5z"/>
+                    <path className="st23"
+                          d="M79.3,339.5l6.3-1.2l-0.4-2.1l1.5-0.3l1.1,6l-1.5,0.3L86,340l-6.3,1.2L79.3,339.5z"/>
                     <path className="st23" d="M80.7,346.6c-0.1-0.4-0.1-0.7,0-1.1c0.1-0.4,0.2-0.7,0.4-1c0.2-0.3,0.5-0.6,0.8-0.8c0.3-0.2,0.8-0.4,1.3-0.5
                         c0.5-0.1,0.9-0.1,1.4,0c0.4,0.1,0.8,0.2,1.1,0.4c0.3,0.2,0.6,0.5,0.8,0.8c0.2,0.3,0.4,0.7,0.4,1c0.1,0.4,0.1,0.7,0,1.1
                         c-0.1,0.4-0.2,0.7-0.4,1c-0.2,0.3-0.5,0.6-0.8,0.8s-0.8,0.4-1.3,0.5c-0.5,0.1-0.9,0.1-1.4,0c-0.4-0.1-0.8-0.2-1.1-0.4
@@ -710,7 +741,7 @@ function ToetsmodelComponent() {
                 <polygon className="st0" points="348,363.1 422.2,467.1 420.6,468.5 345,364.8 "/>
             </svg>
         </div>
-        
+
     )
 }
 

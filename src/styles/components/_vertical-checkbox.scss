@@ -8,12 +8,18 @@
         background-color: rgba(68, 166, 194, 0.18);
     }
 
+    &__label {
+        font-size: small;
+    }
+
     &__container {
         display: block;
         position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
+        padding: 5px;
+        margin-bottom: 0px;
         cursor: pointer;
+        height: 25px;
+        width: 25px;
         font-size: 22px;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -26,10 +32,13 @@
 
         &__checkbox {
             position: absolute;
-            opacity: 0;
+            top: 0;
+            left: 0;
             cursor: pointer;
-            height: 0;
-            width: 0;
+            height: 25px;
+            width: 25px;
+            background-color: white;
+            border: 1px solid black;
 
             &:checked {
                 background-color: #2196F3;
