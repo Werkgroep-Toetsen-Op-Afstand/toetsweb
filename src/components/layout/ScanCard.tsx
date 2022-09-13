@@ -2,6 +2,7 @@ import React, {FunctionComponent} from 'react';
 import ToetstakenIllu from "../../assets/images/IllustratieToetstaken.svg"
 import VerticalCheckbox from './VerticalCheckbox';
 import TextArea from "./TextArea";
+import HorizontalCheckbox from "./HorizontalCheckbox";
 
 interface Props {
 }
@@ -26,19 +27,12 @@ const ScanCard: FunctionComponent<Props> = () => {
                 </div>
                 <br/>
                 <form className='scancard__form'>
+                    <p>Positie - Ambitie</p>
                     <div className='scancard__form__checkbox'>
-                        <VerticalCheckbox titleCheckbox={'Positie'}/>
-                        <VerticalCheckbox titleCheckbox={'Ambitie'}/>
-                        <div>
-                            <br />
-                            <p>Docenten ontwikkelen toetsen naar eigen inzicht: zij gebruiken daarvoor eigen kwaliteitcriteria.</p>
-                            <br />
-                            <p>Docenten maken bij het ontwerpen van toetsen gebruik van kwaliteitscriteria die zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars.</p>
-                            <br />
-                            <p>De kwaliteitscriteria die docenten gebruiken bij het ontwikkelen toetsen worden regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten.</p>
-                            <br />
-                            <p>De kwaliteitscriteria die gebruikt worden bij het ontwerpen van zowel de toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.</p>
-                        </div>
+                        <HorizontalCheckbox position={1} rowText={'Docenten ontwikkelen toetsen naar eigen inzicht: zij gebruiken daarvoor eigen kwaliteitcriteria.'}/>
+                        <HorizontalCheckbox position={2} rowText={'Docenten maken bij het ontwerpen van toetsen gebruik van kwaliteitscriteria die zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars.'}/>
+                        <HorizontalCheckbox position={3} rowText={'De kwaliteitscriteria die docenten gebruiken bij het ontwikkelen toetsen worden regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten.'}/>
+                        <HorizontalCheckbox position={4} rowText={'De kwaliteitscriteria die gebruikt worden bij het ontwerpen van zowel de toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.'}/>
                     </div>
                     <div className='scancard__form__textarea'>
                         <TextArea titleTextArea={'Positie'} hintTextArea={'Licht je antwoord toe.'}/>

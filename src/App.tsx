@@ -14,11 +14,12 @@ import theming from './config/theming';
 
 import AuthContextProvider from './contexts/AuthContext';
 import Layout from './components/layout/Layout';
+import ScanCardContextProvider from "./contexts/ScanCardContext";
 
 enableNetworking(networking);
 enableTheming(theming);
 enableLocalization(lang);
-enableRouting({ routes });
+enableRouting({routes});
 
 const App: FunctionComponent = () => {
 
@@ -32,7 +33,9 @@ const App: FunctionComponent = () => {
     return (
         <BoilerApp>
             <AuthContextProvider>
-                <Layout />
+                <ScanCardContextProvider>
+                    <Layout/>
+                </ScanCardContextProvider>
             </AuthContextProvider>
         </BoilerApp>
     );

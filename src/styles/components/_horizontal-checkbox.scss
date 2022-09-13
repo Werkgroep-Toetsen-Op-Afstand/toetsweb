@@ -1,0 +1,49 @@
+.hor-check {
+    display: flex;
+    flex-direction: row;
+
+    &--blue-bg {
+        background-color: rgba(68, 166, 194, 0.18);
+    }
+
+    &__label {
+        text-align: left;
+        font: normal normal normal 23px/29px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+
+    &__container {
+        width: 40px;
+        padding: 10px 10px 2rem;
+        display: flex;
+        align-items: flex-start;
+        flex-basis: 0;
+
+        &:hover {
+
+        }
+
+        &__checkbox {
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            border: 1px solid black;
+
+            &:checked {
+
+            }
+        }
+
+        &__span-checkbox {
+
+
+            &:after {
+
+            }
+        }
+    }
+}
+  
