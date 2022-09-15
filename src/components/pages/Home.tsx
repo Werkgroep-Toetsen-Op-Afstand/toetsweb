@@ -21,7 +21,6 @@ const Home: FunctionComponent<Props> = () => {
                     <p>Op deze website kun je met je opleidingsteam, de toets- of curriculumcommissie van je team of een andere relevante vertegenwoordiging van de opleiding de Toetsweb-Scan invullen. De Toetsweb-Scan is gebaseerd op de methodiek van de Toetsing Getoetst en is bedoeld om de kwaliteit van toetsing te analyseren, verbeteren en borgen. Het toetsweb vormt het theoretisch fundament onder de Toetsing Getoetst.</p>
                 </div>
 
-                {/* <img src={Toetsmodel} alt="toetsmodel" /> */}
                 <ToetsmodelComponent/>
             </div>
 

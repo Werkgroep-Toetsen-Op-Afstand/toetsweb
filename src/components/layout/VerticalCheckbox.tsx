@@ -22,16 +22,10 @@ const VerticalCheckbox: FunctionComponent<Props> = ({titleCheckbox}) => {
                 />
                 <span className="vert-check__container__span-checkbox"></span>
             </div>
-
+            
             <div className='vert-check__container'>
-                <input      
-                    className='vert-check__container__checkbox'
-                    name={titleCheckbox}
-                    checked={checked === 2}
-                    onChange={() => setChecked(2)}
-                    type="checkbox"
-                />
-                <span className="vert-check__container__span-checkbox"></span>
+                <input type='checkbox'/>
+                <span></span>
             </div>
 
             <div className='vert-check__container'>

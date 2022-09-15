@@ -4,60 +4,30 @@
     row-gap: 2rem;
     align-items: center;
 
-    &--blue-bg {
-        background-color: rgba(68, 166, 194, 0.18);
-    }
-
     &__container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
 
-        &:hover {
-            background-color: #ccc;
-        }
-
-        &__checkbox {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
+        input {
+            visibility: hidden;
+            display: block;
             height: 0;
             width: 0;
-
-            &:checked {
-                background-color: #2196F3;
-            }
+            position: absolute;
+            overflow: hidden;
         }
 
-        &__span-checkbox {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: white;
+        span {
+            height: 16px;
+            width: 16px;
             border: 1px solid black;
+            display: inline-block;
+        }
 
-            &:after {
-                content: "";
-                position: absolute;
-                display: none;
-                left: 9px;
-                top: 5px;
-                width: 5px;
-                height: 10px;
-                border-width: 0 3px 3px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
+        [type=checkbox]:checked + span {
+            background-image: url("../../assets/icons/checkmark.svg");
+            width: 16px;
+            background-size: contain;
+            height: 16px;
+            background-position: center;
         }
     }
 }
