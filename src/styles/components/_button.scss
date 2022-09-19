@@ -1,9 +1,12 @@
 .button {
   padding: .5rem 1rem;
-  color: $color-black;
-  background-color: $color-white;
+  color: #FFFFFF;
   display: inline-block;
   cursor: pointer;
+  font-family: SourceSansPro, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
   user-select: none;
   transition: background-color .2s;
 

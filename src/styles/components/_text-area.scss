@@ -1,12 +1,4 @@
 .text-area {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-  align-items: center;
-
-  &--blue-bg {
-    background-color: rgba(68, 166, 194, 0.18);
-  }
 
   &__container {
     font-weight: bolder;
@@ -14,12 +6,14 @@
 
   &__input {
     resize: none;
-    width: 25rem;
-    height: 5rem;
-    padding: 0.5rem;
+    width: 90%;
+    height: 7.5rem;
+    padding: 1rem;
     border: none;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000029;
+    color: rgb(178, 178, 178);
+    font-size: 18px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
     opacity: 1;
   }
 }

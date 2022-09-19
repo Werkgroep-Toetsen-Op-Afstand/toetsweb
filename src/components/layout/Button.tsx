@@ -3,17 +3,14 @@ import {ClassBuilder, useTheme} from 'react-ts-boiler';
 
 interface Props {
     children: any;
+    backgroundColor: string;
     onClick: () => void;
-
     disabled?: boolean;
 }
 
-const Button: FunctionComponent<Props> = ({ children, onClick, disabled }) => {
-    const { theme } = useTheme();
-
+const Button: FunctionComponent<Props> = ({ children, backgroundColor, onClick, disabled }) => {
     const getClassName = () => {
         return ClassBuilder.createClass('button')
-            .add(`button--${theme.modifier}`)
             .addIf('button--disabled', disabled)
             .build();
     };
@@ -21,7 +18,7 @@ const Button: FunctionComponent<Props> = ({ children, onClick, disabled }) => {
     const onButtonClick = () => !disabled && onClick();
 
     return (
-        <div className={getClassName()} onClick={onButtonClick}>
+        <div className={getClassName()} onClick={onButtonClick} style={{backgroundColor: backgroundColor}}>
             { children }
         </div>
     );

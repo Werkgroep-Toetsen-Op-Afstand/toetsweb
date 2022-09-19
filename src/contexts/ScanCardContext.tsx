@@ -2,9 +2,9 @@ import React, {createContext, useState} from 'react';
 
 interface IScanCardContext {
     checkedPositie: number;
-    setCheckedPositie: (pos: number) => void;
+    handleCheckedPositie: (pos: number) => void;
     checkedAmbitie: number;
-    setCheckedAmbitie: (amb: number) => void;
+    handleCheckedAmbitie: (amb: number) => void;
 }
 
 export const ScanCardContext = createContext<IScanCardContext>({} as IScanCardContext);
@@ -17,8 +17,24 @@ export const ScanCardContextProvider = ({children}: Props) => {
     const [checkedPositie, setCheckedPositie] = useState(0);
     const [checkedAmbitie, setCheckedAmbitie] = useState(0);
 
+    const handleCheckedPositie = (pos: number) => {
+        if (checkedPositie === pos) {
+            setCheckedPositie(0);
+        } else {
+            setCheckedPositie(pos);
+        }
+    }
+
+    const handleCheckedAmbitie = (amb: number) => {
+        if (checkedAmbitie === amb) {
+            setCheckedAmbitie(0);
+        } else {
+            setCheckedAmbitie(amb);
+        }
+    }
+
     return (
-        <ScanCardContext.Provider value={{checkedPositie, setCheckedPositie, checkedAmbitie, setCheckedAmbitie}}>
+        <ScanCardContext.Provider value={{checkedPositie, handleCheckedPositie, checkedAmbitie, handleCheckedAmbitie}}>
             {children}
         </ScanCardContext.Provider>
     );

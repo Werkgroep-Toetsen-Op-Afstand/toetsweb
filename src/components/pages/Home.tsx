@@ -81,7 +81,7 @@ const Home: FunctionComponent<Props> = () => {
                         ongeveer anderhalf tot 2 uur kunt uittrekken. Uiteraard kun je de scan ook individueel
                         invullen.</p>
 
-                    <Button onClick={() => console.log("start scan")} children={
+                    <Button onClick={() => console.log("start scan")} backgroundColor='#44A6C2' children={
                         <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
                     }></Button>
                 </div>
