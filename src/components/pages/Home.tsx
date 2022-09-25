@@ -1,7 +1,6 @@
 import Button from 'components/layout/Button';
 import React, { FunctionComponent, useState } from 'react';
 import {Page, route} from 'react-ts-boiler';
-import { ReactComponent as Toetsmodel } from "../../assets/images/Toetsmodel.svg"
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
@@ -10,6 +9,12 @@ import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 interface Props {}
 
 const Home: FunctionComponent<Props> = () => {
+
+    const [centerClick, setCenterClick] = useState(false);
+
+    const parentCenterClick = (centerClick: boolean) => {
+        setCenterClick(centerClick);
+    }
 
     return (
         <Page className={'home-page'}>
@@ -23,6 +28,8 @@ const Home: FunctionComponent<Props> = () => {
 
                 <ToetsmodelComponent/>
             </div>
+            
+            <div className='home-page__blur'></div>
 
             <div className='home-page__info-section'>
                 <Card children={

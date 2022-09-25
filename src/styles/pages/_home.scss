@@ -3,6 +3,14 @@
     margin: 7rem 0;
     margin-left: auto;
     margin-right: auto;   
+    position: relative;
+
+    &__blur {
+        filter: blur(1.5rem);
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+    }
 
     &__hero-section {
         display: flex;
