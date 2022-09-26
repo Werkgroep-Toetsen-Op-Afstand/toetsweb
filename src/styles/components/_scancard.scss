@@ -1,8 +1,6 @@
 .scancard {
   box-shadow: 0 3px 6px #00000029;
   padding: 4.5rem;
-  border-top: 1rem solid #44A6C2;
-
 
   &__grid {
     display: grid;
@@ -18,7 +16,6 @@
       column-gap: 0.5rem;
 
       &--ambition {
-        background-color: rgba(68, 166, 194, 0.18);
         padding: 0.4rem;
         margin-left: -1.5rem;
         display: inline-flex
@@ -59,16 +56,11 @@
         height: 20px;
         width: 20px;
         background-color: #FFFFFF;
-        border-color: #44A6C2;
         border-width: 2px;
         border-style: solid;
         border-radius: 50%;
         display: inline-block;
         margin: 0.2rem;
-      }
-
-      &__active {
-        background-color: #44A6C2;
       }
     }
 
@@ -76,5 +68,95 @@
       display: flex;
       justify-content: right;
     }
+  }
+}
+
+.color-blue {
+  &__bg {
+    background-color: #44A6C2;
+  }
+
+  &__transparent-bg {
+    background-color: #44A6C22D;
+  }
+
+  &__border {
+    border-color: #44A6C2;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #44A6C2;
+  }
+}
+
+.color-cyan {
+  &__bg {
+    background-color: #2DB3A5;
+  }
+
+  &__transparent-bg {
+    background-color: #2DB3A52D;
+  }
+
+  &__border {
+    border-color: #2DB3A5;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #2DB3A5;
+  }
+}
+
+.color-purple {
+  &__bg {
+    background-color: #B072AD;
+  }
+
+  &__transparent-bg {
+    background-color: #B072AD2D;
+  }
+
+  &__border {
+    border-color: #B072AD;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #B072AD;
+  }
+}
+
+.color-orange {
+  &__bg {
+    background-color: #ED7A0B;
+  }
+
+  &__transparent-bg {
+    background-color: #ED7A0B2D;
+  }
+
+  &__border {
+    border-color: #ED7A0B;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #ED7A0B;
+  }
+}
+
+.color-green {
+  &__bg {
+    background-color: #45AD48;
+  }
+
+  &__transparent-bg {
+    background-color: #45AD482D;
+  }
+
+  &__border {
+    border-color: #45AD48;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #45AD48;
   }
 }

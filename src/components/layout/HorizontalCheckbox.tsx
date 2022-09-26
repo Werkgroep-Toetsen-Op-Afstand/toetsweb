@@ -4,23 +4,11 @@ import {ScanCardContext} from "../../contexts/ScanCardContext";
 interface Props {
     position: number;
     rowText: string;
+    baseClass: string;
 }
 
-const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText}) => {
+const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText, baseClass}) => {
     const {checkedPositie, handleCheckedPositie, checkedAmbitie, handleCheckedAmbitie} = React.useContext(ScanCardContext);
-
-    if (position === 0) {
-        return (
-            <div className='hor-check'>
-                <div className='hor-check__container'>
-                    <p className='hor-check__container__label'>Positie</p>
-                </div>
-                <div className='hor-check__container hor-check--blue-bg'>
-                    <p className='hor-check__container__label'>Ambitie</p>
-                </div>
-            </div>
-        )
-    }
 
     return (
         <div className='hor-check'>
@@ -33,7 +21,7 @@ const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText}) => {
                     type="checkbox"
                 />
             </div>
-            <div className='hor-check__container hor-check--blue-bg'>
+            <div className={`hor-check__container ${baseClass}__transparent-bg`}>
                 <input
                     className='hor-check__container__checkbox'
                     name="b"
