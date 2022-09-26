@@ -30,7 +30,7 @@ const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText, baseCl
                     type="checkbox"
                 />
             </div>
-            <p>{rowText}</p>
+            <p className='hor-check__text'>{rowText}</p>
         </div>
     )
 }

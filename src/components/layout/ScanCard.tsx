@@ -74,7 +74,7 @@ const ScanCard: FunctionComponent<Props> = ({image, baseClass}) => {
                     <span className={`scancard__progress__container__dot ${baseClass}__border`}></span>
                 </div>
                 <div className='scancard__progress__button-container'>
-                    <Button onClick={() => console.log("next clicked")} backgroundColor='#44A6C2' children={
+                    <Button onClick={() => console.log("next clicked")} baseClass={baseClass} children={
                         <span><p>Volgende vraag</p></span>
                     }></Button>
                 </div>

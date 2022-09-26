@@ -19,3 +19,33 @@
     }
   }
 }
+
+.color-blue {
+  &__bg {
+    background-color: #44A6C2;
+  }
+}
+
+.color-cyan {
+  &__bg {
+    background-color: #2DB3A5;
+  }
+}
+
+.color-purple {
+  &__bg {
+    background-color: #B072AD;
+  }
+}
+
+.color-orange {
+  &__bg {
+    background-color: #ED7A0B;
+  }
+}
+
+.color-green {
+  &__bg {
+    background-color: #45AD48;
+  }
+}

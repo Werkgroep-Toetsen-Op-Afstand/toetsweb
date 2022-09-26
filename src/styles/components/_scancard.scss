@@ -47,20 +47,22 @@
 
   &__progress {
     margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
 
     &__container {
       display: flex;
-      justify-content: center;
+      justify-content: right;
+      align-items: center;
 
       &__dot {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         background-color: #FFFFFF;
         border-width: 2px;
         border-style: solid;
         border-radius: 50%;
-        display: inline-block;
-        margin: 0.2rem;
+        margin: 0.4rem;
       }
     }
 
