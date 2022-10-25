@@ -6,10 +6,6 @@
     display: grid;
     grid-template-columns: 60% 40%;
 
-    &--asterix {
-      color: #44A6C2;
-    }
-
     &__span {
       display: flex;
       align-items: center;
@@ -89,6 +85,10 @@
   &__border-top {
     border-top: 1rem solid #44A6C2;
   }
+
+  &__text {
+    color: #44A6C2;
+  }
 }
 
 .color-cyan {
@@ -106,6 +106,10 @@
 
   &__border-top {
     border-top: 1rem solid #2DB3A5;
+  }
+
+  &__text {
+    color: #2DB3A5;
   }
 }
 
@@ -125,6 +129,10 @@
   &__border-top {
     border-top: 1rem solid #B072AD;
   }
+
+  &__text {
+    color: #B072AD;
+  }
 }
 
 .color-orange {
@@ -143,6 +151,10 @@
   &__border-top {
     border-top: 1rem solid #ED7A0B;
   }
+
+  &__text {
+    color: #ED7A0B;
+  }
 }
 
 .color-green {
@@ -160,5 +172,9 @@
 
   &__border-top {
     border-top: 1rem solid #45AD48;
+  }
+
+  &__text {
+    color: #45AD48;
   }
 }

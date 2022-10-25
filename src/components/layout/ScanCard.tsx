@@ -3,14 +3,6 @@ import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
 
-export enum Class {
-    blue = '#44A6C2',
-    cyan = '#2DB3A5',
-    purple = '#B072AD',
-    orange = '#ED7A0B',
-    green = '#45AD48',
-}
-
 interface Props {
     image: string;
     baseClass: string;
@@ -29,8 +21,9 @@ const ScanCard: FunctionComponent<Props> = ({image, baseClass}) => {
                         <br/>
                         <span className='scancard__grid__span'><h4>Positie</h4><p> - In welke beschrijving herken je jouw opleiding nu het meest?</p></span>
                         <br/>
-                        <span className={`scancard__grid__span scancard__grid__span--ambition ${baseClass}__transparent-bg`}>
-                    <h4 className='scancard__grid--asterix'>*</h4>
+                        <span
+                            className={`scancard__grid__span scancard__grid__span--ambition ${baseClass}__transparent-bg`}>
+                    <h4 className={`${baseClass}__text`}>*</h4>
                     <h4>Ambitie</h4>
                     <p> - Welke beschrijving past over 2 jaar het beste bij jouw opleiding?</p>
                     </span>

@@ -1,4 +1,5 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext} from 'react';
+import useLocalStorage from "../utils/LocalStorage";
 
 interface IScanCardContext {
     checkedPositie: number;
@@ -14,8 +15,12 @@ interface Props {
 }
 
 export const ScanCardContextProvider = ({children}: Props) => {
-    const [checkedPositie, setCheckedPositie] = useState(0);
-    const [checkedAmbitie, setCheckedAmbitie] = useState(0);
+
+    const [checkedPositie, setCheckedPositie] = useLocalStorage('checkedPositie', 0);
+    const [checkedAmbitie, setCheckedAmbitie] = useLocalStorage('checkedAmbitie', 0);
+
+    // const [checkedPositie, setCheckedPositie] = useState(0);
+    // const [checkedAmbitie, setCheckedAmbitie] = useState(0);
 
     const handleCheckedPositie = (pos: number) => {
         if (checkedPositie === pos) {

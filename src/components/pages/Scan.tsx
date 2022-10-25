@@ -15,7 +15,7 @@ const Scan: FunctionComponent<Props> = () => {
             <h1 className='scan__title'>Scan</h1>
             <br />
             <br />
-            <ScanCard image={Toetstaken} baseClass={'color-orange'}/>
+            <ScanCard image={Toetsorganisatie} baseClass={'color-orange'}/>
         </Page>
     )
 }
