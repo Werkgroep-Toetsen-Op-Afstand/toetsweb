@@ -8,7 +8,12 @@ interface Props {
 }
 
 const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText, baseClass}) => {
-    const {checkedPositie, handleCheckedPositie, checkedAmbitie, handleCheckedAmbitie} = React.useContext(ScanCardContext);
+    const {
+        checkedPositie,
+        handleCheckedPositie,
+        checkedAmbitie,
+        handleCheckedAmbitie
+    } = React.useContext(ScanCardContext);
 
     return (
         <div className='hor-check'>

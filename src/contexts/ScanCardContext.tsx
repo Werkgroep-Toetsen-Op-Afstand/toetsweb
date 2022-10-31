@@ -16,15 +16,12 @@ interface Props {
 
 export const ScanCardContextProvider = ({children}: Props) => {
 
-    const [checkedPositie, setCheckedPositie] = useLocalStorage('checkedPositie', 0);
-    const [checkedAmbitie, setCheckedAmbitie] = useLocalStorage('checkedAmbitie', 0);
-
-    // const [checkedPositie, setCheckedPositie] = useState(0);
-    // const [checkedAmbitie, setCheckedAmbitie] = useState(0);
+    const [checkedPositie, setCheckedPositie] = useLocalStorage('checkedPositie', -1);
+    const [checkedAmbitie, setCheckedAmbitie] = useLocalStorage('checkedAmbitie', -1);
 
     const handleCheckedPositie = (pos: number) => {
         if (checkedPositie === pos) {
-            setCheckedPositie(0);
+            setCheckedPositie(-1);
         } else {
             setCheckedPositie(pos);
         }
@@ -32,7 +29,7 @@ export const ScanCardContextProvider = ({children}: Props) => {
 
     const handleCheckedAmbitie = (amb: number) => {
         if (checkedAmbitie === amb) {
-            setCheckedAmbitie(0);
+            setCheckedAmbitie(-1);
         } else {
             setCheckedAmbitie(amb);
         }

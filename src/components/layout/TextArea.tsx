@@ -2,13 +2,15 @@ import React, {FunctionComponent} from "react";
 import useLocalStorage from "../../utils/LocalStorage";
 
 interface Props {
+    entity: number;
+    element: number;
     titleTextArea: string;
     hintTextArea: string;
 }
 
-const TextArea: FunctionComponent<Props> = ({titleTextArea, hintTextArea}) => {
+const TextArea: FunctionComponent<Props> = ({entity, element, titleTextArea, hintTextArea}) => {
 
-    const [value, setValue] = useLocalStorage(titleTextArea, '');
+    const [value, setValue] = useLocalStorage(`${entity}.${element}.${titleTextArea}`, '');
 
     return (
         <div className='text-area'>

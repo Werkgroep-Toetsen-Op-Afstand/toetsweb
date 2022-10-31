@@ -2,28 +2,44 @@ import React, {FunctionComponent} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
+import all from "../../assets/data/toetsweb.json";
+import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
+import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
+import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
+import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
+import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
 
 interface Props {
-    image: string;
-    baseClass: string;
+    entity: number;
+    element: number;
 }
 
-const ScanCard: FunctionComponent<Props> = ({image, baseClass}) => {
+const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
+
+    const currentEntity = all.entities[entity];
+    const currentElement = currentEntity.elements[element];
+    const elementPhases = currentElement.phases;
+
+    const baseClasses = ['color-blue', 'color-cyan', 'color-purple', 'color-orange', 'color-green'];
+    const images = [Toetstaken, Toetsprogramma, Toetsbeleid, Toetsorganisatie, Toetsbekwaamheid];
+
+    const scanCardData = all.entities[0];
+    console.log(scanCardData);
 
     return (
-        <div className={`scancard ${baseClass}__border-top`}>
+        <div className={`scancard ${baseClasses[entity]}__border-top`}>
             <div className='scancard__grid'>
                 <div>
                     <div>
-                        <h4>Toetstaken</h4>
+                        <h4>{currentEntity.name}</h4>
                         <br/>
-                        <h4>Kwaliteitscriteria</h4>
+                        <h4>{currentElement.name}</h4>
                         <br/>
                         <span className='scancard__grid__span'><h4>Positie</h4><p> - In welke beschrijving herken je jouw opleiding nu het meest?</p></span>
                         <br/>
                         <span
-                            className={`scancard__grid__span scancard__grid__span--ambition ${baseClass}__transparent-bg`}>
-                    <h4 className={`${baseClass}__text`}>*</h4>
+                            className={`scancard__grid__span scancard__grid__span--ambition ${baseClasses[entity]}__transparent-bg`}>
+                    <h4 className={`${baseClasses[entity]}__text`}>*</h4>
                     <h4>Ambitie</h4>
                     <p> - Welke beschrijving past over 2 jaar het beste bij jouw opleiding?</p>
                     </span>
@@ -35,39 +51,37 @@ const ScanCard: FunctionComponent<Props> = ({image, baseClass}) => {
                                 <div className='hor-check__container'>
                                     <p className='hor-check__container__label'>Positie</p>
                                 </div>
-                                <div className={`hor-check__container ${baseClass}__transparent-bg`}>
+                                <div className={`hor-check__container ${baseClasses[entity]}__transparent-bg`}>
                                     <p className='hor-check__container__label'>Ambitie</p>
                                 </div>
                             </div>
-                            <HorizontalCheckbox position={1}
-                                                rowText={'Docenten ontwikkelen toetsen naar eigen inzicht: zij gebruiken daarvoor eigen kwaliteitcriteria.'}
-                                                baseClass={baseClass}/>
-                            <HorizontalCheckbox position={2}
-                                                rowText={'Docenten maken bij het ontwerpen van toetsen gebruik van kwaliteitscriteria die zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars.'}
-                                                baseClass={baseClass}/>
-                            <HorizontalCheckbox position={3}
-                                                rowText={'De kwaliteitscriteria die docenten gebruiken bij het ontwikkelen toetsen worden regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten.'}
-                                                baseClass={baseClass}/>
-                            <HorizontalCheckbox position={4}
-                                                rowText={'De kwaliteitscriteria die gebruikt worden bij het ontwerpen van zowel de toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld.'}
-                                                baseClass={baseClass}/>
+                            {
+                                elementPhases.map((phase, index) => {
+                                    return (
+                                        <HorizontalCheckbox
+                                            key={index}
+                                            position={index}
+                                            rowText={elementPhases[index]}
+                                            baseClass={baseClasses[entity]} />
+                                    )})
+                            }
                         </div>
                     </form>
                 </div>
-                <img className='scancard__grid__illustration' src={image} alt="illustratieve afbeelding"/>
+                <img className='scancard__grid__illustration' src={images[entity]} alt="illustratieve afbeelding"/>
             </div>
             <div className='scancard__textarea-container'>
-                <TextArea titleTextArea={'Positie'} hintTextArea={'Licht je antwoord toe.'}/>
-                <TextArea titleTextArea={'Ambitie'} hintTextArea={'Licht je antwoord toe.'}/>
+                <TextArea entity={entity} element={element} titleTextArea={'Positie'} hintTextArea={'Licht je antwoord toe.'}/>
+                <TextArea entity={entity} element={element} titleTextArea={'Ambitie'} hintTextArea={'Licht je antwoord toe.'}/>
             </div>
             <div className='scancard__progress'>
                 <div className='scancard__progress__container'>
-                    <span className={`scancard__progress__container__dot ${baseClass}__border ${baseClass}__bg`}></span>
-                    <span className={`scancard__progress__container__dot ${baseClass}__border`}></span>
-                    <span className={`scancard__progress__container__dot ${baseClass}__border`}></span>
+                    <span className={`scancard__progress__container__dot ${baseClasses[entity]}__border ${baseClasses[entity]}__bg`}></span>
+                    <span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>
+                    <span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>
                 </div>
                 <div className='scancard__progress__button-container'>
-                    <Button onClick={() => console.log("next clicked")} baseClass={baseClass} children={
+                    <Button onClick={() => console.log("next clicked")} baseClass={baseClasses[entity]} children={
                         <span><p>Volgende vraag</p></span>
                     }></Button>
                 </div>
