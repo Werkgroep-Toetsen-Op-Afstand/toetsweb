@@ -8,13 +8,12 @@ import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
-import useLocalStorage from "../../utils/LocalStorage";
-import Scan from "../pages/Scan";
 import {ProgressDot} from "./ProgressDot";
 
 interface Props {
     entity: number;
     element: number;
+    handleNext: (previousElement: number) => void;
 }
 
 interface ScanCardData {
@@ -24,7 +23,7 @@ interface ScanCardData {
     feedbackAmbitie: string,
 }
 
-const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
+const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
     const currentEntity = all.entities[entity];
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
@@ -42,7 +41,7 @@ const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
             feedbackAmbitie: ''
         }
         setScanCardData(data);
-    }, [])
+    }, [entity, element]);
 
     const handleCheckedPositie = (selectedPosition: number) => {
         setScanCardData({
@@ -127,16 +126,15 @@ const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
             </div>
             <div className='scancard__progress'>
                 <div className='scancard__progress__container'>
-                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 0}/>
-                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 1}/>
-                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 2}/>
-                    {/*<span*/}
-                    {/*    className={`scancard__progress__container__dot ${baseClasses[entity]}__border ${baseClasses[entity]}__bg`}></span>*/}
-                    {/*<span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>*/}
-                    {/*<span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>*/}
+                    <ProgressDot baseClass={baseClasses[entity]} filledIn={element === 0}/>
+                    <ProgressDot baseClass={baseClasses[entity]} filledIn={element === 1}/>
+                    <ProgressDot baseClass={baseClasses[entity]} filledIn={element === 2}/>
                 </div>
                 <div className='scancard__progress__button-container'>
-                    <Button onClick={() => console.log("next clicked")} baseClass={baseClasses[entity]} children={
+                    <Button onClick={() => {
+                        handleNext(element);
+                        window.scrollTo(0, 0);
+                    }} baseClass={baseClasses[entity]} children={
                         <span><p>Volgende vraag</p></span>
                     }></Button>
                 </div>

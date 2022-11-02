@@ -3,11 +3,11 @@ import User from '../networking/models/User';
 import {TokenService, useAbortController} from 'react-ts-boiler';
 import AuthRepository from '../networking/repos/AuthRepository';
 
-interface AuthContext {
+interface IAuthContext {
     isAuthenticated: boolean;
 }
 
-const AuthContext = createContext<AuthContext>({} as AuthContext);
+const AuthContext = createContext<IAuthContext>({} as IAuthContext);
 export const useAuth = () => useContext(AuthContext);
 
 interface Props {
