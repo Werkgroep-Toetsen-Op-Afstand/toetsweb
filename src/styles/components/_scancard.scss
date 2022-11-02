@@ -50,16 +50,6 @@
       display: flex;
       justify-content: right;
       align-items: center;
-
-      &__dot {
-        height: 25px;
-        width: 25px;
-        background-color: #FFFFFF;
-        border-width: 2px;
-        border-style: solid;
-        border-radius: 50%;
-        margin: 0.4rem;
-      }
     }
 
     &__button-container {

@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useEffect} from 'react';
+import React, {FunctionComponent, useEffect, useMemo, useState} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
@@ -10,21 +10,21 @@ import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
 import useLocalStorage from "../../utils/LocalStorage";
 import Scan from "../pages/Scan";
+import {ProgressDot} from "./ProgressDot";
 
 interface Props {
     entity: number;
     element: number;
 }
 
-const ScanCardData = {
-    checkedPositie : -1,
-    checkedAmbitie : -1,
-    feedbackPositie : '',
-    feedbackAmbitie : '',
+interface ScanCardData {
+    checkedPositie: number,
+    checkedAmbitie: number,
+    feedbackPositie: string,
+    feedbackAmbitie: string,
 }
 
 const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
-
     const currentEntity = all.entities[entity];
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
@@ -32,36 +32,39 @@ const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
     const baseClasses = ['color-blue', 'color-cyan', 'color-purple', 'color-orange', 'color-green'];
     const images = [Toetstaken, Toetsprogramma, Toetsbeleid, Toetsorganisatie, Toetsbekwaamheid];
 
-    const [checkedPositie, setCheckedPositie] = useLocalStorage(`${entity}.${element}.checkedPositie`, -1);
-    const [checkedAmbitie, setCheckedAmbitie] = useLocalStorage(`${entity}.${element}.checkedAmbitie`, -1);
+    const [scanCardData, setScanCardData] = useState<ScanCardData>({} as ScanCardData);
 
-    const handleCheckedPositie = (pos: number) => {
-        setCheckedPositie(pos === checkedPositie ? -1 : pos);
-        ScanCardData.checkedPositie = pos === checkedPositie ? -1 : pos;
+    useMemo(() => {
+        const data = window.localStorage.getItem(`${entity}.${element}`) ? JSON.parse(window.localStorage.getItem(`${entity}.${element}`) as string) : {
+            checkedPositie: -1,
+            checkedAmbitie: -1,
+            feedbackPositie: '',
+            feedbackAmbitie: ''
+        }
+        setScanCardData(data);
+    }, [])
+
+    const handleCheckedPositie = (selectedPosition: number) => {
+        setScanCardData({
+            ...scanCardData,
+            checkedPositie: selectedPosition === scanCardData.checkedPositie ? -1 : selectedPosition
+        });
     }
 
-    const handleCheckedAmbitie = (amb: number) => {
-        setCheckedAmbitie(amb === checkedAmbitie ? -1 : amb);
-        ScanCardData.checkedAmbitie = amb === checkedAmbitie ? -1 : amb;
+    const handleCheckedAmbitie = (selectedAmbition: number) => {
+        setScanCardData({
+            ...scanCardData,
+            checkedAmbitie: selectedAmbition === scanCardData.checkedAmbitie ? -1 : selectedAmbition
+        });
+    }
+
+    const handleFeedback = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setScanCardData({...scanCardData, [e.target.name]: e.target.value});
     }
 
     useEffect(() => {
-        try {
-            window.localStorage.setItem(`${entity}.${element}`, JSON.stringify(ScanCardData));
-        } catch (error) {
-            console.log(error);
-        }
-    }, [ScanCardData.checkedPositie, ScanCardData.checkedAmbitie, ScanCardData.feedbackPositie, ScanCardData.feedbackAmbitie]);
-
-    // ScanCardData.checkedPositie = 1;
-    // ScanCardData.checkedAmbitie = 2;
-    // ScanCardData.feedbackPositie = 'test';
-    // ScanCardData.feedbackAmbitie = 'test2';
-    // try {
-    //     window.localStorage.setItem(`${entity}.${element}`, JSON.stringify(ScanCardData));
-    // } catch (error) {
-    //     console.log(error);
-    // }
+        window.localStorage.setItem(`${entity}.${element}`, JSON.stringify(scanCardData));
+    }, [scanCardData]);
 
     return (
         <div className={`scancard ${baseClasses[entity]}__border-top`}>
@@ -97,9 +100,9 @@ const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
                                     return (
                                         <HorizontalCheckbox
                                             key={index}
-                                            checkedPositie={checkedPositie}
+                                            checkedPositie={scanCardData.checkedPositie}
                                             handleCheckedPositie={handleCheckedPositie}
-                                            checkedAmbitie={checkedAmbitie}
+                                            checkedAmbitie={scanCardData.checkedAmbitie}
                                             handleCheckedAmbitie={handleCheckedAmbitie}
                                             position={index}
                                             rowText={elementPhases[index]}
@@ -113,17 +116,24 @@ const ScanCard: FunctionComponent<Props> = ({entity, element}) => {
                 <img className='scancard__grid__illustration' src={images[entity]} alt="illustratieve afbeelding"/>
             </div>
             <div className='scancard__textarea-container'>
-                <TextArea entity={entity} element={element} titleTextArea={'Positie'}
+                <TextArea value={scanCardData.feedbackPositie} setValue={handleFeedback}
+                          titleTextArea={'Positie'}
+                          name={'feedbackPositie'}
                           hintTextArea={'Licht je antwoord toe.'}/>
-                <TextArea entity={entity} element={element} titleTextArea={'Ambitie'}
+                <TextArea value={scanCardData.feedbackAmbitie} setValue={handleFeedback}
+                          titleTextArea={'Ambitie'}
+                          name={'feedbackAmbitie'}
                           hintTextArea={'Licht je antwoord toe.'}/>
             </div>
             <div className='scancard__progress'>
                 <div className='scancard__progress__container'>
-                    <span
-                        className={`scancard__progress__container__dot ${baseClasses[entity]}__border ${baseClasses[entity]}__bg`}></span>
-                    <span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>
-                    <span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>
+                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 0}/>
+                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 1}/>
+                    <ProgressDot  baseClass={baseClasses[entity]} filledIn={element === 2}/>
+                    {/*<span*/}
+                    {/*    className={`scancard__progress__container__dot ${baseClasses[entity]}__border ${baseClasses[entity]}__bg`}></span>*/}
+                    {/*<span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>*/}
+                    {/*<span className={`scancard__progress__container__dot ${baseClasses[entity]}__border`}></span>*/}
                 </div>
                 <div className='scancard__progress__button-container'>
                     <Button onClick={() => console.log("next clicked")} baseClass={baseClasses[entity]} children={

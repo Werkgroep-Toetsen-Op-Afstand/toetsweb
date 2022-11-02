@@ -2,15 +2,14 @@ import React, {FunctionComponent} from "react";
 import useLocalStorage from "../../utils/LocalStorage";
 
 interface Props {
-    entity: number;
-    element: number;
+    value: string;
+    setValue: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    name: string;
     titleTextArea: string;
     hintTextArea: string;
 }
 
-const TextArea: FunctionComponent<Props> = ({entity, element, titleTextArea, hintTextArea}) => {
-
-    const [value, setValue] = useLocalStorage(`${entity}.${element}.Feedback.${titleTextArea}`, '');
+const TextArea: FunctionComponent<Props> = ({value, setValue, name, titleTextArea, hintTextArea}) => {
 
     return (
         <div className='text-area'>
@@ -19,8 +18,9 @@ const TextArea: FunctionComponent<Props> = ({entity, element, titleTextArea, hin
                 <textarea
                     className='text-area__input'
                     placeholder={hintTextArea}
+                    name={name}
                     value={value}
-                    onChange={(e) => setValue(e.target.value)}
+                    onChange={setValue}
                 />
             </div>
         </div>
