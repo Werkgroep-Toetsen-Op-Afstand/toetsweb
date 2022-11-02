@@ -14,7 +14,6 @@ import theming from './config/theming';
 
 import AuthContextProvider from './contexts/AuthContext';
 import Layout from './components/layout/Layout';
-import ScanCardContextProvider from "./contexts/ScanCardContext";
 
 enableNetworking(networking);
 enableTheming(theming);
@@ -33,9 +32,7 @@ const App: FunctionComponent = () => {
     return (
         <BoilerApp>
             <AuthContextProvider>
-                <ScanCardContextProvider>
-                    <Layout/>
-                </ScanCardContextProvider>
+                <Layout/>
             </AuthContextProvider>
         </BoilerApp>
     );

@@ -10,7 +10,7 @@ interface Props {
 
 const TextArea: FunctionComponent<Props> = ({entity, element, titleTextArea, hintTextArea}) => {
 
-    const [value, setValue] = useLocalStorage(`${entity}.${element}.${titleTextArea}`, '');
+    const [value, setValue] = useLocalStorage(`${entity}.${element}.Feedback.${titleTextArea}`, '');
 
     return (
         <div className='text-area'>

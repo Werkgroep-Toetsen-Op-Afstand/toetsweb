@@ -1,26 +1,23 @@
 import React, {FunctionComponent} from 'react';
-import {ScanCardContext} from "../../contexts/ScanCardContext";
+import useLocalStorage from "../../utils/LocalStorage";
 
 interface Props {
+    checkedPositie: number;
+    handleCheckedPositie: (pos: number) => void;
+    checkedAmbitie: number;
+    handleCheckedAmbitie: (amb: number) => void;
     position: number;
     rowText: string;
     baseClass: string;
 }
 
-const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText, baseClass}) => {
-    const {
-        checkedPositie,
-        handleCheckedPositie,
-        checkedAmbitie,
-        handleCheckedAmbitie
-    } = React.useContext(ScanCardContext);
-
+const HorizontalCheckbox: FunctionComponent<Props> = ({checkedPositie, handleCheckedPositie, checkedAmbitie, handleCheckedAmbitie, position, rowText, baseClass}) => {
     return (
         <div className='hor-check'>
             <div className='hor-check__container'>
                 <input
                     className='hor-check__container__checkbox'
-                    name="a"
+                    name="positie"
                     checked={checkedPositie === position}
                     onChange={() => handleCheckedPositie(position)}
                     type="checkbox"
@@ -29,7 +26,7 @@ const HorizontalCheckbox: FunctionComponent<Props> = ({position, rowText, baseCl
             <div className={`hor-check__container ${baseClass}__transparent-bg`}>
                 <input
                     className='hor-check__container__checkbox'
-                    name="b"
+                    name="ambitie"
                     checked={checkedAmbitie === position}
                     onChange={() => handleCheckedAmbitie(position)}
                     type="checkbox"

@@ -22,4 +22,12 @@ export const useLocalStorage = (key: string, initialValue: any) => {
     return [value, setValue];
 }
 
+export const setLocalStorageObject = (key: string, value: any) => {
+    try {
+        window.localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export default useLocalStorage;
