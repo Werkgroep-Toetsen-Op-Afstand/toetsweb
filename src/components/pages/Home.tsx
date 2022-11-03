@@ -10,12 +10,6 @@ interface Props {}
 
 const Home: FunctionComponent<Props> = () => {
 
-    const [centerClick, setCenterClick] = useState(false);
-
-    const parentCenterClick = (centerClick: boolean) => {
-        setCenterClick(centerClick);
-    }
-
     return (
         <Page className={'home-page'}>
             <div className="home-page__hero-section">
@@ -52,9 +46,9 @@ const Home: FunctionComponent<Props> = () => {
                     <p>
                     Binnen iedere toetsentiteit kunnen drie elementen worden onderscheiden. Dit zijn de elementen kwaliteitscriteria, ontwerp en borging. Het eerste element, kwaliteitscriteria, gaat over de vraag welke informatie wordt gebruikt om de kwaliteit van de toetsentiteiten te realiseren en vast te stellen. Het tweede element, ontwerp, is gericht op de vraag hoe de ontwikkeling en inzet van de vijf toetsentiteiten tot stand komt. Het derde element, borging, richt zich op de wijze waarop de kwaliteitsborging van de toetsentiteiten wordt ingericht. Structurele aandacht voor deze drie elementen borgt dat er gewerkt wordt vanuit de PDCA-cyclus.
                     </p>
-
+                    <br />
                     <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als vlakjes.</p>
-
+                    <br />
                     <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
 
                     <br />
@@ -63,6 +57,9 @@ const Home: FunctionComponent<Props> = () => {
                     <h3>Starten met de scan</h3>
 
                     <p>Wil je de Toetsweb-Scan uitvoeren, zorg dan dat je met je team tegelijk aan de slag kunt en ongeveer anderhalf tot 2 uur kunt uittrekken. Uiteraard kun je de scan ook individueel invullen.</p>
+
+                    <br />
+                    <br />
 
                     <Button onClick={() => console.log("start scan")} children={        
                         <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
