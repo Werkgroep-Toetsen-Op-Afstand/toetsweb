@@ -5,13 +5,15 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
-  &__download {
-    margin: 2rem 0 2rem;
+  &__download-container {
+    padding: 2rem 0 2rem 2rem;
     display: flex;
-    justify-content: right;
-    align-items: center;
+    justify-content: flex-end;
   }
+
+    &__download-button {
+        margin-left: 1rem;
+    }
 }

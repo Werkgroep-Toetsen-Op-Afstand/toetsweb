@@ -2,13 +2,13 @@ import React, {FunctionComponent, useEffect, useMemo, useState} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
-import all from "../../assets/data/toetsweb.json";
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
 import {ProgressDot} from "./ProgressDot";
+import data from "../../assets/data/toetsweb.json";
 
 interface Props {
     entity: number;
@@ -24,7 +24,7 @@ interface ScanCardData {
 }
 
 const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
-    const currentEntity = all.entities[entity];
+    const currentEntity = data.entities[entity]
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
 
@@ -64,6 +64,8 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
     useEffect(() => {
         window.localStorage.setItem(`${entity}.${element}`, JSON.stringify(scanCardData));
     }, [scanCardData]);
+
+    const scanElementComplete = scanCardData.checkedPositie !== -1 && scanCardData.checkedAmbitie !== -1 && scanCardData.feedbackPositie !== '' && scanCardData.feedbackAmbitie !== '';
 
     return (
         <div className={`scancard ${baseClasses[entity]}__border-top`}>
@@ -132,8 +134,10 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                 </div>
                 <div className='scancard__progress__button-container'>
                     <Button onClick={() => {
-                        handleNext(element);
-                        window.scrollTo(0, 0);
+                        if (scanElementComplete){
+                            handleNext(element);
+                            window.scrollTo(0, 0);
+                        }
                     }} baseClass={baseClasses[entity]} children={
                         <span><p>Volgende vraag</p></span>
                     }></Button>

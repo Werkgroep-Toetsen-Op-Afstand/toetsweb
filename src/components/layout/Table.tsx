@@ -6,25 +6,30 @@ interface Props {
 }
 
 const Table: FunctionComponent<Props> = ({tableTitle, data}) => {
+
     return (
-        <table className='table'>
+        <div>
             <h2 className='table__title'>{tableTitle}</h2>
-            {
-                data.map((row: any, index: number) => {
-                    return (
-                        <tr key={index} className={`table__row ${index === 0 ? 'table__first-row' : ''}`}>
-                            {
-                                row.map((cell: any, index: number) => {
-                                    return (
-                                        <td key={index} className='table__cell'>{cell}</td>
-                                    )
-                                })
-                            }
-                        </tr>
-                    )
-                })
-            }
-        </table>
+            <table className='table'>
+                <tbody>
+                {
+                    data.map((row: any, index: number) => {
+                        return (
+                            <tr key={index} className={`table__row ${index === 0 ? 'table__first-row' : ''}`}>
+                                {
+                                    row.map((cell: any, index: number) => {
+                                        return (
+                                            <td key={index} className='table__cell'>{cell}</td>
+                                        )
+                                    })
+                                }
+                            </tr>
+                        )
+                    })
+                }
+                </tbody>
+            </table>
+        </div>
     )
 }
 
