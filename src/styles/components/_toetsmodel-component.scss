@@ -11,7 +11,7 @@
     }
 
     &__center {
-        background: white 0% 0% no-repeat padding-box;
+        background: white 0 0 no-repeat padding-box;
         width: 900px;
         padding: 1rem;
         border: 1px solid black;
@@ -42,7 +42,7 @@
     }
 
     &__one-hover {
-        background: white 0% 0% no-repeat padding-box;
+        background: white 0 0 no-repeat padding-box;
         width: 30rem;
         padding: 1rem;
         border: 3px solid black;
@@ -50,8 +50,8 @@
 }
 
 .popup-content {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 
 .number__hover {
