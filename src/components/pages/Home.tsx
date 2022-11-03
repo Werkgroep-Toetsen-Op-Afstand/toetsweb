@@ -1,14 +1,13 @@
 import Button from 'components/layout/Button';
 import React, {FunctionComponent} from 'react';
 import {Page} from 'react-ts-boiler';
-import React, { FunctionComponent, useState } from 'react';
-import {Page, route} from 'react-ts-boiler';
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
 import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 
-interface Props {}
+interface Props {
+}
 
 const Home: FunctionComponent<Props> = () => {
 
@@ -66,11 +65,11 @@ const Home: FunctionComponent<Props> = () => {
                         wijze waarop de kwaliteitsborging van de toetsentiteiten wordt ingericht. Structurele aandacht
                         voor deze drie elementen borgt dat er gewerkt wordt vanuit de PDCA-cyclus.
                     </p>
-
+                    <br/>
                     <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier
                         ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als
                         vlakjes.</p>
-
+                    <br/>
                     <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe
                         de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
 
@@ -82,6 +81,9 @@ const Home: FunctionComponent<Props> = () => {
                     <p>Wil je de Toetsweb-Scan uitvoeren, zorg dan dat je met je team tegelijk aan de slag kunt en
                         ongeveer anderhalf tot 2 uur kunt uittrekken. Uiteraard kun je de scan ook individueel
                         invullen.</p>
+
+                    <br/>
+                    <br/>
 
                     <Button onClick={() => console.log("start scan")} children={
                         <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
