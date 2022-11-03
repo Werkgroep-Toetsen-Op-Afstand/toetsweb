@@ -1,0 +1,17 @@
+.result {
+  max-width: 1400px;
+  margin: 12rem auto 5rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__download {
+    margin: 2rem 0 2rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+}

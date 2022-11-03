@@ -1,0 +1,15 @@
+.result-fragment {
+  margin-top: 1rem;
+
+  &__title {
+    font-size: 42px;
+  }
+
+  &__answer-card {
+    margin-top: 2rem;
+    -webkit-box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+    padding: 1.5rem;
+    background-color: $color-white;
+  }
+}
