@@ -1,13 +1,14 @@
 import Button from 'components/layout/Button';
 import React, {FunctionComponent} from 'react';
 import {Page} from 'react-ts-boiler';
+import React, { FunctionComponent, useState } from 'react';
+import {Page, route} from 'react-ts-boiler';
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
 import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 
-interface Props {
-}
+interface Props {}
 
 const Home: FunctionComponent<Props> = () => {
 
@@ -25,9 +26,10 @@ const Home: FunctionComponent<Props> = () => {
                         Toetsing Getoetst.</p>
                 </div>
 
-                {/* <img src={Toetsmodel} alt="toetsmodel" /> */}
                 <ToetsmodelComponent/>
             </div>
+
+            <div className='home-page__blur'></div>
 
             <div className='home-page__info-section'>
                 <Card children={

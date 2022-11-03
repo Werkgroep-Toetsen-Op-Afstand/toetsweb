@@ -1,29 +1,59 @@
 .toetsmodel-component {
     position: relative;
 
-    &__center-hover {
-        background: white 0% 0% no-repeat padding-box;
-        width: 100%;
+    &__hover {
         padding: 1rem;
-        border: 3px solid black;
-        position: absolute;
-        top: 320px;
+        width: 320px;
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+        -moz-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+        box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+    }
+
+    &__center {
+        background: white 0% 0% no-repeat padding-box;
+        width: 900px;
+        padding: 1rem;
+        border: 1px solid black;
+        position: fixed;
+        top: 20%;
         z-index: 2;
-        left: 0;
+        left: calc(50% - 451px - 1rem);
+        display: flex;
+        column-gap: 1rem;
 
         ul {
             padding-left: 1.5rem;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &--read-more {
+            color: blue;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
     &__one-hover {
         background: white 0% 0% no-repeat padding-box;
-        width: 100%;
+        width: 30rem;
         padding: 1rem;
         border: 3px solid black;
-        position: absolute;
-        top: 320px;
-        z-index: 2;
-        left: 0;
     }
+}
+
+.popup-content {
+    width: 0px;
+    height: 0px;
+}
+
+.number__hover {
+    padding: 1rem;
 }
