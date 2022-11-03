@@ -30,21 +30,22 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
             <div className='result-fragment__answer-card'>
                 {
                     entities.map((entity, entityIndex) => {
-                        const elements = entity.elements;
                         return (
                             <div>
                                 <h3>{entity.name}</h3>
                                 {
-                                    elements.map((element, elementIndex) => {
+                                    entity.elements.map((element, elementIndex) => {
                                         return (
                                             <div>
                                                 <h4>{element.name}</h4>
                                                 <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
                                                 <p>Toelichting: {getFeedback(entityIndex, elementIndex)}</p>
+                                                <br/>
                                             </div>
                                         )
                                     })
                                 }
+                                <br/>
                             </div>
                         );
                     })

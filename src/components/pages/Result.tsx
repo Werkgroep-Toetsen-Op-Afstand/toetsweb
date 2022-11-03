@@ -13,8 +13,7 @@ const Result: FunctionComponent<Props> = () => {
 
     useEffect(() => {
         entities.forEach((entity, entityIndex) => {
-            const elements = entity.elements;
-            elements.forEach((element, elementIndex) => {
+            entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
                 const answer = JSON.parse(rawAnswer as string);
                 if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1
@@ -67,8 +66,7 @@ const Result: FunctionComponent<Props> = () => {
 
         entities.forEach((entity, entityIndex) => {
             fileData += entity.name + "\n";
-            const elements = entity.elements;
-            elements.forEach((element, elementIndex) => {
+            entity.elements.forEach((element, elementIndex) => {
                 fileData += element.name + "\n";
                 fileData += "Positie: " + element.phases[getPositionResult(entityIndex, elementIndex)] + "\n";
                 fileData += "Positie toelichting: " + getPositionFeedback(entityIndex, elementIndex) + "\n";
