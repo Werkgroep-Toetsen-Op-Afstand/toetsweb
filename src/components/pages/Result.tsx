@@ -3,6 +3,7 @@ import {Page} from "react-ts-boiler";
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
 import data from "../../assets/data/toetsweb.json";
+import downloadFile from "../../utils/FileDownloader";
 
 interface Props {
 }
@@ -19,7 +20,6 @@ const Result: FunctionComponent<Props> = () => {
                 if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1
                     || answer.feedbackPositie === "" || answer.feedbackAmbitie === "") {
                     window.location.href = '/scan';
-                    return;
                 }
             })
         })
@@ -52,11 +52,7 @@ const Result: FunctionComponent<Props> = () => {
     const downloadAdviceBooklet = () => {
         fetch('advice-booklet.pdf').then(response => {
             response.blob().then(blob => {
-                let url = window.URL.createObjectURL(blob);
-                let a = document.createElement('a');
-                a.href = url;
-                a.download = 'advies.pdf';
-                a.click();
+                downloadFile(blob, 'advice-booklet.pdf');
             });
         })
     }
@@ -76,13 +72,7 @@ const Result: FunctionComponent<Props> = () => {
             fileData += "\n";
         });
 
-        const blob = new Blob([fileData],
-            {type: 'text/plain;charset=utf-8'});
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'resultaten.txt';
-        a.click();
+        downloadFile(new Blob([fileData]), 'resultaten.txt');
     }
 
     return (

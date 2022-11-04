@@ -3,8 +3,8 @@
   margin: 12rem auto 5rem;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
 
   &__download-container {
