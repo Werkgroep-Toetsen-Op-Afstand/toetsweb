@@ -1,6 +1,6 @@
 import Button from 'components/layout/Button';
-import React, { FunctionComponent, useState } from 'react';
-import {Page, route} from 'react-ts-boiler';
+import { FunctionComponent } from 'react';
+import {Page} from 'react-ts-boiler';
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"

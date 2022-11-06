@@ -4,7 +4,7 @@ import {
     enableRouting,
     enableLocalization,
     enableTheming,
-    enableNetworking, groupListeners, onEventOnce, onEvent,
+    groupListeners, onEventOnce, onEvent,
 } from 'react-ts-boiler';
 
 import routes from './config/routes';
