@@ -20,11 +20,11 @@ const Table: FunctionComponent<Props> = ({tableTitle, data}) => {
                                     row.map((cell: any, index: number) => {
                                         return (
                                             <td key={index} className='table__cell'>{cell}</td>
-                                        )
+                                        );
                                     })
                                 }
                             </tr>
-                        )
+                        );
                     })
                 }
                 </tbody>

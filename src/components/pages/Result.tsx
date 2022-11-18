@@ -2,7 +2,7 @@ import React, {FunctionComponent, useEffect} from 'react';
 import {Page} from "react-ts-boiler";
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
-import data from "../../assets/data/toetsweb.json";
+import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 
 const Result: FunctionComponent<Props> = () => {
 
-    const entities = data.entities;
+    const entities = scanData.entities;
 
     useEffect(() => {
         entities.forEach((entity, entityIndex) => {
@@ -26,9 +26,10 @@ const Result: FunctionComponent<Props> = () => {
     }, []);
 
     const getPositionResult = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.checkedPositie;
+        const answer = JSON.parse(
+            window.localStorage.getItem(`${entity}.${element}`) as string
+        )
+        return answer.checkedPositie + 1;
     }
 
     const getPositionFeedback = (entity: number, element: number) => {
@@ -40,7 +41,7 @@ const Result: FunctionComponent<Props> = () => {
     const getAmbitionResult = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.checkedAmbitie;
+        return answer.checkedAmbitie + 1;
     }
 
     const getAmbitionFeedback = (entity: number, element: number) => {

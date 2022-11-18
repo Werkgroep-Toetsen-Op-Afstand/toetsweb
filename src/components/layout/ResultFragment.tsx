@@ -1,7 +1,9 @@
 import React, {FunctionComponent} from "react";
 import ToetsmodelComponent from "./ToetsmodelComponent";
 import Table from "./Table";
-import data from "../../assets/data/toetsweb.json";
+import scanData from "../../assets/data/scandata.json";
+import resultData from "../../assets/data/resultdata.json";
+import Card from "./Card";
 
 interface Props {
     pageTitle: string;
@@ -11,46 +13,70 @@ interface Props {
 
 const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeedback}) => {
 
-    const entities = data.entities;
+    const entities = scanData.entities;
 
-    const positionData = [
-        ['Toetsweb', 'Kwaliteitscriteria', 'Ontwerp', 'Borging', 'Fase'],
-        ['Toets(tak)en', 2, 2, 1, 1],
-        ['Toetsprogramma', 3, 1, 2, 2],
-        ['Toetsbeleid', 4, 3, 2, 2],
-        ['Toetsorganisatie', 2, 2, 2, 2],
-        ['Toetsbekwaamheid', 3, 2, 2, 2],
-    ];
+    const getTableData = () => {
+        const tableData: Array<Array<string>> = [];
+        tableData.push(['Toetsweb', 'Kwaliteitscriteria', 'Ontwerp', 'Borging', 'Fase']);
+        entities.forEach((entity, entityIndex) => {
+            const results = [
+                getResult(entityIndex, 0).toString(),
+                getResult(entityIndex, 1).toString(),
+                getResult(entityIndex, 2).toString()
+            ];
+
+            tableData.push([
+                entity.name,
+                results[0],
+                results[1],
+                results[2],
+                getEndResult(results.join('')).toString()
+            ]);
+        });
+        return tableData;
+    }
+
+    const getEndResult = (results: string) => {
+        const phases = resultData.phases;
+        let phaseID = 1;
+        phases.forEach((phase) => {
+            const selectIDs = phase.selectIDs;
+            selectIDs.forEach((selectID) => {
+                if (results == selectID) {
+                    phaseID = parseInt(phase.phaseID);
+                }
+            });
+        });
+        return phaseID;
+    }
 
     return (
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{pageTitle}</h1>
             <ToetsmodelComponent/>
-            <Table tableTitle={pageTitle} data={positionData}/>
-            <div className='result-fragment__answer-card'>
-                {
-                    entities.map((entity, entityIndex) => {
-                        return (
-                            <div>
-                                <h3>{entity.name}</h3>
-                                {
-                                    entity.elements.map((element, elementIndex) => {
-                                        return (
-                                            <div>
-                                                <h4>{element.name}</h4>
-                                                <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
-                                                <p>Toelichting: {getFeedback(entityIndex, elementIndex)}</p>
-                                                <br/>
-                                            </div>
-                                        )
-                                    })
-                                }
-                                <br/>
-                            </div>
-                        );
-                    })
-                }
-            </div>
+            <Table tableTitle={pageTitle} data={getTableData()}/>
+            <Card children={
+                entities.map((entity, entityIndex) => {
+                    return (
+                        <div key={entityIndex}>
+                            <h3>{entity.name}</h3>
+                            {
+                                entity.elements.map((element, elementIndex) => {
+                                    return (
+                                        <div key={elementIndex}>
+                                            <h4>{element.name}</h4>
+                                            <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
+                                            <p>Toelichting: {getFeedback(entityIndex, elementIndex)}</p>
+                                            <br/>
+                                        </div>
+                                    );
+                                })
+                            }
+                            <br/>
+                        </div>
+                    );
+                })
+            } className='result-fragment__answer-card'/>
         </div>
     )
 }
