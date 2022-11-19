@@ -1,0 +1,20 @@
+.text-area {
+
+  &__container {
+    font-weight: bolder;
+  }
+
+  &__input {
+    resize: none;
+    width: 90%;
+    height: 7.5rem;
+    padding: 1rem;
+    border: none;
+    color: rgb(178, 178, 178);
+    font-size: 18px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+  }
+}
+

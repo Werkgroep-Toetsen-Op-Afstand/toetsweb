@@ -1,22 +1,51 @@
 .button {
   padding: .5rem 1rem;
-  color: $color-white;
-  background-color: $color-purple;
+  color: #FFFFFF;
   display: inline-block;
   cursor: pointer;
+  font-family: SourceSansPro, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
   user-select: none;
   transition: background-color .2s;
-
-  &:hover {
-    background-color: rgba($color-purple, .6);
-  }
 
   &--disabled {
     cursor: not-allowed;
     opacity: .5;
 
     &:hover {
-      background-color: $color-purple;
+      background-color: $color-white;
     }
+  }
+}
+
+.color-blue {
+  &__bg {
+    background-color: #44A6C2;
+  }
+}
+
+.color-cyan {
+  &__bg {
+    background-color: #2DB3A5;
+  }
+}
+
+.color-purple {
+  &__bg {
+    background-color: #B072AD;
+  }
+}
+
+.color-orange {
+  &__bg {
+    background-color: #ED7A0B;
+  }
+}
+
+.color-green {
+  &__bg {
+    background-color: #45AD48;
   }
 }

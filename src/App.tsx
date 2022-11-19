@@ -18,7 +18,7 @@ import Layout from './components/layout/Layout';
 enableNetworking(networking);
 enableTheming(theming);
 enableLocalization(lang);
-enableRouting({ routes });
+enableRouting({routes});
 
 const App: FunctionComponent = () => {
 
@@ -32,7 +32,7 @@ const App: FunctionComponent = () => {
     return (
         <BoilerApp>
             <AuthContextProvider>
-                <Layout />
+                <Layout/>
             </AuthContextProvider>
         </BoilerApp>
     );

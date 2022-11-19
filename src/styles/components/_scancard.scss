@@ -1,0 +1,171 @@
+.scancard {
+  box-shadow: 0 3px 6px #00000029;
+  padding: 4.5rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    &__span {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+
+      &--ambition {
+        padding: 0.4rem;
+        margin-left: -1.5rem;
+        display: inline-flex
+      }
+    }
+
+    &__illustration {
+      width: 34rem;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+
+      &__checkbox {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__textarea-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 2rem;
+  }
+
+  &__progress {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+
+    &__container {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+    }
+
+    &__button-container {
+      display: flex;
+      justify-content: right;
+    }
+  }
+}
+
+.color-blue {
+  &__bg {
+    background-color: #44A6C2;
+  }
+
+  &__transparent-bg {
+    background-color: #44A6C22D;
+  }
+
+  &__border {
+    border-color: #44A6C2;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #44A6C2;
+  }
+
+  &__text {
+    color: #44A6C2;
+  }
+}
+
+.color-cyan {
+  &__bg {
+    background-color: #2DB3A5;
+  }
+
+  &__transparent-bg {
+    background-color: #2DB3A52D;
+  }
+
+  &__border {
+    border-color: #2DB3A5;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #2DB3A5;
+  }
+
+  &__text {
+    color: #2DB3A5;
+  }
+}
+
+.color-purple {
+  &__bg {
+    background-color: #B072AD;
+  }
+
+  &__transparent-bg {
+    background-color: #B072AD2D;
+  }
+
+  &__border {
+    border-color: #B072AD;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #B072AD;
+  }
+
+  &__text {
+    color: #B072AD;
+  }
+}
+
+.color-orange {
+  &__bg {
+    background-color: #ED7A0B;
+  }
+
+  &__transparent-bg {
+    background-color: #ED7A0B2D;
+  }
+
+  &__border {
+    border-color: #ED7A0B;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #ED7A0B;
+  }
+
+  &__text {
+    color: #ED7A0B;
+  }
+}
+
+.color-green {
+  &__bg {
+    background-color: #45AD48;
+  }
+
+  &__transparent-bg {
+    background-color: #45AD482D;
+  }
+
+  &__border {
+    border-color: #45AD48;
+  }
+
+  &__border-top {
+    border-top: 1rem solid #45AD48;
+  }
+
+  &__text {
+    color: #45AD48;
+  }
+}

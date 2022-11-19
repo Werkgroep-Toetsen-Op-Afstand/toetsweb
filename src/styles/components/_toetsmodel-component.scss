@@ -1,0 +1,29 @@
+.toetsmodel-component {
+    position: relative;
+
+    &__center-hover {
+        background: white 0% 0% no-repeat padding-box;
+        width: 100%;
+        padding: 1rem;
+        border: 3px solid black;
+        position: absolute;
+        top: 320px;
+        z-index: 2;
+        left: 0;
+
+        ul {
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__one-hover {
+        background: white 0% 0% no-repeat padding-box;
+        width: 100%;
+        padding: 1rem;
+        border: 3px solid black;
+        position: absolute;
+        top: 320px;
+        z-index: 2;
+        left: 0;
+    }
+}
