@@ -1,0 +1,33 @@
+.scancard {
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 4.5rem;
+    border-top: 1rem solid #44A6C2;
+    display: flex;
+    column-gap: 3rem;
+
+    &--asterix {
+        color: #44A6C2;
+    }
+
+    &__span {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+
+        &--ambition {
+            background-color: rgba(68, 166, 194, 0.18);
+            padding: 0.4rem;
+            margin-left: -1.5rem;
+            display: inline-flex
+        }
+    }
+
+    &__illustration {
+        width: 34rem;
+    }
+
+    &__form {
+        display: flex;
+        column-gap: 0.6rem;
+    }
+}

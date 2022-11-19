@@ -4,18 +4,15 @@ import {
     enableRouting,
     enableLocalization,
     enableTheming,
-    enableNetworking, groupListeners, onEventOnce, onEvent,
+    groupListeners, onEventOnce, onEvent,
 } from 'react-ts-boiler';
 
 import routes from './config/routes';
 import lang from './config/lang';
-import networking from './config/networking';
 import theming from './config/theming';
 
-import AuthContextProvider from './contexts/AuthContext';
 import Layout from './components/layout/Layout';
 
-enableNetworking(networking);
 enableTheming(theming);
 enableLocalization(lang);
 enableRouting({ routes });
@@ -31,9 +28,7 @@ const App: FunctionComponent = () => {
 
     return (
         <BoilerApp>
-            <AuthContextProvider>
-                <Layout />
-            </AuthContextProvider>
+            <Layout />
         </BoilerApp>
     );
 };

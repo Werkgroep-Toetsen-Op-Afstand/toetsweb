@@ -1,0 +1,34 @@
+.vert-check {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+
+    &__container {
+
+        input {
+            visibility: hidden;
+            display: block;
+            height: 0;
+            width: 0;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        span {
+            height: 16px;
+            width: 16px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        [type=checkbox]:checked + span {
+            background-image: url("../../assets/icons/checkmark.svg");
+            width: 16px;
+            background-size: contain;
+            height: 16px;
+            background-position: center;
+        }
+    }
+}
+  

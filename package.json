@@ -16,6 +16,7 @@
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "react-ts-boiler": "^1.1.5",
+    "reactjs-popup": "^2.0.5",
     "typescript": "^4.4.2",
     "web-vitals": "^1.1.2"
   },
