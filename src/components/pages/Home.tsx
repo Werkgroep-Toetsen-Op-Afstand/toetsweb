@@ -1,9 +1,11 @@
 import Button from 'components/layout/Button';
-import React, {FunctionComponent} from 'react';
+import { FunctionComponent } from 'react';
 import {Page} from 'react-ts-boiler';
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
+import { NavLink as ReactRouterNavLink } from "react-router-dom";
+import { route } from 'react-ts-boiler';
 import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 
 interface Props {
@@ -25,9 +27,10 @@ const Home: FunctionComponent<Props> = () => {
                         Toetsing Getoetst.</p>
                 </div>
 
-                {/* <img src={Toetsmodel} alt="toetsmodel" /> */}
                 <ToetsmodelComponent/>
             </div>
+            
+            <div className='home-page__blur'></div>
 
             <div className='home-page__info-section'>
                 <Card children={
@@ -64,13 +67,10 @@ const Home: FunctionComponent<Props> = () => {
                         wijze waarop de kwaliteitsborging van de toetsentiteiten wordt ingericht. Structurele aandacht
                         voor deze drie elementen borgt dat er gewerkt wordt vanuit de PDCA-cyclus.
                     </p>
-
-                    <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier
-                        ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als
-                        vlakjes.</p>
-
-                    <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe
-                        de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
+                    <br />
+                    <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als vlakjes.</p>
+                    <br />
+                    <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
 
                     <br/>
                     <br/>
@@ -81,9 +81,15 @@ const Home: FunctionComponent<Props> = () => {
                         ongeveer anderhalf tot 2 uur kunt uittrekken. Uiteraard kun je de scan ook individueel
                         invullen.</p>
 
-                    <Button onClick={() => console.log("start scan")} children={
-                        <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
-                    } baseClass={'color-blue'}></Button>
+                    <br />
+                    <br />
+
+                    <ReactRouterNavLink exact={true} to={route('scan')}>
+                        <div className='home-page__button'>
+                            <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
+                        </div>
+                    </ReactRouterNavLink>
+                    
                 </div>
                 <img src={Toetstaken} alt="Illustratie Toets(tak)en"/>
             </div>

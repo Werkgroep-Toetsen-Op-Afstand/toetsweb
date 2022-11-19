@@ -1,29 +1,117 @@
 .toetsmodel-component {
     position: relative;
 
-    &__center-hover {
-        background: white 0% 0% no-repeat padding-box;
-        width: 100%;
+    &__hover {
+        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
         padding: 1rem;
-        border: 3px solid black;
-        position: absolute;
-        top: 320px;
+        width: 320px;
+        background-color: white;
+        -webkit-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+        -moz-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+        box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
+    }
+
+    &__center {
+        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+        background: white 0% 0% no-repeat padding-box;
+        width: 900px;
+        padding: 1rem;
+        border: 1px solid black;
+        position: fixed;
+        top: 20%;
         z-index: 2;
-        left: 0;
+        left: calc(50% - 451px - 1rem);
+        display: flex;
+        column-gap: 1rem;
 
         ul {
             padding-left: 1.5rem;
         }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &--read-more {
+            color: blue;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__one-hover {
+        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
         background: white 0% 0% no-repeat padding-box;
-        width: 100%;
+        width: 30rem;
         padding: 1rem;
         border: 3px solid black;
-        position: absolute;
-        top: 320px;
-        z-index: 2;
-        left: 0;
     }
+
+    &__element-hover {
+        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+        width: 40rem;
+        padding: 1rem;
+        color: $color-white;
+
+        h4 {
+            font-weight: normal;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+}
+
+@keyframes anvil {
+    0% {
+      transform: scale(1) translateY(0px);
+      opacity: 0;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    1% {
+      transform: scale(0.96) translateY(10px);
+      opacity: 0;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+      box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+}
+
+.turquoise {
+    background-color: $color-turquoise; 
+}
+
+.orange {
+    background-color: $color-orange; 
+}
+
+.green {
+    background-color: $color-green; 
+}
+
+.blue {
+    background-color: $color-blue; 
+}
+
+.purple {
+    background-color: $color-purple; 
+}
+
+.popup-content {
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    border: 0;
+}
+
+.number__hover {
+    padding: 1rem;
 }

@@ -18,9 +18,10 @@
       margin-right: auto;
       justify-content: space-between;
 
-      &__right {
+      &--right {
         display: flex;
         column-gap: 3rem;
+
       }
     }
   }

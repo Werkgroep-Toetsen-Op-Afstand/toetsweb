@@ -1,24 +1,30 @@
 .home-page {
-    max-width: 1400px;
-    margin: 7rem 0;
+    max-width: 1500px;
+    margin: 8rem 0;
     margin-left: auto;
     margin-right: auto;   
+    position: relative;
 
     &__hero-section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 90%;
     }
 
     &__info-section {
         display: flex;
-        padding: 4rem;
-        column-gap: 3rem;
+        padding: 4rem 0;
+        column-gap: 20px;
 
         &__inner-card {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             row-gap: 1rem;
+            width: 680px;
+            box-sizing: border-box;
+            padding: 0 6rem;
 
             p {
                 color: $color-gray;
@@ -30,7 +36,6 @@
         display: flex;
         justify-content: space-between;
         column-gap: 5rem;
-        margin-left: 7rem;
         margin-bottom: 8rem;
 
         img {
@@ -40,27 +45,28 @@
         div {
             display: flex;
             flex-direction: column;
+        }
+    }
 
-            div {
-                align-self: flex-end;
-                margin-right: 1rem;
-                background-color: $color-blue;
-                padding: 0.5rem 1rem;
-                color: $color-white;
-                border-radius: 0.2rem;
+    &__button {
+        display: block;
+        margin-right: 1rem;
+        background-color: $color-blue;
+        padding: 0.5rem 1rem;
+        color: $color-white;
+        border-radius: 0.2rem;
+        width: 17.5rem;
 
-                span {
-                    display: flex;
-                    column-gap: 1rem;
-                    align-items: center;
-                    font-weight: $bold;
+        span {
+            display: flex;
+            column-gap: 1rem;
+            align-items: center;
+            font-weight: $bold;
 
-                    img {
-                        height: 1rem;
-                        width: 1rem;
-                    }
-                }
-            }
+            img {
+                height: 1rem;
+                width: 1rem;
+            }   
         }
     }
 }
