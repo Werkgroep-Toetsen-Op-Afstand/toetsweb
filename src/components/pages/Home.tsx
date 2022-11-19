@@ -1,9 +1,11 @@
 import Button from 'components/layout/Button';
-import React, {FunctionComponent} from 'react';
+import { FunctionComponent } from 'react';
 import {Page} from 'react-ts-boiler';
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
+import { NavLink as ReactRouterNavLink } from "react-router-dom";
+import { route } from 'react-ts-boiler';
 import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
 
 interface Props {
@@ -82,12 +84,15 @@ const Home: FunctionComponent<Props> = () => {
                         ongeveer anderhalf tot 2 uur kunt uittrekken. Uiteraard kun je de scan ook individueel
                         invullen.</p>
 
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
 
-                    <Button onClick={() => console.log("start scan")} children={
-                        <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
-                    } baseClass={'color-blue'}></Button>
+                    <ReactRouterNavLink exact={true} to={route('scan')}>
+                        <div className='home-page__button'>
+                            <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
+                        </div>
+                    </ReactRouterNavLink>
+                    
                 </div>
                 <img src={Toetstaken} alt="Illustratie Toets(tak)en"/>
             </div>

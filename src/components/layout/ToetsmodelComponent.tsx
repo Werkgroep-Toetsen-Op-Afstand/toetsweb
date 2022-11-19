@@ -47,7 +47,28 @@ function ToetsmodelComponent() {
                 <rect width="1030" height="1065" fill=""/>
                 <g id="Group_75">
                 <path id="Path_247" d="M528.551 0C805.475 0 1029.94 224.466 1029.94 501.389C1029.94 778.312 805.474 1002.78 528.551 1002.78C251.628 1002.78 27.1621 778.313 27.1621 501.389C27.1621 224.465 251.628 0 528.551 0Z" fill="white"/>
-                <path id="Path_248" d="M161.821 501.6C161.713 463.692 167.578 426.004 179.201 389.922L117.974 369.636C104.194 412.266 97.206 456.798 97.266 501.6C97.266 645.133 167.366 772.131 275.137 850.739L312.803 798.387C221.411 731.401 161.821 623.421 161.821 501.6" fill="#46AD48"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom right"
+                    offsetY={-60}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_248" d="M161.821 501.6C161.713 463.692 167.578 426.004 179.201 389.922L117.974 369.636C104.194 412.266 97.206 456.798 97.266 501.6C97.266 645.133 167.366 772.131 275.137 850.739L312.803 798.387C221.411 731.401 161.821 623.421 161.821 501.6" fill="#46AD48"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover green'>
+                        <h4>4. KETEN-GEORIËNTEERDE ONTWIKKELINGSFASE </h4>
+                        <p>
+                            De eisen die gesteld worden aan toetsbekwaamheid worden besproken met in- en/of relevante externe partners en sluiten aan bij de landelijke kaders Ook voor de partners uit het werkveld is vastgelegd over welke toetsbekwaamheid zij moeten beschikken. De kwaliteit van de toetsbekwaamheid van alle partners in de toetsorganisatie wordt structureel geëvalueerd aan de hand van de de eisen die aan toetsbekwaamheid zijn gesteld, de opbrengsten worden besproken met zowel de relevante partners binnen de opleiding als het werkveld. 
+                        </p>
+                    </div>
+                </Popup>
+
                 <g id="Group_25" opacity="0.75">
                 <g id="Group_24">
                 <g id="Group 1">
@@ -57,7 +78,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask0_0_1)">
                 <g id="Group">
-                <path id="Path_249" d="M226.366 501.581C226.374 470.562 231.113 439.726 240.418 410.136L179.19 389.85C155.76 463.296 156.035 542.254 179.975 615.535C203.916 688.817 250.309 752.708 312.581 798.157L350.247 745.805C311.815 717.737 280.56 680.984 259.032 638.542C237.503 596.1 226.311 549.171 226.366 501.581" fill="#46AD48"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom right"
+                    offsetY={-60}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_249" d="M226.366 501.581C226.374 470.562 231.113 439.726 240.418 410.136L179.19 389.85C155.76 463.296 156.035 542.254 179.975 615.535C203.916 688.817 250.309 752.708 312.581 798.157L350.247 745.805C311.815 717.737 280.56 680.984 259.032 638.542C237.503 596.1 226.311 549.171 226.366 501.581" fill="#46AD48"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover green'>
+                        <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De eisen die gesteld worden aan toetsbekwaamheid worden regelmatig bijgesteld op basis van (landelijke) kaders en actuele (wetenschappelijke) inzichten. De vereiste toetsbekwaamheid is niet alleen op individueel niveau, maar ook op teamniveau vastgesteld. Er wordt doelgericht gewerkt aan het professionaliseren van medewerkers en teams. De kwaliteit van de toetsbekwaamheid wordt structureel geëvalueerd aan de hand van de eisen die aan toetsbekwaamheid zijn gesteld. De opbrengsten hiervan worden besproken met relevante partners binnen de opleiding en dienen als basis voor het opstellen van ontwikkelplannen. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -74,7 +116,27 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask1_0_1)">
                 <g id="Group_2">
-                <path id="Path_251" d="M290.898 501.607C290.85 477.477 294.484 453.481 301.675 430.448L240.448 410.162C221.379 470.58 221.718 535.455 241.417 595.67C261.117 655.886 299.186 708.417 350.277 745.883L387.943 693.531C357.86 671.382 333.404 642.472 316.547 609.135C299.69 575.797 290.904 538.964 290.898 501.607" fill="#46AD48"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom right"
+                    offsetY={-60}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_251" d="M290.898 501.607C290.85 477.477 294.484 453.481 301.675 430.448L240.448 410.162C221.379 470.58 221.718 535.455 241.417 595.67C261.117 655.886 299.186 708.417 350.277 745.883L387.943 693.531C357.86 671.382 333.404 642.472 316.547 609.135C299.69 575.797 290.904 538.964 290.898 501.607" fill="#46AD48"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover green'>
+                        <h4>2. PROCES-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De eisen die binnen de opleiding gesteld worden aan toetsbekwaamheid zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars. Voor alle medewerkers in de toetsorganisatie is vastgelegd over welke toetsbekwaamheid zij moeten beschikken. Om deze bekwaamheid te realiseren zijn concrete doelen geformuleerd. Zowel de stand van zaken t.a.v. de ontwikkeling van de toetsbekwaamheid als de kwaliteit van de toetsbekwaamheid worden met enige regelmaat geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met alle collega’s of studenten, maar wel gebruikt om acties in te zetten om de toetsbekwaamheid te verhogen. 
+                        </p>
+                    </div>
+                </Popup>
                 </g>
                 </g>
                 </g>
@@ -91,7 +153,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask2_0_1)">
                 <g id="Group_3">
-                <path id="Path_253" d="M301.654 430.421C286.931 477.769 287.327 528.528 302.788 575.64C318.249 622.752 348.006 663.875 387.922 693.292L523.795 504.01L301.654 430.421Z" fill="#46AD48"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom right"
+                    offsetY={-60}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_253" d="M301.654 430.421C286.931 477.769 287.327 528.528 302.788 575.64C318.249 622.752 348.006 663.875 387.922 693.292L523.795 504.01L301.654 430.421Z" fill="#46AD48"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover green'>
+                        <h4>1. ACTIVITEITEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding zijn geen (concrete) afspraken gemaakt over de toetsbekwaamheid die van docenten wordt verwacht. De verantwoordelijkheid voor de ontwikkeling van toetsbekwaamheid ligt bij individuele docenten. Uitsluitend wanneer daar aanleiding toe is, wordt de toetsbekwaamheid van docenten geëvalueerd. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -99,7 +182,28 @@ function ToetsmodelComponent() {
                 </g>
                 </g>
                 <path id="Path_254" d="M388.084 694.792L387.239 694.158C347.174 664.613 317.304 623.325 301.778 576.028C286.252 528.73 285.841 477.772 300.601 430.23L301.024 429.173L525.437 503.66L388.084 694.792ZM302.291 431.867C288.009 478.728 288.55 528.857 303.841 575.399C319.131 621.941 348.424 662.625 387.714 691.886L522.161 504.717L302.291 431.867Z" fill="white"/>
-                <path id="Path_255" d="M528.976 868.543C452.146 868.714 377.227 844.604 314.917 799.656L276.67 851.586C350.206 904.648 438.601 933.169 529.282 933.093C619.963 933.017 708.31 904.348 781.757 851.163L743.457 799.233C681.082 844.418 605.997 868.682 528.976 868.543" fill="#ED7A0F"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom right"
+                    offsetY={-60}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_255" d="M528.976 868.543C452.146 868.714 377.227 844.604 314.917 799.656L276.67 851.586C350.206 904.648 438.601 933.169 529.282 933.093C619.963 933.017 708.31 904.348 781.757 851.163L743.457 799.233C681.082 844.418 605.997 868.682 528.976 868.543" fill="#ED7A0F"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover orange'>
+                        <h4>4. KETEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Zowel de kwaliteitscriteria als de inrichting van de toetsorganisatie worden vastgesteld met het werkveld. De rollen, taken en verantwoordelijkheden van het werkveld in de toetsorganisatie zijn vastgelegd, evenals de toetsprocessen die plaatsvinden op de werkplek. De kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria, de opbrengsten worden besproken met zowel de relevante partners binnen de opleiding als het werkveld.
+                        </p>
+                    </div>
+                </Popup>
+
                 <g id="Group_34" opacity="0.75">
                 <g id="Group_33">
                 <g id="Group 4">
@@ -109,7 +213,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask3_0_1)">
                 <g id="Group_4">
-                <path id="Path_256" d="M528.95 804.195C465.906 804.28 404.42 784.604 353.139 747.933L314.891 799.863C377.402 844.716 452.421 868.805 529.359 868.729C606.297 868.653 681.268 844.416 743.691 799.44L705.447 747.511C653.986 784.393 592.259 804.217 528.947 804.195" fill="#ED7A0F"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_256" d="M528.95 804.195C465.906 804.28 404.42 784.604 353.139 747.933L314.891 799.863C377.402 844.716 452.421 868.805 529.359 868.729C606.297 868.653 681.268 844.416 743.691 799.44L705.447 747.511C653.986 784.393 592.259 804.217 528.947 804.195" fill="#ED7A0F"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover orange'>
+                        <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De kwaliteitscriteria die worden gebruikt bij het inrichten van de toetsorganisatie worden met regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten. De rollen, taken en verantwoordelijkheden worden binnen de opleiding regelmatig met elkaar besproken en op elkaar afgestemd. De kwaliteit van de toetsorganisatie wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken met relevante partners binnen de opleiding. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -126,7 +251,27 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask4_0_1)">
                 <g id="Group_5">
-                <path id="Path_258" d="M528.987 739.692C479.678 739.801 431.573 724.468 391.423 695.845L353.176 747.774C404.603 784.444 466.209 804.118 529.372 804.042C592.534 803.966 654.092 784.144 705.432 747.351L667.185 695.422C626.879 724.263 578.547 739.745 528.985 739.692" fill="#ED7A0F"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_258" d="M528.987 739.692C479.678 739.801 431.573 724.468 391.423 695.845L353.176 747.774C404.603 784.444 466.209 804.118 529.372 804.042C592.534 803.966 654.092 784.144 705.432 747.351L667.185 695.422C626.879 724.263 578.547 739.745 528.985 739.692" fill="#ED7A0F"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover orange'>
+                        <h4>2. PROCES-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding zijn kwaliteitscriteria vastgesteld voor de toetsorganisatie. Alle rollen, taken en verantwoordelijkheden zijn vastgelegd, zodat iedereen weet wie waarvoor verantwoordelijk is. Het is voor iedereen helder hoe de verschillende toetsprocessen zich tot elkaar (zouden moeten) verhouden. De processen sluiten echter nog niet naadloos op elkaar aan. Met enige regelmaat wordt de kwaliteit van de toetsorganisatie geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met alle collega’s of studenten, maar wel gebruikt om toetsprocessen te verbeteren.
+                        </p>
+                    </div>
+                </Popup>
                 </g>
                 </g>
                 </g>
@@ -143,7 +288,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask5_0_1)">
                 <g id="Group_6">
-                <path id="Path_260" d="M391.227 695.815C431.526 724.411 479.735 739.736 529.149 739.661C578.563 739.585 626.724 724.111 666.936 695.392L529.161 508.223L391.227 695.815Z" fill="#ED7A0F"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_260" d="M391.227 695.815C431.526 724.411 479.735 739.736 529.149 739.661C578.563 739.585 626.724 724.111 666.936 695.392L529.161 508.223L391.227 695.815Z" fill="#ED7A0F"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover orange'>
+                        <h4>1. ACTIVITEITEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding is niet vastgesteld aan welke kwaliteitscriteria de toetsorganisatie moet voldoen. De toetsprocessen worden door de docenten naar eigen inzicht vormgegeven. Er zijn wel afspraken gemaakt over de rollen, taken en verantwoordelijkheden binnen de toetsprocessen, maar medewerkers weten uitsluitend aan welke verantwoordelijkheden zij zelf moeten voldoen. De kwaliteit van de toetsorganisatie wordt uitsluitend geëvalueerd als daar aanleiding toe is.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -151,7 +317,28 @@ function ToetsmodelComponent() {
                 </g>
                 </g>
                 <path id="Path_261" d="M528.976 740.702C479.462 740.772 431.163 725.368 390.831 696.644L389.986 696.01L390.62 695.165L529.399 506.302L668.599 695.584L667.754 696.218C627.28 725.183 578.747 740.74 528.976 740.702M392.839 695.64C432.8 723.718 480.467 738.749 529.306 738.673C578.145 738.598 625.766 723.419 665.639 695.217L529.339 509.897L392.839 695.64Z" fill="white"/>
-                <path id="Path_262" d="M960.41 501.601C960.406 456.889 953.491 412.447 939.91 369.848L878.683 390.134C901.916 463.477 901.562 542.26 877.673 615.392C853.783 688.524 807.56 752.322 745.51 797.807L783.176 850.159C838.138 810.177 882.851 757.75 913.656 697.166C944.462 636.583 960.483 569.566 960.41 501.601" fill="#AF72AD"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_262" d="M960.41 501.601C960.406 456.889 953.491 412.447 939.91 369.848L878.683 390.134C901.916 463.477 901.562 542.26 877.673 615.392C853.783 688.524 807.56 752.322 745.51 797.807L783.176 850.159C838.138 810.177 882.851 757.75 913.656 697.166C944.462 636.583 960.483 569.566 960.41 501.601" fill="#AF72AD"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover purple'>
+                        <h4>4. KETEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De kwaliteitscriteria die gesteld worden aan het toets(beleids)plan worden besproken met relevante in- en/of externe partners en sluiten aan bij de landelijke kaders. De opgenomen processen en interventies richten zich op de lange termijn. Er zijn tussendoelen opgesteld zodat tussentijdse evaluatie mogelijk is. Het beleidsplan wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria, de opbrengsten worden besproken met zowel de relevante partners binnen de opleiding als het werkveld.
+                        </p>
+                    </div>
+                </Popup>
+
                 <g id="Group_43" opacity="0.75">
                 <g id="Group_42">
                 <g id="Group 7">
@@ -161,7 +348,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask6_0_1)">
                 <g id="Group_7">
-                <path id="Path_263" d="M831.355 501.601C831.395 549.091 820.236 595.921 798.785 638.29C777.334 680.659 746.195 717.374 707.896 745.454L745.562 797.806C807.623 752.33 853.855 688.533 877.746 615.398C901.638 542.264 901.986 463.477 878.742 390.134L817.515 410.42C826.781 439.923 831.449 470.677 831.355 501.601" fill="#AF72AD"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_263" d="M831.355 501.601C831.395 549.091 820.236 595.921 798.785 638.29C777.334 680.659 746.195 717.374 707.896 745.454L745.562 797.806C807.623 752.33 853.855 688.533 877.746 615.398C901.638 542.264 901.986 463.477 878.742 390.134L817.515 410.42C826.781 439.923 831.449 470.677 831.355 501.601" fill="#AF72AD"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover purple'>
+                        <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De kwaliteitscriteria die worden gebruikt bij het ontwikkelen van het toets(beleids)plan worden met regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten. Ook bij de uitwerking van de processen en interventies wordt gebruik gemaakt van actuele (wetenschappelijke) kennis. Het beleidsplan, de visie op onderwijs en het toetskader van de instelling sluiten naadloos op elkaar aan. Het beleidsplan wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken met relevante partners binnen de opleiding. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -178,7 +386,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask7_0_1)">
                 <g id="Group_8">
-                <path id="Path_265" d="M766.827 501.576C766.848 538.805 758.119 575.518 741.345 608.755C724.571 641.991 700.22 670.82 670.258 692.918L707.924 745.27C758.884 707.899 796.847 655.493 816.472 595.424C836.097 535.354 836.398 470.644 817.331 410.395L756.103 430.681C763.226 453.639 766.841 477.542 766.827 501.581" fill="#AF72AD"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_265" d="M766.827 501.576C766.848 538.805 758.119 575.518 741.345 608.755C724.571 641.991 700.22 670.82 670.258 692.918L707.924 745.27C758.884 707.899 796.847 655.493 816.472 595.424C836.097 535.354 836.398 470.644 817.331 410.395L756.103 430.681C763.226 453.639 766.841 477.542 766.827 501.581" fill="#AF72AD"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover purple'>
+                        <h4>2. PROCES-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding zijn kwaliteitscriteria vastgesteld voor het toets(beleids)plan. De visie op onderwijs en het toetskader van de instelling vormen de basis voor het beleidsplan. In het beleidsplan zijn naast toetsprocessen ook interventies opgenomen die beschrijven hoe de ambities gerealiseerd gaan worden. Met enige regelmaat wordt zowel de kwaliteit als de uitvoerbaarheid en bruikbaarheid van het beleidsplan geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met alle collega’s of studenten, maar wel gebruikt om het beleidsplan bij te stellen.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -210,7 +439,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask9_0_1)">
                 <g id="Group_10">
-                <path id="Path_267" d="M670.416 692.912C700.366 670.803 724.707 641.971 741.479 608.737C758.252 575.503 766.989 538.796 766.985 501.569C767.036 477.578 763.404 453.722 756.216 430.833L534.916 504.264L670.416 692.912Z" fill="#AF72AD"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_267" d="M670.416 692.912C700.366 670.803 724.707 641.971 741.479 608.737C758.252 575.503 766.989 538.796 766.985 501.569C767.036 477.578 763.404 453.722 756.216 430.833L534.916 504.264L670.416 692.912Z" fill="#AF72AD"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover purple'>
+                        <h4>1. ACTIVITEITEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding is niet vastgesteld aan welke kwaliteitseisen een toets(beleids)plan moet voldoen. Het beleidsplan is hoofdzakelijk een beschrijving van (losse) toetsprocessen, deze sluiten nog niet (volledig) aan op de visie op onderwijs. De kwaliteit van het beleidsplan wordt uitsluitend geëvalueerd als daar aanleiding toe is.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -233,7 +483,28 @@ function ToetsmodelComponent() {
                 </g>
                 </g>
                 </g>
-                <path id="Path_269" d="M877.898 387.651L939.338 367.999C883.286 195.516 721.317 70.5783 530.186 69.9443L530.609 134.5C692.791 135.292 830.142 241.159 877.898 387.651Z" fill="#2DB3A5"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_269" d="M877.898 387.651L939.338 367.999C883.286 195.516 721.317 70.5783 530.186 69.9443L530.609 134.5C692.791 135.292 830.142 241.159 877.898 387.651Z" fill="#2DB3A5"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover turquoise'>
+                        <h4>4. KETEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Zowel de kwaliteitscriteria als de opbouw van het toetsprogramma worden vastgesteld met het werkveld. Programmaonderdelen die plaatsvinden op de werkplek worden afgestemd met het werkveld zodat deze uitvoerbaar en passend zijn. Het toetsprogramma wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria. De opbrengsten worden besproken met zowel de relevante partners binnen de opleiding als het werkveld.
+                        </p>
+                    </div>
+                </Popup>
+
                 <g id="Group_58" opacity="0.75">
                 <g id="Group_57">
                 <g id="Group 12">
@@ -243,7 +514,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask11_0_1)">
                 <g id="Group_12">
-                <path id="Path_270" d="M816.475 407.267L877.914 387.615C830.104 241.179 692.752 135.259 530.623 134.467L531.046 199.023C594.432 199.494 656.071 219.844 707.278 257.204C758.485 294.564 796.678 347.05 816.475 407.267Z" fill="#2DB3A5"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_270" d="M816.475 407.267L877.914 387.615C830.104 241.179 692.752 135.259 530.623 134.467L531.046 199.023C594.432 199.494 656.071 219.844 707.278 257.204C758.485 294.564 796.678 347.05 816.475 407.267Z" fill="#2DB3A5"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover turquoise'>
+                        <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding zijn kwaliteitscriteria vastgesteld voor het toetsprogramma. De beoogde leerresultaten vormen de basis voor het ontwerpen van het toetsprogramma. Met enige regelmaat worden zowel de dekking als de uitvoerbaarheid van het toetsprogramma geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met alle collega’s of studenten, maar wel gebruikt om het toetsprogramma te verbeteren.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -260,7 +552,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask12_0_1)">
                 <g id="Group_13">
-                <path id="Path_272" d="M531.035 199.001L531.458 263.557C581.085 264.052 629.316 280.048 669.403 309.308C709.49 338.568 739.427 379.627 755.025 426.742L816.464 407.09C796.631 346.909 758.424 294.462 707.221 257.133C656.019 219.805 594.399 199.473 531.035 199.001" fill="#2DB3A5"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_272" d="M531.035 199.001L531.458 263.557C581.085 264.052 629.316 280.048 669.403 309.308C709.49 338.568 739.427 379.627 755.025 426.742L816.464 407.09C796.631 346.909 758.424 294.462 707.221 257.133C656.019 219.805 594.399 199.473 531.035 199.001" fill="#2DB3A5"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover turquoise'>
+                        <h4>2. PROCES-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding zijn kwaliteitscriteria vastgesteld voor het toetsprogramma. De beoogde leerresultaten vormen de basis voor het ontwerpen van het toetsprogramma. Met enige regelmaat worden zowel de dekking als de uitvoerbaarheid van het toetsprogramma geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met alle collega’s of studenten, maar wel gebruikt om het toetsprogramma te verbeteren.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -277,7 +590,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask13_0_1)">
                 <g id="Group_14">
-                <path id="Path_274" d="M755.013 426.952C739.425 379.831 709.49 338.765 669.401 309.503C629.312 280.242 581.075 264.25 531.445 263.767L532.871 497.689L755.013 426.952Z" fill="#2DB3A5"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_274" d="M755.013 426.952C739.425 379.831 709.49 338.765 669.401 309.503C629.312 280.242 581.075 264.25 531.445 263.767L532.871 497.689L755.013 426.952Z" fill="#2DB3A5"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover turquoise'>
+                        <h4>1. ACTIVITEITEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Binnen de opleiding is niet vastgesteld aan welke kwaliteitscriteria het toetsprogramma van de opleiding moet voldoen. Iedere docent ontwikkelt zijn eigen toetsen, er is echter geen overzicht van de samenhang tussen de toetsen. Het is hierdoor niet met zekerheid vast te stellen dat de toetsen gezamenlijk de beoogde leerresultaten dekken.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -285,7 +619,28 @@ function ToetsmodelComponent() {
                 </g>
                 </g>
                 <path id="Path_275" d="M531.664 498.902L530.449 262.502H531.506C581.373 263.021 629.831 279.11 670.105 308.521C710.379 337.931 740.456 379.191 756.13 426.533L756.553 427.59L755.496 428.013L531.664 498.902ZM532.456 264.558L533.882 495.997L753.752 426.106C738.102 379.598 708.415 339.088 668.781 310.156C629.147 281.223 581.517 265.292 532.452 264.558" fill="white"/>
-                <path id="Path_276" d="M528.129 134.447L528.552 69.8906C336.997 70.1016 174.869 195.04 118.607 367.735L180.046 387.391C227.807 241 365.577 134.869 528.129 134.447Z" fill="#45A7C3"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_276" d="M528.129 134.447L528.552 69.8906C336.997 70.1016 174.869 195.04 118.607 367.735L180.046 387.391C227.807 241 365.577 134.869 528.129 134.447Z" fill="#45A7C3"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover blue'>
+                        <h4>4. KETEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Zowel kwaliteitscriteria voor de toetsen als de leer- en toetsdoelen zijn afgestemd met het werkveld. De toetsen sluiten hierdoor niet alleen aan bij het onderwijs dat de student volgt binnen de opleiding, maar ook op wat geleerd wordt op de werkplek. Toetsen worden structureel geëvalueerd aan de hand van de kwaliteitscriteria. De opbrengsten worden besproken met zowel de relevante partners binnen de opleiding als het werkveld.
+                        </p>
+                    </div>
+                </Popup>
+
                 <g id="Group_67" opacity="0.75">
                 <g id="Group_66">
                 <g id="Group 15">
@@ -295,7 +650,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask14_0_1)">
                 <g id="Group_15">
-                <path id="Path_277" d="M527.727 198.97L528.15 134.414C365.599 134.837 228.035 240.756 180.014 387.407L241.453 407.059C261.32 346.734 299.652 294.183 351.026 256.84C402.4 219.497 464.215 199.252 527.727 198.97" fill="#46A8C4"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_277" d="M527.727 198.97L528.15 134.414C365.599 134.837 228.035 240.756 180.014 387.407L241.453 407.059C261.32 346.734 299.652 294.183 351.026 256.84C402.4 219.497 464.215 199.252 527.727 198.97" fill="#46A8C4"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover blue'>
+                        <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            De kwaliteitscriteria die docenten gebruiken bij het ontwikkelen van toetsen worden met regelmaat bijgesteld op basis van actuele (wetenschappelijke) inzichten. De toetsen, die ontwikkeld worden voorafgaand aan het onderwijs, zijn passend voor de leerresultaten en sluiten aan bij eerder gegeven onderwijs. De kwaliteit van toetsen wordt structureel geëvalueerd aan de hand van de kwaliteitscriteria. De opbrengsten hiervan worden besproken met relevante partners binnen de opleiding. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -312,7 +688,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask15_0_1)">
                 <g id="Group_16">
-                <path id="Path_279" d="M527.34 263.504L527.763 198.948C464.279 199.22 402.484 219.435 351.114 256.737C299.744 294.04 261.395 346.543 241.488 406.826L302.927 426.478C318.649 379.292 348.74 338.208 388.983 308.982C429.226 279.756 477.605 263.854 527.34 263.504" fill="#46A8C4"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_279" d="M527.34 263.504L527.763 198.948C464.279 199.22 402.484 219.435 351.114 256.737C299.744 294.04 261.395 346.543 241.488 406.826L302.927 426.478C318.649 379.292 348.74 338.208 388.983 308.982C429.226 279.756 477.605 263.854 527.34 263.504" fill="#46A8C4"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover blue'>
+                        <h4>2. PROCES-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Docenten ontwikkelen toetsen aan de hand van een toetscyclus of ontwerpproces en maken daarbij gebruik van kwaliteitscriteria die zijn gebaseerd op ervaringen van ervaren toetsontwikkelaars. De toetsen, die worden ontwikkeld tijdens de onderwijsperiode, maken zij samen met collega’s. De kwaliteit van de toetsen wordt door de betrokken docenten regelmatig geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend besproken met collega’s of studenten, maar wel gebruikt om eigen toetsen te verbeteren. 
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
@@ -329,7 +726,28 @@ function ToetsmodelComponent() {
                 </mask>
                 <g mask="url(#mask16_0_1)">
                 <g id="Group_17">
-                <path id="Path_281" d="M527.325 263.534C422.884 264.168 334.345 332.422 302.912 426.508L525.898 497.456L527.325 263.534Z" fill="#46A8C4"/>
+                
+                <Popup
+                    mouseLeaveDelay={100}
+                    mouseEnterDelay={0}
+                    arrow={false}
+                    position="bottom center"
+                    offsetY={10}
+                    closeOnDocumentClick
+                    on="hover"
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    trigger={
+                        <path id="Path_281" d="M527.325 263.534C422.884 264.168 334.345 332.422 302.912 426.508L525.898 497.456L527.325 263.534Z" fill="#46A8C4"/>
+                    }
+                >
+                    <div className='toetsmodel-component__element-hover blue'>
+                        <h4>1. ACTIVITEITEN-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
+                        <p>
+                            Docenten ontwikkelen toetsen naar eigen inzicht: zij gebruiken eigen kwaliteitscriteria, ontwerpen de toets vaak alleen en kort voor de afname. De kwaliteit van de toetsen wordt uitsluitend geëvalueerd als daar aanleiding toe is.
+                        </p>
+                    </div>
+                </Popup>
+
                 </g>
                 </g>
                 </g>
