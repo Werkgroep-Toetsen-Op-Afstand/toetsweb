@@ -1,0 +1,22 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__title {
+    font-weight: normal;
+  }
+
+  &__first-row {
+    border-top: 1px solid #DDD;
+  }
+
+  &__row {
+    padding: 0.7rem;
+    border-bottom: 1px solid #DDD;
+  }
+
+  &__cell {
+    padding: 0.7rem;
+    border-bottom: 1px solid #DDD;
+  }
+}

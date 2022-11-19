@@ -29,7 +29,7 @@ const Home: FunctionComponent<Props> = () => {
 
                 <ToetsmodelComponent/>
             </div>
-            
+
             <div className='home-page__blur'></div>
 
             <div className='home-page__info-section'>
@@ -67,10 +67,13 @@ const Home: FunctionComponent<Props> = () => {
                         wijze waarop de kwaliteitsborging van de toetsentiteiten wordt ingericht. Structurele aandacht
                         voor deze drie elementen borgt dat er gewerkt wordt vanuit de PDCA-cyclus.
                     </p>
-                    <br />
-                    <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als vlakjes.</p>
-                    <br />
-                    <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
+                    <br/>
+                    <p>Opleidingen kunnen zich ontwikkelen op de kwaliteit van toetsing. Er worden vier
+                        ontwikkelingsfasen onderscheiden. In het web zijn deze ontwikkelingsfasen gesymboliseerd als
+                        vlakjes.</p>
+                    <br/>
+                    <p>Per toetsentiteit is voor iedere ontwikkelingsfase is een korte omschrijving beschikbaar over hoe
+                        de toetsentiteit in die fase wordt ingevuld (20 vlakjes in het web).</p>
 
                     <br/>
                     <br/>

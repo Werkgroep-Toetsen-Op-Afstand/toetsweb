@@ -1,0 +1,19 @@
+.result {
+  max-width: 1400px;
+  margin: 12rem auto 5rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  &__download-container {
+    padding: 2rem 0 2rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+    &__download-button {
+        margin-left: 1rem;
+    }
+}

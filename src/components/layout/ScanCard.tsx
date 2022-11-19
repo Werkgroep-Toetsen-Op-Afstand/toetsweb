@@ -2,13 +2,13 @@ import React, {FunctionComponent, useEffect, useMemo, useState} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
-import all from "../../assets/data/toetsweb.json";
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
 import {ProgressDot} from "./ProgressDot";
+import data from "../../assets/data/scandata.json";
 
 interface Props {
     entity: number;
@@ -24,7 +24,7 @@ interface ScanCardData {
 }
 
 const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
-    const currentEntity = all.entities[entity];
+    const currentEntity = data.entities[entity]
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
 
@@ -34,12 +34,15 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
     const [scanCardData, setScanCardData] = useState<ScanCardData>({} as ScanCardData);
 
     useMemo(() => {
-        const data = window.localStorage.getItem(`${entity}.${element}`) ? JSON.parse(window.localStorage.getItem(`${entity}.${element}`) as string) : {
-            checkedPositie: -1,
-            checkedAmbitie: -1,
-            feedbackPositie: '',
-            feedbackAmbitie: ''
-        }
+        const data =
+            window.localStorage.getItem(`${entity}.${element}`) ?
+                JSON.parse(window.localStorage.getItem(`${entity}.${element}`) as string)
+                : {
+                    checkedPositie: -1,
+                    checkedAmbitie: -1,
+                    feedbackPositie: '',
+                    feedbackAmbitie: ''
+                }
         setScanCardData(data);
     }, [entity, element]);
 
@@ -65,6 +68,12 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
         window.localStorage.setItem(`${entity}.${element}`, JSON.stringify(scanCardData));
     }, [scanCardData]);
 
+    const scanElementComplete =
+        scanCardData.checkedPositie !== -1 &&
+        scanCardData.checkedAmbitie !== -1 &&
+        scanCardData.feedbackPositie !== '' &&
+        scanCardData.feedbackAmbitie !== '';
+
     return (
         <div className={`scancard ${baseClasses[entity]}__border-top`}>
             <div className='scancard__grid'>
@@ -74,7 +83,10 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                         <br/>
                         <h4>{currentElement.name}</h4>
                         <br/>
-                        <span className='scancard__grid__span'><h4>Positie</h4><p> - In welke beschrijving herken je jouw opleiding nu het meest?</p></span>
+                        <span className='scancard__grid__span'>
+                            <h4>Positie</h4>
+                            <p> - In welke beschrijving herken je jouw opleiding nu het meest?</p>
+                        </span>
                         <br/>
                         <span
                             className={`scancard__grid__span scancard__grid__span--ambition ${baseClasses[entity]}__transparent-bg`}>
@@ -132,8 +144,10 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                 </div>
                 <div className='scancard__progress__button-container'>
                     <Button onClick={() => {
-                        handleNext(element);
-                        window.scrollTo(0, 0);
+                        if (scanElementComplete) {
+                            handleNext(element);
+                            window.scrollTo(0, 0);
+                        }
                     }} baseClass={baseClasses[entity]} children={
                         <span><p>Volgende vraag</p></span>
                     }></Button>

@@ -1,5 +1,4 @@
 import React, {FunctionComponent} from "react";
-import useLocalStorage from "../../utils/LocalStorage";
 
 interface Props {
     value: string;

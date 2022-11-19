@@ -24,7 +24,7 @@ const NavBar: FunctionComponent = () => {
                         <NavItem item={'Toetsweb scan'} color={'orange'}/>
                     </ReactRouterNavLink>
 
-                    <ReactRouterNavLink exact={true} to={'/'}>
+                    <ReactRouterNavLink exact={true} to={'/result'}>
                         <NavItem item={'Resultaat'} color={'green'}/>
                     </ReactRouterNavLink>
                 </div>
