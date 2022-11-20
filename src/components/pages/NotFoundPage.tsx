@@ -1,13 +1,19 @@
 import React, { FunctionComponent } from 'react';
-import {Page} from 'react-ts-boiler';
+import {Page, route} from 'react-ts-boiler';
+import { NavLink as ReactRouterNavLink } from "react-router-dom";
 
 interface Props {}
 
 const NotFoundPage: FunctionComponent<Props> = () => {
 
     return (
-        <Page>
-            <p>404 Pagina niet gevonden</p>
+        <Page className={'not-found-page'}>
+            <h2>404 Pagina niet gevonden</h2>
+            <ReactRouterNavLink exact={true} to={route('home')}>
+                <div className='not-found-page__button'>
+                    <p>Terug naar home</p>
+                </div>
+            </ReactRouterNavLink>
         </Page>
     );
 };

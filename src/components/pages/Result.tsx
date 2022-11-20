@@ -13,10 +13,15 @@ const Result: FunctionComponent<Props> = () => {
     const entities = scanData.entities;
 
     useEffect(() => {
+
+        console.log(entities);
+        
+
         entities.forEach((entity, entityIndex) => {
             entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
                 const answer = JSON.parse(rawAnswer as string);
+                
                 if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1
                     || answer.feedbackPositie === "" || answer.feedbackAmbitie === "") {
                     window.location.href = '/scan';
@@ -72,6 +77,8 @@ const Result: FunctionComponent<Props> = () => {
             });
             fileData += "\n";
         });
+
+
 
         downloadFile(new Blob([fileData]), 'resultaten.txt');
     }

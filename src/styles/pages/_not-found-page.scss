@@ -1,0 +1,18 @@
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+        display: block;
+        margin-right: 1rem;
+        background-color: $color-blue;
+        padding: 0.5rem 1rem;
+        color: $color-white;
+        border-radius: 0.2rem;
+        width: 11rem;
+    }
+}

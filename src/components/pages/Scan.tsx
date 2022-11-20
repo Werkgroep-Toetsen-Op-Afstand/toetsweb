@@ -11,6 +11,7 @@ const Scan: FunctionComponent<Props> = () => {
     const [currentElement, setCurrentElement] = useState(0);
 
     const handleNext = (previousElement: number) => {
+        
         if(previousElement === 2) {
             if (currentEntity === 4) {
                 window.location.href = '/result';

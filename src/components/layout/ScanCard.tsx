@@ -143,8 +143,9 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                     <ProgressDot baseClass={baseClasses[entity]} filledIn={element === 2}/>
                 </div>
                 <div className='scancard__progress__button-container'>
-                    <Button onClick={() => {
+                    <Button onClick={() => {                        
                         if (scanElementComplete) {
+                            console.log('clicked');
                             handleNext(element);
                             window.scrollTo(0, 0);
                         }

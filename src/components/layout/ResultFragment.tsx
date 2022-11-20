@@ -53,7 +53,7 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
     return (
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{pageTitle}</h1>
-            <ToetsmodelComponent/>
+            <ToetsmodelComponent results={getTableData()}/>
             <Table tableTitle={pageTitle} data={getTableData()}/>
             <Card children={
                 entities.map((entity, entityIndex) => {

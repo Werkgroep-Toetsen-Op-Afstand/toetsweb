@@ -44,9 +44,14 @@
             display: flex;
             flex-direction: column;
         }
+
+        h3 {
+            margin-top: 2rem;
+        }
     }
 
     &__button {
+        margin-top: 2rem;
         display: block;
         margin-right: 1rem;
         background-color: $color-blue;
