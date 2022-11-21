@@ -1,4 +1,4 @@
-import {RouteContainer} from 'react-ts-boiler';
+import {RouteContainer} from 'buro-lib-ts';
 import Home from '../components/pages/Home';
 import Scan from '../components/pages/Scan';
 import Result from "../components/pages/Result";

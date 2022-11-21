@@ -1,9 +1,8 @@
-import ScanCard from 'components/layout/ScanCard';
+import {Page} from 'buro-lib-ts';
+import ScanCard from '../layout/ScanCard';
 import React, {FunctionComponent, useState} from 'react';
-import {Page} from "react-ts-boiler";
 
-interface Props {
-}
+interface Props {}
 
 const Scan: FunctionComponent<Props> = () => {
 

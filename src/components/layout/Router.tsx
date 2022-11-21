@@ -1,9 +1,12 @@
 import React, { FunctionComponent } from 'react';
 
-import { Router as BoilerRouter } from 'react-ts-boiler';
-import { Route } from 'react-router-dom';
+import {route, Router as BoilerRouter} from 'buro-lib-ts';
+import {Route, Routes} from 'react-router-dom';
 
 import NotFoundPage from '../pages/NotFoundPage';
+import Home from '../pages/Home';
+import Scan from '../pages/Scan';
+import Result from '../pages/Result';
 
 interface Props {
     children?: any;
@@ -12,11 +15,14 @@ interface Props {
 const Router: FunctionComponent<Props> = ({ children }) => {
 
     return (
-        <BoilerRouter isAuthenticated={true}>
+        <Routes>
+            <Route path={route('home')} element={<Home />} />
+            <Route path={route('scan')} element={<Scan />} />
+            <Route path={route('result')} element={<Result />} />
             { children }
 
-            <Route exact={false} component={NotFoundPage} />
-        </BoilerRouter>
+            <Route element={<NotFoundPage />} />
+        </Routes>
     );
 };
 
