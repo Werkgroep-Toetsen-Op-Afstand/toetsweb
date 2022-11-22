@@ -4,11 +4,10 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
 interface Props {
-    name?: string;
     results?: string[][];
 }
 
-const ToetsmodelComponent: FunctionComponent<Props> = ({name, results = null}) => {
+const ToetsmodelComponent: FunctionComponent<Props> = ({results = null}) => {
 
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
@@ -62,7 +61,7 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({name, results = null}) =
                 </Popup>
             </div>
 
-            <svg width="672" height="672" viewBox="0 0 1030 1065" fill="none" xmlns="http://www.w3.org/2000/svg" className={'svg-model'} id={name}>
+            <svg width="672" height="672" viewBox="0 0 1030 1065" fill="none" xmlns="http://www.w3.org/2000/svg" className={'svg-model'}>
                 <rect width="1030" height="1065" fill=""/>
                 <g id="Group_75">
                 <path id="Path_247" d="M528.551 0C805.475 0 1029.94 224.466 1029.94 501.389C1029.94 778.312 805.474 1002.78 528.551 1002.78C251.628 1002.78 27.1621 778.313 27.1621 501.389C27.1621 224.465 251.628 0 528.551 0Z" fill="white"/>

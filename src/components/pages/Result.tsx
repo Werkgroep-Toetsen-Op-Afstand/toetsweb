@@ -8,8 +8,7 @@ import JSZip from 'jszip';
 
 const saveAs = require('save-svg-as-png');
 
-interface Props {
-}
+interface Props {}
 
 const Result: FunctionComponent<Props> = () => {
 
@@ -80,13 +79,12 @@ const Result: FunctionComponent<Props> = () => {
         });
 
         zip.file('Resultaten.txt', fileData);
-
-        const icons: Element[] = [];
-        document.querySelectorAll('.svg-model').forEach(svg => icons.push(svg));
-
-        Promise.all(icons.map(svg => saveAs.svgAsPngUri(svg))).then(([one, two]) => {
-            zip.file('Positie.png', one.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
-            zip.file('Ambitie.png', two.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
+        Promise.all(
+            Array.from(document.querySelectorAll('.svg-model'))
+            .map(svg => saveAs.svgAsPngUri(svg))
+        ).then(([position, ambition]) => {
+            zip.file('Positie.png', position.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
+            zip.file('Ambitie.png', ambition.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
 
             zip.generateAsync({ type: 'blob' }).then(content => {
                 downloadFile(content, 'Resultaat.zip');
@@ -97,20 +95,23 @@ const Result: FunctionComponent<Props> = () => {
     return (
         <Page className='result'>
             <h1 className='result__title'>Resultaat</h1>
+
             <div className='result__container'>
                 <ResultFragment pageTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback} />
                 <ResultFragment pageTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback} />
             </div>
+
             <div className='result__download-container'>
                 <div className='result__download-button'>
-                    <Button onClick={downloadResults} baseClass={'color-blue'} children={
+                    <Button onClick={downloadResults} baseClass={'color-blue'}>
                         <span><p>Download</p></span>
-                    }></Button>
+                    </Button>
                 </div>
+
                 <div className='result__download-button'>
-                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} children={
+                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'}>
                         <span><p>Download Advies</p></span>
-                    }></Button>
+                    </Button>
                 </div>
             </div>
         </Page>
