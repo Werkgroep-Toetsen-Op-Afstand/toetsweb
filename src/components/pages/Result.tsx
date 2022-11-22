@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useEffect} from 'react';
+import React, {FunctionComponent, useEffect, useMemo} from 'react';
 import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
@@ -14,14 +14,13 @@ const Result: FunctionComponent<Props> = () => {
 
     const entities = scanData.entities;
 
-    useEffect(() => {
+    useMemo(() => {
         entities.forEach((entity, entityIndex) => {
             entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
                 const answer = JSON.parse(rawAnswer as string);
                 
-                if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1
-                    || answer.feedbackPositie === "" || answer.feedbackAmbitie === "") {
+                if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1) {
                     window.location.href = '/scan';
                 }
             })
@@ -60,6 +59,11 @@ const Result: FunctionComponent<Props> = () => {
                 downloadFile(blob, 'advice-booklet.pdf');
             });
         })
+    }
+
+    const resetScan = () => {
+        window.localStorage.clear();
+        window.location.href = '/scan';
     }
 
     const downloadResults = () => {
@@ -111,6 +115,12 @@ const Result: FunctionComponent<Props> = () => {
                 <div className='result__download-button'>
                     <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'}>
                         <span><p>Download Advies</p></span>
+                    </Button>
+                </div>
+
+                <div className='result__download-button'>
+                    <Button onClick={resetScan} baseClass={'color-blue'}>
+                        <span><p>Reset scan</p></span>
                     </Button>
                 </div>
             </div>

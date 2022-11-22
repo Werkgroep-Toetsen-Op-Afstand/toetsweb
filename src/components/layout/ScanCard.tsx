@@ -70,9 +70,7 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
 
     const scanElementComplete =
         scanCardData.checkedPositie !== -1 &&
-        scanCardData.checkedAmbitie !== -1 &&
-        scanCardData.feedbackPositie !== '' &&
-        scanCardData.feedbackAmbitie !== '';
+        scanCardData.checkedAmbitie !== -1
 
     return (
         <div className={`scancard ${baseClasses[entity]}__border-top`}>
