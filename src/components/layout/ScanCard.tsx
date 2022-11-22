@@ -145,7 +145,6 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                 <div className='scancard__progress__button-container'>
                     <Button onClick={() => {                        
                         if (scanElementComplete) {
-                            console.log('clicked');
                             handleNext(element);
                             window.scrollTo(0, 0);
                         }
