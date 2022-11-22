@@ -1,19 +1,17 @@
 import React, { FunctionComponent } from 'react';
-import {ClassBuilder, useTheme} from 'react-ts-boiler';
+import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
     children: any;
+    baseClass: string;
     onClick: () => void;
-
     disabled?: boolean;
 }
 
-const Button: FunctionComponent<Props> = ({ children, onClick, disabled }) => {
-    const { theme } = useTheme();
-
+const Button: FunctionComponent<Props> = ({ children, baseClass, onClick, disabled }) => {
     const getClassName = () => {
         return ClassBuilder.createClass('button')
-            .add(`button--${theme.modifier}`)
+            .add(`${baseClass}__bg`)
             .addIf('button--disabled', disabled)
             .build();
     };

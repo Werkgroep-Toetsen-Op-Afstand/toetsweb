@@ -1,24 +1,18 @@
 import React, {FunctionComponent, useEffect} from 'react';
 import {
-    BoilerApp,
-    enableRouting,
-    enableLocalization,
-    enableTheming,
-    enableNetworking, groupListeners, onEventOnce, onEvent,
-} from 'react-ts-boiler';
+    BuroApp,
+    groupListeners, onEventOnce, onEvent, createRequester, createTranslator,
+} from 'buro-lib-ts';
 
 import routes from './config/routes';
-import lang from './config/lang';
-import networking from './config/networking';
-import theming from './config/theming';
 
-import AuthContextProvider from './contexts/AuthContext';
 import Layout from './components/layout/Layout';
+import {app} from 'buro-lib-ts';
 
-enableNetworking(networking);
-enableTheming(theming);
-enableLocalization(lang);
-enableRouting({ routes });
+app({
+    routingConfig: { routes },
+    translator: createTranslator({ nl: {} })
+});
 
 const App: FunctionComponent = () => {
 
@@ -30,11 +24,9 @@ const App: FunctionComponent = () => {
     }, []);
 
     return (
-        <BoilerApp>
-            <AuthContextProvider>
-                <Layout />
-            </AuthContextProvider>
-        </BoilerApp>
+        <BuroApp>
+            <Layout />
+        </BuroApp>
     );
 };
 

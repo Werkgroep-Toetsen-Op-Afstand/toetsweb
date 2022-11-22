@@ -1,18 +1,12 @@
-import {RouteContainer, RouteType} from 'react-ts-boiler';
+import {RouteContainer} from 'buro-lib-ts';
 import Home from '../components/pages/Home';
-import Users from '../components/pages/Users';
-import NewUser from '../components/pages/NewUser';
-import Events from '../components/pages/Events';
+import Scan from '../components/pages/Scan';
+import Result from "../components/pages/Result";
 
 const routes = new RouteContainer();
 
 routes.add('/', Home, 'home');
-
-routes.group('/users', () => {
-    routes.add('/', Users, 'users');
-    routes.add('/new', NewUser, 'new-user');
-}, RouteType.PUBLIC);
-
-routes.add('/events', Events, 'events');
+routes.add('/scan', Scan, 'scan');
+routes.add('/result', Result, 'result');
 
 export default routes.getRoutes();
