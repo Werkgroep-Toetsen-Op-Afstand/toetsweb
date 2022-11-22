@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import {ClassBuilder} from 'react-ts-boiler';
+import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
     children: any;

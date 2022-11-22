@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import {ClassBuilder, useTheme} from 'react-ts-boiler';
+import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
     children: any;
@@ -7,11 +7,8 @@ interface Props {
 }
 
 const Card: FunctionComponent<Props> = ({ children, className }) => {
-    const { theme } = useTheme();
-
     const getClassName = () => {
         return ClassBuilder.createClass('card')
-            .add(`card--${theme.modifier}`)
             .addIf(className, className)
             .build();
     };

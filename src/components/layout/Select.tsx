@@ -1,11 +1,9 @@
-import React, { FunctionComponent } from 'react';
-import {SelectProps, useTheme, Select as BoilerSelect, ClassBuilder} from 'react-ts-boiler';
+import React from 'react';
+import {SelectProps, Select as BoilerSelect, ClassBuilder} from 'buro-lib-ts';
 
 // Select component override to use theming
-const Select: FunctionComponent<SelectProps> = (props) => {
-    const { theme } = useTheme();
-
-    const className = ClassBuilder.createClass(`boiler-select--${theme.modifier}`)
+function Select<T>(props: SelectProps<T, HTMLDivElement>) {
+    const className = ClassBuilder.createClass(`boiler-select`)
         .addIf(props.className, props.className !== undefined)
         .build();
 
@@ -14,6 +12,6 @@ const Select: FunctionComponent<SelectProps> = (props) => {
             { props.children }
         </BoilerSelect>
     );
-};
+}
 
 export default Select;

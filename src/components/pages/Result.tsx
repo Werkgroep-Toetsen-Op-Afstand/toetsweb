@@ -1,22 +1,20 @@
 import React, {FunctionComponent, useEffect} from 'react';
-import {Page} from "react-ts-boiler";
+import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
 import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
+import JSZip from 'jszip';
 
-interface Props {
-}
+const saveAs = require('save-svg-as-png');
+
+interface Props {}
 
 const Result: FunctionComponent<Props> = () => {
 
     const entities = scanData.entities;
 
     useEffect(() => {
-
-        console.log(entities);
-        
-
         entities.forEach((entity, entityIndex) => {
             entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
@@ -27,13 +25,14 @@ const Result: FunctionComponent<Props> = () => {
                     window.location.href = '/scan';
                 }
             })
-        })
+        });
     }, []);
 
     const getPositionResult = (entity: number, element: number) => {
         const answer = JSON.parse(
             window.localStorage.getItem(`${entity}.${element}`) as string
-        )
+        );
+
         return answer.checkedPositie + 1;
     }
 
@@ -64,7 +63,8 @@ const Result: FunctionComponent<Props> = () => {
     }
 
     const downloadResults = () => {
-        let fileData = ""
+        const zip = new JSZip();
+        let fileData = "";
 
         entities.forEach((entity, entityIndex) => {
             fileData += entity.name + "\n";
@@ -78,28 +78,40 @@ const Result: FunctionComponent<Props> = () => {
             fileData += "\n";
         });
 
+        zip.file('Resultaten.txt', fileData);
+        Promise.all(
+            Array.from(document.querySelectorAll('.svg-model'))
+            .map(svg => saveAs.svgAsPngUri(svg))
+        ).then(([position, ambition]) => {
+            zip.file('Positie.png', position.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
+            zip.file('Ambitie.png', ambition.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
 
-
-        downloadFile(new Blob([fileData]), 'resultaten.txt');
+            zip.generateAsync({ type: 'blob' }).then(content => {
+                downloadFile(content, 'Resultaat.zip');
+            });
+        });
     }
 
     return (
         <Page className='result'>
             <h1 className='result__title'>Resultaat</h1>
+
             <div className='result__container'>
-                <ResultFragment pageTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
-                <ResultFragment pageTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
+                <ResultFragment pageTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback} />
+                <ResultFragment pageTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback} />
             </div>
+
             <div className='result__download-container'>
                 <div className='result__download-button'>
-                    <Button onClick={downloadResults} baseClass={'color-blue'} children={
+                    <Button onClick={downloadResults} baseClass={'color-blue'}>
                         <span><p>Download</p></span>
-                    }></Button>
+                    </Button>
                 </div>
+
                 <div className='result__download-button'>
-                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} children={
+                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'}>
                         <span><p>Download Advies</p></span>
-                    }></Button>
+                    </Button>
                 </div>
             </div>
         </Page>

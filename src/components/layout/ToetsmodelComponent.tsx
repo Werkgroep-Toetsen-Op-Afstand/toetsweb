@@ -12,14 +12,11 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results = null}) => {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
 
-    console.log(results);
-
     let toetstaken = "0"
     let toetsprogramma = "0"
     let toetsbeleid = "0"
     let toetsorganisatie = "0"
     let toetsbekwaamheid = "0"
-    
 
     if (results != null) {
         toetstaken = results[1][1]
@@ -28,9 +25,6 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results = null}) => {
         toetsorganisatie = results[4][1]
         toetsbekwaamheid = results[5][1]
     }
-    
-
-    console.log(toetstaken, toetsprogramma, toetsbeleid, toetsorganisatie, toetsbekwaamheid);
 
     return (
         <div className='toetsmodel-component'>
@@ -67,7 +61,7 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results = null}) => {
                 </Popup>
             </div>
 
-            <svg width="672" height="672" viewBox="0 0 1030 1065" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="672" height="672" viewBox="0 0 1030 1065" fill="none" xmlns="http://www.w3.org/2000/svg" className={'svg-model'}>
                 <rect width="1030" height="1065" fill=""/>
                 <g id="Group_75">
                 <path id="Path_247" d="M528.551 0C805.475 0 1029.94 224.466 1029.94 501.389C1029.94 778.312 805.474 1002.78 528.551 1002.78C251.628 1002.78 27.1621 778.313 27.1621 501.389C27.1621 224.465 251.628 0 528.551 0Z" fill="white"/>

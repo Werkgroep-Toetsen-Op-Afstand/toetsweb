@@ -1,21 +1,18 @@
 import React, {FunctionComponent, useEffect} from 'react';
 import {
-    BoilerApp,
-    enableRouting,
-    enableLocalization,
-    enableTheming,
-    groupListeners, onEventOnce, onEvent,
-} from 'react-ts-boiler';
+    BuroApp,
+    groupListeners, onEventOnce, onEvent, createRequester, createTranslator,
+} from 'buro-lib-ts';
 
 import routes from './config/routes';
-import lang from './config/lang';
-import theming from './config/theming';
 
 import Layout from './components/layout/Layout';
+import {app} from 'buro-lib-ts';
 
-enableTheming(theming);
-enableLocalization(lang);
-enableRouting({routes});
+app({
+    routingConfig: { routes },
+    translator: createTranslator({ nl: {} })
+});
 
 const App: FunctionComponent = () => {
 
@@ -27,9 +24,9 @@ const App: FunctionComponent = () => {
     }, []);
 
     return (
-        <BoilerApp>
+        <BuroApp>
             <Layout />
-        </BoilerApp>
+        </BuroApp>
     );
 };
 

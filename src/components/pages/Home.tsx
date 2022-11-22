@@ -1,15 +1,13 @@
-import Button from 'components/layout/Button';
 import { FunctionComponent } from 'react';
-import {Page} from 'react-ts-boiler';
+import { Page, route } from 'buro-lib-ts';
+
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
-import { route } from 'react-ts-boiler';
-import ToetsmodelComponent from 'components/layout/ToetsmodelComponent';
+import ToetsmodelComponent from '../layout/ToetsmodelComponent';
 
-interface Props {
-}
+interface Props {}
 
 const Home: FunctionComponent<Props> = () => {
 
@@ -87,7 +85,7 @@ const Home: FunctionComponent<Props> = () => {
                     <br />
                     <br />
 
-                    <ReactRouterNavLink exact={true} to={route('scan')}>
+                    <ReactRouterNavLink to={route('scan')}>
                         <div className='home-page__button'>
                             <span><p>Start de Toetsweb-Scan</p><img src={ArrowIcon} alt="pijl naar rechts"></img></span>
                         </div>
