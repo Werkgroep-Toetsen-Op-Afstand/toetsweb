@@ -108,13 +108,13 @@ const Result: FunctionComponent<Props> = () => {
             <div className='result__download-container'>
                 <div className='result__download-button'>
                     <Button onClick={downloadResults} baseClass={'color-blue'}>
-                        <span><p>Download</p></span>
+                        <span><p>Download resultaten</p></span>
                     </Button>
                 </div>
 
                 <div className='result__download-button'>
                     <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'}>
-                        <span><p>Download Advies</p></span>
+                        <span><p>Download advies</p></span>
                     </Button>
                 </div>
 
