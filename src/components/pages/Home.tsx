@@ -56,6 +56,7 @@ const Home: FunctionComponent<Props> = () => {
 
             <div className='home-page__extra-info'>
                 <div>
+                    <h3>Entiteiten, elementen en ontwikkelingsfasen</h3>
                     <p>
                         Binnen iedere toetsentiteit kunnen drie elementen worden onderscheiden. Dit zijn de elementen
                         kwaliteitscriteria, ontwerp en borging. Het eerste element, kwaliteitscriteria, gaat over de
