@@ -8,13 +8,10 @@ services:
             - proxy
         labels:
             traefik.enable: "true"
-            traefik.http.routers.toetsweb.middlewares: "traefik-https-redirect"
-            traefik.http.routers.toetsweb.entrypoints: "http"
+            traefik.http.routers.toetsweb.entrypoints: "https"
             traefik.http.routers.toetsweb.rule: "Host(`toetsweb.acc2.theburo.nl`)"
-            traefik.http.routers.toetsweb-secure.entrypoints: "https"
-            traefik.http.routers.toetsweb-secure.rule: "Host(`toetsweb.acc2.theburo.nl`)"
-            traefik.http.routers.toetsweb-secure.tls: "true"
-            traefik.http.routers.toetsweb-secure.tls.certresolver: "http"
+            traefik.http.routers.toetsweb.tls: "true"
+            traefik.http.routers.toetsweb.tls.certresolver: "http"
             traefik.docker.network: "proxy"
 
 networks:
