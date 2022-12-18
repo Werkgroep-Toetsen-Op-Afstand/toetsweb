@@ -1,9 +1,23 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 import { route } from 'buro-lib-ts';
 import NavItem from './NavItem';
+import scanData from "../../assets/data/scandata.json";
 
 const NavBar: FunctionComponent = () => {
+
+    const entities = scanData.entities;
+
+    const [answer, setAnswer] = useState<any>([]);    
+
+    useEffect(() => {
+        entities.forEach((entity, entityIndex) => {
+            entity.elements.forEach((element, elementIndex) => {
+                setAnswer(window.localStorage.getItem(`${entityIndex}.${elementIndex}`));
+            })
+        })
+    }, [])
+    
 
     return (
         <nav className={'navbar'}>
@@ -24,9 +38,11 @@ const NavBar: FunctionComponent = () => {
                         <NavItem item={'Toetsweb scan'} color={'orange'}/>
                     </ReactRouterNavLink>
 
+                    {answer && 
                     <ReactRouterNavLink to={'/result'}>
                         <NavItem item={'Resultaat'} color={'green'}/>
                     </ReactRouterNavLink>
+                    }
                 </div>
             </div>
         </nav>

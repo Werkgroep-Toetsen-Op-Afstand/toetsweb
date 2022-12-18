@@ -19,6 +19,10 @@ const Result: FunctionComponent<Props> = () => {
             entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
                 const answer = JSON.parse(rawAnswer as string);
+            
+                if (rawAnswer === null) {
+                    window.location.href = '/scan';
+                }
                 
                 if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1) {
                     window.location.href = '/scan';
