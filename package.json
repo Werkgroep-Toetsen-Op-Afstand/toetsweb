@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
     "reactjs-popup": "^2.0.5",
     "sass": "^1.56.1",
     "save-svg-as-png": "^1.4.17",

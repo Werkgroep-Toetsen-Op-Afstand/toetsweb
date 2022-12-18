@@ -9,6 +9,8 @@ import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
 import {ProgressDot} from "./ProgressDot";
 import data from "../../assets/data/scandata.json";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface Props {
     entity: number;
@@ -74,6 +76,7 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
 
     return (
         <div className={`scancard ${baseClasses[entity]}__border-top`}>
+            <ToastContainer/>
             <div className='scancard__grid'>
                 <div>
                     <div>
@@ -145,6 +148,8 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext}) => {
                         if (scanElementComplete) {
                             handleNext(element);
                             window.scrollTo(0, 0);
+                        } else {
+                            toast.error('Kies minimaal 1 optie voor positie en ambitie');
                         }
                     }} baseClass={baseClasses[entity]} children={
                         <span><p>Volgende vraag</p></span>
