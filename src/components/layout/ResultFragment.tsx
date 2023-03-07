@@ -1,23 +1,22 @@
 import React, {FunctionComponent} from "react";
 import ToetsmodelComponent from "./ToetsmodelComponent";
-import Table from "./Table";
 import scanData from "../../assets/data/scandata.json";
 import resultData from "../../assets/data/resultdata.json";
 import Card from "./Card";
 
 interface Props {
-    pageTitle: string;
+    fragmentTitle: string;
     getResult: (entity: number, element: number) => number;
     getFeedback: (entity: number, element: number) => string;
 }
 
-const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeedback}) => {
+const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, getFeedback}) => {
 
     const entities = scanData.entities;
 
-    const getTableData = () => {
-        const tableData: Array<Array<string>> = [];
-        tableData.push(['Toetsweb', 'Kwaliteitscriteria', 'Ontwerp', 'Borging', 'Fase']);
+    const getResultData = () => {
+        const resultData: Array<Array<string>> = [];
+        resultData.push(['Toetsweb', 'Kwaliteitscriteria', 'Ontwerp', 'Borging', 'Fase']);
         entities.forEach((entity, entityIndex) => {
             const results = [
                 getResult(entityIndex, 0).toString(),
@@ -25,7 +24,7 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
                 getResult(entityIndex, 2).toString()
             ];
 
-            tableData.push([
+            resultData.push([
                 entity.name,
                 results[0],
                 results[1],
@@ -33,7 +32,7 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
                 getEndResult(results.join('')).toString()
             ]);
         });
-        return tableData;
+        return resultData;
     }
 
     const getEndResult = (results: string) => {
@@ -42,7 +41,7 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
         phases.forEach((phase) => {
             const selectIDs = phase.selectIDs;
             selectIDs.forEach((selectID) => {
-                if (results == selectID) {
+                if (results === selectID) {
                     phaseID = parseInt(phase.phaseID);
                 }
             });
@@ -50,33 +49,39 @@ const ResultFragment: FunctionComponent<Props> = ({pageTitle, getResult, getFeed
         return phaseID;
     }
 
+    const printFeedback = (entityIndex: number, elementIndex: number) => {
+        const feedback = getFeedback(entityIndex, elementIndex);
+        return <p>Toelichting: {feedback !== '' ? feedback : <i>Niet ingevuld</i>}</p>;
+    }
+
     return (
         <div className='result-fragment'>
-            <h1 className='result-fragment__title'>{pageTitle}</h1>
-            <ToetsmodelComponent results={getTableData()}/>
-            <Table tableTitle={pageTitle} data={getTableData()}/>
-            <Card children={
-                entities.map((entity, entityIndex) => {
-                    return (
-                        <div key={entityIndex}>
-                            <h3>{entity.name}</h3>
-                            {
-                                entity.elements.map((element, elementIndex) => {
-                                    return (
-                                        <div key={elementIndex}>
-                                            <h4>{element.name}</h4>
-                                            <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
-                                            <p>Toelichting: {getFeedback(entityIndex, elementIndex)}</p>
-                                            <br/>
-                                        </div>
-                                    );
-                                })
-                            }
-                            <br/>
-                        </div>
-                    );
-                })
-            } className='result-fragment__answer-card'/>
+            <h1 className='result-fragment__title'>{fragmentTitle}</h1>
+            <ToetsmodelComponent results={getResultData()}/>
+            <Card className='result-fragment__answer-card'>
+                {
+                    entities.map((entity, entityIndex) => {
+                        return (
+                            <div key={entityIndex}>
+                                <h3>{entity.name}</h3>
+                                {
+                                    entity.elements.map((element, elementIndex) => {
+                                        return (
+                                            <div key={elementIndex}>
+                                                <h4>{element.name}</h4>
+                                                <p>{element.phases[getResult(entityIndex, elementIndex) - 1]}</p>
+                                                {printFeedback(entityIndex, elementIndex)}
+                                                <br/>
+                                            </div>
+                                        );
+                                    })
+                                }
+                                <br/>
+                            </div>
+                        );
+                    })
+                }
+            </Card>
         </div>
     )
 }

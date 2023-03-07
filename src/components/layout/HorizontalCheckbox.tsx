@@ -10,7 +10,11 @@ interface Props {
     baseClass: string;
 }
 
-const HorizontalCheckbox: FunctionComponent<Props> = ({checkedPositie, handleCheckedPositie, checkedAmbitie, handleCheckedAmbitie, position, rowText, baseClass}) => {
+const HorizontalCheckbox: FunctionComponent<Props> = ({
+                                                          checkedPositie, handleCheckedPositie,
+                                                          checkedAmbitie, handleCheckedAmbitie,
+                                                          position, rowText, baseClass
+                                                      }) => {
     return (
         <div className='hor-check'>
             <div className='hor-check__container'>

@@ -13,10 +13,6 @@
   &--disabled {
     cursor: not-allowed;
     opacity: .5;
-
-    &:hover {
-      background-color: $color-white;
-    }
   }
 }
 

@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 import { route } from 'buro-lib-ts';
 import NavItem from './NavItem';
-import scanData from "../../assets/data/scandata.json";
+import scanData from "../../../assets/data/scandata.json";
 
 const NavBar: FunctionComponent = () => {
 
@@ -16,7 +16,7 @@ const NavBar: FunctionComponent = () => {
                 setAnswer(window.localStorage.getItem(`${entityIndex}.${elementIndex}`));
             })
         })
-    }, [])
+    }, [entities])
     
 
     return (
@@ -31,11 +31,11 @@ const NavBar: FunctionComponent = () => {
 
                 <div className='navbar__content--right'>
                     <ReactRouterNavLink to={route('home')}>
-                        <NavItem item={'Het toetsweb'} color={'purple'}/>
+                        <NavItem item={'Het Toetsweb'} color={'purple'}/>
                     </ReactRouterNavLink>
 
                     <ReactRouterNavLink to={route('scan')}>
-                        <NavItem item={'Toetsweb scan'} color={'orange'}/>
+                        <NavItem item={'Toetsweb-Scan'} color={'orange'}/>
                     </ReactRouterNavLink>
 
                     {answer && 

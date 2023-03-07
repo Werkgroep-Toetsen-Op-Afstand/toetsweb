@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, {FunctionComponent} from 'react';
 import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
@@ -8,7 +8,8 @@ interface Props {
     disabled?: boolean;
 }
 
-const Button: FunctionComponent<Props> = ({ children, baseClass, onClick, disabled }) => {
+const Button: FunctionComponent<Props> = ({children, baseClass, onClick, disabled}) => {
+
     const getClassName = () => {
         return ClassBuilder.createClass('button')
             .add(`${baseClass}__bg`)
@@ -20,7 +21,7 @@ const Button: FunctionComponent<Props> = ({ children, baseClass, onClick, disabl
 
     return (
         <div className={getClassName()} onClick={onButtonClick}>
-            { children }
+            {children}
         </div>
     );
 };

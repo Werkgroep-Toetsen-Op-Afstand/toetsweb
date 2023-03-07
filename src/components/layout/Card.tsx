@@ -7,6 +7,7 @@ interface Props {
 }
 
 const Card: FunctionComponent<Props> = ({ children, className }) => {
+
     const getClassName = () => {
         return ClassBuilder.createClass('card')
             .addIf(className, className)

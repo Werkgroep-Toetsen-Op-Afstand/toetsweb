@@ -1,14 +1,16 @@
-import React, {FunctionComponent, useEffect, useMemo} from 'react';
+import React, {FunctionComponent, useMemo} from 'react';
 import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
 import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
+import {Tooltip} from "react-tooltip";
 
 const saveAs = require('save-svg-as-png');
 
-interface Props {}
+interface Props {
+}
 
 const Result: FunctionComponent<Props> = () => {
 
@@ -19,17 +21,17 @@ const Result: FunctionComponent<Props> = () => {
             entity.elements.forEach((element, elementIndex) => {
                 const rawAnswer = window.localStorage.getItem(`${entityIndex}.${elementIndex}`);
                 const answer = JSON.parse(rawAnswer as string);
-            
+
                 if (rawAnswer === null) {
                     window.location.href = '/scan';
                 }
-                
+
                 if (answer.checkedPositie === -1 || answer.checkedAmbitie === -1) {
                     window.location.href = '/scan';
                 }
             })
         });
-    }, []);
+    }, [entities]);
 
     const getPositionResult = (entity: number, element: number) => {
         const answer = JSON.parse(
@@ -58,11 +60,11 @@ const Result: FunctionComponent<Props> = () => {
     }
 
     const downloadAdviceBooklet = () => {
-        fetch('advice-booklet.pdf').then(response => {
-            response.blob().then(blob => {
-                downloadFile(blob, 'advice-booklet.pdf');
-            });
-        })
+        // fetch('advice-booklet.pdf').then(response => {
+        //     response.blob().then(blob => {
+        //         downloadFile(blob, 'advice-booklet.pdf');
+        //     });
+        // });
     }
 
     const resetScan = () => {
@@ -89,13 +91,13 @@ const Result: FunctionComponent<Props> = () => {
         zip.file('Resultaten.txt', fileData);
         Promise.all(
             Array.from(document.querySelectorAll('.svg-model'))
-            .map(svg => saveAs.svgAsPngUri(svg))
+                .map(svg => saveAs.svgAsPngUri(svg))
         ).then(([position, ambition]) => {
-            zip.file('Positie.png', position.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
-            zip.file('Ambitie.png', ambition.replace(/^data:image\/(png|jpg);base64,/, ""), { base64: true });
+            zip.file('Positie.png', position.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
+            zip.file('Ambitie.png', ambition.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
 
-            zip.generateAsync({ type: 'blob' }).then(content => {
-                downloadFile(content, 'Resultaat.zip');
+            zip.generateAsync({type: 'blob'}).then(content => {
+                downloadFile(content, 'Resultaten.zip');
             });
         });
     }
@@ -105,8 +107,8 @@ const Result: FunctionComponent<Props> = () => {
             <h1 className='result__title'>Resultaat</h1>
 
             <div className='result__container'>
-                <ResultFragment pageTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback} />
-                <ResultFragment pageTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback} />
+                <ResultFragment fragmentTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
+                <ResultFragment fragmentTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
             </div>
 
             <div className='result__download-container'>
@@ -117,8 +119,13 @@ const Result: FunctionComponent<Props> = () => {
                 </div>
 
                 <div className='result__download-button'>
-                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'}>
-                        <span><p>Download advies</p></span>
+                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} disabled>
+                        <div data-tooltip-id={'downloadAdviceBooklet'}>
+                            <span><p>Download advies</p></span>
+                            <Tooltip id={"downloadAdviceBooklet"} place="top">
+                                <span>Deze functie is op dit moment nog niet beschikbaar.</span>
+                            </Tooltip>
+                        </div>
                     </Button>
                 </div>
 
