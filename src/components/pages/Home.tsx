@@ -31,7 +31,7 @@ const Home: FunctionComponent<Props> = () => {
                             fundament onder de Toetsing Getoetst.
                         </p>
                     </div>
-                    <div>
+                    <div className={"home-page__hero-section__toetsmodel"}>
                         <ToetsmodelComponent/>
                     </div>
                 </div>
