@@ -1,13 +1,16 @@
 import React, {FunctionComponent, useEffect} from 'react';
 import {
     BuroApp,
-    groupListeners, onEventOnce, onEvent, createRequester, createTranslator,
+    groupListeners,
+    onEventOnce,
+    onEvent,
+    createTranslator,
+    app
 } from 'buro-lib-ts';
 
 import routes from './config/routes';
 
 import Layout from './components/layout/Layout';
-import {app} from 'buro-lib-ts';
 
 app({
     routingConfig: { routes },

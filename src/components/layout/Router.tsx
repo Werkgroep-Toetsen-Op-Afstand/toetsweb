@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import {route, Router as BoilerRouter} from 'buro-lib-ts';
+import {route} from 'buro-lib-ts';
 import {Route, Routes} from 'react-router-dom';
 
 import NotFoundPage from '../pages/NotFoundPage';
@@ -21,7 +21,7 @@ const Router: FunctionComponent<Props> = ({ children }) => {
             <Route path={route('result')} element={<Result />} />
             { children }
 
-            <Route element={<NotFoundPage />} />
+            <Route path={'/*'} element={<NotFoundPage />} />
         </Routes>
     );
 };

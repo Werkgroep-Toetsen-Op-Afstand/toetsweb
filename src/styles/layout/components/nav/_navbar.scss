@@ -1,0 +1,29 @@
+.navbar {
+  background: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
+
+  &__content {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &--right {
+      display: flex;
+      column-gap: 3rem;
+    }
+  }
+}
+  
