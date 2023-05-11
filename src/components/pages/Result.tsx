@@ -6,6 +6,7 @@ import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
 import {Tooltip} from "react-tooltip";
+import {useTitle} from "../../utils/hooks/TitleHook";
 
 const saveAs = require('save-svg-as-png');
 
@@ -13,6 +14,8 @@ interface Props {
 }
 
 const Result: FunctionComponent<Props> = () => {
+
+    useTitle('Toetsweb - Resultaten');
 
     const entities = scanData.entities;
 
