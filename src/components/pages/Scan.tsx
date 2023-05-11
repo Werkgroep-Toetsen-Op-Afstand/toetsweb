@@ -1,7 +1,7 @@
 import {Page} from 'buro-lib-ts';
 import ScanCard from '../layout/ScanCard';
 import React, {FunctionComponent, useState} from 'react';
-import {useTitle} from "../../hooks/TitleHook";
+import {useTitle} from "../../utils/hooks/TitleHook";
 
 interface Props {}
 

@@ -38,7 +38,7 @@ const Result: FunctionComponent<Props> = () => {
             window.localStorage.getItem(`${entity}.${element}`) as string
         );
 
-        return answer.checkedPositie + 1;
+        return answer.checkedPositie;
     }
 
     const getPositionFeedback = (entity: number, element: number) => {
@@ -50,7 +50,7 @@ const Result: FunctionComponent<Props> = () => {
     const getAmbitionResult = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.checkedAmbitie + 1;
+        return answer.checkedAmbitie;
     }
 
     const getAmbitionFeedback = (entity: number, element: number) => {
