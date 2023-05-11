@@ -15,24 +15,15 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
     const entities = scanData.entities;
 
     const getResultData = () => {
-        const resultData: Array<Array<string>> = [];
-        resultData.push(['Toetsweb', 'Kwaliteitscriteria', 'Ontwerp', 'Borging', 'Fase']);
-        entities.forEach((entity, entityIndex) => {
-            const results = [
-                getResult(entityIndex, 0).toString(),
-                getResult(entityIndex, 1).toString(),
-                getResult(entityIndex, 2).toString()
+        return entities.map((entity, entityIndex) => {
+            const subResults = [
+                getResult(entityIndex, 0),
+                getResult(entityIndex, 1),
+                getResult(entityIndex, 2)
             ];
 
-            resultData.push([
-                entity.name,
-                results[0],
-                results[1],
-                results[2],
-                getEndResult(results.join('')).toString()
-            ]);
+            return getEndResult(subResults.join(''));
         });
-        return resultData;
     }
 
     const getEndResult = (results: string) => {
@@ -69,7 +60,7 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
                                         return (
                                             <div key={elementIndex}>
                                                 <h4>{element.name}</h4>
-                                                <p>{element.phases[getResult(entityIndex, elementIndex) - 1]}</p>
+                                                <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
                                                 {printFeedback(entityIndex, elementIndex)}
                                                 <br/>
                                             </div>
