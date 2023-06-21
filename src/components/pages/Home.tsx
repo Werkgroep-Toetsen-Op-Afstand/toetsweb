@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from 'react';
+import React, {useContext} from 'react';
 import {Page, route} from 'buro-lib-ts';
 
 import Card from "../layout/Card"
@@ -8,28 +8,26 @@ import {NavLink as ReactRouterNavLink} from "react-router-dom";
 import ToetsmodelComponent from '../layout/ToetsmodelComponent';
 import Colofon from "../layout/footer/Colofon";
 import Developers from "../layout/footer/Developers";
+import {Language} from "../../utils/Localization";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
-interface Props {
-}
+const Home = () => {
 
-const Home: FunctionComponent<Props> = () => {
+    const {language, changeLanguage, getTranslation} = useContext(LanguageContext);
+
+    const handleChangeLanguage = () => {
+        if (language === Language.NL) changeLanguage(Language.EN);
+        if (language === Language.EN) changeLanguage(Language.NL);
+    }
 
     return (
         <>
             <Page className={'home-page'}>
                 <div className="home-page__hero-section">
                     <div>
-                        <h1>AAN DE SLAG MET HET TOETSWEB: WERKEN AAN KWALITEIT VAN TOETSING</h1>
+                        <h1 onClick={handleChangeLanguage}>{getTranslation("home.heroTitle")}</h1>
                         <br/>
-                        <p className={'home-page__hero-section__subtitle'}>
-                            Op deze website kun je met je opleidingsteam, de toets- of curriculumcommissie van je team
-                            of
-                            een andere relevante vertegenwoordiging van de opleiding de Toetsweb-Scan invullen. De
-                            Toetsweb-Scan is gebaseerd op de methodiek van de Toetsing Getoetst en is bedoeld om de
-                            kwaliteit van toetsing te analyseren, verbeteren en borgen. Het toetsweb vormt het
-                            theoretisch
-                            fundament onder de Toetsing Getoetst.
-                        </p>
+                        <p className={'home-page__hero-section__subtitle'}>{getTranslation("home.heroSubtitle")}</p>
                     </div>
                     <div className={"home-page__hero-section__toetsmodel"}>
                         <ToetsmodelComponent/>
@@ -40,26 +38,13 @@ const Home: FunctionComponent<Props> = () => {
 
                 <div className='home-page__info-section'>
                     <Card className={'home-page__info-section__card'}>
-                        <h3>Gezamenlijk toetskwaliteit bepalen</h3>
-                        <p>
-                            Met behulp van de Toetsweb-Scan kun je als team samen vaststellen hoe de (duurzame)
-                            kwaliteit van toetsing er op dit moment uitziet in jullie opleiding (positiebepaling). Ook
-                            kun je met behulp van deze scan samen keuzes maken over jullie ontwikkeling richting
-                            (duurzame) toetskwaliteit (ambitiebepaling). Daarnaast maak je behulp van de scan met je
-                            team een onderbouwd actieplan om te komen tot jullie ambitie.
-                        </p>
+                        <h3>{getTranslation("home.assessmentQualityTitle")}</h3>
+                        <p>{getTranslation("home.assessmentQualityText")}</p>
                     </Card>
 
                     <Card className={'home-page__info-section__card'}>
-                        <h3>Het toetsweb uitgelegd</h3>
-                        <p>
-                            Het toetsweb bestaat uit vijf toetsentiteiten; toets(tak)en, toetsprogramma, toetsbeleid,
-                            toetsorganisatie en toetsbekwaamheid. Deze vijf entiteiten zijn verbonden met elkaar én met
-                            de kern van het web. De vorm van het web symboliseert de verwevenheid van de verschillende
-                            toetsentiteiten, maakt visueel zichtbaar dat deze allemaal met elkaar verbonden zijn en laat
-                            vier verschillende ontwikkelingsfasen zien. Door met de muis op een van de onderdelen van
-                            het toetsweb te gaan staan, wordt de toelichting op dit onderdeel zichtbaar.
-                        </p>
+                        <h3>{getTranslation("home.assessmentExplainedTitle")}</h3>
+                        <p>{getTranslation("home.assessmentExplainedText")}</p>
                     </Card>
                 </div>
 
