@@ -1,4 +1,4 @@
-import {useState, FunctionComponent} from 'react';
+import {FunctionComponent, useState} from 'react';
 import XMARK from "../../assets/icons/xmark.svg"
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
@@ -14,7 +14,7 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results}) => {
 
     let toetstaken = results && results[0] || 0
     let toetsprogramma = results && results[1] || 0
-    let toetsbeleid = results && results[2]|| 0
+    let toetsbeleid = results && results[2] || 0
     let toetsorganisatie = results && results[3] || 0
     let toetsbekwaamheid = results && results[4] || 0
 
@@ -717,13 +717,16 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results}) => {
                                                 <div className='toetsmodel-component__element-hover turquoise'>
                                                     <h4>3. SYSTEEM-GEORIËNTEERDE ONTWIKKELINGSFASE</h4>
                                                     <p>
-                                                        Binnen de opleiding zijn kwaliteitscriteria vastgesteld voor het
-                                                        toetsprogramma. De beoogde leerresultaten vormen de basis voor
-                                                        het ontwerpen van het toetsprogramma. Met enige regelmaat worden
-                                                        zowel de dekking als de uitvoerbaarheid van het toetsprogramma
-                                                        geëvalueerd. De opbrengsten daarvan worden niet vanzelfsprekend
-                                                        besproken met alle collega’s of studenten, maar wel gebruikt om
-                                                        het toetsprogramma te verbeteren.
+                                                        De kwaliteitscriteria die worden gebruikt bij het ontwikkelen
+                                                        van het toetsprogramma worden met regelmaat bijgesteld op basis
+                                                        van actuele (wetenschappelijke) inzichten. Bij de ontwikkeling
+                                                        wordt er gelet op zowel de horizontale als verticale samenhang
+                                                        tussen de toetsen. Ook vindt overleg plaats over de meest
+                                                        geschikte toetsvormen, de functies van toetsen en de hoeveelheid
+                                                        van toetsen. De kwaliteit van het toetsprogramma wordt
+                                                        structureel geëvalueerd aan de hand van de kwaliteitscriteria.
+                                                        De opbrengsten hiervan worden besproken met relevante partners
+                                                        binnen de opleiding.
                                                     </p>
                                                 </div>
                                             </Popup>
