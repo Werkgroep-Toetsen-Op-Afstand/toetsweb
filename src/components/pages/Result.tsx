@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useContext, useMemo} from 'react';
+import {useContext, useMemo} from 'react';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
 import downloadFile from "../../utils/FileDownloader";
