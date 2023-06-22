@@ -7,7 +7,7 @@ interface Props {
     results?: number[];
 }
 
-const ToetsmodelComponent: FunctionComponent<Props> = ({results}) => {
+const ToetsmodelComponentOud: FunctionComponent<Props> = ({results}) => {
 
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
@@ -47,11 +47,11 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results}) => {
                             </p>
                             <br/>
                             <ul>
-                                <li><p>de legitimering van het onderwijs/de opleiding,</p></li>
-                                <li><p>een visie op het doel van het onderwijs/het beroep waartoe wordt opgeleid,</p>
+                                <li><p>de legitimering van het onderwijs/de opleiding</p></li>
+                                <li><p>een visie op het doel van het onderwijs/het beroep waartoe wordt opgeleid</p>
                                 </li>
-                                <li><p>een visie op de opdracht* van het onderwijs,</p></li>
-                                <li><p>een visie op leren en een visie op toetsen (Van Schilt-Mol, 2021).</p></li>
+                                <li><p>een visie op de opdracht* van het onderwijs</p></li>
+                                <li><p>een visie op leren en een visie op toetsen (Van Schilt-Mol, 2021)</p></li>
                             </ul>
                             <br/>
                             <p>
@@ -2118,4 +2118,4 @@ const ToetsmodelComponent: FunctionComponent<Props> = ({results}) => {
     )
 }
 
-export default ToetsmodelComponent;
+export default ToetsmodelComponentOud;

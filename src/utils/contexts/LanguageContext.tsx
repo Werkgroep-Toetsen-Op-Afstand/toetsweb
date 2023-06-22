@@ -1,10 +1,11 @@
 import {useEffect, useState, createContext, FunctionComponent} from "react";
-import {Language, getLocaleTranslation} from "../Localization";
+import {Language, getLocaleTranslation, ScanData, getLocaleScanData} from "../Localization";
 
 export const LanguageContext = createContext({
     language: 'en',
     changeLanguage: (newLanguage: Language) => {},
-    getTranslation: (key: string) => key
+    getTranslation: (key: string) => key,
+    getScanData: (): ScanData => {return {} as ScanData}
 });
 
 interface Props {
@@ -34,8 +35,12 @@ export const LanguageProvider: FunctionComponent<Props> = ({children}) => {
         return getLocaleTranslation(language, key);
     }
 
+    const getScanData = (): ScanData => {
+        return getLocaleScanData(language);
+    }
+
     return (
-        <LanguageContext.Provider value={{language, changeLanguage, getTranslation}}>
+        <LanguageContext.Provider value={{language, changeLanguage, getTranslation, getScanData}}>
             {children}
         </LanguageContext.Provider>
     )

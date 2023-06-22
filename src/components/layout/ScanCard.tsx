@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useEffect, useMemo, useState} from 'react';
+import React, {FunctionComponent, useContext, useEffect, useMemo, useState} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
@@ -7,10 +7,10 @@ import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
-import data from "../../assets/data/scandata.json";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProgressDots from "./ProgressDots";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 interface Props {
     entity: number;
@@ -27,7 +27,9 @@ interface ScanCardData {
 }
 
 const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handlePrevious}) => {
-    const currentEntity = data.entities[entity]
+
+    const {getScanData} = useContext(LanguageContext);
+    const currentEntity = getScanData().entities[entity]
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
 

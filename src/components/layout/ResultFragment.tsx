@@ -1,8 +1,8 @@
-import React, {FunctionComponent} from "react";
-import ToetsmodelComponent from "./ToetsmodelComponent";
-import scanData from "../../assets/data/scandata.json";
+import React, {FunctionComponent, useContext} from "react";
+import ToetsmodelComponentOud from "./ToetsmodelComponentOud";
 import resultData from "../../assets/data/resultdata.json";
 import Card from "./Card";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 interface Props {
     fragmentTitle: string;
@@ -12,7 +12,9 @@ interface Props {
 
 const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, getFeedback}) => {
 
-    const entities = scanData.entities;
+    const {getScanData} = useContext(LanguageContext);
+
+    const entities = getScanData().entities;
 
     const getResultData = () => {
         return entities.map((entity, entityIndex) => {
@@ -48,7 +50,7 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
     return (
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{fragmentTitle}</h1>
-            <ToetsmodelComponent results={getResultData()}/>
+            <ToetsmodelComponentOud results={getResultData()}/>
             <Card className='result-fragment__answer-card'>
                 {
                     entities.map((entity, entityIndex) => {

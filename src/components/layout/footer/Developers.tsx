@@ -1,14 +1,13 @@
+import {useContext} from "react";
+import {LanguageContext} from "../../../utils/contexts/LanguageContext";
+
 const Developers = () => {
+    const {getTranslation} = useContext(LanguageContext);
     return (
         <div className={"developers"}>
-            <h3 className={"developers__title"}>Ontwikkelaars</h3>
+            <h3 className={"developers__title"}>{getTranslation("developers.title")}</h3>
             <p>
-                Het Toetsweb is ontwikkeld door het Lectoraat Eigentijds Beoordelen en Beslissen. Het lectoraat
-                is
-                onderdeel van het Onderzoeksteam Kwaliteiten van Leraren van de Academie Educatie van de HAN
-                University of Applied Sciences. Deze Toetsweb-Scan is tot stand gekomen in samenwerking met B302
-                en
-                met behulp van subsidie uit het Versnellingsplan Onderwijsinnovatie met ICT.
+                {getTranslation("developers.text")}
             </p>
         </div>
     );

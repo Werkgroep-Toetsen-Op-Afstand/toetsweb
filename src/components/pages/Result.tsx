@@ -1,12 +1,12 @@
-import React, {FunctionComponent, useMemo} from 'react';
+import React, {FunctionComponent, useContext, useMemo} from 'react';
 import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
-import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
 import {Tooltip} from "react-tooltip";
 import {useTitle} from "../../utils/hooks/TitleHook";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 const saveAs = require('save-svg-as-png');
 
@@ -17,7 +17,8 @@ const Result: FunctionComponent<Props> = () => {
 
     useTitle('Toetsweb - Resultaten');
 
-    const entities = scanData.entities;
+    const {getScanData} = useContext(LanguageContext);
+    const entities = getScanData().entities;
 
     useMemo(() => {
         entities.forEach((entity, entityIndex) => {
