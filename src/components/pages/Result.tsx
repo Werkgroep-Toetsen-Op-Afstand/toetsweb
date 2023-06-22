@@ -1,5 +1,4 @@
 import React, {FunctionComponent, useContext, useMemo} from 'react';
-import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
 import downloadFile from "../../utils/FileDownloader";
@@ -10,10 +9,7 @@ import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 const saveAs = require('save-svg-as-png');
 
-interface Props {
-}
-
-const Result: FunctionComponent<Props> = () => {
+const Result = () => {
 
     useTitle('Toetsweb - Resultaten');
 
@@ -107,7 +103,7 @@ const Result: FunctionComponent<Props> = () => {
     }
 
     return (
-        <Page className='result'>
+        <div className='result'>
             <h1 className='result__title'>Resultaat</h1>
 
             <div className='result__container'>
@@ -139,7 +135,7 @@ const Result: FunctionComponent<Props> = () => {
                     </Button>
                 </div>
             </div>
-        </Page>
+        </div>
     )
 }
 

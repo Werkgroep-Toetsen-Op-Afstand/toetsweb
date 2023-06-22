@@ -1,11 +1,10 @@
-import React, {FunctionComponent, useContext, useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
-import { route } from 'buro-lib-ts';
 import NavItem from './NavItem';
 import {LanguageContext} from "../../../utils/contexts/LanguageContext";
 import {Language} from "../../../utils/Localization";
 
-const NavBar: FunctionComponent = () => {
+const NavBar = () => {
 
     const {language, changeLanguage, getTranslation, getScanData} = useContext(LanguageContext);
 
@@ -29,7 +28,7 @@ const NavBar: FunctionComponent = () => {
     return (
         <nav className={'navbar'}>
             <div className={'navbar__content'}>
-                <ReactRouterNavLink to={route('home')}>
+                <ReactRouterNavLink to={""}>
                     <div className={"navbar__container"}>
                         <h1>{getTranslation("nav.title")}</h1>
                     </div>
@@ -37,16 +36,16 @@ const NavBar: FunctionComponent = () => {
                 
 
                 <div className='navbar__content--right'>
-                    <ReactRouterNavLink to={route('home')}>
+                    <ReactRouterNavLink to={""}>
                         <NavItem item={getTranslation("nav.home")} color={'purple'}/>
                     </ReactRouterNavLink>
 
-                    <ReactRouterNavLink to={route('scan')}>
+                    <ReactRouterNavLink to={"scan"}>
                         <NavItem item={getTranslation("nav.scan")} color={'orange'}/>
                     </ReactRouterNavLink>
 
                     {answer && 
-                    <ReactRouterNavLink to={'/result'}>
+                    <ReactRouterNavLink to={"result"}>
                         <NavItem item={getTranslation("nav.result")} color={'green'}/>
                     </ReactRouterNavLink>
                     }

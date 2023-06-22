@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
     children: any;
@@ -9,9 +8,7 @@ interface Props {
 const Card: FunctionComponent<Props> = ({ children, className }) => {
 
     const getClassName = () => {
-        return ClassBuilder.createClass('card')
-            .addIf(className, className)
-            .build();
+        return `card ${className ? className : ''}`;
     };
 
     return (

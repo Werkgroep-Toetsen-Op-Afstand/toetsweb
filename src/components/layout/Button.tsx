@@ -1,5 +1,4 @@
 import React, {FunctionComponent} from 'react';
-import {ClassBuilder} from 'buro-lib-ts';
 
 interface Props {
     children: any;
@@ -11,10 +10,7 @@ interface Props {
 const Button: FunctionComponent<Props> = ({children, baseClass, onClick, disabled}) => {
 
     const getClassName = () => {
-        return ClassBuilder.createClass('button')
-            .add(`${baseClass}__bg`)
-            .addIf('button--disabled', disabled)
-            .build();
+        return `button ${baseClass}__bg ${disabled ? 'button--disabled' : ''}`;
     };
 
     const onButtonClick = () => !disabled && onClick();

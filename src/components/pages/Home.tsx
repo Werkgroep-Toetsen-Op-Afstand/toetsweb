@@ -1,14 +1,11 @@
 import React, {useContext} from 'react';
-import {Page, route} from 'buro-lib-ts';
 
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
 import {NavLink as ReactRouterNavLink} from "react-router-dom";
-import ToetsmodelComponentOud from '../layout/ToetsmodelComponentOud';
 import Colofon from "../layout/footer/Colofon";
 import Developers from "../layout/footer/Developers";
-import {Language} from "../../utils/Localization";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import ToetsmodelComponent from "../layout/toetsmodel/ToetsmodelComponent";
 
@@ -18,7 +15,7 @@ const Home = () => {
 
     return (
         <>
-            <Page className={'home-page'}>
+            <div className={'home-page'}>
                 <div className="home-page__hero-section">
                     <div>
                         <h1>{getTranslation("home.heroTitle")}</h1>
@@ -64,7 +61,7 @@ const Home = () => {
                             <p>
                                 {getTranslation("home.startScan.text")}
                             </p>
-                            <ReactRouterNavLink to={route('scan')}>
+                            <ReactRouterNavLink to={"scan"}>
                                 <span className='home-page__scan-button'>
                                     <p>{getTranslation("home.startScanButton")}</p>
                                     <img src={ArrowIcon} alt="pijl naar rechts"/>
@@ -77,7 +74,7 @@ const Home = () => {
                     </div>
                 </div>
                 <Developers/>
-            </Page>
+            </div>
             <Colofon/>
         </>
     );

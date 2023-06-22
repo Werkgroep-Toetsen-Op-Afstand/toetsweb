@@ -1,11 +1,8 @@
-import {Page} from 'buro-lib-ts';
 import ScanCard from '../layout/ScanCard';
-import React, {FunctionComponent, useState} from 'react';
+import {useState} from 'react';
 import {useTitle} from "../../utils/hooks/TitleHook";
 
-interface Props {}
-
-const Scan: FunctionComponent<Props> = () => {
+const Scan = () => {
 
     const [currentEntity, setCurrentEntity] = useState(0);
     const [currentElement, setCurrentElement] = useState(0);
@@ -42,10 +39,10 @@ const Scan: FunctionComponent<Props> = () => {
     }
 
     return (
-        <Page className='scan'>
+        <div className='scan'>
             <h1 className='scan__title'>Scan</h1>
             <ScanCard entity={currentEntity} element={currentElement} handleNext={handleNext} handlePrevious={handlePrevious} />
-        </Page>
+        </div>
     )
 }
 
