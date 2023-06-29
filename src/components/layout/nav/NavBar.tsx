@@ -52,7 +52,7 @@ const NavBar: FunctionComponent = () => {
                     }
 
                     <div className="cursor-pointer unselectable" onClick={handleChangeLanguage}>
-                        <NavItem item={"🇳🇱 🇬🇧"} color={'white'} />
+                        <NavItem item={language === Language.NL ? "🇬🇧" : "🇳🇱"} color={'white'} />
                     </div>
                 </div>
             </div>

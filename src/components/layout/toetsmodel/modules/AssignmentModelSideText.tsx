@@ -1,19 +1,10 @@
-import Popup from "reactjs-popup";
+import AssignmentModelPopup from "./AssignmentModelPopup";
 
 export const ToetsmodelSideTextEN = () => {
 
     return (
         <g id="side-texts">
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmenttasks-bg">
                         <rect x="120" y="80" fill="white" width="120" height="120"/>
@@ -79,18 +70,9 @@ export const ToetsmodelSideTextEN = () => {
                         & Joosten-ten Brinke, 2015).
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentprogram-bg">
                         <rect x="380" y="80" fill="white" width="120" height="120"/>
@@ -162,18 +144,9 @@ export const ToetsmodelSideTextEN = () => {
                         the different functions of assessment.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentpolicy-bg">
                         <rect x="450" y="300" width="120" height="120" fill="white"/>
@@ -230,18 +203,9 @@ export const ToetsmodelSideTextEN = () => {
                         assessment policy, including the policy at the institutional level and the degree course level.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="toetsorganisatie-bg">
                         <rect x="225" y="500" width="150" height="50" fill="white"/>
@@ -319,18 +283,9 @@ export const ToetsmodelSideTextEN = () => {
                         cooperation based on defined roles and the logistical organisation of assessment.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentliteracy-bg">
                         <rect x="50" y="285" width="75" height="150" fill="white"/>
@@ -398,7 +353,7 @@ export const ToetsmodelSideTextEN = () => {
                         2006).
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
         </g>
     )
 }
@@ -407,16 +362,7 @@ export const ToetsmodelSideTextNL = () => {
 
     return (
         <g id="side-texts">
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmenttasks-bg">
                         <rect x="120" y="80" fill="white" width="120" height="120"/>
@@ -463,18 +409,9 @@ export const ToetsmodelSideTextNL = () => {
                         Joosten-ten Brinke, 2015.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentprogram-bg">
                         <rect x="380" y="80" fill="white" width="120" height="120"/>
@@ -531,18 +468,9 @@ export const ToetsmodelSideTextNL = () => {
                         van de verschillende functies van toetsing.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentpolicy-bg">
                         <rect x="450" y="300" width="120" height="120" fill="white"/>
@@ -588,18 +516,9 @@ export const ToetsmodelSideTextNL = () => {
                         instellingsniveau en het beleid op opleidingsniveau.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="toetsorganisatie-bg">
                         <rect x="225" y="500" width="150" height="50" fill="white"/>
@@ -663,18 +582,9 @@ export const ToetsmodelSideTextNL = () => {
                         toetsing, het rolvast met elkaar samenwerken en de logistieke organisatie van toetsing.
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
 
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position={["bottom center", "left center"]}
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
-                keepTooltipInside=".toetsmodel-component"
+            <AssignmentModelPopup
                 trigger={
                     <g id="assessmentliteracy-bg">
                         <rect x="50" y="285" width="75" height="150" fill="white"/>
@@ -735,7 +645,7 @@ export const ToetsmodelSideTextNL = () => {
                         informatie verder kan bijdragen aan het leren van de student (Straetmans, 2006).
                     </p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
         </g>
     )
 }

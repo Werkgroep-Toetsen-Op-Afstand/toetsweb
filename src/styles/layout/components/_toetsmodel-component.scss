@@ -14,7 +14,7 @@
 
     &__center {
         -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        background: white 0% 0% no-repeat padding-box;
+        background: white 0 0 no-repeat padding-box;
         width: 900px;
         padding: 1rem;
         border: 1px solid black;
@@ -46,7 +46,7 @@
 
     &__one-hover {
         -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        background: white 0% 0% no-repeat padding-box;
+        background: white 0 0 no-repeat padding-box;
         width: 30rem;
         padding: 1rem;
         border: 3px solid black;
@@ -86,29 +86,141 @@
     }
 }
 
-.turquoise {
-    background-color: $color-turquoise; 
+.assessmenttasks {
+    &-activityoriented {
+        background-color: #A1D3E1;
+        fill: #A1D3E1;
+    }
+
+    &-processoriented {
+        background-color: #85C5D7;
+        fill: #85C5D7;
+    }
+
+    &-systemoriented {
+        background-color: #73BDD2;
+        fill: #73BDD2;
+    }
+
+    &-chainoriented {
+        background-color: #45A7C3;
+        fill: #45A7C3;
+    }
 }
 
-.orange {
-    background-color: $color-orange; 
+.assessmentprogram {
+    &-activityoriented {
+        background-color: #95D8D1;
+        fill: #95D8D1;
+    }
+
+    &-processoriented {
+        background-color: #76CDC4;
+        fill: #76CDC4;
+    }
+
+    &-systemoriented {
+        background-color: #61C6BB;
+        fill: #61C6BB;
+    }
+
+    &-chainoriented {
+        background-color: #2DB3A5;
+        fill: #2DB3A5;
+    }
 }
 
-.green {
-    background-color: $color-green; 
+.assessmentpolicy {
+    &-activityoriented {
+        background-color: #D6B7D5;
+        fill: #D6B7D5;
+    }
+
+    &-processoriented {
+        background-color: #CAA3C9;
+        fill: #CAA3C9;
+    }
+
+    &-systemoriented {
+        background-color: #C395C1;
+        fill: #C395C1;
+    }
+
+    &-chainoriented {
+        background-color: #AF72AD;
+        fill: #AF72AD;
+    }
 }
 
-.blue {
-    background-color: $color-blue; 
+.assessmentorganisation {
+    &-activityoriented {
+        background-color: #F5BB86;
+        fill: #F5BB86;
+    }
+
+    &-processoriented {
+        background-color: #F3A862;
+        fill: #F3A862;
+    }
+
+    &-systemoriented {
+        background-color: #F19B4B;
+        fill: #F19B4B;
+    }
+
+    &-chainoriented {
+        background-color: #ED7A0F;
+        fill: #ED7A0F;
+    }
 }
 
-.purple {
-    background-color: $color-purple; 
+.assessmentliteracy {
+    &-activityoriented {
+        background-color: #A1D5A2;
+        fill: #A1D5A2;
+    }
+
+    &-processoriented {
+        background-color: #86C987;
+        fill: #86C987;
+    }
+
+    &-systemoriented {
+        background-color: #74C175;
+        fill: #74C175;
+    }
+
+    &-chainoriented {
+        background-color: #46AD48;
+        fill: #46AD48;
+    }
+}
+
+.grey {
+    &-activityoriented {
+        background-color: #C7C7C7;
+        fill: #C7C7C7;
+    }
+
+    &-processoriented {
+        background-color: #B6B6B6;
+        fill: #B6B6B6;
+    }
+
+    &-systemoriented {
+        background-color: #ABABAB;
+        fill: #ABABAB;
+    }
+
+    &-chainoriented {
+        background-color: #909090;
+        fill: #909090;
+    }
 }
 
 .popup-content {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     padding: 0;
     border: 0;
 }
@@ -116,28 +228,3 @@
 .number__hover {
     padding: 1rem;
 }
-
-.st0{fill:#FFFFFF;}
-.st1{fill:#45AD48;}
-.st2{opacity:0.75;fill:#45AD48;enable-background:new    ;}
-.st3{opacity:0.65;fill:#45AD48;enable-background:new    ;}
-.st4{opacity:0.5;fill:#45AD48;enable-background:new    ;}
-.st5{fill:#ED7A0B;}
-.st6{opacity:0.75;fill:#ED7A0B;enable-background:new    ;}
-.st7{opacity:0.65;fill:#ED7A0B;enable-background:new    ;}
-.st8{opacity:0.5;fill:#ED7A0B;enable-background:new    ;}
-.st9{fill:#B072AD;}
-.st10{opacity:0.75;fill:#B072AD;enable-background:new    ;}
-.st11{opacity:0.65;fill:#B072AD;enable-background:new    ;}
-.st12{opacity:0.65;fill:#FFFFFF;enable-background:new    ;}
-.st13{opacity:0.5;fill:#B072AD;enable-background:new    ;}
-.st14{opacity:0.5;fill:#FFFFFF;enable-background:new    ;}
-.st15{fill:#2DB3A5;}
-.st16{opacity:0.75;fill:#2DB3A5;enable-background:new    ;}
-.st17{opacity:0.65;fill:#2DB3A5;enable-background:new    ;}
-.st18{opacity:0.5;fill:#2DB3A5;enable-background:new    ;}
-.st19{fill:#44A6C2;}
-.st20{opacity:0.75;fill:#45A7C3;enable-background:new    ;}
-.st21{opacity:0.65;fill:#45A7C3;enable-background:new    ;}
-.st22{opacity:0.5;fill:#45A7C3;enable-background:new    ;}
-.st23{fill:#010202;}

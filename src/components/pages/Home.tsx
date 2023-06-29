@@ -1,20 +1,20 @@
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import {Page, route} from 'buro-lib-ts';
 
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
 import ArrowIcon from "../../assets/icons/arrow.svg"
 import {NavLink as ReactRouterNavLink} from "react-router-dom";
-import ToetsmodelComponentOud from '../layout/ToetsmodelComponentOud';
 import Colofon from "../layout/footer/Colofon";
 import Developers from "../layout/footer/Developers";
-import {Language} from "../../utils/Localization";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
-import ToetsmodelComponent from "../layout/toetsmodel/ToetsmodelComponent";
+import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
+import {useTitle} from "../../utils/hooks/TitleHook";
 
 const Home = () => {
 
     const {getTranslation} = useContext(LanguageContext);
+    useTitle(getTranslation("nav.title"));
 
     return (
         <>
@@ -26,7 +26,7 @@ const Home = () => {
                         <p className={'home-page__hero-section__subtitle'}>{getTranslation("home.heroSubtitle")}</p>
                     </div>
                     <div className={"home-page__hero-section__toetsmodel"}>
-                        <ToetsmodelComponent/>
+                        <AssignmentModel/>
                     </div>
                 </div>
 
@@ -60,13 +60,13 @@ const Home = () => {
                         </div>
 
                         <div>
-                            <h3>{getTranslation("home.startScan.title")}</h3>
+                            <h3>{getTranslation("home.startscan.title")}</h3>
                             <p>
-                                {getTranslation("home.startScan.text")}
+                                {getTranslation("home.startscan.text")}
                             </p>
                             <ReactRouterNavLink to={route('scan')}>
                                 <span className='home-page__scan-button'>
-                                    <p>{getTranslation("home.startScanButton")}</p>
+                                    <p>{getTranslation("home.startscan.button")}</p>
                                     <img src={ArrowIcon} alt="pijl naar rechts"/>
                                 </span>
                             </ReactRouterNavLink>

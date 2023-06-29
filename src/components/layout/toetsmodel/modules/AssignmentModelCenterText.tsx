@@ -1,23 +1,42 @@
 import Popup from "reactjs-popup";
-import {FunctionComponent} from "react";
+import {useState} from "react";
+import XMARK from "../../../../assets/icons/xmark.svg";
+import AssignmentModelPopup from "./AssignmentModelPopup";
 
-interface Props {
-    openModal: () => void;
-}
+export const ToetsmodelCenterTextEN = () => {
 
-export const ToetsmodelCenterTextEN: FunctionComponent<Props> = ({openModal}) => {
+    const [open, setOpen] = useState(false);
+    const openModal = () => setOpen(true);
+    const closeModal = () => setOpen(false);
 
     return (
         <g id="center-texts">
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position="bottom center"
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
+            <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                <div className='toetsmodel-component__center'>
+                    <img src={XMARK} onClick={closeModal} alt="Close button"/>
+                    <div>
+                        <h4>Vision on Education</h4>
+                        <p>
+                            How assessments are designed is a means of realising the vision of education rather than an end in
+                            itself (Baartman et al., 2020). The vision on assessment, which is part of the vision on education,
+                            forms the foundation for guaranteeing the quality of assessment and will ensure that assessment
+                            becomes part of the educational concept. In this way, this vision strengthens the realisation of
+                            educational objectives (VO-Raad, 2019).
+                            This assumes, of course, that having a visoin of education is a condition for being able to design
+                            assessments in a meaningful way. The vision is formed by at least (Van Schilt-Mol, 2021);
+                        </p>
+                        <br/>
+                        <ul>
+                            <li><p>the legitimacy of the degree course</p></li>
+                            <li><p>a vision of the goal of the degree course/the profession being trained for</p></li>
+                            <li><p>a vision of the mission of education</p></li>
+                            <li><p>a vision of learning and a vision of assessment</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </Popup>
+
+            <AssignmentModelPopup
                 trigger={
                     <g id="educationvision-bg">
                         <ellipse fill="white" cx="298.2" cy="297.6" rx="83.9" ry="83.9"/>
@@ -70,23 +89,56 @@ export const ToetsmodelCenterTextEN: FunctionComponent<Props> = ({openModal}) =>
                     </p>
                     <p className='toetsmodel-component__center--read-more' onClick={openModal}>Read more...</p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
         </g>
     )
 }
 
-export const ToetsmodelCenterTextNL: FunctionComponent<Props> = ({openModal}) => {
+export const ToetsmodelCenterTextNL = () => {
+
+    const [open, setOpen] = useState(false);
+    const openModal = () => setOpen(true);
+    const closeModal = () => setOpen(false);
+
     return (
         <g id="center-texts">
-            <Popup
-                mouseLeaveDelay={100}
-                mouseEnterDelay={0}
-                arrow={false}
-                position="bottom center"
-                offsetY={10}
-                closeOnDocumentClick
-                on="hover"
-                contentStyle={{padding: '0px', border: 'none'}}
+            <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                <div className='toetsmodel-component__center'>
+                    <img src={XMARK} onClick={closeModal} alt="Close button"/>
+                    <div>
+                        <h4>Visie op onderwijs</h4>
+                        <p>
+                            De manier waarop de toetsing wordt ingericht is een middel om de visie op onderwijs te
+                            realiseren, in plaats van een doel op zich (Baartman, Van Schilt-Mol & Van der Vleuten,
+                            2020). De visie op toetsing, die onderdeel uitmaakt van de visie op onderwijs, vormt het
+                            fundament voor het borgen van de kwaliteit van de toetsing en zal er voor zorgen dat
+                            toetsing onderdeel wordt van het onderwijsconcept. Daarmee werkt deze visie versterkend
+                            op het realiseren van de onderwijsdoelen (VO-Raad, 2019). Dit veronderstelt uiteraard
+                            dat het hebben van een visie op onderwijs voorwaardelijk is om op een zinvolle wijze
+                            invulling te kunnen geven aan toetsing.
+                            De kern van het toetsweb, visie op onderwijs, geeft antwoord op de vraag wat de
+                            opleiding verstaat onder goed onderwijs. De visie wordt gevormd wordt door ten minste;
+                        </p>
+                        <br/>
+                        <ul>
+                            <li><p>de legitimering van het onderwijs/de opleiding</p></li>
+                            <li><p>een visie op het doel van het onderwijs/het beroep waartoe wordt opgeleid</p>
+                            </li>
+                            <li><p>een visie op de opdracht* van het onderwijs</p></li>
+                            <li><p>een visie op leren en een visie op toetsen (Van Schilt-Mol, 2021)</p></li>
+                        </ul>
+                        <br/>
+                        <p>
+                            * Voor de opdracht van het onderwijs geldt dat, passend bij de uitgangspunten van
+                            eigentijds toetsen en beoordelen, de vormende (socialisatie en persoonsvorming) en de
+                            kwalificerende functie in onderling evenwicht de aandacht moeten krijgen (Hoogland,
+                            2017).
+                        </p>
+                    </div>
+                </div>
+            </Popup>
+
+            <AssignmentModelPopup
                 trigger={
                     <g id="educationvision-bg">
                         <ellipse fill="white" cx="298.2" cy="297.6" rx="83.9" ry="83.9"/>
@@ -144,7 +196,7 @@ export const ToetsmodelCenterTextNL: FunctionComponent<Props> = ({openModal}) =>
                     </p>
                     <p className='toetsmodel-component__center--read-more' onClick={openModal}>Lees meer...</p>
                 </div>
-            </Popup>
+            </AssignmentModelPopup>
         </g>
     )
 }
