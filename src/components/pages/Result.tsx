@@ -1,12 +1,12 @@
-import React, {FunctionComponent, useMemo} from 'react';
+import {FunctionComponent, useContext, useMemo} from 'react';
 import {Page} from 'buro-lib-ts';
 import Button from "../layout/Button";
 import ResultFragment from "../layout/ResultFragment";
-import scanData from "../../assets/data/scandata.json";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
 import {Tooltip} from "react-tooltip";
 import {useTitle} from "../../utils/hooks/TitleHook";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 const saveAs = require('save-svg-as-png');
 
@@ -15,9 +15,11 @@ interface Props {
 
 const Result: FunctionComponent<Props> = () => {
 
-    useTitle('Toetsweb - Resultaten');
+    const {getScanData, getTranslation} = useContext(LanguageContext);
 
-    const entities = scanData.entities;
+    useTitle(`${getTranslation("nav.title")} - ${getTranslation("nav.result")}`);
+
+    const entities = getScanData().entities;
 
     useMemo(() => {
         entities.forEach((entity, entityIndex) => {
@@ -47,7 +49,7 @@ const Result: FunctionComponent<Props> = () => {
     const getPositionFeedback = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackPositie;
+        return answer.feedbackPositie === "" ? getTranslation("results.notfilledin") : answer.feedbackPositie
     }
 
     const getAmbitionResult = (entity: number, element: number) => {
@@ -59,7 +61,7 @@ const Result: FunctionComponent<Props> = () => {
     const getAmbitionFeedback = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackAmbitie;
+        return answer.feedbackAmbitie === "" ? getTranslation("results.notfilledin") : answer.feedbackAmbitie;
     }
 
     const downloadAdviceBooklet = () => {
@@ -80,53 +82,53 @@ const Result: FunctionComponent<Props> = () => {
         let fileData = "";
 
         entities.forEach((entity, entityIndex) => {
-            fileData += entity.name + "\n";
+            fileData += `${entity.name}\n`;
             entity.elements.forEach((element, elementIndex) => {
-                fileData += element.name + "\n";
-                fileData += "Positie: " + element.phases[getPositionResult(entityIndex, elementIndex)] + "\n";
-                fileData += "Positie toelichting: " + getPositionFeedback(entityIndex, elementIndex) + "\n";
-                fileData += "Ambitie: " + element.phases[getAmbitionResult(entityIndex, elementIndex)] + "\n";
-                fileData += "Ambitie toelichting: " + getAmbitionFeedback(entityIndex, elementIndex) + "\n\n";
+                fileData += `${element.name}\n`;
+                fileData += `${getTranslation("position")}: ${element.phases[getPositionResult(entityIndex, elementIndex)]}\n`;
+                fileData += `${getTranslation("results.positionexplanation")}: ${getPositionFeedback(entityIndex, elementIndex)}\n`;
+                fileData += `${getTranslation("ambition")}: ${element.phases[getAmbitionResult(entityIndex, elementIndex)]}\n`;
+                fileData += `${getTranslation("results.ambitionexplanation")}: ${getAmbitionFeedback(entityIndex, elementIndex)}\n\n`;
             });
             fileData += "\n";
         });
 
-        zip.file('Resultaten.txt', fileData);
+        zip.file(`${getTranslation("nav.result")}.txt`, fileData);
         Promise.all(
-            Array.from(document.querySelectorAll('.svg-model'))
+            Array.from(document.querySelectorAll('.assignment-model'))
                 .map(svg => saveAs.svgAsPngUri(svg))
         ).then(([position, ambition]) => {
-            zip.file('Positie.png', position.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
-            zip.file('Ambitie.png', ambition.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
+            zip.file(`${getTranslation("position")}.png`, position.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
+            zip.file(`${getTranslation("ambition")}.png`, ambition.replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
 
             zip.generateAsync({type: 'blob'}).then(content => {
-                downloadFile(content, 'Resultaten.zip');
+                downloadFile(content, `${getTranslation("nav.result")}.zip`);
             });
         });
     }
 
     return (
         <Page className='result'>
-            <h1 className='result__title'>Resultaat</h1>
+            <h1 className='result__title'>{getTranslation("nav.result")}</h1>
 
             <div className='result__container'>
-                <ResultFragment fragmentTitle={'Positie'} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
-                <ResultFragment fragmentTitle={'Ambitie'} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
+                <ResultFragment fragmentTitle={getTranslation("position")} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
+                <ResultFragment fragmentTitle={getTranslation("ambition")} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
             </div>
 
             <div className='result__download-container'>
                 <div className='result__download-button'>
                     <Button onClick={downloadResults} baseClass={'color-blue'}>
-                        <span><p>Download resultaten</p></span>
+                        <span><p>{getTranslation("results.downloadresults")}</p></span>
                     </Button>
                 </div>
 
                 <div className='result__download-button'>
                     <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} disabled>
                         <div data-tooltip-id={'downloadAdviceBooklet'}>
-                            <span><p>Download advies</p></span>
+                            <span><p>{getTranslation("results.downloadadvice")}</p></span>
                             <Tooltip id={"downloadAdviceBooklet"} place="top">
-                                <span>Deze functie is op dit moment nog niet beschikbaar.</span>
+                                <span>{getTranslation("results.functionnotavailable")}</span>
                             </Tooltip>
                         </div>
                     </Button>
@@ -134,7 +136,7 @@ const Result: FunctionComponent<Props> = () => {
 
                 <div className='result__download-button'>
                     <Button onClick={resetScan} baseClass={'color-blue'}>
-                        <span><p>Reset scan</p></span>
+                        <span><p>{getTranslation("results.resetscan")}</p></span>
                     </Button>
                 </div>
             </div>
