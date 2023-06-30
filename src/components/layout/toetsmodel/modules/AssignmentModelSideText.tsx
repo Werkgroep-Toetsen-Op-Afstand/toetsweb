@@ -7,7 +7,7 @@ export const ToetsmodelSideTextEN = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmenttasks-bg">
-                        <rect x="120" y="80" fill="white" width="120" height="120"/>
+                        <rect x="120" y="80" fillOpacity={0} width="120" height="120"/>
                         <g id="assessmenttasks">
                             <path d="M122.2,149.6l1.4-1.6l7.5,3.2l-1.2,1.4l-3.6-1.8c-0.7-0.3-1.6-0.8-2.3-1.1l0,0c0.5,0.7,1.1,1.4,1.5,2.1l2.3,3.3l-1.2,1.4
 				L122.2,149.6z M125.2,153.2l2.4-2.8l1,0.9l-2.4,2.8L125.2,153.2z"/>
@@ -75,7 +75,7 @@ export const ToetsmodelSideTextEN = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentprogram-bg">
-                        <rect x="380" y="80" fill="white" width="120" height="120"/>
+                        <rect x="380" y="80" fillOpacity={0} width="120" height="120"/>
                         <g id="assessmentprogram">
                             <path d="M392.9,88.8l1.9,0.9l-1,8.1L392,97l0.7-4c0.1-0.8,0.3-1.7,0.5-2.5l0,0c-0.5,0.7-1.1,1.4-1.6,2l-2.6,3.1l-1.6-0.8
 				L392.9,88.8z M390.2,92.6l3.4,1.6l-0.6,1.2l-3.4-1.6L390.2,92.6z"/>
@@ -149,7 +149,7 @@ export const ToetsmodelSideTextEN = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentpolicy-bg">
-                        <rect x="450" y="300" width="120" height="120" fill="white"/>
+                        <rect x="450" y="300" width="120" height="120" fillOpacity={0}/>
                         <g id="assessmentpolicy">
                             <path d="M526.3,318.1l-0.2,2.1l-7.9,1.7l0.2-1.8l4-0.6c0.8-0.1,1.7-0.3,2.5-0.4l0,0c-0.8-0.3-1.7-0.6-2.4-0.8l-3.8-1.4l0.2-1.8
 				L526.3,318.1z M521.8,316.8l-0.3,3.7l-1.4-0.1l0.3-3.7L521.8,316.8z"/>
@@ -208,7 +208,7 @@ export const ToetsmodelSideTextEN = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="toetsorganisatie-bg">
-                        <rect x="225" y="500" width="150" height="50" fill="white"/>
+                        <rect x="225" y="500" width="150" height="50" fillOpacity={0}/>
                         <g id="toetsorganisatie">
                             <path d="M237.7,509.4l2,0.7l-0.4,8.1l-1.7-0.6l0.4-4c0.1-0.8,0.2-1.7,0.3-2.6l0,0c-0.5,0.7-1,1.5-1.4,2.1l-2.3,3.3l-1.7-0.6
 					L237.7,509.4z M235.4,513.4l3.5,1.3l-0.5,1.3l-3.5-1.3L235.4,513.4z"/>
@@ -288,7 +288,7 @@ export const ToetsmodelSideTextEN = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentliteracy-bg">
-                        <rect x="50" y="285" width="75" height="150" fill="white"/>
+                        <rect x="50" y="285" width="75" height="150" fillOpacity={0}/>
                         <g id="assessmentliteracy">
                             <path d="M79.9,311.8l0,2.1l-7.7,2.5l0-1.9l3.9-1.1c0.8-0.2,1.7-0.4,2.5-0.7v0c-0.8-0.2-1.7-0.4-2.5-0.6l-3.9-1l0-1.8L79.9,311.8
 					z M75.3,311l0,3.7l-1.4,0l0-3.7L75.3,311z"/>
@@ -365,7 +365,7 @@ export const ToetsmodelSideTextNL = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmenttasks-bg">
-                        <rect x="120" y="80" fill="white" width="120" height="120"/>
+                        <rect x="120" y="80" fillOpacity={0} width="120" height="120"/>
                         <g id="assessmenttasks">
                             <path
                                 d="M140.3,132.6l-1.5,1.5l-1-1.1l4.4-4.1l1,1.1l-1.5,1.5l4.3,4.6l-1.3,1.2L140.3,132.6z"/>
@@ -414,7 +414,7 @@ export const ToetsmodelSideTextNL = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentprogram-bg">
-                        <rect x="380" y="80" fill="white" width="120" height="120"/>
+                        <rect x="380" y="80" fillOpacity={0} width="120" height="120"/>
                         <g id="assessmentprogram">
                             <path
                                 d="M397.9,92.8l-1.9-0.9l0.7-1.3l5.4,2.7l-0.7,1.3l-1.9-0.9l-2.8,5.6l-1.6-0.8L397.9,92.8z"/>
@@ -473,7 +473,7 @@ export const ToetsmodelSideTextNL = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentpolicy-bg">
-                        <rect x="450" y="300" width="120" height="120" fill="white"/>
+                        <rect x="450" y="300" width="120" height="120" fillOpacity={0}/>
                         <g id="assessmentpolicy">
                             <path
                                 d="M523.7,327.7l0.3-2.1l1.5,0.2l-0.8,6l-1.5-0.2l0.3-2.1l-6.2-0.8l0.2-1.7L523.7,327.7z"/>
@@ -521,7 +521,7 @@ export const ToetsmodelSideTextNL = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="toetsorganisatie-bg">
-                        <rect x="225" y="500" width="150" height="50" fill="white"/>
+                        <rect x="225" y="500" width="150" height="50" fillOpacity={0}/>
                         <g id="toetsorganisatie">
                             <path
                                 d="M259.5,515.1l-2.1-0.5l0.3-1.4l5.9,1.3l-0.3,1.4l-2.1-0.5l-1.4,6.1l-1.7-0.4L259.5,515.1z"/>
@@ -587,7 +587,7 @@ export const ToetsmodelSideTextNL = () => {
             <AssignmentModelPopup
                 trigger={
                     <g id="assessmentliteracy-bg">
-                        <rect x="50" y="285" width="75" height="150" fill="white"/>
+                        <rect x="50" y="285" width="75" height="150" fillOpacity={0}/>
                         <g id="assessmentliteracy">
                             <path d="M77.7,311.6l0-2.1l1.5,0l0,6l-1.5,0l0-2.1l-6.3,0l0-1.8L77.7,311.6z"/>
                             <path d="M74.4,316.3c2-0.1,3.1,1.3,3.2,2.8c0,1.5-1,2.9-3,3c-2,0.1-3.1-1.3-3.2-2.8C71.3,317.8,72.4,316.4,74.4,316.3z
