@@ -49,7 +49,7 @@ const Result: FunctionComponent<Props> = () => {
     const getPositionFeedback = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackPositie;
+        return answer.feedbackPositie === "" ? getTranslation("results.notfilledin") : answer.feedbackPositie
     }
 
     const getAmbitionResult = (entity: number, element: number) => {
@@ -61,7 +61,7 @@ const Result: FunctionComponent<Props> = () => {
     const getAmbitionFeedback = (entity: number, element: number) => {
         const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
         let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackAmbitie;
+        return answer.feedbackAmbitie === "" ? getTranslation("results.notfilledin") : answer.feedbackAmbitie;
     }
 
     const downloadAdviceBooklet = () => {
@@ -84,18 +84,14 @@ const Result: FunctionComponent<Props> = () => {
         entities.forEach((entity, entityIndex) => {
             fileData += `${entity.name}\n`;
             entity.elements.forEach((element, elementIndex) => {
-                fileData += `
-                ${element.name}\n
-                ${getTranslation("position")}: ${element.phases[getPositionResult(entityIndex, elementIndex)]}\n
-                ${getTranslation("results.positionexplanation")}: ${getPositionFeedback(entityIndex, elementIndex)}\n
-                ${getTranslation("ambition")}: ${element.phases[getAmbitionResult(entityIndex, elementIndex)]}\n
-                ${getTranslation("results.ambitionexplanation")}: ${getAmbitionFeedback(entityIndex, elementIndex)}\n\n
-                `;
+                fileData += `${element.name}\n`;
+                fileData += `${getTranslation("position")}: ${element.phases[getPositionResult(entityIndex, elementIndex)]}\n`;
+                fileData += `${getTranslation("results.positionexplanation")}: ${getPositionFeedback(entityIndex, elementIndex)}\n`;
+                fileData += `${getTranslation("ambition")}: ${element.phases[getAmbitionResult(entityIndex, elementIndex)]}\n`;
+                fileData += `${getTranslation("results.ambitionexplanation")}: ${getAmbitionFeedback(entityIndex, elementIndex)}\n\n`;
             });
             fileData += "\n";
         });
-
-        console.log(fileData);
 
         zip.file(`${getTranslation("nav.result")}.txt`, fileData);
         Promise.all(

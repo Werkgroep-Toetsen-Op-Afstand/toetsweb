@@ -42,13 +42,6 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
         return phaseID;
     }
 
-    const printFeedback = (entityIndex: number, elementIndex: number) => {
-        const feedback = getFeedback(entityIndex, elementIndex);
-        return feedback !== '' ?
-            feedback :
-            getTranslation("results.notfilledin");
-    }
-
     return (
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{fragmentTitle}</h1>
@@ -67,7 +60,7 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
                                                 <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
                                                 <p>
                                                     {getTranslation("explanation")}: <i>
-                                                    {printFeedback(entityIndex, elementIndex)}
+                                                    {getFeedback(entityIndex, elementIndex)}
                                                 </i></p>
                                                 <br/>
                                             </div>
