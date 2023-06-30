@@ -4,14 +4,15 @@
     column-gap: 0.5rem;
 
     &__container {
-        min-width: 40px;
-        width: 40px;
+        min-width: 50px;
+        width: 50px;
         padding: 10px 10px 1rem;
+        display: flex;
+        justify-content: center;
 
         &__label {
             position: absolute;
             font-size: x-small;
-            text-indent: -0.3rem;
         }
 
         &__checkbox {
