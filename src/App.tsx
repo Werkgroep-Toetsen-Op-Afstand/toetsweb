@@ -1,20 +1,15 @@
 import React, {FunctionComponent, useEffect} from 'react';
-import {
-    BuroApp,
-    groupListeners,
-    onEventOnce,
-    onEvent,
-    createTranslator,
-    app
-} from 'buro-lib-ts';
+import {app, BuroApp, createTranslator, groupListeners, onEvent, onEventOnce} from 'buro-lib-ts';
 
 import routes from './config/routes';
-
-import Layout from './components/layout/Layout';
+import NavBar from "./components/layout/nav/NavBar";
+import {ToastContainer} from "react-toastify";
+import Router from "./components/layout/Router";
+import {LanguageProvider} from "./utils/contexts/LanguageContext";
 
 app({
-    routingConfig: { routes },
-    translator: createTranslator({ nl: {} })
+    routingConfig: {routes},
+    translator: createTranslator({nl: {}})
 });
 
 const App: FunctionComponent = () => {
@@ -28,7 +23,13 @@ const App: FunctionComponent = () => {
 
     return (
         <BuroApp>
-            <Layout />
+            <React.Fragment>
+                <LanguageProvider>
+                    <NavBar/>
+                    <ToastContainer/>
+                    <Router/>
+                </LanguageProvider>
+            </React.Fragment>
         </BuroApp>
     );
 };

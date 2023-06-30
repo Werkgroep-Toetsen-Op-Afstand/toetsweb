@@ -1,8 +1,8 @@
-import React, {FunctionComponent} from "react";
-import ToetsmodelComponent from "./ToetsmodelComponent";
-import scanData from "../../assets/data/scandata.json";
+import React, {FunctionComponent, useContext} from "react";
 import resultData from "../../assets/data/resultdata.json";
 import Card from "./Card";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
+import AssignmentModel from "./toetsmodel/AssignmentModel";
 
 interface Props {
     fragmentTitle: string;
@@ -12,7 +12,9 @@ interface Props {
 
 const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, getFeedback}) => {
 
-    const entities = scanData.entities;
+    const {getScanData, getTranslation} = useContext(LanguageContext);
+
+    const entities = getScanData().entities;
 
     const getResultData = () => {
         return entities.map((entity, entityIndex) => {
@@ -40,15 +42,10 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
         return phaseID;
     }
 
-    const printFeedback = (entityIndex: number, elementIndex: number) => {
-        const feedback = getFeedback(entityIndex, elementIndex);
-        return <p>Toelichting: {feedback !== '' ? feedback : <i>Niet ingevuld</i>}</p>;
-    }
-
     return (
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{fragmentTitle}</h1>
-            <ToetsmodelComponent results={getResultData()}/>
+            <AssignmentModel results={getResultData()}/>
             <Card className='result-fragment__answer-card'>
                 {
                     entities.map((entity, entityIndex) => {
@@ -61,7 +58,10 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
                                             <div key={elementIndex}>
                                                 <h4>{element.name}</h4>
                                                 <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
-                                                {printFeedback(entityIndex, elementIndex)}
+                                                <p>
+                                                    {getTranslation("explanation")}: <i>
+                                                    {getFeedback(entityIndex, elementIndex)}
+                                                </i></p>
                                                 <br/>
                                             </div>
                                         );

@@ -1,16 +1,19 @@
 import {Page} from 'buro-lib-ts';
 import ScanCard from '../layout/ScanCard';
-import React, {FunctionComponent, useState} from 'react';
+import {FunctionComponent, useContext, useState} from 'react';
 import {useTitle} from "../../utils/hooks/TitleHook";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 interface Props {}
 
 const Scan: FunctionComponent<Props> = () => {
 
+    const {getTranslation} = useContext(LanguageContext);
+
     const [currentEntity, setCurrentEntity] = useState(0);
     const [currentElement, setCurrentElement] = useState(0);
 
-    useTitle('Toetsweb - Scan');
+    useTitle(getTranslation("nav.scan"));
 
     const handleNext = () => {
         if(currentElement === 2) {

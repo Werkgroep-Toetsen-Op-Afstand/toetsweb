@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useEffect, useMemo, useState} from 'react';
+import React, {FunctionComponent, useContext, useEffect, useMemo, useState} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
@@ -7,10 +7,10 @@ import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
-import data from "../../assets/data/scandata.json";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProgressDots from "./ProgressDots";
+import {LanguageContext} from "../../utils/contexts/LanguageContext";
 
 interface Props {
     entity: number;
@@ -27,7 +27,9 @@ interface ScanCardData {
 }
 
 const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handlePrevious}) => {
-    const currentEntity = data.entities[entity]
+
+    const {getScanData, getTranslation} = useContext(LanguageContext);
+    const currentEntity = getScanData().entities[entity]
     const currentElement = currentEntity.elements[element];
     const elementPhases = currentElement.phases;
 
@@ -71,7 +73,7 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handle
         if (scanElementComplete) {
             handleNext();
         } else {
-            toast.error('Kies minimaal 1 optie voor positie en ambitie');
+            toast.error(getTranslation('positionambitionempty'));
         }
     }
 
@@ -89,17 +91,17 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handle
                         <h4>{currentEntity.name}</h4>
                         <h4>{currentElement.name}</h4>
                         <span className='scancard__titles__container'>
-                            <h4>Positie</h4>
+                            <h4>{getTranslation('position')}</h4>
                             <p className={'scancard__titles__container__subtitle'}>
-                                 - In welke beschrijving herken je jouw opleiding nu het meest?
+                                 - {getTranslation('position.description')}
                             </p>
                         </span>
                         <span
                             className={`scancard__titles__container scancard__titles__container--ambition ${baseClasses[entity]}__transparent-bg`}>
                             <h4 className={`${baseClasses[entity]}__text`}>*</h4>
-                            <h4>Ambitie</h4>
+                            <h4>{getTranslation('ambition')}</h4>
                             <p className={'scancard__titles__container__subtitle'}>
-                                - Welke beschrijving past over 2 jaar het beste bij jouw opleiding?
+                                - {getTranslation('ambition.description')}
                             </p>
                         </span>
                     </div>
@@ -107,10 +109,10 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handle
                         <div className='scancard__grid__form__checkbox'>
                             <div className='hor-check'>
                                 <div className='hor-check__container'>
-                                    <p className='hor-check__container__label'>Positie</p>
+                                    <p className='hor-check__container__label'>{getTranslation('position')}</p>
                                 </div>
                                 <div className={`hor-check__container ${baseClasses[entity]}__transparent-bg`}>
-                                    <p className='hor-check__container__label'>Ambitie</p>
+                                    <p className='hor-check__container__label'>{getTranslation('ambition')}</p>
                                 </div>
                             </div>
                             {
@@ -136,24 +138,26 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handle
             <div className='scancard__textarea-container'>
                 <TextArea value={scanCardData.feedbackPositie}
                           setValue={handleFeedback}
-                          titleTextArea={'Positie'}
+                          titleTextArea={getTranslation('position')}
                           name={'feedbackPositie'}
-                          hintTextArea={'Licht je antwoord toe.'}/>
+                          hintTextArea={getTranslation('scan.explain')}/>
                 <TextArea value={scanCardData.feedbackAmbitie}
                           setValue={handleFeedback}
-                          titleTextArea={'Ambitie'}
+                          titleTextArea={getTranslation('ambition')}
                           name={'feedbackAmbitie'}
-                          hintTextArea={'Licht je antwoord toe.'}/>
+                          hintTextArea={getTranslation('scan.explain')}/>
             </div>
             <div className='scancard__progress'>
                 <Button baseClass={baseClasses[entity]} onClick={handlePrevious}
                         disabled={entity === 0 && element === 0}>
-                    <span><p>Vorige vraag</p></span>
+                    <span><p>{getTranslation('scan.previous')}</p></span>
                 </Button>
                 <ProgressDots baseClass={baseClasses[entity]} currentStep={element + 1} totalSteps={3}/>
                 <Button baseClass={baseClasses[entity]} onClick={handleButtonNext}>
                         <span>
-                            <p>{(entity === 4 && element === 2) ? 'Naar resultaten' : 'Volgende vraag'}</p>
+                            <p>{(entity === 4 && element === 2) ?
+                                getTranslation('scan.toresults') :
+                                getTranslation('scan.next')}</p>
                         </span>
                 </Button>
             </div>
