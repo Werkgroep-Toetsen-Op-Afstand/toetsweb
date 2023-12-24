@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 import NavItem from './NavItem';
 import {LanguageContext} from "../../../utils/contexts/LanguageContext";

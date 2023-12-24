@@ -1,7 +1,8 @@
 import ScanCard from '../layout/ScanCard';
-import {FunctionComponent, useContext, useState} from 'react';
+import {useContext, useState} from 'react';
 import {useTitle} from "../../utils/hooks/TitleHook";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
+import Page from "../Page";
 
 const Scan = () => {
 
@@ -42,10 +43,9 @@ const Scan = () => {
     }
 
     return (
-        <div className='scan'>
-            <h1 className='scan__title'>Scan</h1>
+        <Page className='scan'>
             <ScanCard entity={currentEntity} element={currentElement} handleNext={handleNext} handlePrevious={handlePrevious} />
-        </div>
+        </Page>
     )
 }
 

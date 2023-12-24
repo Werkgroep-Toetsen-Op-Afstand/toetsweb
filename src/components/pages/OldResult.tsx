@@ -1,26 +1,22 @@
-import React, {useContext, useMemo} from 'react';
+import {useContext, useMemo} from 'react';
 import Button from "../layout/Button";
+import ResultFragment from "../layout/ResultFragment";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
 import {Tooltip} from "react-tooltip";
 import {useTitle} from "../../utils/hooks/TitleHook";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import Page from "../Page";
-import Card from "../layout/Card";
-import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
-import resultData from "../../assets/data/resultdata.json";
 
 const saveAs = require('save-svg-as-png');
 
-const Result = () => {
+const OldResult = () => {
 
     const {getScanData, getTranslation} = useContext(LanguageContext);
 
     useTitle(`${getTranslation("nav.title")} - ${getTranslation("nav.result")}`);
 
     const entities = getScanData().entities;
-
-    const baseClasses = ['color-blue', 'color-cyan', 'color-purple', 'color-orange', 'color-green'];
 
     useMemo(() => {
         entities.forEach((entity, entityIndex) => {
@@ -108,98 +104,13 @@ const Result = () => {
         });
     }
 
-    const getResultData = (getResult: (entity: number, element: number) => number) => {
-        return entities.map((entity, entityIndex) => {
-            const subResults = [
-                getResult(entityIndex, 0),
-                getResult(entityIndex, 1),
-                getResult(entityIndex, 2)
-            ];
-
-            return getEndResult(subResults.join(''));
-        });
-    }
-
-    const getEndResult = (results: string) => {
-        const phases = resultData.phases;
-        let phaseID = 1;
-        phases.forEach((phase) => {
-            const selectIDs = phase.selectIDs;
-            selectIDs.forEach((selectID) => {
-                if (results === selectID) {
-                    phaseID = parseInt(phase.phaseID);
-                }
-            });
-        });
-        return phaseID;
-    }
-
     return (
         <Page className='result'>
-            <div>
-                <div className={"result__container result__subtitle"}>
-                    <h1 className={"result__container--item"}>{getTranslation("position")}</h1>
-                    <h1 className={"result__container--item"}>{getTranslation("ambition")}</h1>
-                </div>
+            <h1 className='result__title'>{getTranslation("nav.result")}</h1>
 
-                <div className={"result__container"}>
-                    <div className={"result__container--item"}>
-                        <AssignmentModel results={getResultData(getPositionResult)}/>
-                    </div>
-                    <div className={"result__container--item"}>
-                        <AssignmentModel results={getResultData(getAmbitionResult)}/>
-                    </div>
-                </div>
-
-                <p className={"result__model-explanation"}>{getTranslation("home.modelExplained")}</p>
-
-                {
-                    entities.map((entity, entityIndex) => {
-
-                        const titleClass = `${baseClasses[entityIndex]}__text`;
-
-                        return (
-                            <div className={"result__container"}>
-                                <Card className={"result__container--item"}>
-                                    <h3 className={titleClass}>{entity.name}</h3>
-                                    {
-                                        entity.elements.map((element, elementIndex) => {
-                                            return (
-                                                <div key={elementIndex}>
-                                                    <h2 className={titleClass}>{element.name}</h2>
-                                                    <p>{element.phases[getPositionResult(entityIndex, elementIndex)]}</p>
-                                                    <p>
-                                                        {getTranslation("explanation")}: <i>
-                                                        {getPositionFeedback(entityIndex, elementIndex)}
-                                                    </i></p>
-                                                    <br/>
-                                                </div>
-                                            );
-                                        })
-                                    }
-                                </Card>
-                                <Card className={"result__container--item"}>
-                                    <h3 className={titleClass}>{entity.name}</h3>
-                                    {
-                                        entity.elements.map((element, elementIndex) => {
-                                            return (
-                                                <div key={elementIndex}>
-                                                    <h2 className={titleClass}>{element.name}</h2>
-                                                    <p>{element.phases[getAmbitionResult(entityIndex, elementIndex)]}</p>
-                                                    <p>
-                                                        {getTranslation("explanation")}: <i>
-                                                        {getAmbitionFeedback(entityIndex, elementIndex)}
-                                                    </i></p>
-                                                    <br/>
-                                                </div>
-                                            );
-                                        })
-                                    }
-                                </Card>
-                            </div>
-                        )
-                    })
-                }
+            <div className='result__container'>
+                <ResultFragment fragmentTitle={getTranslation("position")} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
+                <ResultFragment fragmentTitle={getTranslation("ambition")} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
             </div>
 
             <div className='result__download-container'>
@@ -230,4 +141,4 @@ const Result = () => {
     )
 }
 
-export default Result;
+export default OldResult;

@@ -1,20 +1,21 @@
 import {useContext} from 'react';
-import { NavLink as ReactRouterNavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
+import Page from "../Page";
 
 const NotFoundPage = () => {
 
     const {getTranslation} = useContext(LanguageContext);
 
     return (
-        <div className={'not-found-page'}>
+        <Page className={'not-found-page'}>
             <h2>{getTranslation("notfound.title")}</h2>
-            <ReactRouterNavLink to={route('home')}>
+            <NavLink to={"/home"}>
                 <div className='not-found-page__button'>
                     <p>{getTranslation("notfound.buttonText")}</p>
                 </div>
-            </ReactRouterNavLink>
-        </div>
+            </NavLink>
+        </Page>
     );
 };
 

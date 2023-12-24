@@ -1,15 +1,34 @@
 .result {
   max-width: 1400px;
-  margin: 12rem auto 5rem;
+  margin: 8rem auto 5rem;
 
   &__container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+
+    &--item {
+      flex: 1;
+    }
 
     @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
+    }
   }
+
+  &__model-explanation {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    z-index: 1;
+    background: white;
+    position: sticky;
+    text-align: center;
+    padding: 1rem 0;
+    top: 6rem;
   }
 
   &__download-container {
@@ -18,7 +37,7 @@
     justify-content: flex-end;
   }
 
-    &__download-button {
-        margin-left: 1rem;
-    }
+  &__download-button {
+    margin-left: 1rem;
+  }
 }

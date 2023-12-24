@@ -9,6 +9,7 @@ import Developers from "../layout/footer/Developers";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
 import {useTitle} from "../../utils/hooks/TitleHook";
+import Page from "../Page";
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
     useTitle(getTranslation("nav.title"));
 
     return (
-        <>
+        <Page>
             <div className={'home-page'}>
                 <div className="home-page__hero-section">
                     <div>
@@ -26,6 +27,7 @@ const Home = () => {
                     </div>
                     <div className={"home-page__hero-section__toetsmodel"}>
                         <AssignmentModel/>
+                        <p className={"home-page__model-explanation"}>{getTranslation("home.modelExplained")}</p>
                     </div>
                 </div>
 
@@ -78,7 +80,7 @@ const Home = () => {
                 <Developers/>
             </div>
             <Colofon/>
-        </>
+        </Page>
     );
 };
 

@@ -30,9 +30,9 @@ const GenericEntity: FunctionComponent<PhaseBarProps> = ({entity, phase, result,
 
     return (
         <AssignmentModelPopup trigger={
-            <path className={`${colorClass}`} d={d}/>
+            <path className={colorClass} d={d}/>
         }>
-            <div className={`toetsmodel-component__element-hover ${entity}-chainoriented`}>
+            <div className={`toetsmodel-component__element-hover ${entity}-${phase}`}>
                 <h4>{getTranslation(`phase.${phase}.title`).toUpperCase()}</h4>
                 <p>{getTranslation(`${entity}.${phase}.description`)}</p>
             </div>

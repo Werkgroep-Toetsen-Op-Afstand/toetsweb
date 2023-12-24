@@ -46,33 +46,31 @@ const ResultFragment: FunctionComponent<Props> = ({fragmentTitle, getResult, get
         <div className='result-fragment'>
             <h1 className='result-fragment__title'>{fragmentTitle}</h1>
             <AssignmentModel results={getResultData()}/>
-            <Card className='result-fragment__answer-card'>
-                {
-                    entities.map((entity, entityIndex) => {
-                        return (
-                            <div key={entityIndex}>
-                                <h3>{entity.name}</h3>
-                                {
-                                    entity.elements.map((element, elementIndex) => {
-                                        return (
-                                            <div key={elementIndex}>
-                                                <h4>{element.name}</h4>
-                                                <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
-                                                <p>
-                                                    {getTranslation("explanation")}: <i>
-                                                    {getFeedback(entityIndex, elementIndex)}
-                                                </i></p>
-                                                <br/>
-                                            </div>
-                                        );
-                                    })
-                                }
-                                <br/>
-                            </div>
-                        );
-                    })
-                }
-            </Card>
+
+            {
+                entities.map((entity, entityIndex) => {
+                    return (
+                        <Card key={entityIndex} className='result-fragment__answer-card'>
+                            <h3>{entity.name}</h3>
+                            {
+                                entity.elements.map((element, elementIndex) => {
+                                    return (
+                                        <div key={elementIndex}>
+                                            <h4>{element.name}</h4>
+                                            <p>{element.phases[getResult(entityIndex, elementIndex)]}</p>
+                                            <p>
+                                                {getTranslation("explanation")}: <i>
+                                                {getFeedback(entityIndex, elementIndex)}
+                                            </i></p>
+                                            <br/>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </Card>
+                    )
+                })
+            }
         </div>
     )
 }

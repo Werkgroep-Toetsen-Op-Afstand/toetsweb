@@ -88,17 +88,15 @@ const ScanCard: FunctionComponent<Props> = ({entity, element, handleNext, handle
             <div className='scancard__grid'>
                 <div>
                     <div className='scancard__titles'>
-                        <h4>{currentEntity.name}</h4>
-                        <h4>{currentElement.name}</h4>
+                        <h3 className={`${baseClasses[entity]}__text`}>{currentEntity.name} - {currentElement.name}</h3>
+
                         <span className='scancard__titles__container'>
                             <h4>{getTranslation('position')}</h4>
                             <p className={'scancard__titles__container__subtitle'}>
                                  - {getTranslation('position.description')}
                             </p>
                         </span>
-                        <span
-                            className={`scancard__titles__container scancard__titles__container--ambition ${baseClasses[entity]}__transparent-bg`}>
-                            <h4 className={`${baseClasses[entity]}__text`}>*</h4>
+                        <span className={`scancard__titles__container ${baseClasses[entity]}__transparent-bg`}>
                             <h4>{getTranslation('ambition')}</h4>
                             <p className={'scancard__titles__container__subtitle'}>
                                 - {getTranslation('ambition.description')}
