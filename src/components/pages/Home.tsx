@@ -1,5 +1,4 @@
-import {useContext} from 'react';
-import {Page, route} from 'buro-lib-ts';
+import React, {useContext} from 'react';
 
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
@@ -18,7 +17,7 @@ const Home = () => {
 
     return (
         <>
-            <Page className={'home-page'}>
+            <div className={'home-page'}>
                 <div className="home-page__hero-section">
                     <div>
                         <h1>{getTranslation("home.heroTitle")}</h1>
@@ -64,7 +63,7 @@ const Home = () => {
                             <p>
                                 {getTranslation("home.startscan.text")}
                             </p>
-                            <ReactRouterNavLink to={route('scan')}>
+                            <ReactRouterNavLink to={"scan"}>
                                 <span className='home-page__scan-button'>
                                     <p>{getTranslation("home.startscan.button")}</p>
                                     <img src={ArrowIcon} alt="pijl naar rechts"/>
@@ -77,7 +76,7 @@ const Home = () => {
                     </div>
                 </div>
                 <Developers/>
-            </Page>
+            </div>
             <Colofon/>
         </>
     );
