@@ -1,11 +1,21 @@
 import nl, {
     nlElements,
     nlEntities,
-    nlEntityElementPhaseDescriptions, nlGenericEntityDescriptions,
-    nlGenericEntityPhaseDescriptions, nlGenericPhaseDescriptions,
+    nlEntityElementPhaseDescriptions,
+    nlGenericEntityDescriptions,
+    nlGenericEntityPhaseDescriptions,
+    nlGenericPhaseDescriptions,
     nlPhases
 } from "../config/lang/nl";
-import en, {enEntities, enElements, enPhases, enEntityElementPhaseDescriptions, enGenericEntityPhaseDescriptions, enGenericPhaseDescriptions, enGenericEntityDescriptions} from "../config/lang/en";
+import en, {
+    enElements,
+    enEntities,
+    enEntityElementPhaseDescriptions,
+    enGenericEntityDescriptions,
+    enGenericEntityPhaseDescriptions,
+    enGenericPhaseDescriptions,
+    enPhases
+} from "../config/lang/en";
 
 export enum Language {
     EN = 'en',

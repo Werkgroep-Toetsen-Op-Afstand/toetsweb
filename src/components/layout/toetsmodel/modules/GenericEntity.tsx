@@ -1,6 +1,5 @@
 import {FunctionComponent} from "react";
 import {Phase} from "../../../../models/Phase";
-import 'react-modern-drawer/dist/index.css'
 import {Portal} from "../../Portal";
 
 interface PhaseBarProps {

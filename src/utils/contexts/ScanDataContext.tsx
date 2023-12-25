@@ -7,7 +7,9 @@ import {
     getElements,
     getEntities,
     getEntityElementPhaseDescriptions,
-    getGenericEntityDescriptions, getGenericEntityPhaseDescriptions, getGenericPhaseDescriptions,
+    getGenericEntityDescriptions,
+    getGenericEntityPhaseDescriptions,
+    getGenericPhaseDescriptions,
     getPhases,
     Language
 } from "../Localization";

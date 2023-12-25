@@ -1,5 +1,5 @@
-import {useEffect, useState, createContext, FunctionComponent} from "react";
-import {Language, getLocaleTranslation} from "../Localization";
+import {createContext, FunctionComponent, useEffect, useState} from "react";
+import {getLocaleTranslation, Language} from "../Localization";
 
 export const LanguageContext = createContext({
     language: Language.NL,
