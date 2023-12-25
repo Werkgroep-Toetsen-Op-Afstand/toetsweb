@@ -7,6 +7,12 @@
     flex-direction: column;
     gap: 0.5rem;
 
+    span {
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.5rem;
+    }
+
     &__container {
       display: flex;
       align-items: center;

@@ -13,6 +13,7 @@ import ProgressDots from "./ProgressDots";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import {Entity} from "../../models/Entity";
 import {Element} from "../../models/Element";
+import {Portal} from "./Portal";
 
 interface Props {
     entity: Entity;
@@ -87,14 +88,23 @@ const ScanCard: FunctionComponent<Props> = ({
         window.localStorage.setItem(`${entityIndex}.${elementIndex}`, JSON.stringify(scanCardData));
     }, [entityIndex, elementIndex, scanCardData]);
 
-    const scanElementComplete = scanCardData.checkedPositie !== -1 && scanCardData.checkedAmbitie !== -1
+    const scanElementComplete = scanCardData.checkedPositie !== -1 && scanCardData.checkedAmbitie !== -1;
 
     return (
         <div className={"scancard"} style={{borderTop: `1rem solid ${entity.color}`}}>
             <div className='scancard__grid'>
                 <div>
                     <div className='scancard__titles'>
-                        <h3 style={{color: entity.color}}>{entity.name} - {element.name}</h3>
+                        <span style={{color: entity.color}}>
+                            <Portal trigger={
+                                <h3>{entity.name} </h3>}>
+                            <div className='toetsmodel-component__popup'>
+                                <h4>{entity.name}</h4>
+                                <p>{entity.description}</p>
+                            </div>
+                        </Portal><h3>- {element.name}</h3>
+                    </span>
+
 
                         <span className='scancard__titles__container'>
                             <h4>{getTranslation('position')}</h4>
