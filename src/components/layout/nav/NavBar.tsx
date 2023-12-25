@@ -46,13 +46,14 @@ const NavBar = () => {
                         <NavItem item={getTranslation("nav.scan")} color={'orange'}/>
                     </ReactRouterNavLink>
 
-                    {answer && 
-                    <ReactRouterNavLink to={"result"}>
-                        <NavItem item={getTranslation("nav.result")} color={'green'}/>
-                    </ReactRouterNavLink>
+                    {answer &&
+                        <ReactRouterNavLink to={"result"}>
+                            <NavItem item={getTranslation("nav.result")} color={'green'}/>
+                        </ReactRouterNavLink>
                     }
 
-                    <button className="navlink navlink--white cursor-pointer unselectable nobutton" onClick={handleChangeLanguage}>
+                    <button className="navlink navlink--white cursor-pointer unselectable nobutton"
+                            onClick={handleChangeLanguage}>
                         {
                             language === Language.NL ?
                                 <img src={flagEnglish} alt={"EN"} height={33}/> :

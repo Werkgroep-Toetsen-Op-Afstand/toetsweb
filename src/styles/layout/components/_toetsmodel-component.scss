@@ -1,239 +1,107 @@
 .toetsmodel-component {
-    position: relative;
+  position: relative;
 
-    &__hover {
-        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        padding: 1rem;
-        width: 320px;
-        background-color: white;
-        -webkit-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
-        -moz-box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
-        box-shadow: 10px 10px 23px -15px rgba(0,0,0,0.43);
-        border: 3px solid black;
+  &__hover {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    padding: 1rem;
+    width: 320px;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.43);
+    box-shadow: 10px 10px 23px -15px rgba(0, 0, 0, 0.43);
+    border: 3px solid black;
+  }
+
+  &__center {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    background: white 0 0 no-repeat padding-box;
+    width: 900px;
+    padding: 1rem;
+    border: 1px solid black;
+    position: fixed;
+    top: 20%;
+    z-index: 2;
+    left: calc(50% - 451px - 1rem);
+    display: flex;
+    column-gap: 1rem;
+
+    ul {
+      padding-left: 1.5rem;
     }
 
-    &__center {
-        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        background: white 0 0 no-repeat padding-box;
-        width: 900px;
-        padding: 1rem;
-        border: 1px solid black;
-        position: fixed;
-        top: 20%;
-        z-index: 2;
-        left: calc(50% - 451px - 1rem);
-        display: flex;
-        column-gap: 1rem;
-
-        ul {
-            padding-left: 1.5rem;
-        }
-
-        img {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-
-        &--read-more {
-            color: blue;
-            cursor: pointer;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
-    &__popup {
-        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        padding: 2rem;
-        border-radius: 1rem;
-        border: 3px solid black;
-        background: white;
+    &--read-more {
+      color: blue;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__popup {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px solid black;
+    background: white;
+  }
+
+  &__one-hover {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    background: white 0 0 no-repeat padding-box;
+    width: 30rem;
+    padding: 1rem;
+    border: 3px solid black;
+  }
+
+  &__element-hover {
+    -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    width: 40rem;
+    padding: 1rem;
+    color: $color-white;
+
+    h4 {
+      font-weight: normal;
     }
 
-    &__one-hover {
-        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        background: white 0 0 no-repeat padding-box;
-        width: 30rem;
-        padding: 1rem;
-        border: 3px solid black;
+    p {
+      font-weight: 300;
     }
-
-    &__element-hover {
-        -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
-        width: 40rem;
-        padding: 1rem;
-        color: $color-white;
-
-        h4 {
-            font-weight: normal;
-        }
-
-        p {
-            font-weight: 300;
-        }
-    }
+  }
 }
 
 @keyframes anvil {
-    0% {
-      transform: scale(1) translateY(0px);
-      opacity: 0;
-      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
-    }
-    1% {
-      transform: scale(0.96) translateY(10px);
-      opacity: 0;
-      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
-    }
-    100% {
-      transform: scale(1) translateY(0px);
-      opacity: 1;
-      box-shadow: 0 0 500px rgba(241, 241, 241, 0);
-    }
-}
-
-.assessmenttasks {
-    &-activityoriented {
-        background-color: #A1D3E1;
-        fill: #A1D3E1;
-    }
-
-    &-processoriented {
-        background-color: #85C5D7;
-        fill: #85C5D7;
-    }
-
-    &-systemoriented {
-        background-color: #73BDD2;
-        fill: #73BDD2;
-    }
-
-    &-chainoriented {
-        background-color: #45A7C3;
-        fill: #45A7C3;
-    }
-}
-
-.assessmentprogram {
-    &-activityoriented {
-        background-color: #95D8D1;
-        fill: #95D8D1;
-    }
-
-    &-processoriented {
-        background-color: #76CDC4;
-        fill: #76CDC4;
-    }
-
-    &-systemoriented {
-        background-color: #61C6BB;
-        fill: #61C6BB;
-    }
-
-    &-chainoriented {
-        background-color: #2DB3A5;
-        fill: #2DB3A5;
-    }
-}
-
-.assessmentpolicy {
-    &-activityoriented {
-        background-color: #D6B7D5;
-        fill: #D6B7D5;
-    }
-
-    &-processoriented {
-        background-color: #CAA3C9;
-        fill: #CAA3C9;
-    }
-
-    &-systemoriented {
-        background-color: #C395C1;
-        fill: #C395C1;
-    }
-
-    &-chainoriented {
-        background-color: #AF72AD;
-        fill: #AF72AD;
-    }
-}
-
-.assessmentorganisation {
-    &-activityoriented {
-        background-color: #F5BB86;
-        fill: #F5BB86;
-    }
-
-    &-processoriented {
-        background-color: #F3A862;
-        fill: #F3A862;
-    }
-
-    &-systemoriented {
-        background-color: #F19B4B;
-        fill: #F19B4B;
-    }
-
-    &-chainoriented {
-        background-color: #ED7A0F;
-        fill: #ED7A0F;
-    }
-}
-
-.assessmentliteracy {
-    &-activityoriented {
-        background-color: #A1D5A2;
-        fill: #A1D5A2;
-    }
-
-    &-processoriented {
-        background-color: #86C987;
-        fill: #86C987;
-    }
-
-    &-systemoriented {
-        background-color: #74C175;
-        fill: #74C175;
-    }
-
-    &-chainoriented {
-        background-color: #46AD48;
-        fill: #46AD48;
-    }
-}
-
-.grey {
-    &-activityoriented {
-        background-color: #C7C7C7;
-        fill: #C7C7C7;
-    }
-
-    &-processoriented {
-        background-color: #B6B6B6;
-        fill: #B6B6B6;
-    }
-
-    &-systemoriented {
-        background-color: #ABABAB;
-        fill: #ABABAB;
-    }
-
-    &-chainoriented {
-        background-color: #909090;
-        fill: #909090;
-    }
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  1% {
+    transform: scale(0.96) translateY(10px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+  }
 }
 
 .popup-content {
-    width: 0;
-    height: 0;
-    padding: 0;
-    border: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
 }
 
 .number__hover {
-    padding: 1rem;
+  padding: 1rem;
 }

@@ -17,12 +17,17 @@ export const ToetsmodelCenterTextEN = () => {
                     <div>
                         <h4>Vision on Education</h4>
                         <p>
-                            How assessments are designed is a means of realising the vision of education rather than an end in
-                            itself (Baartman et al., 2020). The vision on assessment, which is part of the vision on education,
-                            forms the foundation for guaranteeing the quality of assessment and will ensure that assessment
-                            becomes part of the educational concept. In this way, this vision strengthens the realisation of
+                            How assessments are designed is a means of realising the vision of education rather than an
+                            end in
+                            itself (Baartman et al., 2020). The vision on assessment, which is part of the vision on
+                            education,
+                            forms the foundation for guaranteeing the quality of assessment and will ensure that
+                            assessment
+                            becomes part of the educational concept. In this way, this vision strengthens the
+                            realisation of
                             educational objectives (VO-Raad, 2019).
-                            This assumes, of course, that having a visoin of education is a condition for being able to design
+                            This assumes, of course, that having a visoin of education is a condition for being able to
+                            design
                             assessments in a meaningful way. The vision is formed by at least (Van Schilt-Mol, 2021);
                         </p>
                         <br/>

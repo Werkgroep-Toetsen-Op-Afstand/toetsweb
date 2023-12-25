@@ -5,7 +5,7 @@ interface Props {
     className?: string;
 }
 
-const Card: FunctionComponent<Props> = ({ children, className }) => {
+const Card: FunctionComponent<Props> = ({children, className}) => {
 
     const getClassName = () => {
         return `card ${className ?? ''}`;
@@ -13,7 +13,7 @@ const Card: FunctionComponent<Props> = ({ children, className }) => {
 
     return (
         <div className={getClassName()}>
-            { children }
+            {children}
         </div>
     );
 };

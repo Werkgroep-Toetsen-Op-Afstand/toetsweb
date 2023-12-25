@@ -1,20 +1,20 @@
 .scan {
-    max-width: 1400px;
-    padding-top: 7.5rem;
-    margin: auto;
+  max-width: 1400px;
+  padding-top: 7.5rem;
+  margin: auto;
 
-    &__tabs {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &-item {
-            font-size: 1.6rem;
-            font-weight: 600;
-            flex: 1;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
+    &-item {
+      font-size: 1.6rem;
+      font-weight: 600;
+      flex: 1;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 0.5rem 0.5rem 0 0;
     }
+  }
 }

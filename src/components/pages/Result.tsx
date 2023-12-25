@@ -73,9 +73,9 @@ const Result = () => {
             entity.elements.forEach((element, elementIndex) => {
                 fileData += `${element.name}\n`;
                 fileData += `${getTranslation("position")}: ${element.phases[getResult(AnswerTypes.POSITION_RESULT, entityIndex, elementIndex)].description}\n`;
-                fileData += `${getTranslation("results.positionexplanation")}: ${getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex)  || getTranslation("results.notfilledin")}\n`;
+                fileData += `${getTranslation("results.positionexplanation")}: ${getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}\n`;
                 fileData += `${getTranslation("ambition")}: ${element.phases[getResult(AnswerTypes.AMBITION_RESULT, entityIndex, elementIndex)].description}\n`;
-                fileData += `${getTranslation("results.ambitionexplanation")}: ${getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex)  || getTranslation("results.notfilledin")}\n\n`;
+                fileData += `${getTranslation("results.ambitionexplanation")}: ${getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}\n\n`;
             });
             fileData += "\n";
         });

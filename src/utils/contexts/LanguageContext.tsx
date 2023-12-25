@@ -3,7 +3,8 @@ import {getLocaleTranslation, Language} from "../Localization";
 
 export const LanguageContext = createContext({
     language: Language.NL,
-    changeLanguage: (newLanguage: Language) => {},
+    changeLanguage: (newLanguage: Language) => {
+    },
     getTranslation: (key: string) => key,
 });
 
