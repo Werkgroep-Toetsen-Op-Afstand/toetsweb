@@ -1,5 +1,20 @@
 .scan {
     max-width: 1400px;
-    padding-top: 10rem;
+    padding-top: 7.5rem;
     margin: auto;
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item {
+            font-size: 1.6rem;
+            font-weight: 600;
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+    }
 }

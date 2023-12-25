@@ -18,8 +18,13 @@ const Scan = () => {
 
     useTitle(getTranslation("nav.scan"));
 
+    const goToEntity = (index: number) => {
+        setCurrentEntity(index);
+        setCurrentElement(0);
+    }
+
     const handleNext = () => {
-        if(currentElement === 2) {
+        if (currentElement === 2) {
             if (currentEntity === 4) {
                 window.location.href = '/result';
                 return;
@@ -49,7 +54,26 @@ const Scan = () => {
 
     return (
         <Page className='scan'>
-            <ScanCard entity={entity} entityIndex={currentEntity} element={entity.elements[currentElement]} elementIndex={currentElement} handleNext={handleNext} handlePrevious={handlePrevious} />
+            <div className={"scan__tabs"}>
+                {
+                    entities.map((entity, index) => {
+
+                        const style = {
+                            backgroundColor: currentEntity === index ? entity.color : 'white',
+                            color: currentEntity === index ? 'white' : entity.color
+                        }
+
+                        return (
+                            <button key={entity.name} className={"scan__tabs-item nobutton"} style={style}
+                                    onClick={() => goToEntity(index)}>
+                                <p>{entity.name}</p>
+                            </button>
+                        )
+                    })
+                }
+            </div>
+            <ScanCard entity={entity} entityIndex={currentEntity} element={entity.elements[currentElement]}
+                      elementIndex={currentElement} handleNext={handleNext} handlePrevious={handlePrevious}/>
         </Page>
     )
 }
