@@ -1,16 +1,16 @@
 import React, {useContext, useEffect, useState} from 'react';
-import { NavLink as ReactRouterNavLink } from "react-router-dom";
+import {NavLink as ReactRouterNavLink} from "react-router-dom";
 import NavItem from './NavItem';
 import {LanguageContext} from "../../../utils/contexts/LanguageContext";
 import {Language} from "../../../utils/Localization";
 import flagDutch from "../../../assets/icons/flag-dutch.svg";
 import flagEnglish from "../../../assets/icons/flag-english.svg";
+import {ScanDataContext} from "../../../utils/contexts/ScanDataContext";
 
 const NavBar = () => {
 
-    const {language, changeLanguage, getTranslation, getScanData} = useContext(LanguageContext);
-
-    const entities = getScanData().entities;
+    const {language, changeLanguage, getTranslation} = useContext(LanguageContext);
+    const {scanData: entities} = useContext(ScanDataContext)
 
     const [answer, setAnswer] = useState<any>([]);
 
@@ -52,13 +52,13 @@ const NavBar = () => {
                     </ReactRouterNavLink>
                     }
 
-                    <div className="navlink navlink--white cursor-pointer unselectable" onClick={handleChangeLanguage}>
+                    <button className="navlink navlink--white cursor-pointer unselectable nobutton" onClick={handleChangeLanguage}>
                         {
                             language === Language.NL ?
                                 <img src={flagEnglish} alt={"EN"} height={33}/> :
                                 <img src={flagDutch} alt={"NL"} height={33}/>
                         }
-                    </div>
+                    </button>
                 </div>
             </div>
         </nav>

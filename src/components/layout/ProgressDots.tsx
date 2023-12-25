@@ -1,21 +1,25 @@
 import React from "react";
 
 interface Props {
-    baseClass: string;
+    color: string;
     currentStep: number;
     totalSteps: number;
 }
 
-const ProgressDots: React.FunctionComponent<Props> = ({ baseClass, currentStep, totalSteps }) => {
+const ProgressDots: React.FunctionComponent<Props> = ({color, currentStep, totalSteps}) => {
+
+    const backgroundColor = (i: number) => {
+        if (i < currentStep) {
+            return color;
+        }
+        return "#FFFFFF";
+    }
+
     return (
         <div className="progress-dots">
             {[...Array(totalSteps)].map((_, i) => (
-                <span
-                    key={i}
-                    className={`progress-dots__dot ${baseClass}__border ${
-                        i < currentStep ? `${baseClass}__bg` : ""
-                    }`}
-                ></span>
+                <span key={i} className={"progress-dots__dot"}
+                      style={{backgroundColor: backgroundColor(i), borderColor: color}}/>
             ))}
         </div>
     )

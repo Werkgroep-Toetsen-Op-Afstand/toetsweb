@@ -3,6 +3,7 @@ import {useContext, useState} from 'react';
 import {useTitle} from "../../utils/hooks/TitleHook";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import Page from "../Page";
+import {ScanDataContext} from "../../utils/contexts/ScanDataContext";
 
 const Scan = () => {
 
@@ -10,6 +11,10 @@ const Scan = () => {
 
     const [currentEntity, setCurrentEntity] = useState(0);
     const [currentElement, setCurrentElement] = useState(0);
+
+    const {scanData: entities} = useContext(ScanDataContext);
+
+    const entity = entities[currentEntity];
 
     useTitle(getTranslation("nav.scan"));
 
@@ -44,7 +49,7 @@ const Scan = () => {
 
     return (
         <Page className='scan'>
-            <ScanCard entity={currentEntity} element={currentElement} handleNext={handleNext} handlePrevious={handlePrevious} />
+            <ScanCard entity={entity} entityIndex={currentEntity} element={entity.elements[currentElement]} elementIndex={currentElement} handleNext={handleNext} handlePrevious={handlePrevious} />
         </Page>
     )
 }

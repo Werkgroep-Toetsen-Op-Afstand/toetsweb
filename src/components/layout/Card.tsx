@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, {FunctionComponent} from 'react';
 
 interface Props {
     children: any;
@@ -8,7 +8,7 @@ interface Props {
 const Card: FunctionComponent<Props> = ({ children, className }) => {
 
     const getClassName = () => {
-        return `card ${className ? className : ''}`;
+        return `card ${className ?? ''}`;
     };
 
     return (

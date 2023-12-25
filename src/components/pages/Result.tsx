@@ -8,19 +8,24 @@ import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import Page from "../Page";
 import Card from "../layout/Card";
 import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
-import resultData from "../../assets/data/resultdata.json";
+import {getPhaseOfSelectId} from "../../models/Phase";
+import {ScanDataContext} from "../../utils/contexts/ScanDataContext";
 
 const saveAs = require('save-svg-as-png');
 
+enum AnswerTypes {
+    POSITION_RESULT = "checkedPositie",
+    POSITION_FEEDBACK = "feedbackPositie",
+    AMBITION_RESULT = "checkedAmbitie",
+    AMBITION_FEEDBACK = "feedbackAmbitie"
+}
+
 const Result = () => {
 
-    const {getScanData, getTranslation} = useContext(LanguageContext);
+    const {getTranslation} = useContext(LanguageContext);
+    const {scanData: entities} = useContext(ScanDataContext);
 
     useTitle(`${getTranslation("nav.title")} - ${getTranslation("nav.result")}`);
-
-    const entities = getScanData().entities;
-
-    const baseClasses = ['color-blue', 'color-cyan', 'color-purple', 'color-orange', 'color-green'];
 
     useMemo(() => {
         entities.forEach((entity, entityIndex) => {
@@ -39,30 +44,11 @@ const Result = () => {
         });
     }, [entities]);
 
-    const getPositionResult = (entity: number, element: number) => {
+    const getResult = (answerType: AnswerTypes, entity: number, element: number) => {
         const answer = JSON.parse(
             window.localStorage.getItem(`${entity}.${element}`) as string
         );
-
-        return answer.checkedPositie;
-    }
-
-    const getPositionFeedback = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackPositie === "" ? getTranslation("results.notfilledin") : answer.feedbackPositie
-    }
-
-    const getAmbitionResult = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.checkedAmbitie;
-    }
-
-    const getAmbitionFeedback = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackAmbitie === "" ? getTranslation("results.notfilledin") : answer.feedbackAmbitie;
+        return answer[answerType];
     }
 
     const downloadAdviceBooklet = () => {
@@ -86,10 +72,10 @@ const Result = () => {
             fileData += `${entity.name}\n`;
             entity.elements.forEach((element, elementIndex) => {
                 fileData += `${element.name}\n`;
-                fileData += `${getTranslation("position")}: ${element.phases[getPositionResult(entityIndex, elementIndex)]}\n`;
-                fileData += `${getTranslation("results.positionexplanation")}: ${getPositionFeedback(entityIndex, elementIndex)}\n`;
-                fileData += `${getTranslation("ambition")}: ${element.phases[getAmbitionResult(entityIndex, elementIndex)]}\n`;
-                fileData += `${getTranslation("results.ambitionexplanation")}: ${getAmbitionFeedback(entityIndex, elementIndex)}\n\n`;
+                fileData += `${getTranslation("position")}: ${element.phases[getResult(AnswerTypes.POSITION_RESULT, entityIndex, elementIndex)].description}\n`;
+                fileData += `${getTranslation("results.positionexplanation")}: ${getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex)  || getTranslation("results.notfilledin")}\n`;
+                fileData += `${getTranslation("ambition")}: ${element.phases[getResult(AnswerTypes.AMBITION_RESULT, entityIndex, elementIndex)].description}\n`;
+                fileData += `${getTranslation("results.ambitionexplanation")}: ${getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex)  || getTranslation("results.notfilledin")}\n\n`;
             });
             fileData += "\n";
         });
@@ -108,30 +94,17 @@ const Result = () => {
         });
     }
 
-    const getResultData = (getResult: (entity: number, element: number) => number) => {
+    const getResultData = (answerType: AnswerTypes, getResult: (answerType: AnswerTypes, entity: number, element: number) => number) => {
+
         return entities.map((entity, entityIndex) => {
             const subResults = [
-                getResult(entityIndex, 0),
-                getResult(entityIndex, 1),
-                getResult(entityIndex, 2)
+                getResult(answerType, entityIndex, 0),
+                getResult(answerType, entityIndex, 1),
+                getResult(answerType, entityIndex, 2)
             ];
 
-            return getEndResult(subResults.join(''));
+            return getPhaseOfSelectId(subResults.join('')) + 1;
         });
-    }
-
-    const getEndResult = (results: string) => {
-        const phases = resultData.phases;
-        let phaseID = 1;
-        phases.forEach((phase) => {
-            const selectIDs = phase.selectIDs;
-            selectIDs.forEach((selectID) => {
-                if (results === selectID) {
-                    phaseID = parseInt(phase.phaseID);
-                }
-            });
-        });
-        return phaseID;
     }
 
     return (
@@ -144,10 +117,10 @@ const Result = () => {
 
                 <div className={"result__container"}>
                     <div className={"result__container--item"}>
-                        <AssignmentModel results={getResultData(getPositionResult)}/>
+                        <AssignmentModel results={getResultData(AnswerTypes.POSITION_RESULT, getResult)}/>
                     </div>
                     <div className={"result__container--item"}>
-                        <AssignmentModel results={getResultData(getAmbitionResult)}/>
+                        <AssignmentModel results={getResultData(AnswerTypes.AMBITION_RESULT, getResult)}/>
                     </div>
                 </div>
 
@@ -155,22 +128,22 @@ const Result = () => {
 
                 {
                     entities.map((entity, entityIndex) => {
-
-                        const titleClass = `${baseClasses[entityIndex]}__text`;
+                        const color = entity.color;
+                        const explanation = getTranslation("explanation");
 
                         return (
-                            <div className={"result__container"}>
+                            <div key={entity.name} className={"result__container"}>
                                 <Card className={"result__container--item"}>
-                                    <h3 className={titleClass}>{entity.name}</h3>
+                                    <h3 style={{color: color}}>{entity.name}</h3>
                                     {
                                         entity.elements.map((element, elementIndex) => {
                                             return (
-                                                <div key={elementIndex}>
-                                                    <h2 className={titleClass}>{element.name}</h2>
-                                                    <p>{element.phases[getPositionResult(entityIndex, elementIndex)]}</p>
+                                                <div key={element.name}>
+                                                    <h2 style={{color: color}}>{element.name}</h2>
+                                                    <p>{element.phases[getResult(AnswerTypes.POSITION_RESULT, entityIndex, elementIndex)].description}</p>
                                                     <p>
-                                                        {getTranslation("explanation")}: <i>
-                                                        {getPositionFeedback(entityIndex, elementIndex)}
+                                                        {explanation}: <i>
+                                                        {getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}
                                                     </i></p>
                                                     <br/>
                                                 </div>
@@ -179,16 +152,16 @@ const Result = () => {
                                     }
                                 </Card>
                                 <Card className={"result__container--item"}>
-                                    <h3 className={titleClass}>{entity.name}</h3>
+                                    <h3 style={{color: color}}>{entity.name}</h3>
                                     {
                                         entity.elements.map((element, elementIndex) => {
                                             return (
-                                                <div key={elementIndex}>
-                                                    <h2 className={titleClass}>{element.name}</h2>
-                                                    <p>{element.phases[getAmbitionResult(entityIndex, elementIndex)]}</p>
+                                                <div key={element.name}>
+                                                    <h2 style={{color: color}}>{element.name}</h2>
+                                                    <p>{element.phases[getResult(AnswerTypes.AMBITION_RESULT, entityIndex, elementIndex)].description}</p>
                                                     <p>
-                                                        {getTranslation("explanation")}: <i>
-                                                        {getAmbitionFeedback(entityIndex, elementIndex)}
+                                                        {explanation}: <i>
+                                                        {getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}
                                                     </i></p>
                                                     <br/>
                                                 </div>
@@ -204,13 +177,13 @@ const Result = () => {
 
             <div className='result__download-container'>
                 <div className='result__download-button'>
-                    <Button onClick={downloadResults} baseClass={'color-blue'}>
+                    <Button onClick={downloadResults} backgroundColor={entities[0].color}>
                         <span><p>{getTranslation("results.downloadresults")}</p></span>
                     </Button>
                 </div>
 
                 <div className='result__download-button'>
-                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} disabled>
+                    <Button onClick={downloadAdviceBooklet} backgroundColor={entities[0].color} disabled>
                         <div data-tooltip-id={'downloadAdviceBooklet'}>
                             <span><p>{getTranslation("results.downloadadvice")}</p></span>
                             <Tooltip id={"downloadAdviceBooklet"} place="top">
@@ -221,7 +194,7 @@ const Result = () => {
                 </div>
 
                 <div className='result__download-button'>
-                    <Button onClick={resetScan} baseClass={'color-blue'}>
+                    <Button onClick={resetScan} backgroundColor={entities[0].color}>
                         <span><p>{getTranslation("results.resetscan")}</p></span>
                     </Button>
                 </div>
