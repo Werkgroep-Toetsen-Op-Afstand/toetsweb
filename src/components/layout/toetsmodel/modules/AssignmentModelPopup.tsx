@@ -13,7 +13,7 @@ const AssignmentModelPopup: FunctionComponent<Props> = ({trigger, children}) => 
             mouseLeaveDelay={100}
             mouseEnterDelay={0}
             arrow={false}
-            position={["bottom center", "left center"]}
+            position={["left center"]}
             offsetY={10}
             closeOnDocumentClick
             on="hover"

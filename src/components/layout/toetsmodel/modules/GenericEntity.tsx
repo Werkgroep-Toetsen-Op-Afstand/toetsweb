@@ -1,6 +1,7 @@
 import {FunctionComponent} from "react";
-import AssignmentModelPopup from "./AssignmentModelPopup";
 import {Phase} from "../../../../models/Phase";
+import 'react-modern-drawer/dist/index.css'
+import {Portal} from "../../Portal";
 
 interface PhaseBarProps {
     phase: Phase;
@@ -23,14 +24,14 @@ const GenericEntity: FunctionComponent<PhaseBarProps> = ({phase, result, d}) => 
     }
 
     return (
-        <AssignmentModelPopup trigger={
+        <Portal trigger={
             <path style={style()} d={d}/>
         }>
-            <div className={"toetsmodel-component__element-hover"} style={{backgroundColor: phase.color, fill: phase.color}}>
+            <div className={"toetsmodel-component__popup"} style={{backgroundColor: phase.color}}>
                 <h4>{`${phaseIndex + 1}. ${phase.name.toUpperCase()}`}</h4>
                 <p>{phase.genericEntityDescription}</p>
             </div>
-        </AssignmentModelPopup>
+        </Portal>
     );
 }
 
