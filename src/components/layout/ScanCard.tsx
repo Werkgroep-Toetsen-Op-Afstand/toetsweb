@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useContext, useEffect, useMemo, useState} from 'react';
+import React, {FunctionComponent, useContext, useEffect} from 'react';
 import TextArea from "./TextArea";
 import HorizontalCheckbox from "./HorizontalCheckbox";
 import Button from "./Button";
@@ -7,13 +7,13 @@ import Toetsprogramma from "../../assets/images/IllustratieToetsprogramma.svg"
 import Toetsorganisatie from "../../assets/images/IllustratieToetsorganisatie.svg"
 import Toetsbeleid from "../../assets/images/IllustratieToetsbeleid.svg"
 import Toetsbekwaamheid from "../../assets/images/IllustratieToetsbekwaamheid.svg"
-import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ProgressDots from "./ProgressDots";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import {Entity} from "../../models/Entity";
 import {Element} from "../../models/Element";
 import {Portal} from "./Portal";
+import {ScanCardData} from "../pages/Scan";
 
 interface Props {
     entity: Entity;
@@ -22,13 +22,8 @@ interface Props {
     elementIndex: number;
     handleNext: () => void;
     handlePrevious: () => void;
-}
-
-interface ScanCardData {
-    checkedPositie: number,
-    checkedAmbitie: number,
-    feedbackPositie: string,
-    feedbackAmbitie: string,
+    scanData: ScanCardData;
+    setScanData: (data: ScanCardData) => void;
 }
 
 const ScanCard: FunctionComponent<Props> = ({
@@ -37,58 +32,35 @@ const ScanCard: FunctionComponent<Props> = ({
                                                 element,
                                                 elementIndex,
                                                 handleNext,
-                                                handlePrevious
+                                                handlePrevious,
+                                                scanData,
+                                                setScanData
                                             }) => {
 
     const {getTranslation} = useContext(LanguageContext);
     const images = [Toetstaken, Toetsprogramma, Toetsbeleid, Toetsorganisatie, Toetsbekwaamheid];
 
-    const [scanCardData, setScanCardData] = useState<ScanCardData>({} as ScanCardData);
-
-    useMemo(() => {
-        const data =
-            window.localStorage.getItem(`${entityIndex}.${elementIndex}`) ?
-                JSON.parse(window.localStorage.getItem(`${entityIndex}.${elementIndex}`) as string)
-                : {
-                    checkedPositie: -1,
-                    checkedAmbitie: -1,
-                    feedbackPositie: '',
-                    feedbackAmbitie: ''
-                }
-        setScanCardData(data);
-    }, [entityIndex, elementIndex]);
-
     const handleCheckedPositie = (selectedPosition: number) => {
-        setScanCardData({
-            ...scanCardData,
-            checkedPositie: selectedPosition === scanCardData.checkedPositie ? -1 : selectedPosition
+        setScanData({
+            ...scanData,
+            checkedPositie: selectedPosition === scanData.checkedPositie ? -1 : selectedPosition
         });
     }
 
     const handleCheckedAmbitie = (selectedAmbition: number) => {
-        setScanCardData({
-            ...scanCardData,
-            checkedAmbitie: selectedAmbition === scanCardData.checkedAmbitie ? -1 : selectedAmbition
+        setScanData({
+            ...scanData,
+            checkedAmbitie: selectedAmbition === scanData.checkedAmbitie ? -1 : selectedAmbition
         });
     }
 
     const handleFeedback = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setScanCardData({...scanCardData, [e.target.name]: e.target.value});
-    }
-
-    const handleButtonNext = () => {
-        if (scanElementComplete) {
-            handleNext();
-        } else {
-            toast.error(getTranslation('positionambitionempty'));
-        }
+        setScanData({...scanData, [e.target.name]: e.target.value});
     }
 
     useEffect(() => {
-        window.localStorage.setItem(`${entityIndex}.${elementIndex}`, JSON.stringify(scanCardData));
-    }, [entityIndex, elementIndex, scanCardData]);
-
-    const scanElementComplete = scanCardData.checkedPositie !== -1 && scanCardData.checkedAmbitie !== -1;
+        window.localStorage.setItem(`${entityIndex}.${elementIndex}`, JSON.stringify(scanData));
+    }, [entityIndex, elementIndex, scanData]);
 
     return (
         <div className={"scancard"} style={{borderTop: `1rem solid ${entity.color}`}}>
@@ -134,9 +106,9 @@ const ScanCard: FunctionComponent<Props> = ({
                                     return (
                                         <HorizontalCheckbox
                                             key={phase.name}
-                                            checkedPositie={scanCardData.checkedPositie}
+                                            checkedPositie={scanData.checkedPositie}
                                             handleCheckedPositie={handleCheckedPositie}
-                                            checkedAmbitie={scanCardData.checkedAmbitie}
+                                            checkedAmbitie={scanData.checkedAmbitie}
                                             handleCheckedAmbitie={handleCheckedAmbitie}
                                             position={index}
                                             rowText={phase.description}
@@ -150,12 +122,12 @@ const ScanCard: FunctionComponent<Props> = ({
                 <img className='scancard__grid__illustration' src={images[entityIndex]} alt="illustratieve afbeelding"/>
             </div>
             <div className='scancard__textarea-container'>
-                <TextArea value={scanCardData.feedbackPositie}
+                <TextArea value={scanData.feedbackPositie}
                           setValue={handleFeedback}
                           titleTextArea={getTranslation('position')}
                           name={'feedbackPositie'}
                           hintTextArea={getTranslation('scan.explain')}/>
-                <TextArea value={scanCardData.feedbackAmbitie}
+                <TextArea value={scanData.feedbackAmbitie}
                           setValue={handleFeedback}
                           titleTextArea={getTranslation('ambition')}
                           name={'feedbackAmbitie'}
@@ -167,7 +139,7 @@ const ScanCard: FunctionComponent<Props> = ({
                     <span><p>{getTranslation('scan.previous')}</p></span>
                 </Button>
                 <ProgressDots color={entity.color} currentStep={elementIndex + 1} totalSteps={3}/>
-                <Button backgroundColor={entity.color} onClick={handleButtonNext}>
+                <Button backgroundColor={entity.color} onClick={handleNext}>
                         <span>
                             <p>{(entityIndex === 4 && elementIndex === 2) ?
                                 getTranslation('scan.toresults') :
