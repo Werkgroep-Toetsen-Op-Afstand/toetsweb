@@ -1,22 +1,19 @@
-import React, { FunctionComponent } from 'react';
-import {ClassBuilder} from 'buro-lib-ts';
+import React, {FunctionComponent} from 'react';
 
 interface Props {
     children: any;
     className?: string;
 }
 
-const Card: FunctionComponent<Props> = ({ children, className }) => {
+const Card: FunctionComponent<Props> = ({children, className}) => {
 
     const getClassName = () => {
-        return ClassBuilder.createClass('card')
-            .addIf(className, className)
-            .build();
+        return `card ${className ?? ''}`;
     };
 
     return (
         <div className={getClassName()}>
-            { children }
+            {children}
         </div>
     );
 };

@@ -3,6 +3,10 @@
   margin: 8rem auto 4rem auto;
   position: relative;
 
+  &__model-explanation {
+    font-size: 90%;
+  }
+
   &__hero-section {
     display: flex;
     justify-content: space-between;

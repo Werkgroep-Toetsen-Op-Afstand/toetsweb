@@ -1,25 +1,31 @@
-import {FunctionComponent, useContext, useMemo} from 'react';
-import {Page} from 'buro-lib-ts';
+import React, {useContext, useMemo} from 'react';
 import Button from "../layout/Button";
-import ResultFragment from "../layout/ResultFragment";
 import downloadFile from "../../utils/FileDownloader";
 import JSZip from 'jszip';
 import {Tooltip} from "react-tooltip";
 import {useTitle} from "../../utils/hooks/TitleHook";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
+import Page from "../Page";
+import Card from "../layout/Card";
+import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
+import {getPhaseOfSelectId} from "../../models/Phase";
+import {ScanDataContext} from "../../utils/contexts/ScanDataContext";
 
 const saveAs = require('save-svg-as-png');
 
-interface Props {
+enum AnswerTypes {
+    POSITION_RESULT = "checkedPositie",
+    POSITION_FEEDBACK = "feedbackPositie",
+    AMBITION_RESULT = "checkedAmbitie",
+    AMBITION_FEEDBACK = "feedbackAmbitie"
 }
 
-const Result: FunctionComponent<Props> = () => {
+const Result = () => {
 
-    const {getScanData, getTranslation} = useContext(LanguageContext);
+    const {getTranslation} = useContext(LanguageContext);
+    const {scanData: entities} = useContext(ScanDataContext);
 
     useTitle(`${getTranslation("nav.title")} - ${getTranslation("nav.result")}`);
-
-    const entities = getScanData().entities;
 
     useMemo(() => {
         entities.forEach((entity, entityIndex) => {
@@ -38,30 +44,11 @@ const Result: FunctionComponent<Props> = () => {
         });
     }, [entities]);
 
-    const getPositionResult = (entity: number, element: number) => {
+    const getResult = (answerType: AnswerTypes, entity: number, element: number) => {
         const answer = JSON.parse(
             window.localStorage.getItem(`${entity}.${element}`) as string
         );
-
-        return answer.checkedPositie;
-    }
-
-    const getPositionFeedback = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackPositie === "" ? getTranslation("results.notfilledin") : answer.feedbackPositie
-    }
-
-    const getAmbitionResult = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.checkedAmbitie;
-    }
-
-    const getAmbitionFeedback = (entity: number, element: number) => {
-        const rawAnswer = window.localStorage.getItem(`${entity}.${element}`);
-        let answer = JSON.parse(rawAnswer as string);
-        return answer.feedbackAmbitie === "" ? getTranslation("results.notfilledin") : answer.feedbackAmbitie;
+        return answer[answerType];
     }
 
     const downloadAdviceBooklet = () => {
@@ -85,10 +72,10 @@ const Result: FunctionComponent<Props> = () => {
             fileData += `${entity.name}\n`;
             entity.elements.forEach((element, elementIndex) => {
                 fileData += `${element.name}\n`;
-                fileData += `${getTranslation("position")}: ${element.phases[getPositionResult(entityIndex, elementIndex)]}\n`;
-                fileData += `${getTranslation("results.positionexplanation")}: ${getPositionFeedback(entityIndex, elementIndex)}\n`;
-                fileData += `${getTranslation("ambition")}: ${element.phases[getAmbitionResult(entityIndex, elementIndex)]}\n`;
-                fileData += `${getTranslation("results.ambitionexplanation")}: ${getAmbitionFeedback(entityIndex, elementIndex)}\n\n`;
+                fileData += `${getTranslation("position")}: ${element.phases[getResult(AnswerTypes.POSITION_RESULT, entityIndex, elementIndex)].description}\n`;
+                fileData += `${getTranslation("results.positionexplanation")}: ${getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}\n`;
+                fileData += `${getTranslation("ambition")}: ${element.phases[getResult(AnswerTypes.AMBITION_RESULT, entityIndex, elementIndex)].description}\n`;
+                fileData += `${getTranslation("results.ambitionexplanation")}: ${getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}\n\n`;
             });
             fileData += "\n";
         });
@@ -107,24 +94,96 @@ const Result: FunctionComponent<Props> = () => {
         });
     }
 
+    const getResultData = (answerType: AnswerTypes, getResult: (answerType: AnswerTypes, entity: number, element: number) => number) => {
+
+        return entities.map((entity, entityIndex) => {
+            const subResults = [
+                getResult(answerType, entityIndex, 0),
+                getResult(answerType, entityIndex, 1),
+                getResult(answerType, entityIndex, 2)
+            ];
+
+            return getPhaseOfSelectId(subResults.join('')) + 1;
+        });
+    }
+
     return (
         <Page className='result'>
-            <h1 className='result__title'>{getTranslation("nav.result")}</h1>
+            <div>
+                <div className={"result__container result__subtitle"}>
+                    <h1 className={"result__container--item"}>{getTranslation("position")}</h1>
+                    <h1 className={"result__container--item"}>{getTranslation("ambition")}</h1>
+                </div>
 
-            <div className='result__container'>
-                <ResultFragment fragmentTitle={getTranslation("position")} getResult={getPositionResult} getFeedback={getPositionFeedback}/>
-                <ResultFragment fragmentTitle={getTranslation("ambition")} getResult={getAmbitionResult} getFeedback={getAmbitionFeedback}/>
+                <div className={"result__container"}>
+                    <div className={"result__container--item"}>
+                        <AssignmentModel results={getResultData(AnswerTypes.POSITION_RESULT, getResult)}/>
+                    </div>
+                    <div className={"result__container--item"}>
+                        <AssignmentModel results={getResultData(AnswerTypes.AMBITION_RESULT, getResult)}/>
+                    </div>
+                </div>
+
+                <p className={"result__model-explanation"}>{getTranslation("home.modelExplained")}</p>
+
+                {
+                    entities.map((entity, entityIndex) => {
+                        const color = entity.color;
+                        const explanation = getTranslation("explanation");
+
+                        return (
+                            <div key={entity.name} className={"result__container"}>
+                                <Card className={"result__container--item"}>
+                                    <h3 style={{color: color}}>{entity.name}</h3>
+                                    {
+                                        entity.elements.map((element, elementIndex) => {
+                                            return (
+                                                <div key={element.name}>
+                                                    <h2 style={{color: color}}>{element.name}</h2>
+                                                    <p>{element.phases[getResult(AnswerTypes.POSITION_RESULT, entityIndex, elementIndex)].description}</p>
+                                                    <p>
+                                                        {explanation}: <i>
+                                                        {getResult(AnswerTypes.POSITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}
+                                                    </i></p>
+                                                    <br/>
+                                                </div>
+                                            );
+                                        })
+                                    }
+                                </Card>
+                                <Card className={"result__container--item"}>
+                                    <h3 style={{color: color}}>{entity.name}</h3>
+                                    {
+                                        entity.elements.map((element, elementIndex) => {
+                                            return (
+                                                <div key={element.name}>
+                                                    <h2 style={{color: color}}>{element.name}</h2>
+                                                    <p>{element.phases[getResult(AnswerTypes.AMBITION_RESULT, entityIndex, elementIndex)].description}</p>
+                                                    <p>
+                                                        {explanation}: <i>
+                                                        {getResult(AnswerTypes.AMBITION_FEEDBACK, entityIndex, elementIndex) || getTranslation("results.notfilledin")}
+                                                    </i></p>
+                                                    <br/>
+                                                </div>
+                                            );
+                                        })
+                                    }
+                                </Card>
+                            </div>
+                        )
+                    })
+                }
             </div>
 
             <div className='result__download-container'>
                 <div className='result__download-button'>
-                    <Button onClick={downloadResults} baseClass={'color-blue'}>
+                    <Button onClick={downloadResults} backgroundColor={entities[0].color}>
                         <span><p>{getTranslation("results.downloadresults")}</p></span>
                     </Button>
                 </div>
 
                 <div className='result__download-button'>
-                    <Button onClick={downloadAdviceBooklet} baseClass={'color-blue'} disabled>
+                    <Button onClick={downloadAdviceBooklet} backgroundColor={entities[0].color} disabled>
                         <div data-tooltip-id={'downloadAdviceBooklet'}>
                             <span><p>{getTranslation("results.downloadadvice")}</p></span>
                             <Tooltip id={"downloadAdviceBooklet"} place="top">
@@ -135,7 +194,7 @@ const Result: FunctionComponent<Props> = () => {
                 </div>
 
                 <div className='result__download-button'>
-                    <Button onClick={resetScan} baseClass={'color-blue'}>
+                    <Button onClick={resetScan} backgroundColor={entities[0].color}>
                         <span><p>{getTranslation("results.resetscan")}</p></span>
                     </Button>
                 </div>

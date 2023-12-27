@@ -4,12 +4,12 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   -webkit-box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.16);
 
   &__content {
-    height: 8rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     margin-left: 1rem;

@@ -1,10 +1,10 @@
-import AssignmentModelPopup from "./AssignmentModelPopup";
+import {Portal} from "../../Portal";
 
 export const ToetsmodelSideTextEN = () => {
 
     return (
         <g id="side-texts">
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmenttasks-bg">
                         <rect x="120" y="80" fillOpacity={0} width="120" height="120"/>
@@ -59,7 +59,7 @@ export const ToetsmodelSideTextEN = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Assessment (tasks)</h4>
                     <p>
                         Assessments are (learning) activities/measurement instruments used to establish whether the
@@ -70,9 +70,9 @@ export const ToetsmodelSideTextEN = () => {
                         & Joosten-ten Brinke, 2015).
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentprogram-bg">
                         <rect x="380" y="80" fillOpacity={0} width="120" height="120"/>
@@ -135,7 +135,7 @@ export const ToetsmodelSideTextEN = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Assessment programme</h4>
                     <p>
                         The assessment programme is an intentional and substantiated combination of assessment types
@@ -144,9 +144,9 @@ export const ToetsmodelSideTextEN = () => {
                         the different functions of assessment.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentpolicy-bg">
                         <rect x="450" y="300" width="120" height="120" fillOpacity={0}/>
@@ -195,7 +195,7 @@ export const ToetsmodelSideTextEN = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Assessment policy</h4>
                     <p>
                         Assessment policy refers to the entire range of substantive and procedural agreements concerning
@@ -203,9 +203,9 @@ export const ToetsmodelSideTextEN = () => {
                         assessment policy, including the policy at the institutional level and the degree course level.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="toetsorganisatie-bg">
                         <rect x="225" y="500" width="150" height="50" fillOpacity={0}/>
@@ -272,7 +272,7 @@ export const ToetsmodelSideTextEN = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Assessment organisation</h4>
                     <p>
                         The quality of the whole assessment organisation is key to assuring the quality of assessment.
@@ -283,9 +283,9 @@ export const ToetsmodelSideTextEN = () => {
                         cooperation based on defined roles and the logistical organisation of assessment.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentliteracy-bg">
                         <rect x="50" y="285" width="75" height="150" fillOpacity={0}/>
@@ -341,7 +341,7 @@ export const ToetsmodelSideTextEN = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Assessment literacy</h4>
                     <p>
                         In the assessment web, ‘assessment literacy’ refers to the expertise actors within the study
@@ -353,7 +353,7 @@ export const ToetsmodelSideTextEN = () => {
                         2006).
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
         </g>
     )
 }
@@ -362,7 +362,7 @@ export const ToetsmodelSideTextNL = () => {
 
     return (
         <g id="side-texts">
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmenttasks-bg">
                         <rect x="120" y="80" fillOpacity={0} width="120" height="120"/>
@@ -398,7 +398,7 @@ export const ToetsmodelSideTextNL = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Toets(tak)en</h4>
                     <p>
                         Toetsen zijn (leer)activiteiten/meet-instrumenten die worden ingezet om na te gaan of de
@@ -409,9 +409,9 @@ export const ToetsmodelSideTextNL = () => {
                         Joosten-ten Brinke, 2015.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentprogram-bg">
                         <rect x="380" y="80" fillOpacity={0} width="120" height="120"/>
@@ -459,7 +459,7 @@ export const ToetsmodelSideTextNL = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Toetsprogramma</h4>
                     <p>
                         Het toetsprogramma is een bewuste en beargumenteerde combinatie van toets(vorm)en,
@@ -468,9 +468,9 @@ export const ToetsmodelSideTextNL = () => {
                         van de verschillende functies van toetsing.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentpolicy-bg">
                         <rect x="450" y="300" width="120" height="120" fillOpacity={0}/>
@@ -507,7 +507,7 @@ export const ToetsmodelSideTextNL = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Toetsbeleid</h4>
                     <p>
                         Met het toetsbeleid wordt het geheel aan vastgestelde afspraken, zowel inhoudelijk als
@@ -516,9 +516,9 @@ export const ToetsmodelSideTextNL = () => {
                         instellingsniveau en het beleid op opleidingsniveau.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="toetsorganisatie-bg">
                         <rect x="225" y="500" width="150" height="50" fillOpacity={0}/>
@@ -570,7 +570,7 @@ export const ToetsmodelSideTextNL = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Toetsorganisatie</h4>
                     <p>
                         De kwaliteit van de hele organisatie van het toetsbouwwerk is belangrijk om
@@ -582,9 +582,9 @@ export const ToetsmodelSideTextNL = () => {
                         toetsing, het rolvast met elkaar samenwerken en de logistieke organisatie van toetsing.
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
 
-            <AssignmentModelPopup
+            <Portal
                 trigger={
                     <g id="assessmentliteracy-bg">
                         <rect x="50" y="285" width="75" height="150" fillOpacity={0}/>
@@ -633,7 +633,7 @@ export const ToetsmodelSideTextNL = () => {
                         </g>
                     </g>
                 }>
-                <div className='toetsmodel-component__one-hover'>
+                <div className='toetsmodel-component__popup'>
                     <h4>Toetsbekwaamheid</h4>
                     <p>
                         Met toetsbekwaamheid wordt in het toetsweb verwezen naar de deskundigheid die bij
@@ -645,7 +645,7 @@ export const ToetsmodelSideTextNL = () => {
                         informatie verder kan bijdragen aan het leren van de student (Straetmans, 2006).
                     </p>
                 </div>
-            </AssignmentModelPopup>
+            </Portal>
         </g>
     )
 }

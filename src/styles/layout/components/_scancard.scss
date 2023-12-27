@@ -7,19 +7,25 @@
     flex-direction: column;
     gap: 0.5rem;
 
+    span {
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.5rem;
+    }
+
     &__container {
       display: flex;
       align-items: center;
       gap: 0.4rem;
+      padding: 0.4rem;
+
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+      }
 
       &__subtitle {
         font-size: 1em;
-      }
-
-      &--ambition {
-        padding: 0.4rem;
-        margin-left: -1.5rem;
-        display: inline-flex;
       }
     }
   }
@@ -64,115 +70,5 @@
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.color-blue {
-  &__bg {
-    background-color: #44A6C2;
-  }
-
-  &__transparent-bg {
-    background-color: #44A6C22D;
-  }
-
-  &__border {
-    border-color: #44A6C2;
-  }
-
-  &__border-top {
-    border-top: 1rem solid #44A6C2;
-  }
-
-  &__text {
-    color: #44A6C2;
-  }
-}
-
-.color-cyan {
-  &__bg {
-    background-color: #2DB3A5;
-  }
-
-  &__transparent-bg {
-    background-color: #2DB3A52D;
-  }
-
-  &__border {
-    border-color: #2DB3A5;
-  }
-
-  &__border-top {
-    border-top: 1rem solid #2DB3A5;
-  }
-
-  &__text {
-    color: #2DB3A5;
-  }
-}
-
-.color-purple {
-  &__bg {
-    background-color: #B072AD;
-  }
-
-  &__transparent-bg {
-    background-color: #B072AD2D;
-  }
-
-  &__border {
-    border-color: #B072AD;
-  }
-
-  &__border-top {
-    border-top: 1rem solid #B072AD;
-  }
-
-  &__text {
-    color: #B072AD;
-  }
-}
-
-.color-orange {
-  &__bg {
-    background-color: #ED7A0B;
-  }
-
-  &__transparent-bg {
-    background-color: #ED7A0B2D;
-  }
-
-  &__border {
-    border-color: #ED7A0B;
-  }
-
-  &__border-top {
-    border-top: 1rem solid #ED7A0B;
-  }
-
-  &__text {
-    color: #ED7A0B;
-  }
-}
-
-.color-green {
-  &__bg {
-    background-color: #45AD48;
-  }
-
-  &__transparent-bg {
-    background-color: #45AD482D;
-  }
-
-  &__border {
-    border-color: #45AD48;
-  }
-
-  &__border-top {
-    border-top: 1rem solid #45AD48;
-  }
-
-  &__text {
-    color: #45AD48;
   }
 }

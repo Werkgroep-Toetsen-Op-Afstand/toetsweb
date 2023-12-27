@@ -1,5 +1,4 @@
-import {useContext} from 'react';
-import {Page, route} from 'buro-lib-ts';
+import React, {useContext} from 'react';
 
 import Card from "../layout/Card"
 import Toetstaken from "../../assets/images/IllustratieToetstaken.svg"
@@ -10,6 +9,7 @@ import Developers from "../layout/footer/Developers";
 import {LanguageContext} from "../../utils/contexts/LanguageContext";
 import AssignmentModel from "../layout/toetsmodel/AssignmentModel";
 import {useTitle} from "../../utils/hooks/TitleHook";
+import Page from "../Page";
 
 const Home = () => {
 
@@ -17,8 +17,8 @@ const Home = () => {
     useTitle(getTranslation("nav.title"));
 
     return (
-        <>
-            <Page className={'home-page'}>
+        <Page>
+            <div className={'home-page'}>
                 <div className="home-page__hero-section">
                     <div>
                         <h1>{getTranslation("home.heroTitle")}</h1>
@@ -27,6 +27,7 @@ const Home = () => {
                     </div>
                     <div className={"home-page__hero-section__toetsmodel"}>
                         <AssignmentModel/>
+                        <p className={"home-page__model-explanation"}>{getTranslation("home.modelExplained")}</p>
                     </div>
                 </div>
 
@@ -64,7 +65,7 @@ const Home = () => {
                             <p>
                                 {getTranslation("home.startscan.text")}
                             </p>
-                            <ReactRouterNavLink to={route('scan')}>
+                            <ReactRouterNavLink to={"scan"}>
                                 <span className='home-page__scan-button'>
                                     <p>{getTranslation("home.startscan.button")}</p>
                                     <img src={ArrowIcon} alt="pijl naar rechts"/>
@@ -77,9 +78,9 @@ const Home = () => {
                     </div>
                 </div>
                 <Developers/>
-            </Page>
+            </div>
             <Colofon/>
-        </>
+        </Page>
     );
 };
 

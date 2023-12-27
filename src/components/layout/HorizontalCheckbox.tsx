@@ -7,13 +7,13 @@ interface Props {
     handleCheckedAmbitie: (amb: number) => void;
     position: number;
     rowText: string;
-    baseClass: string;
+    backgroundColor: string;
 }
 
 const HorizontalCheckbox: FunctionComponent<Props> = ({
                                                           checkedPositie, handleCheckedPositie,
                                                           checkedAmbitie, handleCheckedAmbitie,
-                                                          position, rowText, baseClass
+                                                          position, rowText, backgroundColor
                                                       }) => {
     return (
         <div className='hor-check'>
@@ -26,7 +26,7 @@ const HorizontalCheckbox: FunctionComponent<Props> = ({
                     type="checkbox"
                 />
             </div>
-            <div className={`hor-check__container ${baseClass}__transparent-bg`}>
+            <div className={"hor-check__container"} style={{backgroundColor}}>
                 <input
                     className='hor-check__container__checkbox'
                     name="ambitie"

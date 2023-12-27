@@ -3,3 +3,10 @@
 @import 'base/base';
 @import 'utils/utils';
 @import 'layout/layout';
+
+#modal-root {
+  position: fixed;
+  bottom: 1rem;
+  left: 25%;
+  max-width: 50%;
+}
