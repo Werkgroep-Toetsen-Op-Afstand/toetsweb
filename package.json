@@ -10,8 +10,9 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
-    "buro-lib-ts": "^1.0.26",
     "chokidar": "^3.5.3",
+    "framer-motion": "^10.16.16",
+    "jspdf": "^2.5.1",
     "jszip": "^3.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,15 +27,21 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@types/blob-stream": "^0.1.33",
+    "@types/pdfkit": "^0.13.4",
     "@types/react-beautiful-dnd": "^13.1.2",
     "@types/react-dom": "^18.0.8",
-    "eslint-plugin-react": "^7.31.10"
+    "csscomb": "^4.3.0",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^3.2.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier ./src && echo '\nuse: npm run format:fix to fix formatting\n'",
+    "format:fix": "csscomb src/styles/ && prettier --write ./src"
   },
   "eslintConfig": {
     "extends": [

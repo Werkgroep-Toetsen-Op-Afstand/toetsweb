@@ -1,29 +1,28 @@
 @import 'reset';
 @import 'typography';
-@import "fonts";
+@import 'fonts';
 
 html {
-  height: 100%;
+	height: 100%;
 }
 
 body {
-  background: $background-color no-repeat;
-  background-size: cover;
-  height: 100%;
+	height: 100%;
+
+	background: $background-color no-repeat;
+	background-size: cover;
 }
 
-main, #root {
-  height: 100%;
+main,
+#root {
+	height: 100%;
 }
 
-main {
-  
+section[class$='-page'] {
+	padding: 1rem;
 }
 
-section[class$="-page"] {
-  padding: 1rem;
-}
-
-input[type=text]:disabled, input[type=password]:disabled {
-  cursor: not-allowed;
+input[type='text']:disabled,
+input[type='password']:disabled {
+	cursor: not-allowed;
 }

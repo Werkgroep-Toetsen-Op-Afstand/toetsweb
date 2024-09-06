@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 
 export const useTitle = (title: string) => {
-    React.useEffect(() => {
-        const prevTitle = document.title;
-        document.title = title;
+	React.useEffect(() => {
+		const prevTitle = document.title
+		document.title = title
 
-        return () => {
-            document.title = prevTitle;
-        };
-    }, [title]);
+		return () => {
+			document.title = prevTitle
+		}
+	}, [title])
 }

@@ -1,63 +1,70 @@
-import React, {FunctionComponent, useContext, useEffect, useState} from 'react';
-import { NavLink as ReactRouterNavLink } from "react-router-dom";
-import { route } from 'buro-lib-ts';
-import NavItem from './NavItem';
-import {LanguageContext} from "../../../utils/contexts/LanguageContext";
-import {Language} from "../../../utils/Localization";
+import React, { useContext, useEffect, useState } from 'react'
+import { NavLink as ReactRouterNavLink } from 'react-router-dom'
+import NavItem from './NavItem'
+import { LanguageContext } from '../../../utils/contexts/LanguageContext'
+import { Language } from '../../../utils/Localization'
+import flagDutch from '../../../assets/icons/flag-dutch.svg'
+import flagEnglish from '../../../assets/icons/flag-english.svg'
+import { ScanDataContext } from '../../../utils/contexts/ScanDataContext'
 
-const NavBar: FunctionComponent = () => {
+const NavBar = () => {
+	const { language, changeLanguage, getTranslation } =
+		useContext(LanguageContext)
+	const { scanData: entities } = useContext(ScanDataContext)
 
-    const {language, changeLanguage, getTranslation, getScanData} = useContext(LanguageContext);
+	const [answer, setAnswer] = useState<any>([])
 
-    const entities = getScanData().entities;
+	useEffect(() => {
+		entities.forEach((entity, entityIndex) => {
+			entity.elements.forEach((element, elementIndex) => {
+				setAnswer(window.localStorage.getItem(`${entityIndex}.${elementIndex}`))
+			})
+		})
+	}, [entities])
 
-    const [answer, setAnswer] = useState<any>([]);    
+	const handleChangeLanguage = () => {
+		if (language === Language.NL) changeLanguage(Language.EN)
+		if (language === Language.EN) changeLanguage(Language.NL)
+	}
 
-    useEffect(() => {
-        entities.forEach((entity, entityIndex) => {
-            entity.elements.forEach((element, elementIndex) => {
-                setAnswer(window.localStorage.getItem(`${entityIndex}.${elementIndex}`));
-            })
-        })
-    }, [entities])
+	return (
+		<nav className={'navbar'}>
+			<div className={'navbar__content'}>
+				<ReactRouterNavLink to={''}>
+					<div className={'navbar__container'}>
+						<h1>{getTranslation('nav.title')}</h1>
+					</div>
+				</ReactRouterNavLink>
 
-    const handleChangeLanguage = () => {
-        if (language === Language.NL) changeLanguage(Language.EN);
-        if (language === Language.EN) changeLanguage(Language.NL);
-    }
+				<div className="navbar__content--right">
+					<ReactRouterNavLink to={''}>
+						<NavItem item={getTranslation('nav.home')} color={'purple'} />
+					</ReactRouterNavLink>
 
-    return (
-        <nav className={'navbar'}>
-            <div className={'navbar__content'}>
-                <ReactRouterNavLink to={route('home')}>
-                    <div className={"navbar__container"}>
-                        <h1>{getTranslation("nav.title")}</h1>
-                    </div>
-                </ReactRouterNavLink>
-                
+					<ReactRouterNavLink to={'scan'}>
+						<NavItem item={getTranslation('nav.scan')} color={'orange'} />
+					</ReactRouterNavLink>
 
-                <div className='navbar__content--right'>
-                    <ReactRouterNavLink to={route('home')}>
-                        <NavItem item={getTranslation("nav.home")} color={'purple'}/>
-                    </ReactRouterNavLink>
+					{answer && (
+						<ReactRouterNavLink to={'result'}>
+							<NavItem item={getTranslation('nav.result')} color={'green'} />
+						</ReactRouterNavLink>
+					)}
 
-                    <ReactRouterNavLink to={route('scan')}>
-                        <NavItem item={getTranslation("nav.scan")} color={'orange'}/>
-                    </ReactRouterNavLink>
+					<button
+						className="navlink navlink--white cursor-pointer unselectable nobutton"
+						onClick={handleChangeLanguage}
+					>
+						{language === Language.NL ? (
+							<img src={flagEnglish} alt={'EN'} height={33} />
+						) : (
+							<img src={flagDutch} alt={'NL'} height={33} />
+						)}
+					</button>
+				</div>
+			</div>
+		</nav>
+	)
+}
 
-                    {answer && 
-                    <ReactRouterNavLink to={'/result'}>
-                        <NavItem item={getTranslation("nav.result")} color={'green'}/>
-                    </ReactRouterNavLink>
-                    }
-
-                    <div className="cursor-pointer unselectable" onClick={handleChangeLanguage}>
-                        <NavItem item={language === Language.NL ? "🇬🇧" : "🇳🇱"} color={'white'} />
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
-};
- 
-export default NavBar;
+export default NavBar

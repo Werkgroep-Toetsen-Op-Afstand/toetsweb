@@ -1,43 +1,40 @@
-import {FunctionComponent, useContext} from "react";
-import {Phase} from "./GenericPhase";
-import AssignmentModelPopup from "./AssignmentModelPopup";
-import {LanguageContext} from "../../../../utils/contexts/LanguageContext";
-
-export enum Entity {
-    AssessmentTasks = 'assessmenttasks',
-    AssessmentProgram = 'assessmentprogram',
-    AssessmentPolicy = 'assessmentpolicy',
-    AssessmentOrganisation = 'assessmentorganisation',
-    AssessmentLiteracy = 'assessmentliteracy',
-}
+import { FunctionComponent } from 'react'
+import { Phase } from '../../../../models/Phase'
+import { Portal } from '../../Portal'
 
 interface PhaseBarProps {
-    entity: Entity;
-    phase: Phase;
-    result: number;
-    d: string;
+	phase: Phase
+	result: number
+	d: string
 }
 
-const GenericEntity: FunctionComponent<PhaseBarProps> = ({entity, phase, result, d}) => {
-    const {getTranslation} = useContext(LanguageContext);
+const GenericEntity: FunctionComponent<PhaseBarProps> = ({
+	phase,
+	result,
+	d,
+}) => {
+	const phaseIndex = phase.type.valueOf()
+	const isResult = phaseIndex === result || result === -1
 
-    const phases = [Phase.ActivityOriented, Phase.ProcessOriented, Phase.SystemOriented, Phase.ChainOriented];
+	const style = () => {
+		const color = isResult ? phase.color : phase.fallbackColor
+		return {
+			backgroundColor: color,
+			fill: color,
+		}
+	}
 
-    const phaseIndex = phases.indexOf(phase);
-    const colorClass = (phaseIndex === (result - 1) || result === -1) ?
-        `${entity}-${phase}` :
-        `grey-${phase}`;
-
-    return (
-        <AssignmentModelPopup trigger={
-            <path className={`${colorClass}`} d={d}/>
-        }>
-            <div className={`toetsmodel-component__element-hover ${entity}-chainoriented`}>
-                <h4>{getTranslation(`phase.${phase}.title`).toUpperCase()}</h4>
-                <p>{getTranslation(`${entity}.${phase}.description`)}</p>
-            </div>
-        </AssignmentModelPopup>
-    );
+	return (
+		<Portal trigger={<path style={style()} d={d} />}>
+			<div
+				className={'toetsmodel-component__popup'}
+				style={{ backgroundColor: phase.color }}
+			>
+				<h4>{`${phaseIndex + 1}. ${phase.name.toUpperCase()}`}</h4>
+				<p>{phase.genericEntityDescription}</p>
+			</div>
+		</Portal>
+	)
 }
 
-export default GenericEntity;
+export default GenericEntity

@@ -1,20 +1,23 @@
 .navlink {
-    padding-bottom: 3px;
-    transition: .4s;
+	margin-top: 0.3em;
+	padding-bottom: 0.1em;
 
-    &--purple {
-        border-bottom: 5px solid $color-purple;
-    }
+	transition: 0.4s;
+	text-align: center;
 
-    &--orange {
-        border-bottom: 5px solid $color-orange;
-    }
+	&--purple {
+		border-bottom: 5px solid $color-purple;
+	}
 
-    &--green {
-        border-bottom: 5px solid $color-green;
-    }
+	&--orange {
+		border-bottom: 5px solid $color-orange;
+	}
 
-    &:hover {
-        scale: 1.05;
-    }
+	&--green {
+		border-bottom: 5px solid $color-green;
+	}
+
+	&:hover {
+		scale: 1.05;
+	}
 }

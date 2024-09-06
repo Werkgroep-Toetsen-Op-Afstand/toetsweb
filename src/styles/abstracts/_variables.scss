@@ -1,13 +1,13 @@
 // COLORS
 $color-white: rgb(255, 255, 255);
 $color-gray: #707070;
-$color-black: #000000;
-$color-blue: #44A6C2;
-$color-cyan: #2DB3A5;
-$color-purple: #B072AD;
-$color-orange: #EC7A0B;
-$color-green: #45AD48;
-$color-turquoise: #2DB3A5;
+$color-black: #000;
+$color-blue: #44a6c2;
+$color-cyan: #2db3a5;
+$color-purple: #b072ad;
+$color-orange: #ec7a0b;
+$color-green: #45ad48;
+$color-turquoise: #2db3a5;
 
 $background-color: $color-white;
 
@@ -21,5 +21,7 @@ $base-font-size: 1em;
 
 // BREAKPOINTS
 $breakpoints: (
-        'half-screen': (max-aspect-ratio: 4/3),
+	'half-screen': (
+		max-aspect-ratio: 4/3,
+	),
 );

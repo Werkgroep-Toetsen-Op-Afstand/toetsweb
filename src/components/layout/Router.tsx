@@ -1,29 +1,29 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent, ReactNode } from 'react'
 
-import {route} from 'buro-lib-ts';
-import {Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import NotFoundPage from '../pages/NotFoundPage';
-import Home from '../pages/Home';
-import Scan from '../pages/Scan';
-import Result from '../pages/Result';
+import NotFoundPage from '../pages/NotFoundPage'
+import Home from '../pages/Home'
+import Scan from '../pages/Scan'
+import Result from '../pages/Result'
 
 interface Props {
-    children?: any;
+	children?: ReactNode
 }
 
 const Router: FunctionComponent<Props> = ({ children }) => {
+	return (
+		<BrowserRouter>
+			{children}
+			<Routes>
+				<Route path={'/'} element={<Home />} />
+				<Route path={'scan'} element={<Scan />} />
+				<Route path={'result'} element={<Result />} />
 
-    return (
-        <Routes>
-            <Route path={route('home')} element={<Home />} />
-            <Route path={route('scan')} element={<Scan />} />
-            <Route path={route('result')} element={<Result />} />
-            { children }
+				<Route path={'*'} element={<NotFoundPage />} />
+			</Routes>
+		</BrowserRouter>
+	)
+}
 
-            <Route path={'/*'} element={<NotFoundPage />} />
-        </Routes>
-    );
-};
-
-export default Router;
+export default Router

@@ -1,29 +1,33 @@
-import React, {FunctionComponent} from 'react';
-import {ClassBuilder} from 'buro-lib-ts';
+import React, { FunctionComponent } from 'react'
 
 interface Props {
-    children: any;
-    baseClass: string;
-    onClick: () => void;
-    disabled?: boolean;
+	children: any
+	backgroundColor: string
+	onClick: () => void
+	disabled?: boolean
 }
 
-const Button: FunctionComponent<Props> = ({children, baseClass, onClick, disabled}) => {
+const Button: FunctionComponent<Props> = ({
+	children,
+	backgroundColor,
+	onClick,
+	disabled,
+}) => {
+	const getClassName = () => {
+		return `button nobutton ${disabled ? 'button--disabled' : ''}`
+	}
 
-    const getClassName = () => {
-        return ClassBuilder.createClass('button')
-            .add(`${baseClass}__bg`)
-            .addIf('button--disabled', disabled)
-            .build();
-    };
+	const onButtonClick = () => !disabled && onClick()
 
-    const onButtonClick = () => !disabled && onClick();
+	return (
+		<button
+			className={getClassName()}
+			style={{ backgroundColor }}
+			onClick={onButtonClick}
+		>
+			{children}
+		</button>
+	)
+}
 
-    return (
-        <div className={getClassName()} onClick={onButtonClick}>
-            {children}
-        </div>
-    );
-};
-
-export default Button;
+export default Button
