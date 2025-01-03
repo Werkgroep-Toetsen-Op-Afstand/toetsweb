@@ -1,0 +1,17 @@
+.scan-introduction {
+
+  :not(:first-child) + section {
+    margin-top: 2rem;
+  }
+
+  section {
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    float: right;
+  }
+}

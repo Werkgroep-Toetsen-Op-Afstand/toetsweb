@@ -1,0 +1,16 @@
+.button-anchor {
+  text-decoration: none;
+  @extend .button;
+
+  &--primary {
+    @extend .button--primary;
+  }
+
+  &--styless {
+    @extend .button--styless;
+  }
+
+  &--content {
+    @extend .button--content;
+  }
+}

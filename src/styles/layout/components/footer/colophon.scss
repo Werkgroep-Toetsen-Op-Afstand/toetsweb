@@ -1,0 +1,68 @@
+.colophon {
+	margin-top: 5rem;
+
+	&__developers {
+		display: flex;
+
+		max-width: 85%;
+		margin: 0 auto;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+
+			gap: 4rem;
+		}
+
+		&__logos {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			img {
+				width: 44vw;
+				margin: -7rem;
+
+				@media (max-width: 768px) {
+					width: 75vw;
+					margin: -7rem;
+				}
+			}
+		}
+	}
+
+	&__more-info {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		margin-top: 5rem;
+		padding: 5rem 2rem;
+
+		text-align: center;
+
+		color: #fff;
+		background-color: #44a6c2;
+
+		gap: 5rem;
+
+		&__contact {
+			font-weight: lighter;
+
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			max-width: 90%;
+
+			gap: 5rem;
+		}
+	}
+
+	&__copyright {
+		padding: 3rem;
+
+		text-align: center;
+	}
+}

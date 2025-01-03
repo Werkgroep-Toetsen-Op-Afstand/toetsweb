@@ -2,52 +2,41 @@
   "name": "toetsweb",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.3",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "chokidar": "^3.5.3",
-    "framer-motion": "^10.16.16",
-    "jspdf": "^2.5.1",
-    "jszip": "^3.10.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^9.1.1",
-    "react-tooltip": "^5.8.3",
-    "reactjs-popup": "^2.0.5",
-    "sass": "^1.56.1",
-    "save-svg-as-png": "^1.4.17",
-    "typescript": "^4.9.3",
-    "web-vitals": "^2.1.4"
+    "@react-pdf/renderer": "^4.1.5",
+    "framer-motion": "^11.13.1",
+    "i18next": "^24.1.0",
+    "i18next-browser-languagedetector": "^8.0.2",
+    "i18next-http-backend": "^3.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.2.0",
+    "react-router-dom": "^7.0.2",
+    "react-tooltip": "^5.28.0",
+    "reactjs-popup": "^2.0.6",
+    "sass": "^1.82.0"
   },
   "devDependencies": {
     "@types/blob-stream": "^0.1.33",
-    "@types/pdfkit": "^0.13.4",
-    "@types/react-beautiful-dnd": "^13.1.2",
-    "@types/react-dom": "^18.0.8",
+    "@types/pdfkit": "^0.13.7",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "csscomb": "^4.3.0",
-    "eslint-plugin-react": "^7.31.10",
-    "prettier": "^3.2.5"
+    "eslint-plugin-react": "^7.37.2",
+    "prettier": "^3.4.2",
+    "typescript": "^5.0.0",
+    "vite": "^5.4.11",
+    "vite-plugin-chunk-split": "^0.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
     "format": "prettier ./src && echo '\nuse: npm run format:fix to fix formatting\n'",
     "format:fix": "csscomb src/styles/ && prettier --write ./src"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

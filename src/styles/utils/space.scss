@@ -1,3 +1,44 @@
+@use "sass:string";
+
+@mixin spacing($property) {
+	$letter: string.slice($property, 1, 1);
+	.#{$letter} {
+		@for $i from $spacingMin through $spacingMax {
+			&-#{$i} {
+				#{$property}: #{$i}rem !important;
+			}
+
+			&t-#{$i} {
+				#{$property}-top: #{$i}rem !important;
+			}
+
+			&r-#{$i} {
+				#{$property}-right: #{$i}rem !important;
+			}
+
+			&l-#{$i} {
+				#{$property}-left: #{$i}rem !important;
+			}
+
+			&b-#{$i} {
+				#{$property}-bottom: #{$i}rem !important;
+			}
+
+			&h-#{$i} {
+				@extend .#{$letter}l-#{$i}, .#{$letter}r-#{$i};
+			}
+
+			&v-#{$i} {
+				@extend .#{$letter}t-#{$i}, .#{$letter}b-#{$i};
+			}
+		}
+	}
+}
+
+@include spacing(margin);
+
+@include spacing(padding);
+
 .m-bottom-4 {
 	margin-bottom: 4rem;
 }
@@ -12,6 +53,10 @@
 
 .m-right-2 {
 	margin-right: 2rem;
+}
+
+.m-top-1 {
+	margin-top: 1rem;
 }
 
 .p-05 {

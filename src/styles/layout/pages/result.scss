@@ -1,0 +1,45 @@
+.result {
+	max-width: 1400px;
+	margin: auto;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+
+		column-gap: 1rem;
+
+		&--item {
+			flex: 1;
+		}
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__model-explanation {
+		margin-bottom: 2rem;
+
+		text-align: center;
+	}
+
+	&__subtitle {
+		position: sticky;
+		z-index: 1;
+		top: 5.5rem;
+
+		padding: 1rem 0;
+
+		text-align: center;
+
+		background: white;
+	}
+
+	&__download-container {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+		padding: 2rem 0 2rem 2rem;
+	}
+}

@@ -1,35 +1,31 @@
-import React, { useContext } from 'react'
-
-import Card from '../layout/Card'
 import Toetstaken from '../../assets/images/IllustratieToetstaken.svg'
 import ArrowIcon from '../../assets/icons/arrow.svg'
-import { NavLink as ReactRouterNavLink } from 'react-router-dom'
-import Colofon from '../layout/footer/Colofon'
-import Developers from '../layout/footer/Developers'
-import { LanguageContext } from '../../utils/contexts/LanguageContext'
+import Colophon from '../layout/footer/Colophon'
 import AssignmentModel from '../layout/toetsmodel/AssignmentModel'
-import { useTitle } from '../../utils/hooks/TitleHook'
+import {useTitle} from '../../utils/hooks/TitleHook'
 import Page from '../Page'
+import {useTranslation} from "react-i18next";
+import TranslatedSection from "../layout/TranslatedSection";
+import {LocalButtonAnchor} from "../layout/ButtonAnchor";
 
 const Home = () => {
-	const { getTranslation } = useContext(LanguageContext)
-	useTitle(getTranslation('nav.title'))
+	const {t} = useTranslation();
+	useTitle(t('pages.home.title'))
 
 	return (
 		<Page>
-			<div className={'home-page'}>
+			<main className={'home-page'}>
 				<div className="home-page__hero-section">
 					<div>
-						<h1>{getTranslation('home.heroTitle')}</h1>
-						<br />
+						<h1>{t('pages.home.header.title')}</h1>
 						<p className={'home-page__hero-section__subtitle'}>
-							{getTranslation('home.heroSubtitle')}
+							{t('pages.home.header.subTitle')}
 						</p>
 					</div>
 					<div className={'home-page__hero-section__toetsmodel'}>
-						<AssignmentModel />
+						<AssignmentModel/>
 						<p className={'home-page__model-explanation'}>
-							{getTranslation('home.modelExplained')}
+							{t('pages.home.modelSubText')}
 						</p>
 					</div>
 				</div>
@@ -37,44 +33,44 @@ const Home = () => {
 				<div className="home-page__blur"></div>
 
 				<div className="home-page__info-section">
-					<Card className={'home-page__info-section__card'}>
-						<h3>{getTranslation('home.assessmentQualityTitle')}</h3>
-						<p>{getTranslation('home.assessmentQualityText')}</p>
-					</Card>
-
-					<Card className={'home-page__info-section__card'}>
-						<h3>{getTranslation('home.assessmentExplainedTitle')}</h3>
-						<p>{getTranslation('home.assessmentExplainedText')}</p>
-					</Card>
+					<TranslatedSection className={'card'} translationKey={'pages.home.assessmentQuality'}/>
+					<TranslatedSection className={'card'} translationKey={'pages.home.assessmentExplained'}/>
 				</div>
+
+				<TranslatedSection translationKey={'pages.home.entities'}/>
 
 				<div className="home-page__extra-info">
 					<div className="home-page__extra-info__text">
-						<div>
-							<h3>{getTranslation('home.entities.title')}</h3>
-							<p>{getTranslation('home.entities.text.part1')}</p>
-							<p>{getTranslation('home.entities.text.part2')}</p>
-							<p>{getTranslation('home.entities.text.part3')}</p>
-						</div>
-
-						<div>
-							<h3>{getTranslation('home.startscan.title')}</h3>
-							<p>{getTranslation('home.startscan.text')}</p>
-							<ReactRouterNavLink to={'scan'}>
-								<span className="home-page__scan-button">
-									<p>{getTranslation('home.startscan.button')}</p>
-									<img src={ArrowIcon} alt="pijl naar rechts" />
-								</span>
-							</ReactRouterNavLink>
-						</div>
+						<TranslatedSection translationKey={'pages.home.elements'}/>
+						<TranslatedSection translationKey={'pages.home.phases'}>
+							<p className={'m-top-1'}>
+								{t('pages.home.explanation.readMore')}<a className={'a'}
+																		 href={'https://www.han.nl/artikelen/2021/03/het-toetsweb-duurzame-kwaliteit-van-toetsing/'}>
+								{t('pages.home.explanation.link')}
+							</a>
+							</p>
+						</TranslatedSection>
 					</div>
-					<div className="home-page__extra-info__image">
-						<img src={Toetstaken} alt="Illustratie Toets(tak)en" />
-					</div>
+					<img src={Toetstaken} alt="Illustratie Toets(tak)en"/>
 				</div>
-				<Developers />
-			</div>
-			<Colofon />
+
+				<TranslatedSection translationKey={'pages.home.startScan'}>
+					<LocalButtonAnchor to={'scan'} variant={'primary'}>
+						<span>{t('pages.home.startScan.link')}</span>
+						<img src={ArrowIcon} alt="pijl naar rechts"/>
+					</LocalButtonAnchor>
+				</TranslatedSection>
+
+				<TranslatedSection className={'mt-5'} translationKey={'pages.home.customWeb'}>
+					<LocalButtonAnchor to={'custom-web'} variant={'primary'}>
+						<span>{t('pages.home.customWeb.link')}</span>
+						<img src={ArrowIcon} alt="pijl naar rechts"/>
+					</LocalButtonAnchor>
+				</TranslatedSection>
+
+				<TranslatedSection className={'developers'} translationKey={'pages.home.developers'}/>
+			</main>
+			<Colophon/>
 		</Page>
 	)
 }

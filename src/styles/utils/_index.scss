@@ -1,0 +1,28 @@
+@import "cursor";
+@import "flex";
+@import "space";
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nobutton {
+  font: inherit;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  color: inherit;
+  border: none;
+  outline: inherit;
+  background: none;
+}
+
+.a {
+  color: blue !important;
+  text-decoration: blue underline !important;
+}

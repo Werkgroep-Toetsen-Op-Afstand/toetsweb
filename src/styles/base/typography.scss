@@ -1,0 +1,37 @@
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+
+	color: $text-color;
+}
+
+h1 {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 3em;
+	font-weight: 900;
+}
+
+h3 {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 2.2em;
+}
+
+h4 {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 1.6em;
+}
+
+p {
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 1.1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+	margin: 0;
+}

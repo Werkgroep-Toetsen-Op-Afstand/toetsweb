@@ -1,0 +1,1112 @@
+{
+  "title": "Assessment Web",
+  "pages": {
+    "home": {
+      "title": "The Assessment Web",
+      "header": {
+        "title": "GETTING STARTED WITH THE ASSESSMENT WEB: WORKING ON THE QUALITY OF ASSESSMENT",
+        "subTitle": "On this website you can complete the Assessment Web Scan with your degree course team, the assessment or curriculum committee of your team or another relevant representation of the degree course. The Assessment Web Scan is based on the methodology of the 'Assessment Assessed' and is intended to analyze, improve and guarantee the quality of the assessment. The Assessment Web forms the theoretical foundation of the 'Assessment Assessed'."
+      },
+      "assessmentQuality": {
+        "title": "Jointly determine assessment quality",
+        "text": "With the help of the Assessment Web you can determine together as a team what the (sustainable) quality of assessment currently looks like in your degree course (position determination). With the help of this scan, you can also make choices together about your development towards (sustainable) assessment quality (ambition determination). In addition, you use the scan with your team to make a substantiated action plan to achieve your ambition."
+      },
+      "assessmentExplained": {
+        "title": "The Assessment Web explained",
+        "text": "The Assessment Web consists of five assessment entities; assessment (tasks), assessment programme, assessment policy, assessment organisation and assessment literacy. These five entities are connected with one another and also with the centre of the web. The shape of the web symbolizes the interconnectedness of the different assessment entities, makes it visually visible that they are all connected to each other and shows four different development phases."
+      },
+      "modelSubText": "By hovering the mouse over one of the parts of the Assessment Web, the explanation of this part becomes visible.",
+      "entities": {
+        "title": "Assessment entities",
+        "text": [
+          "The assessment web consists of five assessment entities; assessment(tasks), assessment programme, assessment policy, assessment organisation and assessment literacy.  At the core of the assessment web is the vision on education. This is leading for all (design) choices made in the assessment entities.",
+          "Assessments are all (learning) activities/measuring instruments that are used to determine whether the intended learning outcomes are or have been achieved. Assessment tasks are the items or assignments within an assessment that challenge students to demonstrate their knowledge and skills. The assessment programme focuses on the clear connection between all assessments and the intended learning outcomes. The assessment programme must consist of a deliberate and substantiated combination of assessment (forms) that fit the objectives and structure of a programme (the educational programme).",
+          "All substantive and procedural agreements are laid down in the assessment policy. There is often an assessment policy at the institutional level and an assessment policy at the degree programme level. The assessment policy pays attention to the assessment organisation. In the assessment organisation, lecturers, board of examiners, assessment committee, management and support staff work together in a targeted and role-based manner to achieve the desired assessment quality on all assessment entities. The assessment entity assessment literacy considers the specific expertise that all these actors – within their own role – must have in order to achieve the quality of the assessment entities.",
+          "The design choices made within the entities are inextricably linked to the vision of education. The vision on assessment is part of this. By making the vision on assessment an integral part of the vision on education, it is ensured that assessment becomes part of the educational concept and that assessment literacy is experienced as part of teacher competence."
+        ]
+      },
+      "elements": {
+        "title": "Elements",
+        "text": "Three elements can be distinguished within each assessment entity. These are the elements quality criteria, design and quality assurance. The first element, quality criteria, concerns the question of what information is used to achieve and establish the quality of the assessment entities. The second element, design, focuses on the question of how the development and deployment of the five assessment entities are achieved. The third element, quality assurance, focuses on the way in which the quality assurance of the assessment entities is organised. Structural attention to these three elements ensures that work is done from the PDCA cycle."
+      },
+      "phases": {
+        "title": "Development phases",
+        "text": [
+          "A team of a degree programme can develop the quality of each assessment entity. Four development phases are distinguished: the activity-oriented phase, the process-oriented phase, the system-oriented phase and the chain-oriented phase. Characteristic aspects within these phases are a development in the way in which all those involved are deployed (from individual actions to actions involving all relevant partners), a development in long-term thinking (from ad hoc to a long-term strategy) and a development in the integration of processes and activities in the educational process (from stand-alone activities to activities that are consciously carried out in conjunction within ongoing processes). In the web, these phases of development are symbolized as boxes. The inner ring is the activity-oriented phase, the outer ring the chain-oriented phase. This allows a degree programme to climb outwards, as it were: the further the degree programme climbs, the more grip there is on working sustainably on quality from the vision of education.",
+          "For each assessment entity, a short description is available for each development phase about how the assessment entity is filled in during that phase. To make this description visible, move your mouse over these parts of the Assessment Web."
+        ]
+      },
+      "explanation": {
+        "readMore": "Are you looking for more explanation about the Assessment Web, the assessment entities, elements and development phases? ",
+        "link": "Then visit this website."
+      },
+      "startScan": {
+        "title": "Start the Scan",
+        "text": "If you want to run the Assessment Web Scan, make sure you can work with your team at the same time. Completing the scan, if you do that as a team, takes at least an hour. You can also choose to first have the scan completed individually, then discuss this in the team and complete the scan again together. Once you have clicked 'start', an introduction page will first open on which the preparation and execution of the scan are explained in more detail. Then you can start the scan. For each assessment entity and then per element (quality criteria, design and assurance), you are asked to choose a place in the Assessment Web. You fill in both the current position and your ambition. You have the opportunity to give an explanation of this. At the end of the scan, the result will be displayed and you will have the option to download the result.",
+        "link": "Start the Assessment Web Scan"
+      },
+      "customWeb": {
+        "title": "Do you only need a completed Assessment Web?",
+        "text": "You already know what phase the various assessment entities are in in your degree programme and where your ambition lies, for example because you have already used this scan or another tool. And all you need is a completed Assessment Web. Then click below.",
+        "link": "Fill in the Assessment Web yourself"
+      },
+      "developers": {
+        "title": "Developers",
+        "text": "The Assessment Web was developed by the research centre Contemporary Assessment and Decision Making. The research centre is part of the research team Teacher Qualities of the School of  Education of the HAN University of Applied Sciences. This Assessment-Web Scan was created in collaboration with B302 and with the help of a subsidy from the Dutch ‘Versnellingsplan Onderwijsinnovatie met ICT'."
+      },
+      "colophon": {
+        "title": "More information?",
+        "subTitle": "Then contact us!",
+        "roles": {
+          "lecturer": "Lecturer",
+          "researcher": "Researcher",
+          "educator": "Educator/Trainer/Advisor"
+        },
+        "academy": "Academy of Education"
+      }
+    },
+    "scan": {
+      "title": "Assessment Web Scan",
+      "introduction": {
+        "title": "Get started",
+        "preparation": {
+          "title": "The preparation",
+          "text": "You are going to fill in the Assessment Web Scan. You can do this alone, or with your team. In both cases, we recommend that everyone who is going to complete the scan familiarizes themselves with the entities of the assessment web prior to completing the scan. This can be done, for example, via the project page of the Research Group for Contemporary Judgment and Decision Makring (in Dutch). Here you will also find various downloads, such as the manual for the conversation tool/scan. In addition, we recommend that you collect and read various assessment documents from your own degree programme (e.g. assessment plan, assessment programme, assessment, etc.). Make sure you have these at hand while completing the scan."
+        },
+        "individual": {
+          "title": "Procedure – (individual) completion of scan",
+          "text": [
+            "The scan consists of 5 tabs, the assessment entities. You are always asked to tick 2 blocks. In the first column you are asked to choose the description that comes closest to the current situation, in the second column of the desired situation in 2 years. It is important to realize that these are general descriptions that help to conduct a dialogue about what is there now, and what should ideally be there. The question is therefore always: in which description do you recognize your degree programme the most? Or in other words: which description fits best?",
+            "If you have made a choice in both columns, you can explain your choice in the 'explain your answer' boxes. These texts will be included in the pdf that you can download afterwards.",
+            "You give an estimate three times per entity. You do this successively for the elements 'criteria', 'design' and 'assurance'. If you click on 'next question' after filling in the explanation, you will automatically be taken to the next element. The dots at the bottom of the screen show how many questions you still have to fill in per entity.",
+            "As soon as you have entered the answers for the three elements per entity, the 'next question' button will automatically take you to the next assessment entity. Via the 'previous question' button you can always go back to a previously given answer.",
+            "Of course, you can choose not to fill in all entities. In this case, click the tab (with the name of the assessment entity).",
+            "By clicking on 'to results' (this button is visible for each entity as soon as all three elements have been entered) you will be taken to the results page. You will find a completed web there twice. The first web visually shows what the current phase of development is for each assessment entity, the second web makes visible what the desired situation is. The completed explanations can be found under the web. Entities that are not (fully) filled in are not included in the results.",
+            "The images and explanations can be downloaded by clicking on the 'download results' button at the bottom of the results page. An advice to further develop from the current situation can be downloaded by clicking on 'download advice'."
+          ]
+        },
+        "team": {
+          "title": "Fill in as a team",
+          "text": "If you want to complete the scan together with colleagues, there are several ways you can do this. This of course depends on the goal you have in mind. For example, you can choose to discuss each question together and give a joint answer based on consensus per question. It is also possible to have everyone fill in the questions individually first, and discuss the similarities and differences together based on the results."
+        }
+      },
+      "position": {
+        "name": "Position",
+        "question": "In which description do you recognize your degree course the most?"
+      },
+      "ambition": {
+        "name": "Ambition",
+        "question": "Which description best suits your degree course in 2 years?"
+      },
+      "optionEmpty": "Choose at least 1 option for position and ambition",
+      "explain": "Explanation",
+      "answer": "Answer",
+      "comment": "Explain your answer",
+      "backToIntroduction": "Back to the introduction",
+      "nextQuestion": "Next question",
+      "previousQuestion": "Previous question",
+      "submit": "To results"
+    },
+    "result": {
+      "title": "Results",
+      "explanation": [
+        "On this page you can see the results of the Assessment Web Scan you have completed. In the left column you can see the current position of each assessment entity and in the right column your ambition per assessment entity. The results are depicted both in the assessment web and described in the text below. The text for the position describes the phase in which the assessment entity is in the current situation and the text for the ambition where your ambition lies. You will also find your choices there, so the statements you have chosen, and possibly the explanation you have given.",
+        "The result indicates the phase in which your degree programme is generally for the assessment entity in question. In concrete terms, this means that at least one of the elements (quality criteria, design or quality assurance), but possibly all three of these elements, are in this phase of development. The same applies to the ambition. The phase indicates where your ambition lies overall for the relevant assessment entity. In concrete terms, your ambition for one or more elements is in that phase.",
+        "At the bottom of the page, you have three options. You can download the results for further use. This download contains the same images and text as this page. You can also download an advice. For each element, the advice briefly outlines what characterises this element in the phase in which your degree programme is and what risks this potentially entails for the quality of the assessment entity in question. It also identifies a number of concrete actions that may be helpful in taking a development step towards the next phase. The third option is to reset the results. The results are remembered on the device on which the scan is completed. If you want to complete a new scan, reset the results first. Make sure that, if desired, you first download the results and the advice.",
+        "Good luck and have fun working on the quality of assessment!"
+      ],
+      "notFilledIn": "Not filled in",
+      "comment": {
+        "position": "Position explanation",
+        "ambition": "Ambition explanation"
+      },
+      "download": {
+        "results": "Download results",
+        "advice": "Download advice"
+      },
+      "reset": "Reset scan",
+      "page": "Page",
+      "nextPhase": {
+        "title": "On the way to the {{phase}}",
+        "text": "To take the step to the {{phase}}, the following actions can be considered:"
+      },
+      "endPhase": {
+        "title": "Development",
+        "text": "Your degree programme is currently in the {{phase}} for this entity. It is of course important to continue to pay attention to the quality of assessment. This entity may already be in the {{phase}}, but this maybe does not (yet) apply to one or more other assessment entities. You can then choose to give it more priority now. Together, stay aware that assessment entities are interrelated, as the assessment web shows. Choices in another assessment entity can therefore also affect this assessment entity."
+      }
+    },
+    "customWeb": {
+      "title": "Custom Assessment Web",
+      "text": "On this page you can fill in the Assessment Web yourself. For example, because you have already used this scan or the Conversation Tool Assessment Web. You will have already determined the current position and your ambition together. If you click on the relevant phase for an assessment entity, this phase and the previous phases will be coloured. You can then download this completed Assessment Web.",
+      "download": "Download Assessment Web",
+      "reset": "Reset Assessment Web"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "text": "The page you are looking for does not exist.",
+      "back": "Back to homepage"
+    }
+  },
+  "entities": [
+    {
+      "name": "Assessment (tasks)",
+      "description": "Assessments are (learning) activities/measurement instruments used to establish whether the intended learning outcomes have been achieved (Joosten-ten Brinke & Draaier, 2015). The quality of the assessment as a whole also includes the design of the assessment models and instructions for students and assessors. The assessment tasks are the items, questions or assignments within an assessment whereby students are challenged to demonstrate their knowledge and skills (Draaier & Joosten-ten Brinke, 2015).",
+      "elements": [
+        {
+          "phases": [
+            {
+              "description": "Teachers develop assessments as they see fit: they use their own quality criteria."
+            },
+            {
+              "description": "When designing assessments, teachers use quality criteria that are based on the experiences of experienced assessment developers."
+            },
+            {
+              "description": "Teachers' quality criteria when developing assessments are regularly adjusted based on current (scientific) insights."
+            },
+            {
+              "description": "The quality criteria used in the design of both the assessments and the learning and assessment objectives are discussed with chain partners, for example the professional field."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "Teachers often design the assessments on their own and shortly before administering the assessment."
+            },
+            {
+              "description": "Teachers develop assessments using an assessments cycle or design process. The assessments, which are developed during the teaching period, are made together with colleagues."
+            },
+            {
+              "description": "The assessments, developed prior to the teaching, are appropriate for the learning outcomes and fit in with earlier education."
+            },
+            {
+              "description": "The assessments are developed prior to the teaching period. These assessments match not only the study programme that the student follows within the degree  course, but also what is learned in the workplace."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The quality of the assessments is evaluated only when there is reason to do so."
+            },
+            {
+              "description": "The quality of the assessments is regularly evaluated by the teachers involved. The results are not necessarily discussed with colleagues or students but are used to improve their own assessments."
+            },
+            {
+              "description": "The quality of assessments is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+            },
+            {
+              "description": "Assessments are structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "description": "Teachers develop assessments as they see fit: they use their own quality criteria, often design the assessments on their own and shortly before administering the assessment. The quality of the assessments is evaluated only when there is reason to do so.",
+          "result": {
+            "position": "For the entity assessment (tasks), your degree programme is in the activity-oriented phase. That means that teachers develop assessments as they see fit: they use their own quality criteria, often design the assessments on their own and shortly before administering the assessment. The quality of the assessments is evaluated only when there is reason to do so.",
+            "ambition": "Your ambition for the entity assessment (tasks) is the activity-oriented phase. That means that teachers develop assessments as they see fit: they use their own quality criteria, often design the assessments on their own and shortly before administering the assessment. The quality of the assessments is evaluated only when there is reason to do so."
+          },
+          "advice": {
+            "introduction": "Your degree programme is generally in the activity-oriented phase for the assessment entity assessments (taks). In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. Below, we briefly outline what characterises this element in the activity-oriented phase and what risks this potentially entails for the quality of assessment (tasks). In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the process-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that no quality criteria have yet been formulated. Or that different images arise about this among colleagues in the training. However, these quality criteria – and in particular a shared vision of them – are essential because they are the basis for designing assessment (tasks) and evaluating their quality. Quality criteria for assessment (tasks) include criteria such as validity, reliability, objectivity, discriminatory capacity, feasibility, efficiency and acceptance (Joosten-ten Brinke & Draaijer, 2014 and Draaijer & Joosten-ten Brinke, 2014).",
+                  "The risk of the activity-oriented development phase is that the quality of the assessment (tasks) depends on the person who designs them. Because there are no joint agreements about the quality that assessment (tasks) must meet, the teachers may have different ideas about quality. As a result, students are presented with assessments of varying quality. After all, the quality of the assessment in this case depends on the teacher who designs the assessment. Moreover, it is not possible to say with certainty that one's own quality criteria are in line with the vision on assessment of the degree programme or with organisational preconditions within the degree programme. This can lead to assessments not being appropriate to the degree programme context or not being in line with organisational and practical agreements and procedures within the degree programme."
+                ]
+              },
+              {
+                "text": [
+                  "The activity-oriented development phase is also characterized by the way in which colleagues from the degree program are involved in the development of the assessment (tasks): colleagues often carry out stand-alone activities on an ad-hoc basis. The professional field is hardly involved in this, nor are all relevant partners from the degree programme, such as students, naturally involved. Usually, no concrete agreements have been made within the degree programme about the development process of assessment (tasks).",
+                  "The risk of this is that it can lead to (a lot of) uncertainty among students: every teacher assesses in their own way, assessments may look different – even with the same form of assessment – and the assessments may be of varying quality. In addition, in the activity-oriented phase, assessment (tasks) are often developed just before the assessment is taken. The risk of this is that the assessment agency may receive assessments too late, causing them to experience unnecessary pressure when making and distributing the assessments. Due to the late development, it is also possible that there are carelessnesses in the assessment because there was no time left to look at the assessment with at least 2 teachers. In this case, there is insufficient time in the assessment development to develop joint assessment and education, so that the connection between the learning outcomes (education) and assessment objectives (assessment) (constructive alignment) cannot be properly implemented."
+                ]
+              },
+              {
+                "text": [
+                  "In the activity-oriented phase, the quality of assessment (tasks) is usually only evaluated incidentally. As a result, there is a possibility that assessments of insufficient quality will be taken and that these assessments will be taken for several years without quality improvement."
+                ]
+              }
+            ],
+            "actions": [
+              "Formulate concrete quality criteria for assessment (tasks). Include these quality criteria in the assessment policy plan. Share the criteria with all teachers responsible for designing assessments. If teachers know which quality criteria an assessment must meet, a basic quality of the assessments can be achieved.",
+              "Make agreements within the teaching team about the steps that are taken in developing assessments. This allows teachers to know which steps need to be taken when taking an exam and assessment tasks. If these steps are actually taken by everyone, this will lead to unambiguity between assessments and a basic quality of assessments can be achieved.",
+              "Make agreements within the education team about planning when developing assessments. Develop assessment matrices prior to education, and develop concrete assessment questions as soon as possible. This creates a logical connection between the assessment objectives, the education and the assessment questions, there is sufficient time to give substance to the four-eyes principle if necessary, and the assessments are available in time for the assessment.",
+              "Make agreements within the education team about the evaluation of assessments. Use the quality criteria that have been established as a basis for conducting the evaluation. Put the evaluation of assessments on the agenda of the teacher meetings, so that the findings from the evaluations are regularly shared within the team."
+            ]
+          }
+        },
+        {
+          "description": "Teachers develop assessments using an assessments cycle or design process and use quality criteria that are based on the experiences of experienced assessment developers. The assessments, which are developed during the teaching period, are made together with colleagues. The quality of the assessments is regularly evaluated by the teachers involved. The results are not necessarily discussed with colleagues or students but are used to improve their own assessments.",
+          "result": {
+            "position": "For the entity assessment (tasks), your degree programme is in the process-oriented phase. That means that teachers develop assessments using an assessments cycle or design process and use quality criteria that are based on the experiences of experienced assessment developers. The assessments, which are developed during the teaching period, are made together with colleagues. The quality of the assessments is regularly evaluated by the teachers involved. The results are not necessarily discussed with colleagues or students but are used to improve their own assessments.",
+            "ambition": "Your ambition for the entity assessment (tasks) is the process-oriented phase. That means that teachers develop assessments using an assessments cycle or design process and use quality criteria that are based on the experiences of experienced assessment developers. The assessments, which are developed during the teaching period, are made together with colleagues. The quality of the assessments is regularly evaluated by the teachers involved. The results are not necessarily discussed with colleagues or students but are used to improve their own assessments."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the process-oriented phase for the assessment entity assessment (tasks). In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, we briefly outline below what is characteristic of this element in the process-oriented phase and what risks this potentially entails for the quality of the assessments (tasks). In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the system-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of these criteria is often based on the experiences of relevant actors in the degree programme. However, it is not possible to say with certainty that the established quality criteria are in line with the vision on assessment of the degree programme or with organisational preconditions within the degree programme. This may result in assessments that have been developed entirely in accordance with the quality criteria not being appropriate to the degree programme context or not being in line with organisational and practical agreements and procedures within the degree programme."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the assessment cycle and the design process are often followed when developing assessments. If the steps in the development process (for example, the assessment cycle and the design process) are not followed by all teachers, this can lead to a lot of uncertainty among students. Every teacher assesses in his or her own way, assessments may look different – even with the same form of assessment – and the assessments may be of varying quality.",
+                  "Assessments (tasks) are usually developed during the implementation of the unit of study. As a result, it is possible that there are inaccuracies in the assessment because there was no time left to look at the assessment with at least 2 teachers. There is then insufficient time in the assessment development to develop joint assessment and education, so that it may not be possible to optimally implement the connection between the learning outcomes (education) and assessment objectives (assessment) (constructive alignment)."
+                ]
+              },
+              {
+                "text": [
+                  "In the process-oriented phase, evaluation takes place incidentally. The result of the evaluation will be discussed with relevant actors in the team and adjustments will be made. The evaluation of assessments therefore does not yet take place regularly, teachers and/or the assessment committee only look at assessments if there seems to be reason to do so. As a result, there is no overarching view of the quality of the assessments within the entire degree programme. Nor is it self-evident that the evaluation will take place on the basis of agreed quality criteria. It is therefore possible that the assessments are of varying quality, but all receive the stamp 'sufficient quality'."
+                ]
+              }
+            ],
+            "actions": [
+              "Base the quality criteria for assessments on experiences of experienced assessment developers within your own degree programme and assess the quality criteria against the degree programme's vision on education. In addition, make sure that the established quality criteria are feasible and appropriate within the context of the degree programme.",
+              "When developing assessments and assessment tasks, always make conscious use of an assessment cycle and a design process. In that case, assessments are developed according to a predetermined procedure in which the established quality criteria have been given a place. As a result, all assessments have an assessment matrix (if relevant), an instruction for the students and an assessment model.",
+              "Always develop the assessments together with colleagues during or prior to the implementation of the study unit. Make sure the assessments are available on time. Also make sure that there is time in the assessment development to develop assessments together (4-eyes principle) and to deliver the assessments to the assessment agency on time.",
+              "Make agreements about the regularity with which the quality of assessments is evaluated by the teachers who develop the assessments and/or the assessment committee. This gives the assessment developers some insight into the quality of the assessments and can adjust the assessments based on the evaluation results."
+            ]
+          }
+        },
+        {
+          "description": "Teachers' quality criteria when developing assessments are regularly adjusted based on current (scientific) insights. The assessments, developed prior to the teaching, are appropriate for the learning outcomes and fit in with earlier education. The quality of assessments is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+          "result": {
+            "position": "For the entity assessment (tasks), your degree programme is in the system-oriented phase. That means that teachers’ quality criteria when developing assessments are regularly adjusted based on current (scientific) insights. The assessments, developed prior to the teaching, are appropriate for the learning outcomes and fit in with earlier education. The quality of assessments is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+            "ambition": "Your ambition for the entity assessment (tasks) is the system-oriented phase. That means that teachers’ quality criteria when developing assessments are regularly adjusted based on current (scientific) insights. The assessments, developed prior to the teaching, are appropriate for the learning outcomes and fit in with earlier education. The quality of assessments is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the system-oriented phase for the assessment entity assessment (tasks). In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what is characteristic of this element in the system-oriented phase and what risks this potentially entails for the quality of the assessments (tasks). In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria that have been established at the level of the degree programme are used. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme. The quality criteria on the basis of which assessments are constructed may be outdated. And it is possible that in this phase the students' opinion about the quality of assessments will not be taken into account in agreements about achieving quality."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the assessment cycle and the design process are fully completed by the assessment constructors within the degree programme. The development process of assessments has a logical place within all educational processes within the degree programme. However, it is not self-evident that it will be checked whether the assessment is in line with previous education and education that will follow. It is therefore possible that there are high-quality assessments (technical) that do not fit well within the assessment programme.",
+                  "Assessment (tasks) are always developed prior to the study unit. There is sometimes insufficient time in the assessment development to develop joint assessment and education, so that it may not be possible to optimally implement the connection between the learning outcomes (education) and assessment objectives (assessment) (constructive alignment)."
+                ]
+              },
+              {
+                "text": [
+                  "In the system-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation is discussed with all relevant actors in the team and adjustments are made. It is not always self-evident that the evaluation takes place on the basis of agreed quality criteria. It is therefore possible that the assessments are of varying quality, but all receive the stamp 'sufficient quality'."
+                ]
+              }
+            ],
+            "actions": [
+              "Adjust the established quality criteria on the basis of new (scientific) insights and on the basis of student evaluations. Discuss the quality of assessments with each other regularly and take a critical look at new developments in the field of assessment quality.",
+              "When developing assessments, ensure coordination with lecturers who – within the teaching and assessment programme – provide education prior to and following the education for which the assessment is being developed. Assessments are not only designed according to a cycle, they also fit in well with previously given education and the education that will follow. The assessments are then appropriate to the intended learning outcomes.",
+              "Develop the assessments prior to education based on the learning outcomes. Make sure that there is ample time in the assessment development to develop assessments and education together, so that the connection between the learning outcomes (education) and assessment objectives (assessment) (constructive alignment) can be properly implemented.",
+              "Evaluate the assessments as part of a quality cycle (PDCA) structurally and discuss the results of the assessment evaluations with colleagues, students or other relevant partners within the degree programme. Then there is a constant overview of the quality of the assessments within the degree programme: it is known which assessments are of good quality, but it is also known where the points for improvement are. Make sure that the assessment committee and/or lecturers who carry out the assessment evaluation know which criteria assessments must meet, and evaluate the assessments structurally. Regularly ask students about the quality of assessments (for example, after taking the assessment). The information that emerges from this can then be used to improve the quality of the assessments."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria used in the design of both the assessments and the learning and assessment objectives are discussed with chain partners, for example  the professional field. These assessments match not only the study programme that the student follows within the degree  course, but also what is learned in the workplace. Assessments are structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+          "result": {
+            "position": "For the entity assessment (tasks), your degree programme is in the chain-oriented phase.That means that the quality criteria used in the design of both the assessments and the learning and assessment objectives are discussed with chain partners, for example the professional field. These assessments match not only the study programme that the student follows within the degree course, but also what is learned in the workplace. Assessments are structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+            "ambition": "Your ambition for the entity assessment (tasks) is the chain-oriented phase.That means that the quality criteria used in the design of both the assessments and the learning and assessment objectives are discussed with chain partners, for example the professional field. These assessments match not only the study programme that the student follows within the degree course, but also what is learned in the workplace. Assessments are structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the chain-oriented phase for the assessment entity assessment (tasks). In concrete terms, this means that all the elements below are in this phase in terms of development. Below, we briefly outline what is characteristic of each element in the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme, chain partners, fellow institutions and/or external experts. Chain partners and/or external experts are involved in this."
+                ]
+              },
+              {
+                "text": [
+                  "During development, the assessment cycle and the design process are fully completed by the assessment constructors within the degree programme. Where relevant, chain partners, fellow institutions and/or experts are involved. Assessments (tasks) are always developed prior to the educational unit."
+                ]
+              },
+              {
+                "text": [
+                  "In the chain-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation will be discussed with all relevant actors in the degree programme and with chain partners and/or external experts, and adjustments will be made."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessment programme",
+      "description": "The assessment programme is an intentional and substantiated combination of assessment types that match the objectives and structure of a degree course (study programme) (Baartman & Van der Vleuten, 2015). It is about the apparent relationship between assessment and the assurance of the different functions of assessment.",
+      "elements": [
+        {
+          "phases": [
+            {
+              "description": "Within the degree course, it has not been determined which quality criteria the assessment programme should meet."
+            },
+            {
+              "description": "In the degree course quality criteria have been established for the assessment programme."
+            },
+            {
+              "description": "The quality criteria for developing the assessment programme are regularly adjusted based on new (scientific) insights."
+            },
+            {
+              "description": "The quality criteria used in the design of the assessment programma are discussed with chain partners, for example the professional field and are regularly adjusted based on current (scientific) insights."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "Every teacher develops his own assessments, but there is no overview of the coherence between the assessments. Therefore, it is impossible to establish with certainty that the assessments collectively cover the intended learning outcomes."
+            },
+            {
+              "description": "The intended learning outcomes form the basis for designing the assessment programme."
+            },
+            {
+              "description": "During development, attention is paid to both horizontal and vertical coherence between the assessments. There is also consultation on the most suitable assessment design, assessment functions, and the number of assessments."
+            },
+            {
+              "description": "The structure of the assessment programme is discussed and determined with chain partners, for example the professional field. Programme components that take place in the workplace are coordinated with the professional field so that they are feasible and appropriate."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The quality of the assessment programme is evaluated only when there is reason to do so."
+            },
+            {
+              "description": "With some regularity, the assessment programme's coverage and feasibility are evaluated. The results are not necessarily discussed with all colleagues or students but are used to improve the assessment programme."
+            },
+            {
+              "description": "The quality of the assessment programme is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+            },
+            {
+              "description": "The assessment programme is structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "description": "Within the degree course, it has not been determined which quality criteria the assessment programme should meet. Every teacher develops his own assessments, but there is no overview of the coherence between the assessments. Therefore, it is impossible to establish with certainty that the assessments collectively cover the intended learning outcomes.",
+          "result": {
+            "position": "For the entity assessment programme, your degree programme is in the activity-oriented phase. That means that within the degree course, it has not been determined which quality criteria the assessment programme should meet. Every teacher develops his own assessments, but there is no overview of the coherence between the assessments. Therefore, it is impossible to establish with certainty that the assessments collectively cover the intended learning outcomes.",
+            "ambition": "Your ambition for the entity assessment programme is the activity-oriented phase. That means that within the degree course, it has not been determined which quality criteria the assessment programme should meet. Every teacher develops his own assessments, but there is no overview of the coherence between the assessments. Therefore, it is impossible to establish with certainty that the assessments collectively cover the intended learning outcomes."
+          },
+          "advice": {
+            "introduction": "Your degree programme is generally in the activity-oriented phase for the assessment entity assessment programme. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the activity-oriented phase and what risks this potentially entails for the quality of the assessment programme. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the process-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that no quality criteria have yet been formulated. Or that different images arise about this among colleagues in the team. However, these quality criteria – and in particular a shared vision on them – are essential because they are the basis for designing the assessment programme and evaluating its quality. Quality criteria for the assessment programme include criteria such as fairness, authenticity, comparability, feasibility, transparency, suitability for educational objectives and time & costs (Baartman & Van der Vleuten, 2014).",
+                  "The risk of the activity-oriented development phase is that the board of examiners, assessment committee and curriculum committee do not have a common picture of the quality criteria that must be set for an assessment programme. As a result, it may be unclear whether the degree programme's own quality criteria are in line with the vision on assessment of the degree programme or with organisational preconditions within the degree programme. This can lead to the assessments in the degree programme not being logically connected, that forms of assessment are not appropriate to the degree programme context or the intended learning outcomes, or that the intended learning outcomes are not covered."
+                ]
+              },
+              {
+                "text": [
+                  "The activity-oriented development phase is also characterised by the way in which colleagues from the degree programme are involved in the development of the assessment programme: lecturers often develop assessments without being aware of the whole of the assessments within the degree programme. The professional field is hardly involved in the choice of assessment methods, nor are all relevant partners from the degree programme, such as students, naturally involved.",
+                  "The risk of this is that there is no overview available showing how many assessments are taken, what kind of assessments these are and what intended learning outcomes are central to them. It is therefore not possible to determine with certainty that the student will be trained to become a competent professional on the basis of the education and assessment programme. Moreover, in this phase of development, it is often common for each teacher to develop their own assessments. Consultation about the relationship between assessments – for example, about content or increasing complexity in terms of assessment form – does not take place as a matter of course. As a result, it is not possible to determine with certainty that there is a coherent assessment programme."
+                ]
+              },
+              {
+                "text": [
+                  "In the activity-oriented phase, the quality of the assessment programme is usually only evaluated incidentally. It is therefore unclear whether all intended learning outcomes are covered and whether there is a logically coherent set of assessments."
+                ]
+              }
+            ],
+            "actions": [
+              "Formulate concrete quality criteria for the assessment programme. Include these quality criteria in the assessment policy plan. Share the criteria with the assessment committees, curriculum committee and board of examiners. When the members of these committees know which quality criteria the assessment programme must meet, a basic quality of the assessment programme can be realised.",
+              "Make an overview of all assessments within the curriculum committee. Share this overview within the whole team. By making an overview, it becomes clear how many assessments are taken within the entire degree programme and which assessment forms are used.",
+              "Discuss the assessment programme, and more explicitly the relationship between the assessments and the coverage of the intended learning outcomes, within the teaching team. Naming the relationships between the assessments and the relationships of individual assessments with the intended learning outcomes ensures that assessments are seen as part of a larger whole.",
+              "Make agreements within the teaching team about the evaluation of the assessment programme. Use the quality criteria that have been established as a basis for conducting the evaluation. Put the evaluation of the assessment programme on the agenda of the lecturer meetings, so that the findings from the evaluations are regularly shared within the team."
+            ]
+          }
+        },
+        {
+          "description": "In the degree course quality criteria have been established for the assessment programme. The intended learning outcomes form the basis for designing the assessment programme. With some regularity, the assessment programme's coverage and feasibility are evaluated. The results are not necessarily discussed with all colleagues or students but are used to improve the assessment programme.",
+          "result": {
+            "position": "For the entity assessment programme, your degree programme is in the process-oriented phase. That means that in the degree course quality criteria have been established for the assessment programme. The intended learning outcomes form the basis for designing the assessment programme. With some regularity, the assessment programme’s coverage and feasibility are evaluated. The results are not necessarily discussed with all colleagues or students but are used to improve the assessment programme.",
+            "ambition": "Your ambition for the entity assessment programme is the process-oriented phase. That means that in the degree course quality criteria have been established for the assessment programme. The intended learning outcomes form the basis for designing the assessment programme. With some regularity, the assessment programme’s coverage and feasibility are evaluated. The results are not necessarily discussed with all colleagues or students but are used to improve the assessment programme."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the process-oriented phase for the assessment entity assessment programme. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the process-oriented phase and what risks this potentially entails for the quality of the assessment programme. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the system-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of these criteria is often based on the experiences of relevant actors in the degree programme. However, it is not possible to say with certainty that the established quality criteria are in line with the vision of assessment of the degree programme or with organisational preconditions within the degree programme. This can lead to the assessments in the degree programme not being logically connected, that forms of assessment are not appropriate to the degree programme context or the intended learning outcomes, or that the intended learning outcomes are not covered."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the assessment programme is often designed horizontally. It is clear how many assessments are taken and what kind of assessments these are. However, it is sometimes still unclear which intended learning outcomes are central to this. As a result, it is not possible to determine with certainty whether the student will be trained to become a competent professional on the basis of the education and assessment programme.",
+                  "During the design process, there has sometimes been too little coordination about the feasibility of the assessment programme. Although the relationship between assessments is examined, it does not look at the feasibility. As a result, parts of the assessment programme may not be feasible for students or for lecturers. It is also possible that the programme is theoretically feasible for students and lecturers, but not appropriate and feasible within the assessment organisation."
+                ]
+              },
+              {
+                "text": [
+                  "In the process-oriented phase, evaluation takes place incidentally. The result of the evaluation will be discussed with relevant actors in the training and adjustments will be made. The evaluation of the assessment programme therefore does not take place regularly, those responsible only look at the whole of the assessments if there seems to be reason to do so. As a result, there is no overarching view of the degree of coherence between and the continuous coverage of the intended learning outcomes by the assessments. Nor is it self-evident that the evaluation will take place on the basis of agreed quality criteria."
+                ]
+              }
+            ],
+            "actions": [
+              "Base the quality criteria for the assessment programme on the experiences of experienced developers within your own degree programme and assess the quality criteria against the degree programme's vision on education. In addition, make sure that the established quality criteria are feasible and appropriate within the context of the degree programme.",
+              "Take the intended learning outcomes as a starting point when designing the assessment programme. If the assessment programme covers the learning outcomes, this means that the student can demonstrate that he or she is a competent professional by successfully completing the education and assessment programme.",
+              "Jointly examine in the team during or after completion of the development of the assessment programme whether the programme is feasible. In doing so, consider both the feasibility for the students (so that, for example, students can be prevented from having to make 6 portfolios in one period), and the feasibility for the lecturers and those involved in the assessment process (so that, for example, 4 partial assessments do not have to be taken and marked in 8 weeks).",
+              "Make agreements about the regularity with which the quality of assessment programmes is evaluated by the actors within that degree programme who are responsible for the assessment programme to cover the intended learning outcomes (e.g. Board of examiners, Curriculum Board or Assessment Board). This provides some insight into the quality of the assessment programme. Based on the results of the evaluations, advice can be given to, for example, assessment and educational developers to improve the coherence between the assessments or the way in which the assessments lead to the intended learning outcomes."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria for developing the assessment programme are regularly adjusted based on new (scientific) insights. During development, attention is paid to both horizontal and vertical coherence between the assessments. There is also consultation on the most suitable assessment design, assessment functions, and the number of assessments. The quality of the assessment programme is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+          "result": {
+            "position": "For the entity assessment programme, your degree programme is in the system-oriented phase.That means that the quality criteria for developing the assessment programme are regularly adjusted based on new (scientific) insights. During development, attention is paid to both horizontal and vertical coherence between the assessments. There is also consultation on the most suitable assessment design, assessment functions, and the number of assessments. The quality of the assessment programme is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+            "ambition": "Your ambition for the entity assessment programme is the system-oriented phase.That means that the quality criteria for developing the assessment programme are regularly adjusted based on new (scientific) insights. During development, attention is paid to both horizontal and vertical coherence between the assessments. There is also consultation on the most suitable assessment design, assessment functions, and the number of assessments. The quality of the assessment programme is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the system-oriented phase for the assessment entity assessment programme. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what is characteristic of this element in the system-oriented phase and what risks this potentially entails for the quality of the assessment programme. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria that have been established at the level of the degree programme are used. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme. The quality criteria on the basis of which assessments are constructed may be outdated. And it is possible that in this phase the students' opinion about the assessment programme will not be taken into account in agreements about the realisation of quality."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the assessment programme is designed – horizontally and vertically – on the basis of the degree programme qualifications/intended learning outcomes and their elaboration in levels. It can be established with certainty that the student has mastered the intended learning outcomes at the end of the degree programme, but it is unclear whether there is a logical constructive line in the development of this within the degree programme. It cannot be established with certainty that the place of education within the entire educational and assessment programme (vertical programme) is taken into account when designing the assessments within study units (horizontal programme).",
+                  "During the design, coordination took place within the degree programme about the balance between the feasibility of the programme and the number of assessments. Although the feasibility of the assessment programme is discussed, the development of the programme does not always pay sufficient attention to the choice of assessment methods. As a result, it is possible that assessment forms are used that do not fit seamlessly with the professional competence to be demonstrated (for example, having a literature search carried out to demonstrate professional competence in the field of automotive technology). In addition, a lack of attention to the functions of assessments may mean that only assessment with a summative function takes place and no attention is paid to formative assessment that can give direction to the student's development."
+                ]
+              },
+              {
+                "text": [
+                  "In the system-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation is discussed with all relevant actors in the team and adjustments are made. It is not self-evident that the evaluation takes place on the basis of agreed quality criteria. It is unclear whether there is a coherent and logically structured assessment programme both within study units (horizontally) and within the entire degree programme (vertically)."
+                ]
+              }
+            ],
+            "actions": [
+              "Adjust the established quality criteria on the basis of new (scientific) insights and on the basis of student evaluations. Discuss the quality of the assessment programme regularly and take a critical look together at new developments in the field of assessment quality.",
+              "When developing the assessment programme, consciously focus on coherence and structure within both the horizontal and the vertical assessment programme. This ensures that the teaching and assessment programme are in balance: when designing the assessments within study units (horizontal programme), the place of education within the entire teaching and assessment programme (vertical programme) is taken into account. As a result, there is a constructive line in the development of the intended learning outcomes.",
+              "When designing the assessment programme, ensure that there is coordination about the most suitable assessment forms and the functions of these assessments. In addition to the feasibility of the programme, you also discuss coordination between education and assessments. Jointly think about which assessment forms are most suitable in view of the professional competence to be demonstrated and about the learning function of assessments (balance between the use of assessments with a summative function and the use of formative assessment).",
+              "Structurally evaluate the horizontal and vertical assessment programme as part of a quality cycle (PDCA) and discuss the results of these evaluations with colleagues, students or other relevant partners within the degree programme. Then there is a constant view of the coherence between the assessments, the structure of the assessment programme and the coverage of the intended learning outcomes, both within study units (horizontal) and for the entire degree programme (vertical). It is therefore known where any points for improvement are. Make sure that the actors carrying out the evaluation know which criteria an assessment programme must meet, and evaluate the programme structurally. Regularly ask students about the quality of and the relationship between assessment and education (for example after taking the assessment), the information that emerges from this can then be used to improve the assessment programme."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria and the structure of the assessment programme are discussed with chain partners, for example  the professional field. Programme components that take place in the workplace are coordinated with the professional field so that they are feasible and appropriate. The assessment programme is structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as  the professional field.",
+          "result": {
+            "position": "For the entity assessment programme, your degree programme is in the chain-oriented phase. That means that the quality criteria and the structure of the assessment programme are discussed with chain partners, for example the professional field. Programme components that take place in the workplace are coordinated with the professional field so that they are feasible and appropriate. The assessment programme is structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+            "ambition": "Your ambition for the entity assessment programme is the chain-oriented phase. That means that the quality criteria and the structure of the assessment programme are discussed with chain partners, for example the professional field. Programme components that take place in the workplace are coordinated with the professional field so that they are feasible and appropriate. The assessment programme is structurally evaluated on the basis of the quality criteria. The results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+          },
+          "advice": {
+            "introduction": "For the assessment entity assessment programme, your degree programme is in generall in the chain-oriented phase. In concrete terms, this means that all the elements below are in this phase in terms of development. Below, we briefly outline what is characteristic of each element in the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme, chain partners, fellow institutions and/or external experts. Chain partners and/or external experts are involved in this."
+                ]
+              },
+              {
+                "text": [
+                  "The assessment programme is designed – horizontally and vertically – on the basis of the degree programme qualifications/intended learning outcomes and their elaboration in levels. Where relevant, chain partners, fellow institutions and/or experts are involved. During the design, coordination took place within the degree programme about the balance between the feasibility of the assessment programme, the most suitable assessment methods, the functions of these assessments and the number of assessments. The feasibility of the components of the programme that take place in the workplace has been discussed with the chain partners."
+                ]
+              },
+              {
+                "text": [
+                  "In the chain-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation will be discussed with all relevant actors in the degree programme and with chain partners and/or external experts, and adjustments will be made."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessment policy",
+      "description": "Assessment policy refers to the entire range of substantive and procedural agreements concerning assessment (Bruijns & Kok, 2015). Several levels can be distinguished within the integral assessment policy, including the policy at the institutional level and the degree course level.",
+      "elements": [
+        {
+          "phases": [
+            {
+              "description": "Within the degree course, it has not been determined which quality requirements an assessment (policy) plan must meet."
+            },
+            {
+              "description": "Within the degree course, quality criteria have been established for the assessment (policy) plan."
+            },
+            {
+              "description": "The quality criteria used in developing the assessment (policy) plan are regularly adjusted based on current (scientific) insights."
+            },
+            {
+              "description": "The quality criteria set for the assessment (policy) plan are discussed with relevant internal and/or external partners and are in line with the national frameworks."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The policy plan is mainly a description of (separate) assessment processes. These are not yet (completely) in line with the vision on education."
+            },
+            {
+              "description": "The vision on education and the assessment framework of the institution form the basis for the policy plan. In addition to assessment processes, the policy plan includes interventions describing how the ambitions will be achieved."
+            },
+            {
+              "description": "Current (scientific) knowledge is used to develop processes and interventions. The policy plan, the vision on education and the assessment framework of the institution connect seamlessly."
+            },
+            {
+              "description": "The processes and interventions included in the policy plan are aimed at the long term. Intermediate goals have been set so that mid-term evaluation is possible."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The quality of the policy plan is only evaluated if there is reason to do so."
+            },
+            {
+              "description": "The quality, feasibility, and practicality of the policy plan are evaluated at regular intervals. The results are not automatically discussed with all colleagues or students, but are used to adjust the policy plan."
+            },
+            {
+              "description": "The policy plan is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree  course."
+            },
+            {
+              "description": "The policy plan is structurally evaluated based on the quality criteria, and the results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "description": "Within the degree course, it has not been determined which quality requirements an assessment (policy) plan must meet. The policy plan is mainly a description of (separate) assessment processes. These are not yet (completely) in line with the vision on education. The quality of the policy plan is only evaluated if there is reason to do so.",
+          "result": {
+            "position": "For the entity assessment policy, your degree programme is in the activity-oriented phase. That means that within the degree course, it has not been determined which quality requirements an assessment (policy) plan must meet. The policy plan is mainly a description of (separate) assessment processes. These are not yet (completely) in line with the vision on education. The quality of the policy plan is only evaluated if there is reason to do so.",
+            "ambition": "Your ambition for the entity assessment policy is the activity-oriented phase. That means that within the degree course, it has not been determined which quality requirements an assessment (policy) plan must meet. The policy plan is mainly a description of (separate) assessment processes. These are not yet (completely) in line with the vision on education. The quality of the policy plan is only evaluated if there is reason to do so."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the activity-oriented phase for the assessment entity assessment policy. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the activity-oriented phase and what risks this potentially entails for the quality of the assessment policy. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the process-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that no quality criteria have yet been formulated. Or that different images arise about this among colleagues in the team. However, these quality criteria – and in particular a shared vision on them – are essential because they are the basis for designing the assessment policy and evaluating its quality. Quality criteria for the assessment policy include criteria such as transparency, topicality, support, facilitation, affiliation and feasibility (Bruijns & Kok, 2014).",
+                  "The risk of the activity-oriented development phase is that the management, the assessment committee and the curriculum committee do not have a common understanding of the quality criteria that must be set for an assessment policy plan. As a result, it may be unclear whether the degree programma's own quality criteria are in line with the vision on assessment of the degree programme or with organisational preconditions within the degree programme. This may result in the assessment processes described in the policy not being known to the employees, not being up-to-date or not feasible."
+                ]
+              },
+              {
+                "text": [
+                  "The activity-oriented development phase is also characterised by the way in which colleagues from the degree programme are involved in the development of the assessment policy: if an assessment policy plan is available, a few colleagues have often taken the lead in writing it. It is not self-evident that the content of the assessment policy plan will be presented to relevant partners, such as lecturers in the degree programme, the professional field or students.",
+                  "For some degree programmes, there is no assessment policy plan available in the activity-oriented phase. The 'policy' itself often consists of a description of separate assessment processes that do not, or not entirely, match the vision on education. Procedures may have been agreed, but they do not necessarily form a coherent whole. Because these procedures are not always based on a common vision on assessment of the degree programme or of the institute (this vision forms the basis for the assessment policy), it is not self-evident that the procedures lead to sufficient quality of assessment.",
+                  "In the degree programmes where an assessment policy plan is available, it often only contains a description of assessment processes. Although the elaboration of these processes is well thought out, it is not based on analyses of possible bottlenecks or based on a long(er) term vision of assessment. It is not possible to determine with certainty whether the elaboration is in line with recent insights into assessment. Partly because of this, it is not possible to determine with certainty whether the assessment processes are of good quality and thus actually make a positive contribution to the development of the student."
+                ]
+              },
+              {
+                "text": [
+                  "In the activity-oriented phase, the quality of the assessment policy is usually only evaluated incidentally. It is therefore unclear whether all employees are aware of the content of the assessment policy plan."
+                ]
+              }
+            ],
+            "actions": [
+              "Formulate concrete quality criteria for the assessment policy plan. Include these criteria in the assessment policy plan. Share the criteria with management, board of examiners, assessment committee and curriculum committee. When the members of these committees know which quality criteria the assessment policy plan must meet, a basic quality of both the assessment policy plan and the implementation of the assessment processes described therein can be achieved.",
+              "When writing the assessment policy plan, explicitly take into account the vision on education and assessment and the organisational preconditions of the assessment organisation within which the assessment processes from the assessment policy plan must be carried out. This prevents assessment processes from being developed that are not appropriate or feasible.",
+              "Discuss 'the dot on the horizon' within the education team: what goals do you want to set as a degree programme to maintain and/or optimise the quality of assessment. Include the interventions to achieve these goals in the assessment policy plan.",
+              "Make agreements within the teaching team about the evaluation of the assessment policy. Look at both the quality of the assessment policy plan and the achievement of the set goals. Use the quality criteria that have been established as a basis for conducting the evaluation. Put the evaluation of the assessment policy on the agenda of the lecturer meetings, so that the findings from the evaluations are regularly shared within the team."
+            ]
+          }
+        },
+        {
+          "description": "Within the degree course, quality criteria have been established for the assessment (policy) plan. The vision on education and the assessment framework of the institution form the basis for the policy plan. In addition to assessment processes, the policy plan includes interventions describing how the ambitions will be achieved. The quality, feasibility, and practicality of the policy plan are evaluated at regular intervals. The results are not automatically discussed with all colleagues or students, but are used to adjust the policy plan.",
+          "result": {
+            "position": "For the entity assessment policy, your degree programme is in the process-oriented phase. That means that within the degree course, quality criteria have been established for the assessment (policy) plan. The vision on education and the assessment framework of the institution form the basis for the policy plan. In addition to assessment processes, the policy plan includes interventions describing how the ambitions will be achieved. The quality, feasibility, and practicality of the policy plan are evaluated at regular intervals. The results are not automatically discussed with all colleagues or students, but are used to adjust the policy plan.",
+            "ambition": "Your ambition for the entity assessment policy is the process-oriented phase. That means that within the degree course, quality criteria have been established for the assessment (policy) plan. The vision on education and the assessment framework of the institution form the basis for the policy plan. In addition to assessment processes, the policy plan includes interventions describing how the ambitions will be achieved. The quality, feasibility, and practicality of the policy plan are evaluated at regular intervals. The results are not automatically discussed with all colleagues or students, but are used to adjust the policy plan."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the process-oriented phase for the assessment entity assessment policy. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the process-oriented phase and what risks this potentially entails for the quality of the assessment policy. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the system-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of these criteria is often based on the experiences of relevant actors in the degree programme. However, it is not possible to say with certainty that the established quality criteria are in line with the vision on assessment of the degree programme or with organisational preconditions within the degree programme. This may result in the assessment processes described in the policy not being known to the employees, not being up-to-date or not feasible."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the design of the assessment policy is to some extent in line with the assessment policy framework at the institutional level. When designing the assessment policy, degree programme-specific aspects (such as organisational preconditions) are taken into account, but not yet sufficiently for the assessment policy framework established at the institutional level. As a result, the elaboration of concrete processes may not be in line with the institution's vision of assessment.",
+                  "The assessment policy describes interventions that have been determined on the basis of incidental analyses of possible bottlenecks. In concrete terms, this means that intervention may only be taken in the event of incidents, and that there will not be regular checks to see whether the other processes lead to the intended goals and the intended result."
+                ]
+              },
+              {
+                "text": [
+                  "In the process-oriented phase, evaluation takes place incidentally. The result of the evaluation will be discussed with relevant actors in the team and adjustments will be made. The evaluation of the assessment policy therefore does not take place regularly, those responsible only look at the plan if there seems to be reason to do so. As a result, it is unknown whether employees are aware of the content of the procedures described and whether they work according to these procedures in practice. This may have a negative effect on the quality of assessment."
+                ]
+              }
+            ],
+            "actions": [
+              "Base the quality criteria for the assessment policy on the experiences of users within your own degree programme and assess the quality criteria against the degree programme's vision on education. In addition, make sure that the established quality criteria are feasible and appropriate within the context of the degree programme.",
+              "Where possible, the design of the assessment policy of the degree programme is (even) more in line with the assessment policy framework of the institution. This will allow us to connect as much as possible to the institution's vision of assessment and to agreements regarding processes that have been laid down institution-wide.",
+              "Regularly assess the interventions and processes from the assessment policy for feasibility and usability.  Don't just let these analyses take place after incidents, but rather carry them out regularly. As a result, there is at least some insight into the quality of the implementation of the various interventions and processes described in the assessment policy.",
+              "Make agreements about the regularity in which the quality of the assessment policy is reviewed by the actors within the degree programme who are (partly) responsible for the implementation of the policy (e.g. management,  curriculum committee or review committee). Do not only plan an evaluation of the assessment policy when the term of the policy plan has expired. This provides more insight into the quality of the assessment policy. Based on the results of the evaluations, the assessment policy can be adjusted. Regularly evaluating the assessment policy reduces the possibility that employees deviate from the described and agreed procedures in practice, which can have a positive effect on the quality of assessment."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria used in developing the assessment (policy) plan are regularly adjusted based on current (scientific) insights. Current (scientific) knowledge is used to develop processes and interventions. The policy plan, the vision on education and the assessment framework of the institution connect seamlessly. The policy plan is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+          "result": {
+            "position": "For the entity assessment policy, your degree programme is in the system-oriented phase. That means that the quality criteria used in developing the assessment (policy) plan are regularly adjusted based on current (scientific) insights. Current (scientific) knowledge is used to develop processes and interventions. The policy plan, the vision on education and the assessment framework of the institution connect seamlessly. The policy plan is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree  course.",
+            "ambition": "Your ambition for the entity assessment policy is the system-oriented phase. That means that the quality criteria used in developing the assessment (policy) plan are regularly adjusted based on current (scientific) insights. Current (scientific) knowledge is used to develop processes and interventions. The policy plan, the vision on education and the assessment framework of the institution connect seamlessly. The policy plan is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the system-oriented phase for the assessment entity assessment policy. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the system-oriented phase and what risks this potentially entails for the quality of the assessment policy. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria that have been established at the level of the degree programme are used. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme. The quality criteria on the basis of which the assessment policy is drawn up may be outdated. It is also possible that the opinion of users of the assessment policy (employees who have to carry out the processes) and students (who are part of the processes) is not taken into account in agreements about achieving quality."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the design of the assessment policy is fully in line with the assessment policy framework. The assessment policy framework is therefore taken into account when designing the assessment policy, but degree programme-specific aspects such as organisational preconditions are sometimes considered to be of greater importance than aligning with all the points of attention in the framework.",
+                  "The assessment policy describes interventions that have been determined on the basis of structural analyses of possible bottlenecks. The practical consequences of this are well thought out and largely evidence-informed. If the interventions and procedures do not make use of experiences from other degree programmes or results from (scientific) research, this may allow processes to be set up that have been determined to be ineffective or less effective than other elaborations. This may have a negative effect on the quality of the interventions and the processes, both in terms of their elaboration and the result."
+                ]
+              },
+              {
+                "text": [
+                  "In the system-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation is discussed with all relevant actors in the team and adjustments are made. It is not self-evident that the evaluation takes place on the basis of agreed quality criteria."
+                ]
+              }
+            ],
+            "actions": [
+              "Adjust the established quality criteria on the basis of new (scientific) insights and on the basis of (student) evaluations. Discuss the quality of the assessment policy regularly and take a critical look at the feasibility of the plan together.",
+              "Ensure that the design of the assessment policy fits in seamlessly with the assessment policy framework. The institution's vision on assessment and the way in which this is translated into the assessment policy framework is leading in the design of the assessment policy of the degree programme.",
+              "Use new (scientific) insights when working out the practical consequences of the interventions and processes. If the practical consequences of the interventions are evidence-informed, new insights are used, which are then translated to/adapted to the own degree programme context.",
+              "Structurally evaluate the assessment policy as part of a quality cycle (PDCA) and discuss the results of these evaluations with colleagues, students or other relevant partners within the degree programme. There is then a constant overview of the quality of the assessment policy and it is known where any points for improvement are (for example, procedures that are not carried out as agreed or are unknown to employees). Ensure that the actors carrying out the evaluation know which criteria an assessment policy must meet, and evaluate the degree programme structurally. Because it is known where the bottlenecks are in the implementation of the policy, it is also known where possible risks occur for the quality of the assessment."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria set for the assessment (policy) plan are discussed with relevant internal and/or external partners and are in line with the national frameworks. The processes and interventions included in the policy plan are aimed at the long term. Intermediate goals have been set so that mid-term evaluation is possible. The policy plan is structurally evaluated based on the quality criteria, and the results are discussed with both the relevant partners within the degree course and relevant chain partners, such as  the professional field.",
+          "result": {
+            "position": "For the entity assessment policy, your degree programme is in the chain-oriented phase. That means that the quality criteria set for the assessment (policy) plan are discussed with relevant internal and/or external partners and are in line with the national frameworks. The processes and interventions included in the policy plan are aimed at the long term. Intermediate goals have been set so that mid-term evaluation is possible. The policy plan is structurally evaluated based on the quality criteria, and the results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field",
+            "ambition": "Your ambition for the entity assessment policy is the chain-oriented phase. That means that the quality criteria set for the assessment (policy) plan are discussed with relevant internal and/or external partners and are in line with the national frameworks. The processes and interventions included in the policy plan are aimed at the long term. Intermediate goals have been set so that mid-term evaluation is possible. The policy plan is structurally evaluated based on the quality criteria, and the results are discussed with both the relevant partners within the degree course and relevant chain partners, such as the professional field."
+          },
+          "advice": {
+            "introduction": "For the assessment entity assessment policy, your degree programme is generally in the chain-oriented phase. In concrete terms, this means that all the elements below are in this phase in terms of development. Below, we briefly outline what is characteristic of each element in the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme, chain partners, fellow institutions and/or external experts. Chain partners and/or external experts are involved in this."
+                ]
+              },
+              {
+                "text": [
+                  "When designing the assessment policy, the assessment policy framework and regional or national frameworks are fully in line with the design of the assessment policy. The assessment policy describes interventions that have been determined on the basis of structural analyses of possible bottlenecks. The practical consequences of this have been translated into a long-term policy, well thought-out and evidence-informed."
+                ]
+              },
+              {
+                "text": [
+                  "In the chain-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation will be discussed with all relevant actors in the degree programme and with chain partners and/or external experts, and adjustments will be made."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessment organisation",
+      "description": "The quality of the whole assessment organisation is key to assuring the quality of assessment. The assessment organization refers to how teachers, boards of examiners, assessment committees, management, and support staff work together purposefully to achieve the desired assessment quality for all assessment entities (Van Deursen & Van Zijl, 2015). It also concerns establishing the roles, tasks and responsibilities of the actors/parties involved in assessment, cooperation based on defined roles and the logistical organisation of assessment.",
+      "elements": [
+        {
+          "phases": [
+            {
+              "description": "Within the degree course, it has not been determined which quality criteria the assessment organisation should meet."
+            },
+            {
+              "description": "Quality criteria have been established for the assessment organisation within the degree course."
+            },
+            {
+              "description": "The quality criteria used in setting up the assessment organisation are regularly adjusted based on current (scientific) insights."
+            },
+            {
+              "description": "The quality criteria that are used when setting up the assessment organisation are discussed with chain partners, for example the professional field."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The teachers design the assessment processes as they see fit. Agreements have been made about the assessment processes' roles, tasks and responsibilities, but employees only know which responsibilities they themselves have to meet."
+            },
+            {
+              "description": "All roles, tasks and responsibilities have been defined, so everyone knows who is responsible for what. It is clear to everyone how the various assessment processes relate to or should relate to each other. However, the processes do not yet seamlessly align with each other."
+            },
+            {
+              "description": "The roles, tasks and responsibilities in the degree course are regularly discussed and aligned with each other."
+            },
+            {
+              "description": "The design of the assessment organization is discussed with chain partners, for example the professional field. The roles, tasks and responsibilities of the professional field in the assessment organisation are laid down, as well as the assessment processes which take place at the workplace."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The quality of the assessment organisation is only evaluated when there is reason to do so."
+            },
+            {
+              "description": "The quality of the assessment organisation is evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to improve assessment processes."
+            },
+            {
+              "description": "The quality of the assessment organisation is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+            },
+            {
+              "description": "The quality of the assessment organisation is structurally evaluated based on the quality criteria, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field."
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "description": "Within the degree course, it has not been determined which quality criteria the assessment organisation should meet. The teachers design the assessment processes as they see fit. Agreements have been made about the assessment processes' roles, tasks and responsibilities, but employees only know which responsibilities they themselves have to meet. The quality of the assessment organisation is only evaluated when there is reason to do so.",
+          "result": {
+            "position": "For the entity assessment organisation, your degree programme is in the activity-oriented phase. That means that within the degree course, it has not been determined which quality criteria the assessment organisation should meet. The teachers design the assessment processes as they see fit. Agreements have been made about the assessment processes’ roles, tasks and responsibilities, but employees only know which responsibilities they themselves have to meet. The quality of the assessment organisation is only evaluated when there is reason to do so.",
+            "ambition": "Your ambition for the entity assessment organisation is the activity-oriented phase. That means that within the degree course, it has not been determined which quality criteria the assessment organisation should meet. The teachers design the assessment processes as they see fit. Agreements have been made about the assessment processes’ roles, tasks and responsibilities, but employees only know which responsibilities they themselves have to meet. The quality of the assessment organisation is only evaluated when there is reason to do so."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the activity-oriented phase for the assessment entity assessment organisation. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the activity-oriented phase and what risks this potentially entails for the quality of the assessment organisation. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the process-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that no quality criteria have yet been formulated. Or that different images arise about this among colleagues in the team. However, these quality criteria – and in particular a shared vision on them – are essential because they are the basis for designing the assessment organisation and evaluating its quality. Quality criteria for the assessment organisation include criteria such as targeting, coordination, quality standards and hedging of risks (Van Deursen & Van Zijl, 2015).",
+                  "The risk of the activity-oriented phase is that management, policy officers and other actors responsible for the design of the assessment organisation may each have different ideas about the quality of an assessment organisation. This can lead to agreements they make with actors within the degree programme about their involvement in, but also roles, tasks and responsibilities in and for different assessment processes, not being in line with each other, or even contradictory."
+                ]
+              },
+              {
+                "text": [
+                  "The activity-oriented development phase is also characterized by the way in which colleagues from the degree programme are involved in setting up the assessment organization: employees often do not know which roles, tasks and responsibilities are distinguished within the various assessment processes, and therefore cannot act accordingly. As a result, it is also not known 'who is what'; In the event of incidents, it is unclear who can be held accountable for what or who can be asked for advice. In addition, it is possible that committees do not know from each other where which responsibilities lie (for example between the board of examiners, the assessment committee and management), which means that processes may not be in line with each other or even work against each other.",
+                  "In addition, the actors within the degree programme often interpret the various assessment processes in their own way in this development phase. As a result, there can be major differences not only in the execution, but also in the quality. This may lead to uncertainty for students: for example, it may lead to the way in which grades on partial assessments lead to a final assessment varying from lecturer to lecturer, or to them being sent from pillar to post when asked questions."
+                ]
+              },
+              {
+                "text": [
+                  "In the activity-oriented phase, the quality of the assessment organisation is usually only evaluated incidentally. It is therefore unknown whether actors are aware of their own roles, tasks and responsibilities with regard to assessments and those of their colleagues."
+                ]
+              }
+            ],
+            "actions": [
+              "Formulate concrete quality criteria for the assessment organization. Include these criteria in the assessment policy plan. Share the criteria with management, policy officers and other actors responsible for setting up the assessment organisation. When these actors know which quality criteria the assessment organisation must meet, a basic quality of the design of the assessment organisation can be achieved.",
+              "Map out the roles, tasks and responsibilities within the various assessment processes. Make it clear who is responsible for what and share this overview with all relevant actors. As a result, the employees within the degree programme know which roles, tasks and responsibilities they themselves must meet within the various assessment processes in which they have a role.",
+              "Make concrete agreements within the education team about the way in which various assessment processes (e.g. design of assessment degree programme and design of assessment policy) will be set up and implemented. This allows a basic quality of the individual processes to be achieved.",
+              "Make agreements within the teaching team about the evaluation of the assessment organisation. Look at both the quality of the assessment organisation as a whole and the implementation of the assessment processes. Use the quality criteria that have been established as a basis for conducting the evaluation. Put the evaluation of the assessment organisation on the agenda of the lecturer meetings, so that the findings from the evaluations are regularly shared within the team."
+            ]
+          }
+        },
+        {
+          "description": "Quality criteria have been established for the assessment organisation within the degree course. All roles, tasks and responsibilities have been defined, so everyone knows who is responsible for what. It is clear to everyone how the various assessment processes relate to or should relate to each other. However, the processes do not yet seamlessly align with each other. The quality of the assessment organisation is evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to improve assessment processes.",
+          "result": {
+            "position": "For the entity assessment organisation, your degree programme is in the process-oriented phase. That means that quality criteria have been established for the assessment organisation within the degree course. All roles, tasks and responsibilities have been defined, so everyone knows who is responsible for what. It is clear to everyone how the various assessment processes relate to or should relate to each other. However, the processes do not yet seamlessly align with each other. The quality of the assessment organisation is evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to improve assessment processes.",
+            "ambition": "Your ambition for the entity assessment organisation is the process-oriented phase. That means that quality criteria have been established for the assessment organisation within the degree course. All roles, tasks and responsibilities have been defined, so everyone knows who is responsible for what. It is clear to everyone how the various assessment processes relate to or should relate to each other. However, the processes do not yet seamlessly align with each other. The quality of the assessment organisation is evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to improve assessment processes."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the process-oriented phase for the assessment entity assessment organisation. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the process-oriented phase and what risks this potentially entails for the quality of the assessment organisation. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the system-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of these criteria is often based on the experiences of relevant actors in the degree programme. However, it is not possible to say with certainty that the established quality criteria are in line with the vision of assessment of the degree programme. This may result in quality criteria being formulated that are not feasible or that are not appropriate within the context of the degree programme."
+                ]
+              },
+              {
+                "text": [
+                  "When designing the assessment organisation in this development phase, the roles, tasks and responsibilities of all actors in assessment are determined. Although all employees within the degree programme know which roles, tasks and responsibilities they must meet themselves, it is not yet certain that they are also familiar with the roles, tasks and responsibilities of their colleagues. As a result, it is possible that ambiguities arise in the implementation of the various processes, that activities are carried out within processes that are contradictory to each other, or that it is unknown who can be asked for advice in the event of incidents.",
+                  "The way in which the design of the assessment policy, assessment programme and assessment (tasks) fit together will also be mapped out in this phase. Although there are agreements about the design and implementation of the individual processes, it is not self-evident that the processes will also fit together. As a result, it is possible that activities within and between processes are not in line with each other or even work against each other."
+                ]
+              },
+              {
+                "text": [
+                  "In the process-oriented phase, evaluation takes place incidentally. The result of the evaluation will be discussed with relevant actors in the team and adjustments will be made. The evaluation of the assessment organisation therefore does not yet take place on a regular basis, but only when incidents occur, for example. There is some insight into the extent to which all actors are aware of their own and each other's roles, tasks and responsibilities, but it is unclear whether everyone knows how to find the right people for questions or specific assessment processes."
+                ]
+              }
+            ],
+            "actions": [
+              "Base the quality criteria for the assessment organisation on the experiences of the actors within the assessment organisation of the degree programme and assess this against the vision on education. Also make sure that the established quality criteria are feasible and appropriate within the context of the degree programme.",
+              "Establish the roles, tasks and responsibilities for all employees within the team within the assessment processes in which they are involved. Make sure that all employees are aware of this, so that they can act accordingly. Because the roles, tasks and responsibilities are known, employees know who can be held accountable or questioned for what.",
+              "Map out the way in which the various assessment processes within the degree programme fit together (e.g. design of assessments in relation to the assessment programme). Make sure that it is clear to all actors within the degree programme how the various assessment processes relate to each other. As a result, the activities carried out within and between these processes are in line with each other. This means that there is not only a basic quality of individual processes, but of the entire process structure.",
+              "Make agreements about the regularity in which the quality of the assessment organisation is evaluated by management, policy officers or other relevant actors. Then there is some insight in the degree programme into the extent to which all actors within the assessment processes are aware of their own and each other's roles, tasks and responsibilities. If the evaluation shows that someone is not taking up the roles, tasks and/or responsibilities properly, this colleague can be addressed about this by his manager. Because everyone knows 'who is what', people also know how to find each other with questions about specific assessment processes."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria used in setting up the assessment organisation are regularly adjusted based on current (scientific) insights. The roles, tasks and responsibilities in the degree course are regularly discussed and aligned with each other. The quality of the assessment organisation is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+          "result": {
+            "position": "For the entity assessment organisation, your degree programme is in the system-oriented phase. That means that the quality criteria used in setting up the assessment organisation are regularly adjusted based on current (scientific) insights. The roles, tasks and responsibilities in the degree course are regularly discussed and aligned with each other. The quality of the assessment organisation is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course.",
+            "ambition": "Your ambition for the entity assessment organisation is the system-oriented phase. That means that the quality criteria used in setting up the assessment organisation are regularly adjusted based on current (scientific) insights. The roles, tasks and responsibilities in the degree course are regularly discussed and aligned with each other. The quality of the assessment organisation is structurally evaluated based on the quality criteria. The results are discussed with relevant partners within the degree course."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the system-oriented phase for the assessment entity assessment organisation. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the system-oriented phase and what risks this potentially entails for the quality of the assessment organisation. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria that have been established at the level of the degree programme are used. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme. The quality criteria on the basis of which the assessment organisation is set up may be outdated. It is possible that the experiences of staff and students about the quality of the assessment organisation will not be taken into account in agreements about achieving sufficient quality."
+                ]
+              },
+              {
+                "text": [
+                  "When designing the assessment organisation in this development phase, the roles, tasks and responsibilities of all actors in assessment at degree programme level are determined. Although the roles, tasks and responsibilities are known and recorded by all actors within the degree programme, they are not always discussed within the team or the degree programme and coordinated where necessary. As a result, the roles, tasks and responsibilities may not always be appropriate to the function of the actors and to their role within the degree programme and there may be unnecessary double hats. As a result, the responsibilities of the various committees (such as the assessment committee, board of examiners, curriculum committee, etc.) may not be optimally aligned.",
+                  "The way in which the design of the assessment policy, assessment programme and assessment (tasks) within the degree programme fit together is mapped out in a structural and systematic manner. Although it is known how the various processes relate to each other, agreements about how this will take concrete shape within the team or the degree programme have not been recorded as a matter of course. This can jeopardize the quality of the overall assessment. For example: it is not self-evident that a lecturer who wants to change an assessment method will contact those who are responsible for the development of the assessment programme, for the assessment policy, and for the assessment literacy. As a result, it may be that the adjustment of the assessment method does not appear to be appropriate within the vision on assessment (policy), is not in line with the assessment programme, or that the lecturers do not have the necessary assessment literacy to carry out this assessment method in a qualitatively good way."
+                ]
+              },
+              {
+                "text": [
+                  "In the system-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation is discussed with all relevant actors in the team and adjustments are made. It is not self-evident that the evaluation takes place on the basis of agreed quality criteria. However, within the degree programme there is some insight into the extent to which all actors within the assessment processes are aware of their own and each other's roles, tasks and responsibilities, and how the actors within these processes work together on the basis of their tasks, roles and responsibilities."
+                ]
+              }
+            ],
+            "actions": [
+              "Adjust the established quality criteria on the basis of new (scientific) insights and on the basis of student evaluations. Discuss the quality of the assessment organisation regularly and take a critical look at new developments together. Assess the agreed roles, tasks and responsibilities against new frameworks, such as the Higher Education and Research Act, but also against student and staff evaluations.",
+              "Determine the roles, tasks and responsibilities jointly at team or degree programme level. Do not just lay down the roles, tasks and responsibilities of all actors in assessment within the team or degree programme, but discuss them with each other and coordinate them where necessary. As a result, the roles, tasks and responsibilities are appropriate to the function of the actors and to their role within the degree programme, there is no unnecessary double hatting and everyone knows who can be held accountable and questioned for what. As a result, the responsibilities of the various committees (such as the assessment committee, board of examiners, curriculum committee, etc.) are also well aligned.",
+              "Discuss the way in which the various assessment processes within the degree programme fit together (e.g. design of assessment literacy in relation to assessment forms in the assessment programme) at team or degree programme level. Discuss the activities within and between the assessment processes with each other and coordinate where necessary. This makes it clear to all involved exactly which processes may influence each other. For example: if a lecturer wants to change an assessment method, he or she knows who is responsible for the development of the assessment programme, for the assessment policy, and for the assessment literacy, and he or she checks whether the alternative assessment method is appropriate within the vision on assessment (policy) and its translation into the assessment programme, and whether the necessary assessment literacy to be able to give substance to this assessment method is present.",
+              "Evaluate the assessment organisation as part of a quality cycle (PDCA) structural and discuss the results with colleagues, students or other relevant partners within the degree programme. There is then a continuous view of the quality of the assessment organisation and more specifically of the extent to which all actors know about themselves and others where their tasks, roles and responsibilities lie within the degree programme with regard to the assessment processes. Survey both staff and students regularly, so that there is also insight into the effectiveness and efficiency of the various assessment processes. It is then known what is going well, but also where the points for improvement are. Make sure that the employees who carry out the evaluation know which criteria the assessment organisation must meet, and evaluate them structurally. It is good if colleagues, on the basis of evaluations, but also in daily processes, address each other about the way in which they interpret their tasks, roles and responsibilities."
+            ]
+          }
+        },
+        {
+          "description": "The quality criteria and the assessment organisation’s structure are discussed with chain partners, for example the professional field. The roles, tasks and responsibilities of the professional field in the assessment organisation are laid down, as well as the assessment processes which take place at the workplace. The quality of the assessment organisation is structurally evaluated based on the quality criteria, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+          "result": {
+            "position": "For the entity assessment organisation, your degree programme is in the chain-oriented phase. That means that the quality criteria and the assessment organisation’s structure are discussed with chain partners, for example the professional field. The roles, tasks and responsibilities of the professional field in the assessment organisation are laid down, as well as the assessment processes which take place at the workplace. The quality of the assessment organisation is structurally evaluated based on the quality criteria, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+            "ambition": "Your ambition for the entity assessment organisation is the chain-oriented phase. That means that the quality criteria and the assessment organisation’s structure are discussed with chain partners, for example the professional field. The roles, tasks and responsibilities of the professional field in the assessment organisation are laid down, as well as the assessment processes which take place at the workplace. The quality of the assessment organisation is structurally evaluated based on the quality criteria, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the chain-oriented phase for the assessment entity assessment organisation. In concrete terms, this means that all the elements below are in this phase in terms of development. Below, we briefly outline what is characteristic of each element in the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree progamme. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme, chain partners, fellow institutions and/or external experts. Chain partners and/or external experts are involved in this."
+                ]
+              },
+              {
+                "text": [
+                  "When designing the assessment organisation, the roles, tasks and responsibilities of all actors in assessment at degree programme level are determined. The way in which the design of assessment policy, assessment programme and assessment (tasks) in the entire assessment organisation (internal and external) fit together is mapped out in a structural and systematic manner."
+                ]
+              },
+              {
+                "text": [
+                  "In the chain-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation will be discussed with all relevant actors in the degree programme and with chain partners and/or external experts, and adjustments will be made."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessment literacy",
+      "description": "In the assessment web, ‘assessment literacy’ refers to the expertise actors within the study programme should have to achieve quality across all assessment entities (Van Berkel, Sluijsmans & Joosten-ten Brinke, 2015). Specifically for the entity ’assessment’, the assessment literacy of teachers, boards of examiners and other involved parties is of utmost importance. Every teacher must be able to interpret assessment information and use it to establish how a student is doing and how this information can further contribute to the student’s learning (Straetmans, 2006).",
+      "elements": [
+        {
+          "phases": [
+            {
+              "description": "Within the degree course no (concrete) agreements have been made about the assessment literacy expected from teachers."
+            },
+            {
+              "description": "The requirements for assessment literacy within the degree course are based on the experiences of experienced assessment developers."
+            },
+            {
+              "description": "The requirements for assessment literacy are regularly adjusted based on (national) frameworks and current insights."
+            },
+            {
+              "description": "The requirements for assessment literacy are discussed with internal and/or relevant external partners and are in line with the national frameworks."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "The responsibility for the development of assessment literacy lies with individual teachers."
+            },
+            {
+              "description": "For all employees in the assessment organisation, the required assessment literacy has been laid down. To realise this literacy, concrete goals have been formulated."
+            },
+            {
+              "description": "The required assessment literacy is not only established at an individual level but also at a team level. A targeted effort is made to professionalise employees and teams."
+            },
+            {
+              "description": "Not only for the partners within the degree course, but also for the partners from the professional field, it has been determined which Assessment literacy they must have."
+            }
+          ]
+        },
+        {
+          "phases": [
+            {
+              "description": "Teachers' assessment literacy is only evaluated when there is reason to do so."
+            },
+            {
+              "description": "Both the status of the development of assessment literacy and the quality of assessment literacy are evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to initiate actions to improve assessment literacy."
+            },
+            {
+              "description": "The quality of assessment literacy is structurally evaluated based on the requirements for assessment literacy. The results are discussed with relevant partners within the degree course and serve as a basis for designing development plans."
+            },
+            {
+              "description": "The quality of the assessment literacy of all partners in the assessment organisation is structurally evaluated based on the requirements for assessment literacy, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field."
+            }
+          ]
+        }
+      ],
+      "phases": [
+        {
+          "description": "Within the degree course no (concrete) agreements have been made about the assessment literacy expected from teachers. The responsibility for the development of assessment literacy lies with individual teachers. Teachers' assessment literacy is only evaluated when there is reason to do so.",
+          "result": {
+            "position": "For the entity assessment literacy, your degree programme is in the activity-oriented phase. That means that within the degree course no (concrete) agreements have been made about the assessment literacy expected from teachers. The responsibility for the development of assessment literacy lies with individual teachers. Teachers’ assessment literacy is only evaluated when there is reason to do so.",
+            "ambition": "Your ambition for the entity assessment literacy is the activity-oriented phase. That means that within the degree course no (concrete) agreements have been made about the assessment literacy expected from teachers. The responsibility for the development of assessment literacy lies with individual teachers. Teachers’ assessment literacy is only evaluated when there is reason to do so."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the activity-oriented phase for the assessment entity assessment literacy. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what characterises this element in the activity-oriented phase and what risks this potentially entails for the quality of assessment literacy. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the process-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that no quality criteria have yet been formulated. Or that different images arise about this among colleagues in the team. However, these quality criteria – and in particular a shared vision of them – are essential because they are the basis for designing  the assessment literacy and evaluating its quality. Quality criteria for assessment literacy include criteria such as transparency (is it clear who should have which literacy, is this determined for the entire degree programme and is professionalization geared to this), topicality (e.g. alignment with national developments and university-wide frameworks), support, facilitation and feasibility (e.g. Van Berkel, Sluijsmans & Joosten-ten Brinke, 2015).",
+                  "The risk of the activity-oriented development phase is that actors do not know what assessment literacy they must have. It is not certain that lecturers have the skills needed for assessment that is in line with the degree programme's vision of assessment."
+                ]
+              },
+              {
+                "text": [
+                  "The activity-oriented development phase is also characterised by the way in which colleagues from the degree programme are involved in the development of the assessment literacy: it is unclear to the various actors how they can develop their assessment literacy. Each actor tackles this in its own way, with the result that the extent to which the assessment literacy is met differs considerably.",
+                  "In this phase of development, there is often no professionalization in the field of assessment. As a result, it is possible that different actors do not meet the desired quality of assessment literacy."
+                ]
+              },
+              {
+                "text": [
+                  "In the activity-oriented phase, the quality of the assessment literacy is usually only evaluated incidentally. As a result, the assessment literacy may be of insufficient quality."
+                ]
+              }
+            ],
+            "actions": [
+              "Formulate concrete quality criteria for the assessment literacy. Include these criteria in the assessment policy plan. Share the criteria with all actors involved, such as teachers, management, board of examiners and assessment committee. When these actors know which quality criteria the assessment literacy must meet, a basic quality of the assessment literacy can be achieved.",
+              "Make agreements about the steps that must be taken in developing and demonstrating the assessment literacy. If all steps are actually taken by everyone, this will lead to all actors at least having a basic literacy assessment.",
+              "Ensure that actors can make agreements with their managers about professionalisation in the field of assessment.",
+              "Make agreements within the training team about the evaluation of the assessment literacy. Use the quality criteria that have been established as a basis for conducting the evaluation. Put the evaluation of the assessment literacy on the agenda of the lecturer meetings, so that the findings from the evaluations are regularly shared within the team."
+            ]
+          }
+        },
+        {
+          "description": "The requirements for assessment literacy within the degree course are based on the experiences of experienced assessment developers. For all employees in the assessment organisation, the required assessment literacy has been laid down. To realise this literacy, concrete goals have been formulated. Both the status of the development of assessment literacy and the quality of assessment literacy are evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to initiate actions to improve assessment literacy.",
+          "result": {
+            "position": "For the entity assessment literacy, your degree programme is in the process-oriented phase. That means that the requirements for assessment literacy within the degree course are based on the experiences of experienced assessment developers. For all employees in the assessment organisation, the required assessment literacy has been laid down. To realise this literacy, concrete goals have been formulated. Both the status of the development of assessment literacy and the quality of assessment literacy are evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to initiate actions to improve assessment literacy.",
+            "ambition": "Your ambition for the entity assessment literacy is the process-oriented phase. That means that the requirements for assessment literacy within the degree course are based on the experiences of experienced assessment developers. For all employees in the assessment organisation, the required assessment literacy has been laid down. To realise this literacy, concrete goals have been formulated. Both the status of the development of assessment literacy and the quality of assessment literacy are evaluated regularly. The results are not automatically discussed with all colleagues or students but are used to initiate actions to improve assessment literacy."
+          },
+          "advice": {
+            "introduction": "Jullie opleiding bevindt zich voor de toetsentiteit toetsbekwaamheid overall in de proces-georiënteerde fase. Dat betekent concreet dat ten minste één van onderstaande elementen, maar mogelijk alle 3 deze elementen zich qua ontwikkeling in deze fase bevinden. Hieronder wordt per element kort geschetst wat kenmerkend is voor dit element in de proces-georiënteerde fase en welke risico’s dit potentieel met zich meebrengt voor de kwaliteit van de toetsbekwaamheid. Afsluitend worden enkele concrete acties benoemd die mogelijk behulpzaam zijn bij het maken van een ontwikkelstap richting de systeem-georiënteerde fase.",
+            "elements": [
+              {
+                "text": [
+                  "Kenmerkend voor deze ontwikkelingsfase is dat gebruik wordt gemaakt van kwaliteitscriteria die op opleidingsniveau zijn vastgesteld. De keuze voor deze criteria is veelal gebaseerd op ervaringen van relevante actoren in de opleiding. Het is echter niet mogelijk met zekerheid te zeggen dat de vastgestelde kwaliteitscriteria  aansluiten bij de visie op toetsing van de opleiding of op organisatorische randvoorwaarden binnen de opleiding. Dit kan er toe leiden dat de toetsbekwaamheid van docenten wel voldoet aan de gestelde kwaliteitscriteria maar dat zij toch niet beschikken over bepaalde bekwaamheden die zij nodig hebben om hun taak in toetsing binnen de visie van de opleiding uit te voeren."
+                ]
+              },
+              {
+                "text": [
+                  "Bij het ontwerpen van toetsbekwaamheid wordt in deze ontwikkelingsfase voor alle toetsprocessen de vereiste toetsbekwaamheid van alle actoren in toetsing in kaart gebracht. Als het voor sommige toetsprocessen en voor sommige actoren niet duidelijk is over welke bekwaamheid zij moeten beschikken, dan is het niet mogelijk om de juiste stappen te kiezen voor professionalisering op het gebied van toetsing.",
+                  "De leidinggevende maakt met actoren in de opleiding afspraken over de doelen van professionalisering voor de korte termijn. Er vindt wel professionalisering plaats op het gebied van toetsing, maar vaak is dit nog incidenteel en weinig doelgericht. Hierdoor kan het zijn dat niet de opleiding in zijn geheel onvoldoende profiteert van de toegenomen toetsbekwaamheid. De kwaliteit van toetsing in zijn geheel verbeterd niet of nauwelijks."
+                ]
+              },
+              {
+                "text": [
+                  "In de proces-georiënteerde fase vindt evaluatie incidenteel plaats. Het resultaat van de evaluatie wordt besproken met relevante actoren in de opleiding en aanpassingen worden doorgevoerd. De evaluatie van toetsbekwaamheid vindt dus niet met regelmaat plaats, De toetsbekwaamheid wordt alleen geëvalueerd als hier aanleiding toe is. Hierdoor is er geen overkoepelend zicht op de kwaliteit van de toetsbekwaamheid. Ook is het niet vanzelfsprekend dat de evaluatie plaatsvindt aan de hand van de afgesproken kwaliteitscriteria. Het is hierdoor mogelijk dat de kwaliteit van de toetsbekwaamheid van de verschillende actoren van wisselende kwaliteit zijn, maar wel allemaal het stempel voldoende krijgt."
+                ]
+              }
+            ],
+            "actions": [
+              "Baseer de kwaliteitscriteria voor de toetsbekwaamheid op ervaringen van ervaren toetsontwikkelaars binnen de eigen opleiding en toets deze aan de visie op onderwijs. Zorg dat de vastgestelde criteria uitvoerbaar zijn en passen bij de context van de opleiding.",
+              "Breng voor alle actoren de vereiste bekwaamheden voor alle toetsprocessen in kaart. De verschillende actoren die een taak hebben bij de verschillende toetsprocessen weten dan over welke bekwaamheden zij moeten beschikken om kwaliteit te kunnen realiseren.",
+              "Zorg dat de leidinggevende, in samenspraak met actoren, professionaliseringsdoelen met betrekking tot toetsing, minimal voor de korte termijn, formuleert. Als actoren doelen hebben geformuleerd die zij door inzet van professionaliseringsactiviteiten op korte termijn kunnen behalen, dan kunnen bepaalde toetsactiviteiten (afhankelijk van het gestelde doel) beter worden uitgevoerd.",
+              "Maak afspraken over de regelmaat waarin de kwaliteit van de toetsbekwaamheid geëvalueerd en besproken wordt met verschillende actoren die betrokken zijn bij toetsing. Dan heeft de opleiding enig zicht op de kwaliteit van de toetsbekwaamheid en kan op basis van deze evaluaties acties in worden gezet om de toetsbekwaamheid van actoren te verbeteren. De toetsbekwaamheid wordt bijvoorbeeld één keer per jaar besproken in het functioneringsgesprek- of bij beoordelingsgesprekken. De uitkomst van deze gesprekken kan dan worden gebruikt om individuele professionaliseringsactiviteiten te plannen."
+            ]
+          }
+        },
+        {
+          "description": "The requirements for assessment literacy are regularly adjusted based on (national) frameworks and current insights. The required assessment literacy is not only established at an individual level but also at a team level. A targeted effort is made to professionalise employees and teams. The quality of assessment literacy is structurally evaluated based on the requirements for assessment literacy. The results are discussed with relevant partners within the degree course and serve as a basis for designing development plans.",
+          "result": {
+            "position": "For the entity assessment literacy, your degree programme is in the system-oriented phase. That means that the requirements for assessment literacy are regularly adjusted based on (national) frameworks and current insights. The required assessment literacy is not only established at an individual level but also at a team level. A targeted effort is made to professionalise employees and teams. The quality of assessment literacy is structurally evaluated based on the requirements for assessment literacy. The results are discussed with relevant partners within the degree course and serve as a basis for designing development plans.",
+            "ambition": "Your ambition for the entity assessment literacy is the system-oriented phase. That means that the requirements for assessment literacy are regularly adjusted based on (national) frameworks and current insights. The required assessment literacy is not only established at an individual level but also at a team level. A targeted effort is made to professionalise employees and teams. The quality of assessment literacy is structurally evaluated based on the requirements for assessment literacy. The results are discussed with relevant partners within the degree course and serve as a basis for designing development plans."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the system-oriented phase for the assessment entity assessment literacy. In concrete terms, this means that at least one of the elements below, but possibly all 3 of these elements, are in this phase in terms of development. For each element, a brief outline is given below of what is characteristic of this element in the system-oriented phase and what risks this potentially entails for the quality of the assessment literacy. In conclusion, a number of concrete actions are mentioned that may be helpful in taking a development step towards the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria that have been established at the level of the degree programme are used. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme. The professionalization that teachers/examiners follow about assessment may be outdated and insufficiently in line with the current situation. It is not known which examiners do or do not master the proficiency requirements. The opinion of students, but also of teachers themselves, is not always taken into account when it comes to improving the assessment literacy of the examiners."
+                ]
+              },
+              {
+                "text": [
+                  "In this development phase, the required assessment literacy of all actors in assessment at degree programme level is mapped out and recorded in the design of assessment literacy for all assessment processes. The required assessment literacy for all assessment processes and actors is therefore known, but may not fit in with the vision of the degree programme team.",
+                  "This is in line with the specific roles, tasks and responsibilities. As part of the quality cycle of assessment, the manager makes agreements with actors in the degree programme about the goals of professionalisation for the medium term. So professionalization goals are formulated, but these are sometimes still separate from the results of the PDCA cycle. As a result, the professionalisation activities carried out sometimes have little or no impact on the quality of assessment in general."
+                ]
+              },
+              {
+                "text": [
+                  "In the system-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation is discussed with all relevant actors in the team and adjustments are made. If the results of evaluations are not or hardly discussed collectively with the various actors in the degree programme, there is no overview of the total quality of the assessment literacy."
+                ]
+              }
+            ],
+            "actions": [
+              "Adjust the established quality criteria on the basis of new (scientific) insights and on the basis of experiences from student and teacher evaluations. Reflect regularly with each other on assessment literacy. Examiners then know from each other what assessment literacy they have, where further support is needed and where they can strengthen each other. Intervision meetings and calibration sessions with colleagues are a common practice. Together, also take a critical look at new developments in the field of assessment literacy.",
+              "Determine the required assessment literacy jointly at team level. The required assessment literacy for all assessment processes is then not only mapped out, but also fits in with the vision of the degree programme team.",
+              "Formulate appropriate medium-term goals for professionalisation for the actors that are a logical consequence of the results of the quality cycle. Targeted work is then done on medium-term goals regarding improving the assessment literacy of actors. The professionalisation activities therefore contribute to improving the points that have emerged during the PDCA cycle.",
+              "Structurally evaluate assessment literacy as part of a quality cycle (PDCA) and discuss the results of the evaluations with colleagues, students or other relevant partners within the degree programme. Have the assessment quality determined annually at the collective level by independent assessment experts, with the result being an accurate overview of the extent to which assessment literacy is guaranteed at the organisational level. Let individual actors determine the assessment literacy by sending out 360-degree feedback, discussing the outcome and formulating personal learning goals based on this. Make a multi-year training and professionalization plan."
+            ]
+          }
+        },
+        {
+          "description": "The requirements for assessment literacy are discussed with internal and/or relevant external partners and are in line with the national frameworks. Also for the partners from the professional field, it has been determined which Assessment literacy they must have. The quality of the assessment literacy of all partners in the assessment organisation is structurally evaluated based on the requirements for assessment literacy, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+          "result": {
+            "position": "For the entity assessment literacy, your degree programme is in the chain-oriented phase. That means that the requirements for assessment literacy are discussed with internal and/or relevant external partners and are in line with the national frameworks. Also for the partners from the professional field, it has been determined which Assessment literacy they must have. The quality of the assessment literacy of all partners in the assessment organisation is structurally evaluated based on the requirements for assessment literacy, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field.",
+            "ambition": "Your ambition for the entity assessment literacy is the chain-oriented phase. That means that the requirements for assessment literacy are discussed with internal and/or relevant external partners and are in line with the national frameworks. Also for the partners from the professional field, it has been determined which Assessment literacy they must have. The quality of the assessment literacy of all partners in the assessment organisation is structurally evaluated based on the requirements for assessment literacy, and the results are discussed with the relevant partners within the degree course and relevant chain partners, such as the professional field."
+          },
+          "advice": {
+            "introduction": "Your degree programme is in general in the chain-oriented phase for the assessment entity assessment literacy. In concrete terms, this means that all the elements below are in this phase in terms of development. Below, we briefly outline what is characteristic of each element in the chain-oriented phase.",
+            "elements": [
+              {
+                "text": [
+                  "Characteristic of this development phase is that quality criteria are used that have been established at the level of the degree programme. The choice of criteria is based on (scientific) literature. The choice was also assessed against the experiences of relevant actors in the degree programme, chain partners, fellow institutions and/or external experts. Chain partners and/or external experts are involved in this."
+                ]
+              },
+              {
+                "text": [
+                  "When designing assessment literacy, the required assessment literacy of all actors in assessment at degree programme level and of actors in the chain is mapped out and recorded for all assessment processes. This is in line with the specific roles, tasks and responsibilities. As part of the quality cycle of assessment, the manager makes agreements with actors in the degree programme about the goals of professionalisation for the long term."
+                ]
+              },
+              {
+                "text": [
+                  "In the chain-oriented phase, the evaluation takes place structurally and systematically as part of the quality cycle of assessment. The result of the evaluation will be discussed with all relevant actors in the degree programme and with chain partners and/or external experts, and adjustments will be made."
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "name": "Quality criteria"
+    },
+    {
+      "name": "Design"
+    },
+    {
+      "name": "Quality assurance"
+    }
+  ],
+  "phases": [
+    {
+      "name": "Activity-oriented phase",
+      "description": "Individual employees in the degree course (teachers/examiners, coursemanagement, examination board of examiners, assessment experts/assessment committee, support staff) carry out parts of assessment activities on an ad hoc basis, whereby there is no attention to the interrelationship between these activities."
+    },
+    {
+      "name": "Process-oriented phase",
+      "description": "Relevant employees in the degree course (teachers/examiners, coursemanagement, examination board of examiners, assessment experts/assessment committee, support staff) carry out interrelated process-oriented assessment activities based on short-term policy."
+    },
+    {
+      "name": "System-oriented phase",
+      "description": "All relevant staff and partners in the degree course (students, teachers/examiners, coursemanagement, examination board of examiners, assessment experts/assessment committee, support staff) jointly carry out assessment activities from a medium-term perspective according to the PDCA cycle that are integrated into ongoing processes within the degree course."
+    },
+    {
+      "name": "Chain-oriented phase",
+      "description": "All relevant employees and partners within the degree course and in the chain (students, teachers/examiners, coursemanagement, examination board of examiners, assessment experts/assessment committee, support staff, professional field and external experts) jointly carry out assessment activities from a long-term perspective according to the PDCA cycle that are integrated into ongoing processes within the degree course and the chain."
+    }
+  ]
+}

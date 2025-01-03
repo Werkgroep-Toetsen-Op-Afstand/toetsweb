@@ -1,24 +1,18 @@
-import { useContext } from 'react'
-import { LanguageContext } from '../../../utils/contexts/LanguageContext'
-import {
-	ToetsmodelSideTextEN,
-	ToetsmodelSideTextNL,
-} from './modules/AssignmentModelSideText'
-import {
-	ToetsmodelCenterTextEN,
-	ToetsmodelCenterTextNL,
-} from './modules/AssignmentModelCenterText'
+import {ToetsmodelSideTextEN, ToetsmodelSideTextNL,} from './modules/AssignmentModelSideText'
+import {ToetsmodelCenterTextEN, ToetsmodelCenterTextNL,} from './modules/AssignmentModelCenterText'
+import {useTranslation} from "react-i18next";
+import {Language} from "../../../models/Locale";
 
 const AssignmentModelModules = () => {
-	const { language } = useContext(LanguageContext)
+	const {i18n} = useTranslation();
 
-	switch (language) {
-		case 'en':
+	switch (i18n.language) {
+		case Language.EN:
 			return {
 				SideText: ToetsmodelSideTextEN,
 				CenterText: ToetsmodelCenterTextEN,
 			}
-		case 'nl':
+		case Language.NL:
 		default:
 			return {
 				SideText: ToetsmodelSideTextNL,

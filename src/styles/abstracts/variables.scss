@@ -1,0 +1,38 @@
+// COLORS
+$color-white: rgb(255, 255, 255);
+$color-gray: #707070;
+$color-black: #000;
+$color-blue: #44a6c2;
+$color-cyan: #2db3a5;
+$color-purple: #b072ad;
+$color-orange: #ec7a0b;
+$color-green: #45ad48;
+$color-turquoise: #2db3a5;
+
+$background-color: $color-white;
+
+$spacingMin: 0;
+$spacingMax: 5;
+
+// SIDEBAR
+$sidebar-width: 14rem;
+
+// FONTS
+$base-font-family: "Source Sans 3", sans-serif;
+$text-color: black;
+$base-font-size: 1em;
+
+// BREAKPOINTS
+$breakpoints: (
+	'half-screen': (
+		max-aspect-ratio: 4/3,
+	),
+);
+
+// FONT WEIGHTS
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+$black: 900;

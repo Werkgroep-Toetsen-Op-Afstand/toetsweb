@@ -1,64 +1,64 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { NavLink as ReactRouterNavLink } from 'react-router-dom'
-import NavItem from './NavItem'
-import { LanguageContext } from '../../../utils/contexts/LanguageContext'
-import { Language } from '../../../utils/Localization'
-import flagDutch from '../../../assets/icons/flag-dutch.svg'
-import flagEnglish from '../../../assets/icons/flag-english.svg'
-import { ScanDataContext } from '../../../utils/contexts/ScanDataContext'
+import {useContext, useEffect} from 'react';
+import NavItem from './NavItem';
+import {Language} from '../../../models/Locale';
+import flagDutch from '../../../assets/icons/flag-dutch.svg';
+import flagEnglish from '../../../assets/icons/flag-english.svg';
+import {ScanDataContext} from '../../../utils/contexts/ScanDataContext';
+import {useTranslation} from "react-i18next";
+import {LocalButtonAnchor} from "../ButtonAnchor";
 
 const NavBar = () => {
-	const { language, changeLanguage, getTranslation } =
-		useContext(LanguageContext)
-	const { scanData: entities } = useContext(ScanDataContext)
-
-	const [answer, setAnswer] = useState<any>([])
+	const {t, i18n} = useTranslation();
+	const {anyEntityFilledIn} = useContext(ScanDataContext);
 
 	useEffect(() => {
-		entities.forEach((entity, entityIndex) => {
-			entity.elements.forEach((element, elementIndex) => {
-				setAnswer(window.localStorage.getItem(`${entityIndex}.${elementIndex}`))
-			})
-		})
-	}, [entities])
+		document.documentElement.lang = i18n.language;
+	}, [i18n.language]);
 
 	const handleChangeLanguage = () => {
-		if (language === Language.NL) changeLanguage(Language.EN)
-		if (language === Language.EN) changeLanguage(Language.NL)
+		switch (i18n.language) {
+			case Language.NL:
+				i18n.changeLanguage(Language.EN);
+				break
+			case Language.EN:
+			default:
+				i18n.changeLanguage(Language.NL);
+				break;
+		}
 	}
 
 	return (
 		<nav className={'navbar'}>
 			<div className={'navbar__content'}>
-				<ReactRouterNavLink to={''}>
+				<LocalButtonAnchor to={''} variant={'styless'}>
 					<div className={'navbar__container'}>
-						<h1>{getTranslation('nav.title')}</h1>
+						<h1>{t('title')}</h1>
 					</div>
-				</ReactRouterNavLink>
+				</LocalButtonAnchor>
 
 				<div className="navbar__content--right">
-					<ReactRouterNavLink to={''}>
-						<NavItem item={getTranslation('nav.home')} color={'purple'} />
-					</ReactRouterNavLink>
+					<LocalButtonAnchor to={''} className={'p-0'} variant={'styless'}>
+						<NavItem item={t('pages.home.title')} color={'purple'}/>
+					</LocalButtonAnchor>
 
-					<ReactRouterNavLink to={'scan'}>
-						<NavItem item={getTranslation('nav.scan')} color={'orange'} />
-					</ReactRouterNavLink>
+					<LocalButtonAnchor to={'scan'} className={'p-0'} variant={'styless'}>
+						<NavItem item={t('pages.scan.title')} color={'orange'}/>
+					</LocalButtonAnchor>
 
-					{answer && (
-						<ReactRouterNavLink to={'result'}>
-							<NavItem item={getTranslation('nav.result')} color={'green'} />
-						</ReactRouterNavLink>
+					{anyEntityFilledIn && (
+						<LocalButtonAnchor to={'result'} className={'p-0'} variant={'styless'}>
+							<NavItem item={t('pages.result.title')} color={'green'}/>
+						</LocalButtonAnchor>
 					)}
 
 					<button
 						className="navlink navlink--white cursor-pointer unselectable nobutton"
 						onClick={handleChangeLanguage}
 					>
-						{language === Language.NL ? (
-							<img src={flagEnglish} alt={'EN'} height={33} />
+						{i18n.language === Language.NL ? (
+							<img src={flagEnglish} alt={'EN'} height={33}/>
 						) : (
-							<img src={flagDutch} alt={'NL'} height={33} />
+							<img src={flagDutch} alt={'NL'} height={33}/>
 						)}
 					</button>
 				</div>

@@ -1,33 +1,31 @@
-import React, { FunctionComponent } from 'react'
+import {ButtonHTMLAttributes, DetailedHTMLProps, FunctionComponent, ReactNode} from "react";
+import {ClassBuilder} from "../../utils/ClassBuilder";
 
-interface Props {
-	children: any
-	backgroundColor: string
-	onClick: () => void
-	disabled?: boolean
+interface Props extends Omit<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'children'> {
+	variant?: "primary" | "styless"
+	textSize?: "small" | "medium" | "large"
+	children: ReactNode | ReactNode[]
 }
 
-const Button: FunctionComponent<Props> = ({
-	children,
-	backgroundColor,
-	onClick,
-	disabled,
-}) => {
-	const getClassName = () => {
-		return `button nobutton ${disabled ? 'button--disabled' : ''}`
-	}
+const Button: FunctionComponent<Props> = ({variant = 'primary', textSize = 'medium', className, children, ...rest}) => {
 
-	const onButtonClick = () => !disabled && onClick()
+	const classNames = new ClassBuilder('button')
+		.add(`button--${variant}`)
+		.add(`button--text-${textSize}`)
+		.addIf(className, className)
+		.build();
+
+	const hasMultipleChildren = children instanceof Array;
 
 	return (
-		<button
-			className={getClassName()}
-			style={{ backgroundColor }}
-			onClick={onButtonClick}
-		>
-			{children}
+		<button className={classNames} {...rest}>
+			{
+				hasMultipleChildren
+					? <div className={'button--content'}>{children}</div>
+					: children
+			}
 		</button>
 	)
 }
 
-export default Button
+export default Button;

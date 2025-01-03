@@ -1,8 +1,8 @@
-@import 'vendors/normalize';
-@import 'abstracts/abstracts';
-@import 'base/base';
-@import 'utils/utils';
-@import 'layout/layout';
+@import 'vendors';
+@import 'abstracts';
+@import 'base';
+@import 'utils';
+@import 'layout';
 
 #modal-root {
 	position: fixed;

@@ -1,0 +1,20 @@
+.scan {
+	max-width: 1400px;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	margin: 0 auto 2rem auto;
+
+	&__tabs {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		&-item {
+			font-size: 1.6rem;
+			font-weight: 600;
+			padding: 1rem;
+			text-align: center;
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+	}
+}

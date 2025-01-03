@@ -1,0 +1,43 @@
+.button {
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  width: fit-content;
+
+  &--primary {
+    background-color: $color-blue;
+    color: white;
+  }
+
+  &--styless {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  &--text {
+    &-small {
+      font-size: 1rem;
+    }
+
+    &-medium {
+      font-size: 1.25rem;
+    }
+
+    &-large {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

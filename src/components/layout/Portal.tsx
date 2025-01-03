@@ -1,24 +1,26 @@
-import React, { FunctionComponent, useState } from 'react'
-import ReactDOM from 'react-dom'
+import {FunctionComponent, useState, cloneElement, ReactElement} from 'react'
+import {createPortal} from 'react-dom'
 
 interface Props {
-	trigger: JSX.Element
+	trigger: ReactElement
 	children: any
+	onClick?: () => void
 }
 
-export const Portal: FunctionComponent<Props> = ({ trigger, children }) => {
+export const Portal: FunctionComponent<Props> = ({ trigger, children, onClick }) => {
 	const [show, setShow] = useState(false)
 
-	const updatedTrigger = React.cloneElement(trigger, {
+	const updatedTrigger = cloneElement(trigger, {
 		onMouseEnter: () => setShow(true),
 		onMouseLeave: () => setShow(false),
+		onClick: onClick,
 	})
 
 	return (
 		<>
 			{updatedTrigger}
 			{show &&
-				ReactDOM.createPortal(
+				createPortal(
 					children,
 					document.getElementById('modal-root') as HTMLElement,
 				)}

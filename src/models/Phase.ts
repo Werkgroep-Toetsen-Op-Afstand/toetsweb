@@ -1,100 +1,19 @@
-export interface Phase {
-	name: string
-	description: string
-	genericEntityDescription: string
-	color: string
-	fallbackColor: string
-	type: Phases
-}
-
-export interface GenericPhase {
-	name: string
-	description: string
-	type: Phases
-}
-
-export enum Phases {
+export enum Phase {
 	ACTIVITY_ORIENTED,
 	PROCESS_ORIENTED,
 	SYSTEM_ORIENTED,
 	CHAIN_ORIENTED,
 }
 
-const selectIds: string[][] = [
-	//activity oriented phase
-	[
-		'000',
-		'001',
-		'010',
-		'100',
-		'002',
-		'011',
-		'020',
-		'101',
-		'110',
-		'200',
-		'003',
-		'012',
-		'021',
-		'030',
-		'300',
-		'013',
-		'022',
-		'031',
-		'023',
-		'032',
-		'033',
-	],
-	//process oriented phase
-	[
-		'102',
-		'111',
-		'120',
-		'201',
-		'210',
-		'103',
-		'112',
-		'121',
-		'130',
-		'202',
-		'211',
-		'220',
-		'301',
-		'310',
-		'113',
-		'122',
-		'131',
-		'203',
-		'212',
-		'221',
-		'230',
-		'302',
-		'311',
-		'320',
-		'123',
-		'132',
-		'213',
-		'231',
-		'303',
-		'312',
-		'321',
-		'330',
-		'133',
-		'313',
-		'331',
-	],
-	//system oriented phase
-	['222', '223', '232', '322', '233', '323', '332'],
-	//chain oriented phase
-	['333'],
-]
+export const PhaseArray = Object.values(Phase).filter(value => typeof value === 'number') as Phase[];
 
-export const getPhaseOfSelectId = (selectId: string): number => {
-	const phase = selectIds.findIndex((phase: string[]) =>
-		phase.includes(selectId),
-	)
-	return phase === -1 ? 0 : phase
-}
+export const phaseColors: string[][] = [
+	['#A1D3E1', '#85C5D7', '#73BDD2', '#45A7C3'],
+	['#95D8D1', '#76CDC4', '#61C6BB', '#2DB3A5'],
+	['#D6B7D5', '#CAA3C9', '#C395C1', '#AF72AD'],
+	['#F5BB86', '#F3A862', '#F19B4B', '#ED7A0F'],
+	['#A1D5A2', '#86C987', '#74C175', '#46AD48'],
+]
 
 export const genericPhaseColors: string[] = [
 	'#C7C7C7',
